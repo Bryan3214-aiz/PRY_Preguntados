@@ -98,6 +98,7 @@ Partial Class FrmEditarInformacion
         '
         'BTNvolver
         '
+        Me.BTNvolver.Animated = True
         Me.BTNvolver.BackColor = System.Drawing.Color.Transparent
         Me.BTNvolver.BorderRadius = 10
         Me.BTNvolver.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -112,9 +113,11 @@ Partial Class FrmEditarInformacion
         Me.BTNvolver.Size = New System.Drawing.Size(150, 41)
         Me.BTNvolver.TabIndex = 9
         Me.BTNvolver.Text = "Volver al menú"
+        Me.BTNvolver.UseTransparentBackground = True
         '
         'BTNiniciar
         '
+        Me.BTNiniciar.Animated = True
         Me.BTNiniciar.BackColor = System.Drawing.Color.Transparent
         Me.BTNiniciar.BorderRadius = 10
         Me.BTNiniciar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -122,13 +125,14 @@ Partial Class FrmEditarInformacion
         Me.BTNiniciar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BTNiniciar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNiniciar.FillColor = System.Drawing.Color.SeaGreen
-        Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNiniciar.ForeColor = System.Drawing.Color.White
         Me.BTNiniciar.Location = New System.Drawing.Point(194, 375)
         Me.BTNiniciar.Name = "BTNiniciar"
         Me.BTNiniciar.Size = New System.Drawing.Size(150, 41)
         Me.BTNiniciar.TabIndex = 8
-        Me.BTNiniciar.Text = "Iniciar sesión "
+        Me.BTNiniciar.Text = "Guardar cambios"
+        Me.BTNiniciar.UseTransparentBackground = True
         '
         'Label4
         '

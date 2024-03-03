@@ -97,22 +97,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmCargarPregunta.Designer.vb">
-      <DependentUpon>FrmCargarPregunta.vb</DependentUpon>
+    <Compile Include="FrmMenuEstudiante.Designer.vb">
+      <DependentUpon>FrmMenuEstudiante.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmCargarPregunta.vb">
+    <Compile Include="FrmMenuEstudiante.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEditarInformacion.Designer.vb">
       <DependentUpon>FrmEditarInformacion.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmEditarInformacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmITZprofesor.Designer.vb">
-      <DependentUpon>FrmITZprofesor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmITZprofesor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmITZestudiante.Designer.vb">
@@ -125,6 +119,12 @@
       <DependentUpon>FrmLoginUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmLoginUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuProfesor.Designer.vb">
+      <DependentUpon>FrmMenuProfesor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuProfesor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVideoInicio.vb">
@@ -160,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginUsuario.resx">
       <DependentUpon>FrmLoginUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuEstudiante.resx">
+      <DependentUpon>FrmMenuEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuProfesor.resx">
+      <DependentUpon>FrmMenuProfesor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVideoInicio.resx">
       <DependentUpon>FrmVideoInicio.vb</DependentUpon>
@@ -205,6 +211,7 @@
   <ItemGroup>
     <Content Include="Recursos\img\fondoPRG.jpg" />
     <Content Include="Recursos\img\favicon3.ico" />
+    <None Include="Recursos\img\logoPr.png" />
     <Content Include="Recursos\video\cortoPRG.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

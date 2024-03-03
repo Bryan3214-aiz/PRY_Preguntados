@@ -58,15 +58,18 @@ Partial Class FrmLoginUsuario
         '
         'BTNcerrar
         '
+        Me.BTNcerrar.Animated = True
         Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.BorderColor = System.Drawing.Color.Transparent
         Me.BTNcerrar.BorderRadius = 10
         Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BTNcerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrar.ForeColor = System.Drawing.Color.White
+        Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
         Me.BTNcerrar.Location = New System.Drawing.Point(393, 299)
         Me.BTNcerrar.Name = "BTNcerrar"
         Me.BTNcerrar.Size = New System.Drawing.Size(150, 41)
@@ -75,6 +78,7 @@ Partial Class FrmLoginUsuario
         '
         'BTNiniciar
         '
+        Me.BTNiniciar.Animated = True
         Me.BTNiniciar.BackColor = System.Drawing.Color.Transparent
         Me.BTNiniciar.BorderRadius = 10
         Me.BTNiniciar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -82,13 +86,14 @@ Partial Class FrmLoginUsuario
         Me.BTNiniciar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BTNiniciar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNiniciar.FillColor = System.Drawing.Color.SeaGreen
-        Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNiniciar.ForeColor = System.Drawing.Color.White
         Me.BTNiniciar.Location = New System.Drawing.Point(195, 299)
         Me.BTNiniciar.Name = "BTNiniciar"
         Me.BTNiniciar.Size = New System.Drawing.Size(150, 41)
         Me.BTNiniciar.TabIndex = 8
         Me.BTNiniciar.Text = "Iniciar sesión "
+        Me.BTNiniciar.UseTransparentBackground = True
         '
         'Label4
         '

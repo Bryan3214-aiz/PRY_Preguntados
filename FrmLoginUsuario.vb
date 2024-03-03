@@ -1,7 +1,7 @@
 ﻿Imports System.Drawing.Drawing2D
 
 Public Class FrmLoginUsuario
-    Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
+    Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
         panel.BackColor = Color.FromArgb(99, Color.Black)

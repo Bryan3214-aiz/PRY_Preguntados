@@ -48,6 +48,7 @@ Partial Class FrmITZestudiante
         '
         'BTNeditar
         '
+        Me.BTNeditar.Animated = True
         Me.BTNeditar.BackColor = System.Drawing.Color.Transparent
         Me.BTNeditar.BorderRadius = 10
         Me.BTNeditar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -62,9 +63,11 @@ Partial Class FrmITZestudiante
         Me.BTNeditar.Size = New System.Drawing.Size(150, 41)
         Me.BTNeditar.TabIndex = 10
         Me.BTNeditar.Text = "Editar información"
+        Me.BTNeditar.UseTransparentBackground = True
         '
         'BTNcerrar
         '
+        Me.BTNcerrar.Animated = True
         Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
         Me.BTNcerrar.BorderRadius = 10
         Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -72,16 +75,18 @@ Partial Class FrmITZestudiante
         Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrar.ForeColor = System.Drawing.Color.White
         Me.BTNcerrar.Location = New System.Drawing.Point(379, 166)
         Me.BTNcerrar.Name = "BTNcerrar"
         Me.BTNcerrar.Size = New System.Drawing.Size(150, 41)
         Me.BTNcerrar.TabIndex = 9
         Me.BTNcerrar.Text = "Salir del juego"
+        Me.BTNcerrar.UseTransparentBackground = True
         '
         'BTNiniciar
         '
+        Me.BTNiniciar.Animated = True
         Me.BTNiniciar.BackColor = System.Drawing.Color.Transparent
         Me.BTNiniciar.BorderRadius = 10
         Me.BTNiniciar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -95,7 +100,8 @@ Partial Class FrmITZestudiante
         Me.BTNiniciar.Name = "BTNiniciar"
         Me.BTNiniciar.Size = New System.Drawing.Size(150, 41)
         Me.BTNiniciar.TabIndex = 8
-        Me.BTNiniciar.Text = "Iniciar partida"
+        Me.BTNiniciar.Text = "Comenzar a jugar"
+        Me.BTNiniciar.UseTransparentBackground = True
         '
         'Label1
         '
@@ -119,7 +125,7 @@ Partial Class FrmITZestudiante
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.PRY_Preguntados.My.Resources.Resources.fondoPRG
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(768, 402)
+        Me.ClientSize = New System.Drawing.Size(768, 400)
         Me.Controls.Add(Me.panel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
