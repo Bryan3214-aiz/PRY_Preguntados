@@ -127,6 +127,24 @@
     <Compile Include="FrmMenuProfesor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmOPCIONES.Designer.vb">
+      <DependentUpon>FrmOPCIONES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOPCIONES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPregunta.Designer.vb">
+      <DependentUpon>FrmPregunta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPregunta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarUsuario.Designer.vb">
+      <DependentUpon>FrmRegistrarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmVideoInicio.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +184,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuProfesor.resx">
       <DependentUpon>FrmMenuProfesor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOPCIONES.resx">
+      <DependentUpon>FrmOPCIONES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPregunta.resx">
+      <DependentUpon>FrmPregunta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarUsuario.resx">
+      <DependentUpon>FrmRegistrarUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVideoInicio.resx">
       <DependentUpon>FrmVideoInicio.vb</DependentUpon>
@@ -209,13 +236,15 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Recursos\img\BotonSeleccionado.png" />
     <Content Include="Recursos\img\fondoPRG.jpg" />
     <Content Include="Recursos\img\favicon3.ico" />
-    <None Include="Recursos\img\logoPr.png" />
-    <Content Include="Recursos\video\cortoPRG.mp4">
+    <None Include="Recursos\img\long_button.png" />
+    <Content Include="Recursos\video\videoArtePRE.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Recursos\video\inicioJuego.mp4">
+    <None Include="Recursos\img\logoPr.png" />
+    <Content Include="Recursos\video\cortoPRG.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\fondoPRG.jpg" />

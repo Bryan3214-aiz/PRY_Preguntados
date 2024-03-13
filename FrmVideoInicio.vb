@@ -21,7 +21,7 @@
             ' Detener el temporizador
             TemporizadorVideo.Stop()
             Me.Hide()
-            FrmLoginUsuario.ShowDialog()
+            FrmOPCIONES.ShowDialog()
             Me.Close()
         End If
     End Sub

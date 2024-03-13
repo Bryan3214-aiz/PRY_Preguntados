@@ -21,4 +21,14 @@
             Temporizado.Stop()
         End If
     End Sub
+
+    Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BTNcomenzar_Click(sender As Object, e As EventArgs) Handles BTNcomenzar.Click
+        Me.Hide()
+
+        Me.Close()
+    End Sub
 End Class

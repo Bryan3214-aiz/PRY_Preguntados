@@ -178,13 +178,16 @@ Partial Class FrmMenuEstudiante
         Me.BTNcerrar.Text = "Salir del juego"
         Me.BTNcerrar.UseTransparentBackground = True
         '
+        'Temporizado
+        '
+        '
         'FrmMenuEstudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PRY_Preguntados.My.Resources.Resources.fondoPRG
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(768, 400)
+        Me.ClientSize = New System.Drawing.Size(770, 400)
         Me.Controls.Add(Me.panel)
         Me.Controls.Add(Me.BTNcerrar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
