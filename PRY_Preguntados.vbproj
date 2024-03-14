@@ -97,6 +97,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BASEDATOS.vb" />
     <Compile Include="FrmLoginAdmin.Designer.vb">
       <DependentUpon>FrmLoginAdmin.vb</DependentUpon>
     </Compile>
