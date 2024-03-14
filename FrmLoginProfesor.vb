@@ -1,4 +1,11 @@
-﻿Public Class FrmLoginProfesor
+﻿Imports System.Data.OleDb
+Imports System.Data.SqlClient
+Public Class FrmLoginProfesor
+    Dim pro As String
+    Dim constring As String
+    Dim comando As String
+    Dim miconexion As OleDbConnection = New OleDbConnection
+
     Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
@@ -15,11 +22,28 @@
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        'Prueba 8720'
-        Me.Hide()
-        FrmMenuProfesor.ShowDialog()
-        Me.Close()
+        pro = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\PRY_PREGUNTADOS\proyecto_preguntas.mdb"
+        constring = pro
+        miconexion.ConnectionString = constring
+        miconexion.Open()
+        Dim ds As New DataSet
+        Dim dt As New DataTable
 
+        comando = "SELECT * FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
+        Dim cmd As OleDbCommand = New OleDbCommand(comando, miconexion)
+        Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
+        ds.Tables.Add("tabla")
+        adp.Fill(ds.Tables("tabla"))
+        If adp.Fill(ds.Tables("tabla")) Then
+            Me.Hide()
+            FrmMenuProfesor.ShowDialog()
+            Me.Close()
+        Else
+            miconexion.Close()
+            MsgBox("El usuario o contraseña no coinciden")
+            TXTcorreo.Text = ""
+            TXTcontrasena.Text = ""
+        End If
     End Sub
 
     Private Sub FrmLoginUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
