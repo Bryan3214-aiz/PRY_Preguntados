@@ -1,10 +1,6 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Public Class FrmLoginProfesor
-    Dim pro As String
-    Dim constring As String
-    Dim comando As String
-    Dim miconexion As OleDbConnection = New OleDbConnection
 
     Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
@@ -22,13 +18,7 @@ Public Class FrmLoginProfesor
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        pro = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\PRY_PREGUNTADOS\proyecto_preguntas.mdb"
-        constring = pro
-        miconexion.ConnectionString = constring
-        miconexion.Open()
-        Dim ds As New DataSet
-        Dim dt As New DataTable
-
+        CONECTAR()
         comando = "SELECT * FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
         Dim cmd As OleDbCommand = New OleDbCommand(comando, miconexion)
         Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
@@ -39,7 +29,7 @@ Public Class FrmLoginProfesor
             FrmMenuProfesor.ShowDialog()
             Me.Close()
         Else
-            miconexion.Close()
+            DESCONECTAR()
             MsgBox("El usuario o contraseña no coinciden")
             TXTcorreo.Text = ""
             TXTcontrasena.Text = ""
@@ -70,7 +60,6 @@ Public Class FrmLoginProfesor
     Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
         panel2.BackColor = Color.FromArgb(60, Color.Black)
     End Sub
-
 
 End Class
 

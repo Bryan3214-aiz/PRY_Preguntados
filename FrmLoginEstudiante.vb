@@ -1,4 +1,6 @@
-﻿Public Class FrmLoginEstudiante
+﻿Imports System.Data.OleDb
+
+Public Class FrmLoginEstudiante
     Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub BTNregistrarEstudiante_Click(sender As Object, e As EventArgs) Handles BTNregistrarEstudiante.Click
@@ -43,9 +45,24 @@
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        Me.Hide()
-        FrmMenuEstudiante.ShowDialog()
-        Me.Close()
+
+        CONECTAR()
+        comando = "SELECT * FROM ESTUDIANTE WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
+        Dim cmd As OleDbCommand = New OleDbCommand(comando, miconexion)
+        Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
+        ds.Tables.Add("tabla")
+        adp.Fill(ds.Tables("tabla"))
+        If adp.Fill(ds.Tables("tabla")) Then
+            Me.Hide()
+            FrmMenuEstudiante.ShowDialog()
+            Me.Close()
+        Else
+            DESCONECTAR()
+            MsgBox("El usuario o contraseña no coinciden")
+            TXTcorreo.Text = ""
+            TXTcontrasena.Text = ""
+        End If
+
     End Sub
 
     Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
