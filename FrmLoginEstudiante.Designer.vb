@@ -34,7 +34,9 @@ Partial Class FrmLoginEstudiante
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.panel.SuspendLayout()
+        Me.panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'panel
@@ -48,7 +50,7 @@ Partial Class FrmLoginEstudiante
         Me.panel.Controls.Add(Me.Label1)
         Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.TXTcorreo)
-        Me.panel.Location = New System.Drawing.Point(104, 49)
+        Me.panel.Location = New System.Drawing.Point(99, 50)
         Me.panel.Name = "panel"
         Me.panel.Size = New System.Drawing.Size(560, 304)
         Me.panel.TabIndex = 1
@@ -185,11 +187,23 @@ Partial Class FrmLoginEstudiante
         Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrar.ForeColor = System.Drawing.Color.White
         Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
-        Me.BTNcerrar.Location = New System.Drawing.Point(726, -1)
+        Me.BTNcerrar.Location = New System.Drawing.Point(724, 0)
         Me.BTNcerrar.Name = "BTNcerrar"
         Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
         Me.BTNcerrar.TabIndex = 10
         Me.BTNcerrar.Text = "X"
+        '
+        'panel2
+        '
+        Me.panel2.BackColor = System.Drawing.Color.Transparent
+        Me.panel2.BorderRadius = 100
+        Me.panel2.Controls.Add(Me.BTNcerrar)
+        Me.panel2.Controls.Add(Me.panel)
+        Me.panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panel2.Location = New System.Drawing.Point(0, 0)
+        Me.panel2.Name = "panel2"
+        Me.panel2.Size = New System.Drawing.Size(768, 402)
+        Me.panel2.TabIndex = 11
         '
         'FrmLoginEstudiante
         '
@@ -198,14 +212,14 @@ Partial Class FrmLoginEstudiante
         Me.BackgroundImage = Global.PRY_Preguntados.My.Resources.Resources.fondoPRG
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(768, 402)
-        Me.Controls.Add(Me.BTNcerrar)
-        Me.Controls.Add(Me.panel)
+        Me.Controls.Add(Me.panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmLoginEstudiante"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmLoginEstudiantevb"
         Me.panel.ResumeLayout(False)
+        Me.panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -220,4 +234,5 @@ Partial Class FrmLoginEstudiante
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Temporizado As Timer
     Friend WithEvents BTNcerrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents panel2 As Guna.UI2.WinForms.Guna2Panel
 End Class

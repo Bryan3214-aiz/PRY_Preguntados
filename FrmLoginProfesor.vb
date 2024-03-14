@@ -2,7 +2,7 @@
     Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
-        panel.BackColor = Color.FromArgb(99, Color.Black)
+        panel.BackColor = Color.FromArgb(95, Color.Black)
     End Sub
 
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
@@ -40,9 +40,11 @@
         ' Si el tiempo transcurrido supera la duración de la transición, detener el temporizador
         If tiempoTranscurrido >= duracionTransicion Then
             Temporizado.Stop()
-
         End If
     End Sub
 
+    Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
+        panel2.BackColor = Color.FromArgb(60, Color.Black)
+    End Sub
 End Class
 

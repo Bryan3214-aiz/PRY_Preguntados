@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
-        panel.BackColor = Color.FromArgb(99, Color.Black)
+        panel.BackColor = Color.FromArgb(95, Color.Black)
     End Sub
 
     Private Sub FrmLoginEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -46,5 +46,9 @@
         Me.Hide()
         FrmMenuEstudiante.ShowDialog()
         Me.Close()
+    End Sub
+
+    Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
+        panel2.BackColor = Color.FromArgb(60, Color.Black)
     End Sub
 End Class

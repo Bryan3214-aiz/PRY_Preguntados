@@ -36,10 +36,22 @@
         End If
     End Sub
 
-    Private Sub BTNprofesor_Click(sender As Object, e As EventArgs) Handles BTNprofesor.Click
-        Me.Hide()
-        FrmLoginProfesor.ShowDialog()
-        Me.Close()
+    Private Sub BTNprofesor_Click(sender As Object, e As MouseEventArgs) Handles BTNprofesor.Click
+        ' Verificar si se hizo clic derecho
+        If e.Button = MouseButtons.Left Then
+            ' Preguntar al usuario por el patrón
+            Dim patron As String = InputBox("Ingrese el patrón para habilitar el acceso de profesor:")
+
+            ' Verificar si el patrón es correcto
+            If patron = "patron" Then
+                ' Habilitar el botón de administrador
+                Me.Hide()
+                FrmLoginProfesor.ShowDialog()
+                Me.Close()
+            Else
+                MessageBox.Show("Patrón incorrecto. No tiene acceso como profesor.")
+            End If
+        End If
     End Sub
 
     Private Sub BTNestudiante_Click(sender As Object, e As EventArgs) Handles BTNestudiante.Click
