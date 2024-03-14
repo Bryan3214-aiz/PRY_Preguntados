@@ -1,4 +1,4 @@
-﻿Public Class FrmRegistrarUsuario
+﻿Public Class FrmRegistrarEstudiante
     Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
 

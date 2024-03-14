@@ -25,13 +25,13 @@ Partial Class FrmMenuEstudiante
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuEstudiante))
         Me.panel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNeditarInfoEstudiante = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNranking = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNcomenzar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
         Me.panel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,16 +41,49 @@ Partial Class FrmMenuEstudiante
         '
         Me.panel.BackColor = System.Drawing.Color.Transparent
         Me.panel.BorderRadius = 100
-        Me.panel.Controls.Add(Me.Guna2Button2)
-        Me.panel.Controls.Add(Me.Guna2Button3)
-        Me.panel.Controls.Add(Me.Guna2Button1)
         Me.panel.Controls.Add(Me.Guna2PictureBox1)
+        Me.panel.Controls.Add(Me.BTNcerrar)
+        Me.panel.Controls.Add(Me.Guna2Button2)
+        Me.panel.Controls.Add(Me.BTNeditarInfoEstudiante)
+        Me.panel.Controls.Add(Me.Guna2Button1)
         Me.panel.Controls.Add(Me.BTNranking)
         Me.panel.Controls.Add(Me.BTNcomenzar)
-        Me.panel.Location = New System.Drawing.Point(110, 26)
+        Me.panel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panel.Location = New System.Drawing.Point(0, 0)
         Me.panel.Name = "panel"
-        Me.panel.Size = New System.Drawing.Size(550, 315)
+        Me.panel.Size = New System.Drawing.Size(770, 400)
         Me.panel.TabIndex = 2
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(164, 59)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(448, 71)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 16
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
+        '
+        'BTNcerrar
+        '
+        Me.BTNcerrar.Animated = True
+        Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.BorderColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNcerrar.ForeColor = System.Drawing.Color.White
+        Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
+        Me.BTNcerrar.Location = New System.Drawing.Point(726, 0)
+        Me.BTNcerrar.Name = "BTNcerrar"
+        Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
+        Me.BTNcerrar.TabIndex = 15
+        Me.BTNcerrar.Text = "X"
         '
         'Guna2Button2
         '
@@ -64,31 +97,31 @@ Partial Class FrmMenuEstudiante
         Me.Guna2Button2.FillColor = System.Drawing.Color.DimGray
         Me.Guna2Button2.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(279, 216)
+        Me.Guna2Button2.Location = New System.Drawing.Point(395, 219)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(150, 41)
         Me.Guna2Button2.TabIndex = 14
         Me.Guna2Button2.Text = "Funcion Y"
         Me.Guna2Button2.UseTransparentBackground = True
         '
-        'Guna2Button3
+        'BTNeditarInfoEstudiante
         '
-        Me.Guna2Button3.Animated = True
-        Me.Guna2Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button3.BorderRadius = 10
-        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button3.FillColor = System.Drawing.Color.MediumSlateBlue
-        Me.Guna2Button3.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button3.Location = New System.Drawing.Point(107, 216)
-        Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.Size = New System.Drawing.Size(150, 41)
-        Me.Guna2Button3.TabIndex = 13
-        Me.Guna2Button3.Text = "Funcion X"
-        Me.Guna2Button3.UseTransparentBackground = True
+        Me.BTNeditarInfoEstudiante.Animated = True
+        Me.BTNeditarInfoEstudiante.BackColor = System.Drawing.Color.Transparent
+        Me.BTNeditarInfoEstudiante.BorderRadius = 10
+        Me.BTNeditarInfoEstudiante.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNeditarInfoEstudiante.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNeditarInfoEstudiante.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNeditarInfoEstudiante.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNeditarInfoEstudiante.FillColor = System.Drawing.Color.MediumSlateBlue
+        Me.BTNeditarInfoEstudiante.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNeditarInfoEstudiante.ForeColor = System.Drawing.Color.White
+        Me.BTNeditarInfoEstudiante.Location = New System.Drawing.Point(223, 219)
+        Me.BTNeditarInfoEstudiante.Name = "BTNeditarInfoEstudiante"
+        Me.BTNeditarInfoEstudiante.Size = New System.Drawing.Size(150, 41)
+        Me.BTNeditarInfoEstudiante.TabIndex = 13
+        Me.BTNeditarInfoEstudiante.Text = "Editar información"
+        Me.BTNeditarInfoEstudiante.UseTransparentBackground = True
         '
         'Guna2Button1
         '
@@ -102,24 +135,12 @@ Partial Class FrmMenuEstudiante
         Me.Guna2Button1.FillColor = System.Drawing.Color.DodgerBlue
         Me.Guna2Button1.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(369, 146)
+        Me.Guna2Button1.Location = New System.Drawing.Point(485, 149)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(150, 41)
         Me.Guna2Button1.TabIndex = 12
         Me.Guna2Button1.Text = "Ver mis puntaciones"
         Me.Guna2Button1.UseTransparentBackground = True
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackgroundImage = Global.PRY_Preguntados.My.Resources.Resources.logoPr
-        Me.Guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(83, 19)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(369, 121)
-        Me.Guna2PictureBox1.TabIndex = 11
-        Me.Guna2PictureBox1.TabStop = False
         '
         'BTNranking
         '
@@ -133,7 +154,7 @@ Partial Class FrmMenuEstudiante
         Me.BTNranking.FillColor = System.Drawing.Color.Gold
         Me.BTNranking.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNranking.ForeColor = System.Drawing.Color.White
-        Me.BTNranking.Location = New System.Drawing.Point(194, 146)
+        Me.BTNranking.Location = New System.Drawing.Point(310, 149)
         Me.BTNranking.Name = "BTNranking"
         Me.BTNranking.Size = New System.Drawing.Size(150, 41)
         Me.BTNranking.TabIndex = 10
@@ -152,31 +173,12 @@ Partial Class FrmMenuEstudiante
         Me.BTNcomenzar.FillColor = System.Drawing.Color.SeaGreen
         Me.BTNcomenzar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcomenzar.ForeColor = System.Drawing.Color.White
-        Me.BTNcomenzar.Location = New System.Drawing.Point(22, 146)
+        Me.BTNcomenzar.Location = New System.Drawing.Point(138, 149)
         Me.BTNcomenzar.Name = "BTNcomenzar"
         Me.BTNcomenzar.Size = New System.Drawing.Size(150, 41)
         Me.BTNcomenzar.TabIndex = 8
         Me.BTNcomenzar.Text = "Comenzar a jugar"
         Me.BTNcomenzar.UseTransparentBackground = True
-        '
-        'BTNcerrar
-        '
-        Me.BTNcerrar.Animated = True
-        Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
-        Me.BTNcerrar.BorderRadius = 10
-        Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNcerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNcerrar.ForeColor = System.Drawing.Color.White
-        Me.BTNcerrar.Location = New System.Drawing.Point(606, 347)
-        Me.BTNcerrar.Name = "BTNcerrar"
-        Me.BTNcerrar.Size = New System.Drawing.Size(150, 41)
-        Me.BTNcerrar.TabIndex = 9
-        Me.BTNcerrar.Text = "Salir del juego"
-        Me.BTNcerrar.UseTransparentBackground = True
         '
         'Temporizado
         '
@@ -189,7 +191,6 @@ Partial Class FrmMenuEstudiante
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(770, 400)
         Me.Controls.Add(Me.panel)
-        Me.Controls.Add(Me.BTNcerrar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmMenuEstudiante"
@@ -204,11 +205,11 @@ Partial Class FrmMenuEstudiante
 
     Friend WithEvents panel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BTNranking As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BTNcerrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNcomenzar As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTNeditarInfoEstudiante As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Temporizado As Timer
+    Friend WithEvents BTNcerrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

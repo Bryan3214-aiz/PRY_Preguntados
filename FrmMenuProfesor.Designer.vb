@@ -26,6 +26,7 @@ Partial Class FrmMenuProfesor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuProfesor))
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNinfoPRO = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.BTNayuda = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNmiperfil = New Guna.UI2.WinForms.Guna2Button()
         Me.panelCalificaciones = New Guna.UI2.WinForms.Guna2Panel()
         Me.BTNenviarCalificaciones = New Guna.UI2.WinForms.Guna2Button()
@@ -40,7 +41,6 @@ Partial Class FrmMenuProfesor
         Me.PanelLOGO = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
-        Me.BTNayuda = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNinfoPRO.SuspendLayout()
         Me.panelCalificaciones.SuspendLayout()
         Me.PanelSubFormularios.SuspendLayout()
@@ -61,7 +61,7 @@ Partial Class FrmMenuProfesor
         Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrar.ForeColor = System.Drawing.Color.White
         Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
-        Me.BTNcerrar.Location = New System.Drawing.Point(1026, 0)
+        Me.BTNcerrar.Location = New System.Drawing.Point(1069, 0)
         Me.BTNcerrar.Name = "BTNcerrar"
         Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
         Me.BTNcerrar.TabIndex = 11
@@ -83,6 +83,26 @@ Partial Class FrmMenuProfesor
         Me.BTNinfoPRO.Name = "BTNinfoPRO"
         Me.BTNinfoPRO.Size = New System.Drawing.Size(250, 572)
         Me.BTNinfoPRO.TabIndex = 12
+        '
+        'BTNayuda
+        '
+        Me.BTNayuda.Animated = True
+        Me.BTNayuda.BackColor = System.Drawing.Color.Teal
+        Me.BTNayuda.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNayuda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNayuda.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNayuda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNayuda.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BTNayuda.FillColor = System.Drawing.Color.DarkCyan
+        Me.BTNayuda.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNayuda.ForeColor = System.Drawing.Color.White
+        Me.BTNayuda.Location = New System.Drawing.Point(0, 460)
+        Me.BTNayuda.Name = "BTNayuda"
+        Me.BTNayuda.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BTNayuda.Size = New System.Drawing.Size(250, 45)
+        Me.BTNayuda.TabIndex = 8
+        Me.BTNayuda.Text = "Ayuda"
+        Me.BTNayuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'BTNmiperfil
         '
@@ -314,26 +334,6 @@ Partial Class FrmMenuProfesor
         'Temporizado
         '
         '
-        'BTNayuda
-        '
-        Me.BTNayuda.Animated = True
-        Me.BTNayuda.BackColor = System.Drawing.Color.Teal
-        Me.BTNayuda.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNayuda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNayuda.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNayuda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNayuda.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTNayuda.FillColor = System.Drawing.Color.DarkCyan
-        Me.BTNayuda.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNayuda.ForeColor = System.Drawing.Color.White
-        Me.BTNayuda.Location = New System.Drawing.Point(0, 460)
-        Me.BTNayuda.Name = "BTNayuda"
-        Me.BTNayuda.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNayuda.Size = New System.Drawing.Size(250, 45)
-        Me.BTNayuda.TabIndex = 8
-        Me.BTNayuda.Text = "Ayuda"
-        Me.BTNayuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
         'FrmMenuProfesor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -341,7 +341,7 @@ Partial Class FrmMenuProfesor
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1070, 572)
+        Me.ClientSize = New System.Drawing.Size(1113, 572)
         Me.Controls.Add(Me.BTNcerrar)
         Me.Controls.Add(Me.BTNinfoPRO)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmLoginUsuario
+Partial Class FrmLoginProfesor
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,9 +23,8 @@ Partial Class FrmLoginUsuario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLoginUsuario))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLoginProfesor))
         Me.panel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.BTNregistrarEstudiante = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNiniciar = New Guna.UI2.WinForms.Guna2Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -40,8 +39,6 @@ Partial Class FrmLoginUsuario
         'panel
         '
         Me.panel.BackColor = System.Drawing.Color.Transparent
-        Me.panel.BorderRadius = 100
-        Me.panel.Controls.Add(Me.BTNregistrarEstudiante)
         Me.panel.Controls.Add(Me.BTNiniciar)
         Me.panel.Controls.Add(Me.Label3)
         Me.panel.Controls.Add(Me.Label2)
@@ -52,25 +49,6 @@ Partial Class FrmLoginUsuario
         Me.panel.Name = "panel"
         Me.panel.Size = New System.Drawing.Size(560, 304)
         Me.panel.TabIndex = 0
-        '
-        'BTNregistrarEstudiante
-        '
-        Me.BTNregistrarEstudiante.Animated = True
-        Me.BTNregistrarEstudiante.BackColor = System.Drawing.Color.Transparent
-        Me.BTNregistrarEstudiante.BorderRadius = 10
-        Me.BTNregistrarEstudiante.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNregistrarEstudiante.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNregistrarEstudiante.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNregistrarEstudiante.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNregistrarEstudiante.FillColor = System.Drawing.Color.DimGray
-        Me.BTNregistrarEstudiante.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNregistrarEstudiante.ForeColor = System.Drawing.Color.White
-        Me.BTNregistrarEstudiante.Location = New System.Drawing.Point(368, 230)
-        Me.BTNregistrarEstudiante.Name = "BTNregistrarEstudiante"
-        Me.BTNregistrarEstudiante.Size = New System.Drawing.Size(150, 41)
-        Me.BTNregistrarEstudiante.TabIndex = 9
-        Me.BTNregistrarEstudiante.Text = "Registrarse"
-        Me.BTNregistrarEstudiante.UseTransparentBackground = True
         '
         'BTNiniciar
         '
@@ -84,7 +62,7 @@ Partial Class FrmLoginUsuario
         Me.BTNiniciar.FillColor = System.Drawing.Color.SeaGreen
         Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNiniciar.ForeColor = System.Drawing.Color.White
-        Me.BTNiniciar.Location = New System.Drawing.Point(192, 230)
+        Me.BTNiniciar.Location = New System.Drawing.Point(375, 224)
         Me.BTNiniciar.Name = "BTNiniciar"
         Me.BTNiniciar.Size = New System.Drawing.Size(150, 41)
         Me.BTNiniciar.TabIndex = 8
@@ -191,7 +169,7 @@ Partial Class FrmLoginUsuario
         'Temporizado
         '
         '
-        'FrmLoginUsuario
+        'FrmLoginProfesor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -204,7 +182,7 @@ Partial Class FrmLoginUsuario
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FrmLoginUsuario"
+        Me.Name = "FrmLoginProfesor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PREGUNTADOS "
         Me.panel.ResumeLayout(False)
@@ -220,5 +198,4 @@ Partial Class FrmLoginUsuario
     Friend WithEvents BTNcerrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNiniciar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Temporizado As Timer
-    Friend WithEvents BTNregistrarEstudiante As Guna.UI2.WinForms.Guna2Button
 End Class

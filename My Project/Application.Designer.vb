@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.PRY_Preguntados.FrmVideoInicio
+            Me.MainForm = Global.PRY_Preguntados.FrmLoginAdmin
         End Sub
     End Class
 End Namespace

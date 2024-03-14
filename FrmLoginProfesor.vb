@@ -1,5 +1,4 @@
-﻿
-Public Class FrmLoginUsuario
+﻿Public Class FrmLoginProfesor
     Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
@@ -45,11 +44,5 @@ Public Class FrmLoginUsuario
         End If
     End Sub
 
-    Private Sub BTNregistrarEstudiante_Click(sender As Object, e As EventArgs) Handles BTNregistrarEstudiante.Click
-        Me.Hide()
-        FrmRegistrarUsuario.ShowDialog()
-        Me.Close()
-
-    End Sub
 End Class
 

@@ -7,7 +7,6 @@
     End Sub
 
     Private Sub BTNvolver_Click(sender As Object, e As EventArgs) Handles BTNvolver.Click
-
         Dim resultado As DialogResult = MessageBox.Show("Si sales y no guardas los cambios, estos se perderan.       ¿Deseas salir de todas formas?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         If resultado = DialogResult.Yes Then
@@ -15,7 +14,7 @@
             Temporizado.Interval = 20 ' Intervalo en milisegundos
             Temporizado.Start()
             Me.Hide()
-            FrmITZestudiante.Show()
+            FrmMenuEstudiante.Show()
             Me.Close()
         End If
     End Sub

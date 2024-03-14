@@ -1,15 +1,17 @@
-﻿Public Class FrmITZestudiante
-    Private duracionTransicion As Double = 1 ' Duración de la transición en segundos almacenado en una variable global.
+﻿Public Class FrmLoginEstudiante
+    Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
+    Private Sub BTNregistrarEstudiante_Click(sender As Object, e As EventArgs) Handles BTNregistrarEstudiante.Click
+        Me.Hide()
+        FrmRegistrarEstudiante.ShowDialog()
+        Me.Close()
+    End Sub
+
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
         panel.BackColor = Color.FromArgb(99, Color.Black)
     End Sub
 
-    Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
-        Me.Close()
-    End Sub
-
-    Private Sub FrmITZestudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmLoginEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo
         Me.DoubleBuffered = True
         ' Configurar la opacidad inicial del formulario en 0
@@ -20,8 +22,7 @@
     End Sub
 
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
-        tiempoTranscurrido += Temporizado.Interval / 1000 ' Convertir el intervalo a segundos
-
+        tiempoTranscurrido += Temporizado.Interval / 1000
         ' Calcular la opacidad del formulario en función del tiempo transcurrido y la duración de la transición
         Me.Opacity = Math.Min(tiempoTranscurrido / duracionTransicion, 1)
 
@@ -32,9 +33,13 @@
         End If
     End Sub
 
-    Private Sub BTNeditar_Click(sender As Object, e As EventArgs) Handles BTNeditar.Click
-        Me.Hide()
-        FrmEditarInformacion.ShowDialog()
+    Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
+        Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Verificar si el usuario ha confirmado el cierre del formulario
+        If resultado = DialogResult.Yes Then
+            Me.Close() ' Cerrar el formulario
+        End If
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click

@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -97,6 +97,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmLoginAdmin.Designer.vb">
+      <DependentUpon>FrmLoginAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginEstudiante.Designer.vb">
+      <DependentUpon>FrmLoginEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMenuEstudiante.Designer.vb">
       <DependentUpon>FrmMenuEstudiante.vb</DependentUpon>
     </Compile>
@@ -109,16 +121,10 @@
     <Compile Include="FrmEditarInformacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmITZestudiante.Designer.vb">
-      <DependentUpon>FrmITZestudiante.vb</DependentUpon>
+    <Compile Include="FrmLoginProfesor.Designer.vb">
+      <DependentUpon>FrmLoginProfesor.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmITZestudiante.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLoginUsuario.Designer.vb">
-      <DependentUpon>FrmLoginUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmLoginUsuario.vb">
+    <Compile Include="FrmLoginProfesor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMenuProfesor.Designer.vb">
@@ -139,10 +145,10 @@
     <Compile Include="FrmPregunta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistrarUsuario.Designer.vb">
-      <DependentUpon>FrmRegistrarUsuario.vb</DependentUpon>
+    <Compile Include="FrmRegistrarEstudiante.Designer.vb">
+      <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistrarUsuario.vb">
+    <Compile Include="FrmRegistrarEstudiante.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVideoInicio.vb">
@@ -173,11 +179,14 @@
     <EmbeddedResource Include="FrmEditarInformacion.resx">
       <DependentUpon>FrmEditarInformacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmITZestudiante.resx">
-      <DependentUpon>FrmITZestudiante.vb</DependentUpon>
+    <EmbeddedResource Include="FrmLoginAdmin.resx">
+      <DependentUpon>FrmLoginAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLoginUsuario.resx">
-      <DependentUpon>FrmLoginUsuario.vb</DependentUpon>
+    <EmbeddedResource Include="FrmLoginEstudiante.resx">
+      <DependentUpon>FrmLoginEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginProfesor.resx">
+      <DependentUpon>FrmLoginProfesor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuEstudiante.resx">
       <DependentUpon>FrmMenuEstudiante.vb</DependentUpon>
@@ -191,8 +200,8 @@
     <EmbeddedResource Include="FrmPregunta.resx">
       <DependentUpon>FrmPregunta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistrarUsuario.resx">
-      <DependentUpon>FrmRegistrarUsuario.vb</DependentUpon>
+    <EmbeddedResource Include="FrmRegistrarEstudiante.resx">
+      <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVideoInicio.resx">
       <DependentUpon>FrmVideoInicio.vb</DependentUpon>

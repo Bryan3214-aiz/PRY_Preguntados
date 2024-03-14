@@ -2,7 +2,12 @@
     Private duracionTransicion As Double = 1 ' Duración de la transición en segundos almacenado en una variable global.
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
-        Me.Close()
+        Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Verificar si el usuario ha confirmado el cierre del formulario
+        If resultado = DialogResult.Yes Then
+            Me.Close() ' Cerrar el formulario
+        End If
     End Sub
 
     Private Sub FrmMenuProfesor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -14,7 +19,6 @@
         Temporizado.Interval = 20 ' Intervalo en milisegundos
         Temporizado.Start()
         ocultarMenu()
-
 
     End Sub
 
