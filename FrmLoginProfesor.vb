@@ -15,7 +15,7 @@
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-
+        'Prueba 8720'
         Me.Hide()
         FrmMenuProfesor.ShowDialog()
         Me.Close()
@@ -46,5 +46,7 @@
     Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
         panel2.BackColor = Color.FromArgb(60, Color.Black)
     End Sub
+
+
 End Class
 
