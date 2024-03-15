@@ -45,24 +45,30 @@ Public Class FrmLoginEstudiante
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-
+        ' Conexión a la base de datos
         CONECTAR()
-        comando = "SELECT * FROM ESTUDIANTE WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
-        Dim cmd As OleDbCommand = New OleDbCommand(comando, miconexion)
+        ' Comando SQL para realizar la verificación de login
+        Dim comando As String = "SELECT * FROM ESTUDIANTE WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
         Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
-        ds.Tables.Add("tabla")
-        adp.Fill(ds.Tables("tabla"))
-        If adp.Fill(ds.Tables("tabla")) Then
+        ' Se crea un nuevo DataSet para almacenar los resultados
+        Dim ds As New DataSet()
+        ' Se llena el DataSet con los resultados de la consulta
+        adp.Fill(ds, "tabla")
+        ' Se verifica si se encontraron filas en el DataSet
+        If ds.Tables("tabla").Rows.Count > 0 Then
+            ' Si se encontraron filas, el inicio de sesión es exitoso
             Me.Hide()
             FrmMenuEstudiante.ShowDialog()
             Me.Close()
         Else
-            DESCONECTAR()
+            ' Si no se encontraron filas, se muestra un mensaje de error
             MsgBox("El usuario o contraseña no coinciden")
+            ' Se limpian los campos de texto
             TXTcorreo.Text = ""
             TXTcontrasena.Text = ""
         End If
-
+        ' Se desconecta de la base de datos
+        DESCONECTAR()
     End Sub
 
     Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
