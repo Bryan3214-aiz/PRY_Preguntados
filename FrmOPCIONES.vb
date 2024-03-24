@@ -45,8 +45,8 @@
             ' Verificar si el patrón es correcto
             If patron = "patron" Then
                 ' Habilitar el botón de administrador
-                FrmLoginProfesor.Show()
-                Me.Visible = False
+                Me.Hide()
+                FrmLoginProfesor.ShowDialog()
             Else
                 MessageBox.Show("Patrón incorrecto. No tiene acceso como profesor.")
             End If
@@ -56,7 +56,6 @@
     Private Sub BTNestudiante_Click(sender As Object, e As EventArgs) Handles BTNestudiante.Click
         Me.Hide()
         FrmLoginEstudiante.ShowDialog()
-        Me.Close()
     End Sub
 
 
@@ -69,6 +68,7 @@
             ' Verificar si el patrón es correcto
             If patron = "patron" Then
                 ' Habilitar el botón de administrador
+                Me.Hide()
                 FrmLoginAdmin.ShowDialog()
             Else
                 MessageBox.Show("Patrón incorrecto. No tiene acceso de administrador.")

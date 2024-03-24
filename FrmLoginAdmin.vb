@@ -1,6 +1,8 @@
 ﻿Imports System.Data.OleDb
-
+Imports System.Data.SqlClient
 Public Class FrmLoginAdmin
+    Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
+    Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
         Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
@@ -45,5 +47,10 @@ Public Class FrmLoginAdmin
         End If
         ' Se desconecta de la base de datos
         DESCONECTAR()
+    End Sub
+
+    Private Sub BTNvolverMenu_Click(sender As Object, e As EventArgs) Handles BTNvolverMenu.Click
+        Me.Hide()
+        FrmOPCIONES.Show()
     End Sub
 End Class

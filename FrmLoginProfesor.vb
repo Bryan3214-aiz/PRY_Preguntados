@@ -13,7 +13,7 @@ Public Class FrmLoginProfesor
 
         ' Verificar si el usuario ha confirmado el cierre del formulario
         If resultado = DialogResult.Yes Then
-            Me.Dispose() ' Cerrar el formulario
+            Me.Close() ' Cerrar el formulario
         End If
     End Sub
 
@@ -30,7 +30,8 @@ Public Class FrmLoginProfesor
         ' Se verifica si se encontraron filas en el DataSet
         If ds.Tables("tabla").Rows.Count > 0 Then
             ' Si se encontraron filas, el inicio de sesión es exitoso
-            FrmMenuProfesor.Show()
+            Me.Hide()
+            FrmMenuProfesor.ShowDialog()
             Me.Close()
         Else
             ' Si no se encontraron filas, se muestra un mensaje de error
@@ -53,7 +54,6 @@ Public Class FrmLoginProfesor
         Temporizado.Start()
         Label1.BackColor = Color.FromArgb(45, Color.Black)
 
-        FrmOPCIONES.Visible = False
     End Sub
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
         tiempoTranscurrido += Temporizado.Interval / 1000 ' Convertir el intervalo a segundos
@@ -72,8 +72,8 @@ Public Class FrmLoginProfesor
     End Sub
 
     Private Sub BTNvolverMenu_Click(sender As Object, e As EventArgs) Handles BTNvolverMenu.Click
+        Me.Hide()
         FrmOPCIONES.Show()
-        Me.Visible = False
     End Sub
 End Class
 
