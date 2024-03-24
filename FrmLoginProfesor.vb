@@ -2,10 +2,10 @@
 Imports System.Data.SqlClient
 Public Class FrmLoginProfesor
 
-    Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
+    Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
-        panel.BackColor = Color.FromArgb(95, Color.Black)
+        panel.BackColor = Color.FromArgb(55, Color.Black)
     End Sub
 
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
@@ -13,7 +13,7 @@ Public Class FrmLoginProfesor
 
         ' Verificar si el usuario ha confirmado el cierre del formulario
         If resultado = DialogResult.Yes Then
-            Me.Close() ' Cerrar el formulario
+            Me.Dispose() ' Cerrar el formulario
         End If
     End Sub
 
@@ -30,8 +30,7 @@ Public Class FrmLoginProfesor
         ' Se verifica si se encontraron filas en el DataSet
         If ds.Tables("tabla").Rows.Count > 0 Then
             ' Si se encontraron filas, el inicio de sesión es exitoso
-            Me.Hide()
-            FrmMenuProfesor.ShowDialog()
+            FrmMenuProfesor.Show()
             Me.Close()
         Else
             ' Si no se encontraron filas, se muestra un mensaje de error
@@ -52,6 +51,9 @@ Public Class FrmLoginProfesor
         ' Iniciar el temporizador para controlar la transición
         Temporizado.Interval = 20 ' Intervalo en milisegundos
         Temporizado.Start()
+        Label1.BackColor = Color.FromArgb(45, Color.Black)
+
+        FrmOPCIONES.Visible = False
     End Sub
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
         tiempoTranscurrido += Temporizado.Interval / 1000 ' Convertir el intervalo a segundos
@@ -66,11 +68,12 @@ Public Class FrmLoginProfesor
     End Sub
 
     Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
-        panel2.BackColor = Color.FromArgb(60, Color.Black)
+        panel2.BackColor = Color.FromArgb(85, Color.Black)
     End Sub
 
-    Private Sub TXTcorreo_TextChanged(sender As Object, e As EventArgs) Handles TXTcorreo.TextChanged
-
+    Private Sub BTNvolverMenu_Click(sender As Object, e As EventArgs) Handles BTNvolverMenu.Click
+        FrmOPCIONES.Show()
+        Me.Visible = False
     End Sub
 End Class
 

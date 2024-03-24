@@ -6,11 +6,14 @@
 
         ' Verificar si el usuario ha confirmado el cierre del formulario
         If resultado = DialogResult.Yes Then
+            FrmOPCIONES.Close()
+            FrmLoginProfesor.Close()
             Me.Close() ' Cerrar el formulario
         End If
     End Sub
 
     Private Sub FrmMenuProfesor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo
         Me.DoubleBuffered = True
         ' Configurar la opacidad inicial del formulario en 0
@@ -46,16 +49,18 @@
         ' Si el tiempo transcurrido supera la duración de la transición, detener el temporizador
         If tiempoTranscurrido >= duracionTransicion Then
             Temporizado.Stop()
-
         End If
     End Sub
 
-    Private Sub BTNcrearFRMs_Click(sender As Object, e As EventArgs) Handles BTNtemas.Click
+    Private Sub BTNtemas_Click(sender As Object, e As EventArgs) Handles BTNtemas.Click
         mostrarMenu(PanelSubFormularios)
     End Sub
 
-    Private Sub BTNcalificaciones_Click(sender As Object, e As EventArgs) Handles BTNcalificaciones.Click
+    Private Sub BTNcategorias_Click(sender As Object, e As EventArgs) Handles BTNcategorias.Click
         mostrarMenu(panelCalificaciones)
     End Sub
 
+    Private Sub BTNcalificaciones_Click_1(sender As Object, e As EventArgs) Handles BTNcalificaciones.Click
+        mostrarMenu(Panel_Reportes)
+    End Sub
 End Class

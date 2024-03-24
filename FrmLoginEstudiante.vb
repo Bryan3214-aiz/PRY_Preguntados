@@ -10,10 +10,20 @@ Public Class FrmLoginEstudiante
     End Sub
 
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
-        panel.BackColor = Color.FromArgb(95, Color.Black)
+        panel.BackColor = Color.FromArgb(55, Color.Black)
     End Sub
 
     Private Sub FrmLoginEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        MsgBox("  Si es la primera vez que utilizas el juego:" & vbCrLf &
+        "     • Dale click al botón de registrarse." & vbCrLf &
+        "     • Ingresa tus datos personales en los respectivos campos." & vbCrLf &
+        "     • Finalmente le das click al botón crear usuario." & vbCrLf & "" & vbCrLf &
+        "  Si ya has utilizado el juego anteriormente:" & vbCrLf &
+        "     • Inicia sesión rellenando los campos con tu" & vbCrLf &
+        "       información personal." & vbCrLf & "" & vbCrLf &
+        "   ¡Que disfrutes del juego, buena suerte! :D", vbOKOnly + vbInformation, "PREGUNTADOS (PLATAFORMA DE JUEGOS DE TRIVIA)")
+
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo
         Me.DoubleBuffered = True
         ' Configurar la opacidad inicial del formulario en 0
@@ -21,6 +31,8 @@ Public Class FrmLoginEstudiante
         ' Iniciar el temporizador para controlar la transición
         Temporizado.Interval = 20 ' Intervalo en milisegundos
         Temporizado.Start()
+        Label1.BackColor = Color.FromArgb(45, Color.Black)
+
     End Sub
 
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
@@ -72,6 +84,7 @@ Public Class FrmLoginEstudiante
     End Sub
 
     Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
-        panel2.BackColor = Color.FromArgb(60, Color.Black)
+        panel2.BackColor = Color.FromArgb(85, Color.Black)
     End Sub
+
 End Class

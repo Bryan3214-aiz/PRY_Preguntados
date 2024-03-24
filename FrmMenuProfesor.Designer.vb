@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmMenuProfesor
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,19 +20,21 @@ Partial Class FrmMenuProfesor
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuProfesor))
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNinfoPRO = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.BTNayuda = New Guna.UI2.WinForms.Guna2Button()
-        Me.BTNmiperfil = New Guna.UI2.WinForms.Guna2Button()
+        Me.Panel_Reportes = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNcalificaciones = New Guna.UI2.WinForms.Guna2Button()
         Me.panelCalificaciones = New Guna.UI2.WinForms.Guna2Panel()
         Me.BTNenviarCalificaciones = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNeditarCalificaciones = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.BTNcalificaciones = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNcrearCategorias = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNcategorias = New Guna.UI2.WinForms.Guna2Button()
         Me.PanelSubFormularios = New Guna.UI2.WinForms.Guna2Panel()
         Me.BTNbuscarTemas = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNeditarTemas = New Guna.UI2.WinForms.Guna2Button()
@@ -42,6 +44,7 @@ Partial Class FrmMenuProfesor
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
         Me.BTNinfoPRO.SuspendLayout()
+        Me.Panel_Reportes.SuspendLayout()
         Me.panelCalificaciones.SuspendLayout()
         Me.PanelSubFormularios.SuspendLayout()
         Me.PanelLOGO.SuspendLayout()
@@ -61,7 +64,7 @@ Partial Class FrmMenuProfesor
         Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrar.ForeColor = System.Drawing.Color.White
         Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
-        Me.BTNcerrar.Location = New System.Drawing.Point(1069, 0)
+        Me.BTNcerrar.Location = New System.Drawing.Point(1145, 0)
         Me.BTNcerrar.Name = "BTNcerrar"
         Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
         Me.BTNcerrar.TabIndex = 11
@@ -71,65 +74,96 @@ Partial Class FrmMenuProfesor
         '
         Me.BTNinfoPRO.AutoScroll = True
         Me.BTNinfoPRO.BackColor = System.Drawing.Color.Teal
-        Me.BTNinfoPRO.Controls.Add(Me.BTNayuda)
-        Me.BTNinfoPRO.Controls.Add(Me.BTNmiperfil)
-        Me.BTNinfoPRO.Controls.Add(Me.panelCalificaciones)
+        Me.BTNinfoPRO.Controls.Add(Me.Panel_Reportes)
         Me.BTNinfoPRO.Controls.Add(Me.BTNcalificaciones)
+        Me.BTNinfoPRO.Controls.Add(Me.panelCalificaciones)
+        Me.BTNinfoPRO.Controls.Add(Me.BTNcategorias)
         Me.BTNinfoPRO.Controls.Add(Me.PanelSubFormularios)
         Me.BTNinfoPRO.Controls.Add(Me.BTNtemas)
         Me.BTNinfoPRO.Controls.Add(Me.PanelLOGO)
         Me.BTNinfoPRO.Dock = System.Windows.Forms.DockStyle.Left
         Me.BTNinfoPRO.Location = New System.Drawing.Point(0, 0)
         Me.BTNinfoPRO.Name = "BTNinfoPRO"
-        Me.BTNinfoPRO.Size = New System.Drawing.Size(250, 572)
+        Me.BTNinfoPRO.Size = New System.Drawing.Size(250, 669)
         Me.BTNinfoPRO.TabIndex = 12
         '
-        'BTNayuda
+        'Panel_Reportes
         '
-        Me.BTNayuda.Animated = True
-        Me.BTNayuda.BackColor = System.Drawing.Color.Teal
-        Me.BTNayuda.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNayuda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNayuda.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNayuda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNayuda.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTNayuda.FillColor = System.Drawing.Color.DarkCyan
-        Me.BTNayuda.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNayuda.ForeColor = System.Drawing.Color.White
-        Me.BTNayuda.Location = New System.Drawing.Point(0, 460)
-        Me.BTNayuda.Name = "BTNayuda"
-        Me.BTNayuda.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNayuda.Size = New System.Drawing.Size(250, 45)
-        Me.BTNayuda.TabIndex = 8
-        Me.BTNayuda.Text = "Ayuda"
-        Me.BTNayuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Panel_Reportes.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Panel_Reportes.Controls.Add(Me.Guna2Button2)
+        Me.Panel_Reportes.Controls.Add(Me.Guna2Button3)
+        Me.Panel_Reportes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_Reportes.Location = New System.Drawing.Point(0, 460)
+        Me.Panel_Reportes.Name = "Panel_Reportes"
+        Me.Panel_Reportes.Size = New System.Drawing.Size(250, 107)
+        Me.Panel_Reportes.TabIndex = 8
         '
-        'BTNmiperfil
+        'Guna2Button2
         '
-        Me.BTNmiperfil.Animated = True
-        Me.BTNmiperfil.BackColor = System.Drawing.Color.Teal
-        Me.BTNmiperfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNmiperfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNmiperfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNmiperfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNmiperfil.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTNmiperfil.FillColor = System.Drawing.Color.DarkCyan
-        Me.BTNmiperfil.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNmiperfil.ForeColor = System.Drawing.Color.White
-        Me.BTNmiperfil.Location = New System.Drawing.Point(0, 415)
-        Me.BTNmiperfil.Name = "BTNmiperfil"
-        Me.BTNmiperfil.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNmiperfil.Size = New System.Drawing.Size(250, 45)
-        Me.BTNmiperfil.TabIndex = 7
-        Me.BTNmiperfil.Text = "Mi perfil"
-        Me.BTNmiperfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2Button2.Animated = True
+        Me.Guna2Button2.BackColor = System.Drawing.Color.DarkCyan
+        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.Guna2Button2.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.Location = New System.Drawing.Point(0, 35)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.Guna2Button2.Size = New System.Drawing.Size(250, 35)
+        Me.Guna2Button2.TabIndex = 2
+        Me.Guna2Button2.Text = "Enviar notas"
+        Me.Guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'Guna2Button3
+        '
+        Me.Guna2Button3.Animated = True
+        Me.Guna2Button3.BackColor = System.Drawing.Color.DarkCyan
+        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Button3.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.Guna2Button3.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button3.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Button3.Name = "Guna2Button3"
+        Me.Guna2Button3.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.Guna2Button3.Size = New System.Drawing.Size(250, 35)
+        Me.Guna2Button3.TabIndex = 1
+        Me.Guna2Button3.Text = "Asignar nota"
+        Me.Guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'BTNcalificaciones
+        '
+        Me.BTNcalificaciones.Animated = True
+        Me.BTNcalificaciones.BackColor = System.Drawing.Color.Teal
+        Me.BTNcalificaciones.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcalificaciones.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcalificaciones.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcalificaciones.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcalificaciones.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BTNcalificaciones.FillColor = System.Drawing.Color.DarkCyan
+        Me.BTNcalificaciones.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNcalificaciones.ForeColor = System.Drawing.Color.White
+        Me.BTNcalificaciones.Location = New System.Drawing.Point(0, 415)
+        Me.BTNcalificaciones.Name = "BTNcalificaciones"
+        Me.BTNcalificaciones.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BTNcalificaciones.Size = New System.Drawing.Size(250, 45)
+        Me.BTNcalificaciones.TabIndex = 7
+        Me.BTNcalificaciones.Text = "Calificar A estudiantes"
+        Me.BTNcalificaciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'panelCalificaciones
         '
         Me.panelCalificaciones.BackColor = System.Drawing.Color.DarkSlateGray
         Me.panelCalificaciones.Controls.Add(Me.BTNenviarCalificaciones)
         Me.panelCalificaciones.Controls.Add(Me.BTNeditarCalificaciones)
-        Me.panelCalificaciones.Controls.Add(Me.Guna2Button1)
+        Me.panelCalificaciones.Controls.Add(Me.BTNcrearCategorias)
         Me.panelCalificaciones.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelCalificaciones.Location = New System.Drawing.Point(0, 308)
         Me.panelCalificaciones.Name = "panelCalificaciones"
@@ -151,9 +185,9 @@ Partial Class FrmMenuProfesor
         Me.BTNenviarCalificaciones.Location = New System.Drawing.Point(0, 70)
         Me.BTNenviarCalificaciones.Name = "BTNenviarCalificaciones"
         Me.BTNenviarCalificaciones.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNenviarCalificaciones.Size = New System.Drawing.Size(250, 35)
+        Me.BTNenviarCalificaciones.Size = New System.Drawing.Size(250, 37)
         Me.BTNenviarCalificaciones.TabIndex = 3
-        Me.BTNenviarCalificaciones.Text = "Enviar por correo"
+        Me.BTNenviarCalificaciones.Text = "Buscar categorias"
         Me.BTNenviarCalificaciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'BTNeditarCalificaciones
@@ -173,48 +207,48 @@ Partial Class FrmMenuProfesor
         Me.BTNeditarCalificaciones.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
         Me.BTNeditarCalificaciones.Size = New System.Drawing.Size(250, 35)
         Me.BTNeditarCalificaciones.TabIndex = 2
-        Me.BTNeditarCalificaciones.Text = "Editar calificaciones "
+        Me.BTNeditarCalificaciones.Text = "Editar categorias"
         Me.BTNeditarCalificaciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'Guna2Button1
+        'BTNcrearCategorias
         '
-        Me.Guna2Button1.Animated = True
-        Me.Guna2Button1.BackColor = System.Drawing.Color.DarkCyan
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Guna2Button1.Size = New System.Drawing.Size(250, 35)
-        Me.Guna2Button1.TabIndex = 1
-        Me.Guna2Button1.Text = "Asignar calificaciones"
-        Me.Guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BTNcrearCategorias.Animated = True
+        Me.BTNcrearCategorias.BackColor = System.Drawing.Color.DarkCyan
+        Me.BTNcrearCategorias.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcrearCategorias.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcrearCategorias.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcrearCategorias.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcrearCategorias.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BTNcrearCategorias.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BTNcrearCategorias.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNcrearCategorias.ForeColor = System.Drawing.Color.White
+        Me.BTNcrearCategorias.Location = New System.Drawing.Point(0, 0)
+        Me.BTNcrearCategorias.Name = "BTNcrearCategorias"
+        Me.BTNcrearCategorias.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BTNcrearCategorias.Size = New System.Drawing.Size(250, 35)
+        Me.BTNcrearCategorias.TabIndex = 1
+        Me.BTNcrearCategorias.Text = "Crear categorias"
+        Me.BTNcrearCategorias.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'BTNcalificaciones
+        'BTNcategorias
         '
-        Me.BTNcalificaciones.Animated = True
-        Me.BTNcalificaciones.BackColor = System.Drawing.Color.Teal
-        Me.BTNcalificaciones.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNcalificaciones.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNcalificaciones.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNcalificaciones.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNcalificaciones.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTNcalificaciones.FillColor = System.Drawing.Color.DarkCyan
-        Me.BTNcalificaciones.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNcalificaciones.ForeColor = System.Drawing.Color.White
-        Me.BTNcalificaciones.Location = New System.Drawing.Point(0, 263)
-        Me.BTNcalificaciones.Name = "BTNcalificaciones"
-        Me.BTNcalificaciones.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNcalificaciones.Size = New System.Drawing.Size(250, 45)
-        Me.BTNcalificaciones.TabIndex = 5
-        Me.BTNcalificaciones.Text = "Categorias"
-        Me.BTNcalificaciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BTNcategorias.Animated = True
+        Me.BTNcategorias.BackColor = System.Drawing.Color.Teal
+        Me.BTNcategorias.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcategorias.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcategorias.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcategorias.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcategorias.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BTNcategorias.FillColor = System.Drawing.Color.DarkCyan
+        Me.BTNcategorias.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNcategorias.ForeColor = System.Drawing.Color.White
+        Me.BTNcategorias.Location = New System.Drawing.Point(0, 263)
+        Me.BTNcategorias.Name = "BTNcategorias"
+        Me.BTNcategorias.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BTNcategorias.Size = New System.Drawing.Size(250, 45)
+        Me.BTNcategorias.TabIndex = 5
+        Me.BTNcategorias.Text = "Categorias"
+        Me.BTNcategorias.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'PanelSubFormularios
         '
@@ -285,7 +319,7 @@ Partial Class FrmMenuProfesor
         Me.BTNcrearTemas.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
         Me.BTNcrearTemas.Size = New System.Drawing.Size(250, 35)
         Me.BTNcrearTemas.TabIndex = 0
-        Me.BTNcrearTemas.Text = "crear categorias"
+        Me.BTNcrearTemas.Text = "crear temas"
         Me.BTNcrearTemas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'BTNtemas
@@ -341,7 +375,7 @@ Partial Class FrmMenuProfesor
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1113, 572)
+        Me.ClientSize = New System.Drawing.Size(1188, 669)
         Me.Controls.Add(Me.BTNcerrar)
         Me.Controls.Add(Me.BTNinfoPRO)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -350,6 +384,7 @@ Partial Class FrmMenuProfesor
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmMenuEstudiante"
         Me.BTNinfoPRO.ResumeLayout(False)
+        Me.Panel_Reportes.ResumeLayout(False)
         Me.panelCalificaciones.ResumeLayout(False)
         Me.PanelSubFormularios.ResumeLayout(False)
         Me.PanelLOGO.ResumeLayout(False)
@@ -364,15 +399,17 @@ Partial Class FrmMenuProfesor
     Friend WithEvents PanelSubFormularios As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BTNtemas As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNcrearTemas As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BTNcalificaciones As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTNcategorias As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents panelCalificaciones As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BTNeditarCalificaciones As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTNcrearCategorias As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PanelLOGO As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents BTNmiperfil As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTNcalificaciones As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNenviarCalificaciones As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNbuscarTemas As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNeditarTemas As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BTNayuda As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Panel_Reportes As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
 End Class
