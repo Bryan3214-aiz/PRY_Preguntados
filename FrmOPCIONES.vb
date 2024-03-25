@@ -51,13 +51,8 @@
             adp.Fill(ds, "tabla")
             ' Verificar si se encontraron resultados en la consulta
             If ds.Tables("tabla").Rows.Count > 0 Then
-                ' Si se encontraron filas, el inicio de sesión es exitoso
-                ' Ocultar el formulario actual
                 Me.Hide()
-                ' Mostrar el formulario de inicio de sesión de profesor
                 FrmLoginProfesor.ShowDialog()
-                ' Cerrar el formulario actual
-                Me.Close()
             Else
                 ' Si no se encontraron filas, mostrar un mensaje de error
                 MsgBox("Patrón Incorrecto. No tiene acceso como profesor")
@@ -88,13 +83,8 @@
             adp.Fill(ds, "tabla")
             ' Verificar si se encontraron resultados en la consulta
             If ds.Tables("tabla").Rows.Count > 0 Then
-                ' Si se encontraron filas, el inicio de sesión es exitoso
-                ' Ocultar el formulario actual
                 Me.Hide()
-                ' Mostrar el formulario de inicio de sesión de administrador
                 FrmLoginAdmin.ShowDialog()
-                ' Cerrar el formulario actual
-                Me.Close()
             Else
                 ' Si no se encontraron filas, mostrar un mensaje de error
                 MsgBox("Patrón Incorrecto. No tiene acceso como administrador")

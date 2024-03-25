@@ -18,7 +18,6 @@
         ' Si el tiempo transcurrido supera la duración de la transición, detener el temporizador
         If tiempoTranscurrido >= duracionTransicion Then
             Temporizado.Stop()
-
         End If
     End Sub
 
@@ -39,6 +38,4 @@
     Private Sub Label1_paint(sender As Object, e As EventArgs) Handles Label1.Paint
         Label1.BackColor = Color.FromArgb(85, Color.Black)
     End Sub
-
-
 End Class
