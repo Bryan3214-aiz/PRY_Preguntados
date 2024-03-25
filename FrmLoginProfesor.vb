@@ -1,5 +1,4 @@
-﻿Imports System.Data.OleDb
-Imports System.Data.SqlClient
+﻿
 Public Class FrmLoginProfesor
 
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
@@ -22,7 +21,6 @@ Public Class FrmLoginProfesor
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
         ' Conexión a la base de datos
         CONECTAR()
-
         ' Comando SQL para realizar la verificación de login
         Dim comando As String = "SELECT * FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
         Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)

@@ -40,17 +40,31 @@
         ' Verificar si se hizo clic derecho
         If e.Button = MouseButtons.Left Then
             ' Preguntar al usuario por el patrón
-            Dim patron As String = InputBox("Ingrese el patrón para habilitar el acceso de profesor:", "PREGUNTADOS (PLATAFORMA DE JUEGOS DE TRIVIA)")
-
-            ' Verificar si el patrón es correcto
-            If patron = "patron" Then
-                ' Habilitar el botón de administrador
+            Dim patron As String = InputBox("Ingrese el patrón para habilitar el acceso de profesor:")
+            ' Establecer conexión con la base de datos
+            CONECTAR()
+            ' Construir la consulta SQL para buscar el patrón en la tabla ADMINISTRADOR
+            Dim comando As String = "SELECT * FROM PROFESOR WHERE PATRON = '" & patron & "'"
+            Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
+            Dim ds As New DataSet()
+            ' Ejecutar la consulta y llenar el DataSet
+            adp.Fill(ds, "tabla")
+            ' Verificar si se encontraron resultados en la consulta
+            If ds.Tables("tabla").Rows.Count > 0 Then
+                ' Si se encontraron filas, el inicio de sesión es exitoso
+                ' Ocultar el formulario actual
                 Me.Hide()
+                ' Mostrar el formulario de inicio de sesión de profesor
                 FrmLoginProfesor.ShowDialog()
+                ' Cerrar el formulario actual
+                Me.Close()
             Else
-                MessageBox.Show("Patrón incorrecto. No tiene acceso como profesor.")
+                ' Si no se encontraron filas, mostrar un mensaje de error
+                MsgBox("Patrón Incorrecto. No tiene acceso como profesor")
             End If
         End If
+        ' Desconectar la base de datos
+        DESCONECTAR()
     End Sub
 
     Private Sub BTNestudiante_Click(sender As Object, e As EventArgs) Handles BTNestudiante.Click
@@ -60,19 +74,34 @@
 
 
     Private Sub BTNadmin_Click(sender As Object, e As MouseEventArgs) Handles BTNadmin.Click
-        ' Verificar si se hizo clic derecho
+        ' Verificar si se hizo clic izquierdo
         If e.Button = MouseButtons.Left Then
             ' Preguntar al usuario por el patrón
             Dim patron As String = InputBox("Ingrese el patrón para habilitar el acceso de administrador:")
-
-            ' Verificar si el patrón es correcto
-            If patron = "patron" Then
-                ' Habilitar el botón de administrador
+            ' Establecer conexión con la base de datos
+            CONECTAR()
+            ' Construir la consulta SQL para buscar el patrón en la tabla ADMINISTRADOR
+            Dim comando As String = "SELECT * FROM ADMINISTRADOR WHERE PATRON = '" & patron & "'"
+            Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
+            Dim ds As New DataSet()
+            ' Ejecutar la consulta y llenar el DataSet
+            adp.Fill(ds, "tabla")
+            ' Verificar si se encontraron resultados en la consulta
+            If ds.Tables("tabla").Rows.Count > 0 Then
+                ' Si se encontraron filas, el inicio de sesión es exitoso
+                ' Ocultar el formulario actual
                 Me.Hide()
+                ' Mostrar el formulario de inicio de sesión de administrador
                 FrmLoginAdmin.ShowDialog()
+                ' Cerrar el formulario actual
+                Me.Close()
             Else
-                MessageBox.Show("Patrón incorrecto. No tiene acceso de administrador.")
+                ' Si no se encontraron filas, mostrar un mensaje de error
+                MsgBox("Patrón Incorrecto. No tiene acceso como administrador")
             End If
         End If
+        ' Desconectar la base de datos
+        DESCONECTAR()
     End Sub
+
 End Class
