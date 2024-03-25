@@ -1,5 +1,5 @@
 ﻿Public Class FrmPregunta
-    Dim duracionTransicion As Integer = 1
+    Dim duracionTransicion As Integer = 0.5
     Dim duracionVideo As Integer = 10.31
     Dim tiempoTranscurrido As Integer = 0
 

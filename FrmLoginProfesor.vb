@@ -4,6 +4,7 @@ Public Class FrmLoginProfesor
 
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
+
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
         panel.BackColor = Color.FromArgb(55, Color.Black)
     End Sub
@@ -13,6 +14,7 @@ Public Class FrmLoginProfesor
 
         ' Verificar si el usuario ha confirmado el cierre del formulario
         If resultado = DialogResult.Yes Then
+            FrmOPCIONES.Close()
             Me.Close() ' Cerrar el formulario
         End If
     End Sub
@@ -20,9 +22,11 @@ Public Class FrmLoginProfesor
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
         ' Conexión a la base de datos
         CONECTAR()
+
         ' Comando SQL para realizar la verificación de login
         Dim comando As String = "SELECT * FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
         Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
+
         ' Se crea un nuevo DataSet para almacenar los resultados
         Dim ds As New DataSet()
         ' Se llena el DataSet con los resultados de la consulta
@@ -52,7 +56,7 @@ Public Class FrmLoginProfesor
         ' Iniciar el temporizador para controlar la transición
         Temporizado.Interval = 20 ' Intervalo en milisegundos
         Temporizado.Start()
-        Label1.BackColor = Color.FromArgb(45, Color.Black)
+        LabelPro1.BackColor = Color.FromArgb(35, Color.Black)
 
     End Sub
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
@@ -75,5 +79,6 @@ Public Class FrmLoginProfesor
         Me.Hide()
         FrmOPCIONES.Show()
     End Sub
+
 End Class
 

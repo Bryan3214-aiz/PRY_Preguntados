@@ -22,10 +22,10 @@ Partial Class FrmLoginAdmin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLoginAdmin))
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TXTcontrasena = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BTNiniciar = New Guna.UI2.WinForms.Guna2Button()
@@ -33,6 +33,8 @@ Partial Class FrmLoginAdmin
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.BTNvolverMenu = New Guna.UI2.WinForms.Guna2Button()
+        Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
+        Me.LabelAdmin1 = New System.Windows.Forms.Label()
         Me.panel.SuspendLayout()
         Me.panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -78,18 +80,6 @@ Partial Class FrmLoginAdmin
         Me.TXTcontrasena.SelectedText = ""
         Me.TXTcontrasena.Size = New System.Drawing.Size(211, 36)
         Me.TXTcontrasena.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Location = New System.Drawing.Point(2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(555, 101)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "BIENVENIDO A PREGUNTADOS"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
@@ -137,10 +127,10 @@ Partial Class FrmLoginAdmin
         'panel
         '
         Me.panel.BackColor = System.Drawing.Color.Transparent
+        Me.panel.Controls.Add(Me.LabelAdmin1)
         Me.panel.Controls.Add(Me.BTNiniciar)
         Me.panel.Controls.Add(Me.Label3)
         Me.panel.Controls.Add(Me.Label2)
-        Me.panel.Controls.Add(Me.Label1)
         Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.TXTcorreo)
         Me.panel.Location = New System.Drawing.Point(103, 40)
@@ -198,6 +188,22 @@ Partial Class FrmLoginAdmin
         Me.BTNvolverMenu.Size = New System.Drawing.Size(44, 37)
         Me.BTNvolverMenu.TabIndex = 13
         '
+        'Temporizado
+        '
+        '
+        'LabelAdmin1
+        '
+        Me.LabelAdmin1.BackColor = System.Drawing.Color.Transparent
+        Me.LabelAdmin1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LabelAdmin1.Font = New System.Drawing.Font("Showcard Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAdmin1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelAdmin1.Location = New System.Drawing.Point(0, 0)
+        Me.LabelAdmin1.Name = "LabelAdmin1"
+        Me.LabelAdmin1.Size = New System.Drawing.Size(560, 83)
+        Me.LabelAdmin1.TabIndex = 9
+        Me.LabelAdmin1.Text = "BIENVENIDO A PREGUNTADOS"
+        Me.LabelAdmin1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'FrmLoginAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -221,9 +227,10 @@ Partial Class FrmLoginAdmin
     Friend WithEvents BTNiniciar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents TXTcontrasena As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BTNvolverMenu As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Temporizado As Timer
+    Friend WithEvents LabelAdmin1 As Label
 End Class

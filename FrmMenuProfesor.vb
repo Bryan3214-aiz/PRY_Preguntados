@@ -1,11 +1,12 @@
 ﻿Public Class FrmMenuProfesor
-    Private duracionTransicion As Double = 1 ' Duración de la transición en segundos almacenado en una variable global.
+    Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos almacenado en una variable global.
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
         Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         ' Verificar si el usuario ha confirmado el cierre del formulario
         If resultado = DialogResult.Yes Then
+            FrmOPCIONES.Close()
             Me.Close() ' Cerrar el formulario
         End If
     End Sub
@@ -26,6 +27,7 @@
     Private Sub ocultarMenu()
         PanelSubFormularios.Visible = False
         panelCalificaciones.Visible = False
+        Panel_Reportes.Visible = False
     End Sub
 
     Private Sub mostrarMenu(SubMenu As Panel)

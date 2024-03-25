@@ -427,6 +427,9 @@
         rb+Hv5e/p7+3f4Z/1vGKf7bb4Hc23Ca3zS/sbitv0wOd9k//9P8BF74C4oVabAkAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="Temporizado.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAKBEAAJ4EAAAwMAAAAQAgAGgmAADGFQAAKAAAABAA
