@@ -18,8 +18,7 @@ Public Class FrmLoginProfesor
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        ' Conexión a la base de datos
-        CONECTAR()
+        ' Conexión a la base de datos proveniente de FrmOPCIONES al verificar el patrón
         ' Comando SQL para realizar la verificación de login
         Dim comando As String = "SELECT * FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
         Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
