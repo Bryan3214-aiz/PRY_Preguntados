@@ -26,6 +26,8 @@ Partial Class FrmRegistrarEstudiante
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrarEstudiante))
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
         Me.panel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Guna2ComboBox3 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Guna2ComboBox2 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -45,8 +47,6 @@ Partial Class FrmRegistrarEstudiante
         Me.TXTcontrasena = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CMBsecciones = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Guna2ComboBox3 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.panel.SuspendLayout()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -83,6 +83,35 @@ Partial Class FrmRegistrarEstudiante
         Me.panel.Name = "panel"
         Me.panel.Size = New System.Drawing.Size(990, 616)
         Me.panel.TabIndex = 11
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label10.Location = New System.Drawing.Point(515, 214)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(210, 67)
+        Me.Label10.TabIndex = 25
+        Me.Label10.Text = "Seleccione su sección"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Guna2ComboBox3
+        '
+        Me.Guna2ComboBox3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ComboBox3.BorderRadius = 5
+        Me.Guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.Guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ComboBox3.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.Guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.Guna2ComboBox3.ItemHeight = 30
+        Me.Guna2ComboBox3.Items.AddRange(New Object() {"Profesor", "Estudiante"})
+        Me.Guna2ComboBox3.Location = New System.Drawing.Point(745, 225)
+        Me.Guna2ComboBox3.Name = "Guna2ComboBox3"
+        Me.Guna2ComboBox3.Size = New System.Drawing.Size(220, 36)
+        Me.Guna2ComboBox3.TabIndex = 24
         '
         'Label9
         '
@@ -381,35 +410,6 @@ Partial Class FrmRegistrarEstudiante
         Me.TXTcorreo.SelectedText = ""
         Me.TXTcorreo.Size = New System.Drawing.Size(220, 36)
         Me.TXTcorreo.TabIndex = 1
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label10.Location = New System.Drawing.Point(515, 214)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(210, 67)
-        Me.Label10.TabIndex = 25
-        Me.Label10.Text = "Seleccione su sección"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Guna2ComboBox3
-        '
-        Me.Guna2ComboBox3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ComboBox3.BorderRadius = 5
-        Me.Guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.Guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox3.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.Guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Guna2ComboBox3.ItemHeight = 30
-        Me.Guna2ComboBox3.Items.AddRange(New Object() {"Profesor", "Estudiante"})
-        Me.Guna2ComboBox3.Location = New System.Drawing.Point(745, 225)
-        Me.Guna2ComboBox3.Name = "Guna2ComboBox3"
-        Me.Guna2ComboBox3.Size = New System.Drawing.Size(220, 36)
-        Me.Guna2ComboBox3.TabIndex = 24
         '
         'FrmRegistrarEstudiante
         '

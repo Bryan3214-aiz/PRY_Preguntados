@@ -1,5 +1,5 @@
 ﻿Public Class FrmOPCIONES
-    Dim DuracionTransicion As Double = 0.7
+    Dim DuracionTransicion As Double = 0.5
     Private tiempoTranscurrido As Double = 0
 
     Private Sub FrmOPCIONES_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -40,14 +40,13 @@
         ' Verificar si se hizo clic derecho
         If e.Button = MouseButtons.Left Then
             ' Preguntar al usuario por el patrón
-            Dim patron As String = InputBox("Ingrese el patrón para habilitar el acceso de profesor:")
+            Dim patron As String = InputBox("Ingrese el patrón para habilitar el acceso de profesor:", "PREGUNTADOS (PLATAFORMA DE JUEGOS DE TRIVIA)")
 
             ' Verificar si el patrón es correcto
             If patron = "patron" Then
                 ' Habilitar el botón de administrador
                 Me.Hide()
                 FrmLoginProfesor.ShowDialog()
-                Me.Close()
             Else
                 MessageBox.Show("Patrón incorrecto. No tiene acceso como profesor.")
             End If
@@ -57,7 +56,6 @@
     Private Sub BTNestudiante_Click(sender As Object, e As EventArgs) Handles BTNestudiante.Click
         Me.Hide()
         FrmLoginEstudiante.ShowDialog()
-        Me.Close()
     End Sub
 
 
@@ -72,7 +70,6 @@
                 ' Habilitar el botón de administrador
                 Me.Hide()
                 FrmLoginAdmin.ShowDialog()
-                Me.Close()
             Else
                 MessageBox.Show("Patrón incorrecto. No tiene acceso de administrador.")
             End If

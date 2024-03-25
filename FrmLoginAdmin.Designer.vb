@@ -32,6 +32,7 @@ Partial Class FrmLoginAdmin
         Me.panel = New Guna.UI2.WinForms.Guna2Panel()
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BTNvolverMenu = New Guna.UI2.WinForms.Guna2Button()
         Me.panel.SuspendLayout()
         Me.panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -169,6 +170,7 @@ Partial Class FrmLoginAdmin
         'panel2
         '
         Me.panel2.BackColor = System.Drawing.Color.Transparent
+        Me.panel2.Controls.Add(Me.BTNvolverMenu)
         Me.panel2.Controls.Add(Me.panel)
         Me.panel2.Controls.Add(Me.BTNcerrar)
         Me.panel2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -176,6 +178,25 @@ Partial Class FrmLoginAdmin
         Me.panel2.Name = "panel2"
         Me.panel2.Size = New System.Drawing.Size(768, 402)
         Me.panel2.TabIndex = 12
+        '
+        'BTNvolverMenu
+        '
+        Me.BTNvolverMenu.Animated = True
+        Me.BTNvolverMenu.BackColor = System.Drawing.Color.Transparent
+        Me.BTNvolverMenu.BorderColor = System.Drawing.Color.Transparent
+        Me.BTNvolverMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNvolverMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNvolverMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNvolverMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNvolverMenu.FillColor = System.Drawing.Color.CadetBlue
+        Me.BTNvolverMenu.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNvolverMenu.ForeColor = System.Drawing.Color.White
+        Me.BTNvolverMenu.HoverState.FillColor = System.Drawing.Color.DimGray
+        Me.BTNvolverMenu.Image = CType(resources.GetObject("BTNvolverMenu.Image"), System.Drawing.Image)
+        Me.BTNvolverMenu.Location = New System.Drawing.Point(0, 0)
+        Me.BTNvolverMenu.Name = "BTNvolverMenu"
+        Me.BTNvolverMenu.Size = New System.Drawing.Size(44, 37)
+        Me.BTNvolverMenu.TabIndex = 13
         '
         'FrmLoginAdmin
         '
@@ -204,4 +225,5 @@ Partial Class FrmLoginAdmin
     Friend WithEvents TXTcontrasena As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents BTNvolverMenu As Guna.UI2.WinForms.Guna2Button
 End Class
