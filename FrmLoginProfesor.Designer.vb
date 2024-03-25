@@ -28,7 +28,7 @@ Partial Class FrmLoginProfesor
         Me.BTNiniciar = New Guna.UI2.WinForms.Guna2Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LabelPro1 = New System.Windows.Forms.Label()
         Me.TXTcontrasena = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
@@ -45,7 +45,7 @@ Partial Class FrmLoginProfesor
         Me.panel.Controls.Add(Me.BTNiniciar)
         Me.panel.Controls.Add(Me.Label3)
         Me.panel.Controls.Add(Me.Label2)
-        Me.panel.Controls.Add(Me.Label1)
+        Me.panel.Controls.Add(Me.LabelPro1)
         Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.TXTcorreo)
         Me.panel.Location = New System.Drawing.Point(82, 45)
@@ -96,18 +96,18 @@ Partial Class FrmLoginProfesor
         Me.Label2.Text = "Correo:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label1
+        'LabelPro1
         '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(614, 83)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "BIENVENIDO A PREGUNTADOS"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LabelPro1.BackColor = System.Drawing.Color.Transparent
+        Me.LabelPro1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LabelPro1.Font = New System.Drawing.Font("Showcard Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPro1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelPro1.Location = New System.Drawing.Point(0, 0)
+        Me.LabelPro1.Name = "LabelPro1"
+        Me.LabelPro1.Size = New System.Drawing.Size(614, 83)
+        Me.LabelPro1.TabIndex = 4
+        Me.LabelPro1.Text = "BIENVENIDO A PREGUNTADOS"
+        Me.LabelPro1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TXTcontrasena
         '
@@ -227,7 +227,7 @@ Partial Class FrmLoginProfesor
     Friend WithEvents panel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TXTcontrasena As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LabelPro1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents BTNcerrar As Guna.UI2.WinForms.Guna2Button

@@ -1,5 +1,5 @@
 ﻿Public Class FrmMenuEstudiante
-    Private duracionTransicion As Double = 1 ' Duración de la transición en segundos almacenado en una variable global.
+    Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos almacenado en una variable global.
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub FrmMenuEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo
