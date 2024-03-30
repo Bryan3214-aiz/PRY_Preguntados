@@ -31,6 +31,8 @@ Partial Class FrmPregunta
         Me.BTNopcionUno = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.BTNopcionCuatro = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.BTNopcionDos = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.BTN_IMGINSERT = New Guna.UI2.WinForms.Guna2Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.MediaPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,6 +43,7 @@ Partial Class FrmPregunta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MediaPlayer.Enabled = True
         Me.MediaPlayer.Location = New System.Drawing.Point(-27, -72)
+        Me.MediaPlayer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MediaPlayer.Name = "MediaPlayer"
         Me.MediaPlayer.OcxState = CType(resources.GetObject("MediaPlayer.OcxState"), System.Windows.Forms.AxHost.State)
         Me.MediaPlayer.Size = New System.Drawing.Size(838, 555)
@@ -55,13 +58,15 @@ Partial Class FrmPregunta
         Me.BTNopcionTres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BTNopcionTres.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BTNopcionTres.HoverState.ImageSize = New System.Drawing.Size(260, 66)
+        Me.BTNopcionTres.Image = CType(resources.GetObject("BTNopcionTres.Image"), System.Drawing.Image)
         Me.BTNopcionTres.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BTNopcionTres.ImageRotate = 0!
         Me.BTNopcionTres.ImageSize = New System.Drawing.Size(260, 66)
-        Me.BTNopcionTres.Location = New System.Drawing.Point(93, 265)
+        Me.BTNopcionTres.Location = New System.Drawing.Point(124, 326)
+        Me.BTNopcionTres.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNopcionTres.Name = "BTNopcionTres"
         Me.BTNopcionTres.PressedState.ImageSize = New System.Drawing.Size(260, 66)
-        Me.BTNopcionTres.Size = New System.Drawing.Size(262, 69)
+        Me.BTNopcionTres.Size = New System.Drawing.Size(349, 85)
         Me.BTNopcionTres.TabIndex = 4
         '
         'BTNopcionUno
@@ -74,11 +79,12 @@ Partial Class FrmPregunta
         Me.BTNopcionUno.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BTNopcionUno.ImageRotate = 0!
         Me.BTNopcionUno.ImageSize = New System.Drawing.Size(260, 66)
-        Me.BTNopcionUno.Location = New System.Drawing.Point(93, 173)
+        Me.BTNopcionUno.Location = New System.Drawing.Point(124, 213)
+        Me.BTNopcionUno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNopcionUno.Name = "BTNopcionUno"
         Me.BTNopcionUno.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         Me.BTNopcionUno.PressedState.ImageSize = New System.Drawing.Size(260, 66)
-        Me.BTNopcionUno.Size = New System.Drawing.Size(262, 69)
+        Me.BTNopcionUno.Size = New System.Drawing.Size(349, 85)
         Me.BTNopcionUno.TabIndex = 2
         Me.BTNopcionUno.UseTransparentBackground = True
         '
@@ -87,13 +93,15 @@ Partial Class FrmPregunta
         Me.BTNopcionCuatro.BackColor = System.Drawing.Color.Transparent
         Me.BTNopcionCuatro.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BTNopcionCuatro.HoverState.ImageSize = New System.Drawing.Size(260, 66)
+        Me.BTNopcionCuatro.Image = CType(resources.GetObject("BTNopcionCuatro.Image"), System.Drawing.Image)
         Me.BTNopcionCuatro.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BTNopcionCuatro.ImageRotate = 0!
         Me.BTNopcionCuatro.ImageSize = New System.Drawing.Size(260, 66)
-        Me.BTNopcionCuatro.Location = New System.Drawing.Point(421, 265)
+        Me.BTNopcionCuatro.Location = New System.Drawing.Point(561, 326)
+        Me.BTNopcionCuatro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNopcionCuatro.Name = "BTNopcionCuatro"
         Me.BTNopcionCuatro.PressedState.ImageSize = New System.Drawing.Size(260, 66)
-        Me.BTNopcionCuatro.Size = New System.Drawing.Size(262, 69)
+        Me.BTNopcionCuatro.Size = New System.Drawing.Size(349, 85)
         Me.BTNopcionCuatro.TabIndex = 5
         '
         'BTNopcionDos
@@ -101,20 +109,41 @@ Partial Class FrmPregunta
         Me.BTNopcionDos.BackColor = System.Drawing.Color.Transparent
         Me.BTNopcionDos.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BTNopcionDos.HoverState.ImageSize = New System.Drawing.Size(260, 66)
+        Me.BTNopcionDos.Image = CType(resources.GetObject("BTNopcionDos.Image"), System.Drawing.Image)
         Me.BTNopcionDos.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BTNopcionDos.ImageRotate = 0!
         Me.BTNopcionDos.ImageSize = New System.Drawing.Size(260, 66)
-        Me.BTNopcionDos.Location = New System.Drawing.Point(421, 173)
+        Me.BTNopcionDos.Location = New System.Drawing.Point(561, 213)
+        Me.BTNopcionDos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNopcionDos.Name = "BTNopcionDos"
         Me.BTNopcionDos.PressedState.ImageSize = New System.Drawing.Size(260, 66)
-        Me.BTNopcionDos.Size = New System.Drawing.Size(262, 69)
+        Me.BTNopcionDos.Size = New System.Drawing.Size(349, 85)
         Me.BTNopcionDos.TabIndex = 6
+        '
+        'BTN_IMGINSERT
+        '
+        Me.BTN_IMGINSERT.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_IMGINSERT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_IMGINSERT.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_IMGINSERT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_IMGINSERT.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTN_IMGINSERT.ForeColor = System.Drawing.Color.White
+        Me.BTN_IMGINSERT.Location = New System.Drawing.Point(631, 93)
+        Me.BTN_IMGINSERT.Name = "BTN_IMGINSERT"
+        Me.BTN_IMGINSERT.Size = New System.Drawing.Size(180, 45)
+        Me.BTN_IMGINSERT.TabIndex = 7
+        Me.BTN_IMGINSERT.Text = "Insertar imagen"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'FrmPregunta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 411)
+        Me.ClientSize = New System.Drawing.Size(1045, 506)
+        Me.Controls.Add(Me.BTN_IMGINSERT)
         Me.Controls.Add(Me.BTNopcionDos)
         Me.Controls.Add(Me.BTNopcionCuatro)
         Me.Controls.Add(Me.BTNopcionTres)
@@ -122,6 +151,7 @@ Partial Class FrmPregunta
         Me.Controls.Add(Me.MediaPlayer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmPregunta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPregunta"
@@ -137,4 +167,6 @@ Partial Class FrmPregunta
     Friend WithEvents BTNopcionUno As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents BTNopcionCuatro As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents BTNopcionDos As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents BTN_IMGINSERT As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
