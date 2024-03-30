@@ -98,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BASEDATOS.vb" />
+    <Compile Include="FrmEditarTemas.Designer.vb">
+      <DependentUpon>FrmEditarTemas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarTemas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLoginAdmin.Designer.vb">
       <DependentUpon>FrmLoginAdmin.vb</DependentUpon>
     </Compile>
@@ -146,6 +152,12 @@
     <Compile Include="FrmPregunta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCrearTemas.Designer.vb">
+      <DependentUpon>FrmCrearTemas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearTemas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmRegistrarEstudiante.Designer.vb">
       <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>
     </Compile>
@@ -180,6 +192,9 @@
     <EmbeddedResource Include="FrmEditarInformacion.resx">
       <DependentUpon>FrmEditarInformacion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarTemas.resx">
+      <DependentUpon>FrmEditarTemas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginAdmin.resx">
       <DependentUpon>FrmLoginAdmin.vb</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPregunta.resx">
       <DependentUpon>FrmPregunta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearTemas.resx">
+      <DependentUpon>FrmCrearTemas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarEstudiante.resx">
       <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>

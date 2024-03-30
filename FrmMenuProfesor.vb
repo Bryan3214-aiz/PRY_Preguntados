@@ -52,6 +52,8 @@
         End If
     End Sub
 
+    '---------------------------------------------Metodos para mostrar paneles con las opciones de menu-------------------------------------------------------
+
     Private Sub BTNtemas_Click(sender As Object, e As EventArgs) Handles BTNtemas.Click
         mostrarMenu(PanelSubFormularios)
     End Sub
@@ -62,5 +64,84 @@
 
     Private Sub BTNcalificaciones_Click_1(sender As Object, e As EventArgs) Handles BTNcalificaciones.Click
         mostrarMenu(Panel_Reportes)
+    End Sub
+
+
+    '---------------------------------------------Botones del menu que llaman a los formularios-------------------------------------------------------------
+
+    Private Sub BTNcrearTemas_Click(sender As Object, e As EventArgs) Handles BTNcrearTemas.Click
+        FormularioAbierto(New FrmCrearTemas())
+        ocultarMenu()
+    End Sub
+
+    Private Sub BTNeditarTemas_Click(sender As Object, e As EventArgs) Handles BTNeditarTemas.Click
+        FormularioAbierto(New FrmEditarTemas())
+        ocultarMenu()
+    End Sub
+
+    Private Sub BTNeliminarTemas_Click(sender As Object, e As EventArgs) Handles BTNeliminarTemas.Click
+        ocultarMenu()
+    End Sub
+
+    Private Sub BTNbuscarTemas_Click(sender As Object, e As EventArgs) Handles BTNbuscarTemas.Click
+        ocultarMenu()
+    End Sub
+
+
+
+    Private Sub BTNcrearCategorias_Click(sender As Object, e As EventArgs) Handles BTNcrearCategorias.Click
+        ocultarMenu()
+    End Sub
+
+    Private Sub BTNeditarCategorias_Click(sender As Object, e As EventArgs) Handles BTNeditarCategorias.Click
+        ocultarMenu()
+    End Sub
+
+    Private Sub BTNbuscarCategorias_Click(sender As Object, e As EventArgs) Handles BTNbuscarCategorias.Click
+        ocultarMenu()
+    End Sub
+
+
+
+
+    Private Sub BTNcalificarRespuestas_Click(sender As Object, e As EventArgs) Handles BTNcalificarRespuestas.Click
+        ocultarMenu()
+    End Sub
+
+    Private Sub BTNenviarReporte_Click(sender As Object, e As EventArgs) Handles BTNenviarReporte.Click
+        ocultarMenu()
+    End Sub
+
+
+
+
+    Private Sub BTNmiPerfil_Click(sender As Object, e As EventArgs) Handles BTNmiPerfil.Click
+        ocultarMenu()
+    End Sub
+
+    Private Sub BTNayuda_Click(sender As Object, e As EventArgs) Handles BTNayuda.Click
+        ocultarMenu()
+    End Sub
+
+
+    '--------------------------------------------- Metodo que llama a los formularios -------------------------------------------------------
+
+    Private formularioActual As Form = Nothing
+
+    Private Sub FormularioAbierto(formulario As Form)
+        If formularioActual IsNot Nothing Then
+            formularioActual.Close()
+        End If
+        formularioActual = formulario
+        formulario.TopLevel = False
+        formulario.FormBorderStyle = FormBorderStyle.None
+        formulario.Dock = DockStyle.Fill
+        panelContenedor.Controls.Add(formulario)
+        panelContenedor.Tag = formulario
+        formulario.Show()
+    End Sub
+
+    Private Sub panelContenedor_Paint(sender As Object, e As PaintEventArgs) Handles panelContenedor.Paint
+        panelContenedor.BackColor = Color.FromArgb(60, Color.Black)
     End Sub
 End Class

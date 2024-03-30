@@ -25,14 +25,10 @@ Partial Class FrmLoginEstudiante
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLoginEstudiante))
         Me.panel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.CMBseleccioneGrado = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.BTNregistrarEstudiante = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNiniciar = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CMBseleccioneSeccion = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXTcontrasena = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
@@ -48,50 +44,17 @@ Partial Class FrmLoginEstudiante
         '
         Me.panel.BackColor = System.Drawing.Color.Transparent
         Me.panel.BorderRadius = 100
-        Me.panel.Controls.Add(Me.Label10)
-        Me.panel.Controls.Add(Me.CMBseleccioneGrado)
         Me.panel.Controls.Add(Me.BTNregistrarEstudiante)
         Me.panel.Controls.Add(Me.BTNiniciar)
-        Me.panel.Controls.Add(Me.Label8)
         Me.panel.Controls.Add(Me.Label3)
         Me.panel.Controls.Add(Me.Label2)
-        Me.panel.Controls.Add(Me.CMBseleccioneSeccion)
         Me.panel.Controls.Add(Me.Label1)
         Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.TXTcorreo)
-        Me.panel.Location = New System.Drawing.Point(77, 32)
+        Me.panel.Location = New System.Drawing.Point(65, 49)
         Me.panel.Name = "panel"
-        Me.panel.Size = New System.Drawing.Size(630, 430)
+        Me.panel.Size = New System.Drawing.Size(614, 320)
         Me.panel.TabIndex = 1
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label10.Location = New System.Drawing.Point(105, 201)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(192, 67)
-        Me.Label10.TabIndex = 29
-        Me.Label10.Text = "Seleccione su grado"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CMBseleccioneGrado
-        '
-        Me.CMBseleccioneGrado.BackColor = System.Drawing.Color.Transparent
-        Me.CMBseleccioneGrado.BorderRadius = 5
-        Me.CMBseleccioneGrado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CMBseleccioneGrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CMBseleccioneGrado.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBseleccioneGrado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBseleccioneGrado.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.CMBseleccioneGrado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CMBseleccioneGrado.ItemHeight = 30
-        Me.CMBseleccioneGrado.Items.AddRange(New Object() {"Profesor", "Estudiante"})
-        Me.CMBseleccioneGrado.Location = New System.Drawing.Point(303, 219)
-        Me.CMBseleccioneGrado.Name = "CMBseleccioneGrado"
-        Me.CMBseleccioneGrado.Size = New System.Drawing.Size(211, 36)
-        Me.CMBseleccioneGrado.TabIndex = 28
         '
         'BTNregistrarEstudiante
         '
@@ -105,7 +68,7 @@ Partial Class FrmLoginEstudiante
         Me.BTNregistrarEstudiante.FillColor = System.Drawing.Color.DimGray
         Me.BTNregistrarEstudiante.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNregistrarEstudiante.ForeColor = System.Drawing.Color.White
-        Me.BTNregistrarEstudiante.Location = New System.Drawing.Point(335, 353)
+        Me.BTNregistrarEstudiante.Location = New System.Drawing.Point(338, 229)
         Me.BTNregistrarEstudiante.Name = "BTNregistrarEstudiante"
         Me.BTNregistrarEstudiante.Size = New System.Drawing.Size(150, 41)
         Me.BTNregistrarEstudiante.TabIndex = 9
@@ -124,24 +87,12 @@ Partial Class FrmLoginEstudiante
         Me.BTNiniciar.FillColor = System.Drawing.Color.SeaGreen
         Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNiniciar.ForeColor = System.Drawing.Color.White
-        Me.BTNiniciar.Location = New System.Drawing.Point(154, 353)
+        Me.BTNiniciar.Location = New System.Drawing.Point(157, 229)
         Me.BTNiniciar.Name = "BTNiniciar"
         Me.BTNiniciar.Size = New System.Drawing.Size(150, 41)
         Me.BTNiniciar.TabIndex = 8
         Me.BTNiniciar.Text = "Iniciar sesión "
         Me.BTNiniciar.UseTransparentBackground = True
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label8.Location = New System.Drawing.Point(110, 268)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(187, 67)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "Seleccione su sección"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
@@ -167,22 +118,6 @@ Partial Class FrmLoginEstudiante
         Me.Label2.Text = "Correo:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'CMBseleccioneSeccion
-        '
-        Me.CMBseleccioneSeccion.BackColor = System.Drawing.Color.Transparent
-        Me.CMBseleccioneSeccion.BorderRadius = 5
-        Me.CMBseleccioneSeccion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CMBseleccioneSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CMBseleccioneSeccion.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBseleccioneSeccion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBseleccioneSeccion.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.CMBseleccioneSeccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CMBseleccioneSeccion.ItemHeight = 30
-        Me.CMBseleccioneSeccion.Location = New System.Drawing.Point(303, 285)
-        Me.CMBseleccioneSeccion.Name = "CMBseleccioneSeccion"
-        Me.CMBseleccioneSeccion.Size = New System.Drawing.Size(211, 36)
-        Me.CMBseleccioneSeccion.TabIndex = 26
-        '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
@@ -191,7 +126,7 @@ Partial Class FrmLoginEstudiante
         Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(630, 84)
+        Me.Label1.Size = New System.Drawing.Size(614, 84)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "BIENVENIDO A PREGUNTADOS"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -254,7 +189,7 @@ Partial Class FrmLoginEstudiante
         Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrar.ForeColor = System.Drawing.Color.White
         Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
-        Me.BTNcerrar.Location = New System.Drawing.Point(746, 0)
+        Me.BTNcerrar.Location = New System.Drawing.Point(704, 0)
         Me.BTNcerrar.Name = "BTNcerrar"
         Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
         Me.BTNcerrar.TabIndex = 10
@@ -270,7 +205,7 @@ Partial Class FrmLoginEstudiante
         Me.panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panel2.Location = New System.Drawing.Point(0, 0)
         Me.panel2.Name = "panel2"
-        Me.panel2.Size = New System.Drawing.Size(790, 494)
+        Me.panel2.Size = New System.Drawing.Size(748, 418)
         Me.panel2.TabIndex = 11
         '
         'BTNvolverMenu
@@ -298,7 +233,7 @@ Partial Class FrmLoginEstudiante
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PRY_Preguntados.My.Resources.Resources.fondoPRG
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(790, 494)
+        Me.ClientSize = New System.Drawing.Size(748, 418)
         Me.Controls.Add(Me.panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -322,9 +257,5 @@ Partial Class FrmLoginEstudiante
     Friend WithEvents Temporizado As Timer
     Friend WithEvents BTNcerrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label10 As Label
-    Friend WithEvents CMBseleccioneGrado As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents CMBseleccioneSeccion As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents BTNvolverMenu As Guna.UI2.WinForms.Guna2Button
 End Class
