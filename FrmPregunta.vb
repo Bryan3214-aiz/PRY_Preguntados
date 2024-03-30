@@ -30,4 +30,22 @@
 
     End Sub
 
+    Private Sub BTN_IMGINSERT_Click(sender As Object, e As EventArgs) Handles BTN_IMGINSERT.Click
+        Try
+            OpenFileDialog1.Filter = "Archivos de imagen|.png .jpg .jpeg |Todos los archivos|.*"
+
+            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+                Dim rutaImagen As String = OpenFileDialog1.FileName
+
+                BASEDATOS.InsertarImagen(rutaImagen)
+
+                MessageBox.Show("Imagen insertada correctamente en la base de datos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Error al insertar la imagen: " & ex.Message)
+            MessageBox.Show("Ocurrió un error al insertar la imagen en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
 End Class
