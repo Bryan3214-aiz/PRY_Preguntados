@@ -30,11 +30,11 @@ Partial Class FrmLoginAdmin
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BTNiniciar = New Guna.UI2.WinForms.Guna2Button()
         Me.panel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.LabelAdmin1 = New System.Windows.Forms.Label()
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.BTNvolverMenu = New Guna.UI2.WinForms.Guna2Button()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
-        Me.LabelAdmin1 = New System.Windows.Forms.Label()
         Me.panel.SuspendLayout()
         Me.panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -52,7 +52,7 @@ Partial Class FrmLoginAdmin
         Me.TXTcorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTcorreo.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTcorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTcorreo.Location = New System.Drawing.Point(263, 113)
+        Me.TXTcorreo.Location = New System.Drawing.Point(290, 123)
         Me.TXTcorreo.Name = "TXTcorreo"
         Me.TXTcorreo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTcorreo.PlaceholderText = "Digite un correo electrónico"
@@ -73,7 +73,7 @@ Partial Class FrmLoginAdmin
         Me.TXTcontrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTcontrasena.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTcontrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTcontrasena.Location = New System.Drawing.Point(263, 169)
+        Me.TXTcontrasena.Location = New System.Drawing.Point(290, 179)
         Me.TXTcontrasena.Name = "TXTcontrasena"
         Me.TXTcontrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TXTcontrasena.PlaceholderText = "Digite una contraseña"
@@ -86,7 +86,7 @@ Partial Class FrmLoginAdmin
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label2.Location = New System.Drawing.Point(77, 113)
+        Me.Label2.Location = New System.Drawing.Point(104, 123)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(180, 36)
         Me.Label2.TabIndex = 5
@@ -98,7 +98,7 @@ Partial Class FrmLoginAdmin
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label3.Location = New System.Drawing.Point(77, 169)
+        Me.Label3.Location = New System.Drawing.Point(104, 179)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(180, 36)
         Me.Label3.TabIndex = 6
@@ -117,7 +117,7 @@ Partial Class FrmLoginAdmin
         Me.BTNiniciar.FillColor = System.Drawing.Color.SeaGreen
         Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNiniciar.ForeColor = System.Drawing.Color.White
-        Me.BTNiniciar.Location = New System.Drawing.Point(375, 224)
+        Me.BTNiniciar.Location = New System.Drawing.Point(402, 251)
         Me.BTNiniciar.Name = "BTNiniciar"
         Me.BTNiniciar.Size = New System.Drawing.Size(150, 41)
         Me.BTNiniciar.TabIndex = 8
@@ -133,10 +133,23 @@ Partial Class FrmLoginAdmin
         Me.panel.Controls.Add(Me.Label2)
         Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.TXTcorreo)
-        Me.panel.Location = New System.Drawing.Point(103, 40)
+        Me.panel.Location = New System.Drawing.Point(85, 61)
         Me.panel.Name = "panel"
-        Me.panel.Size = New System.Drawing.Size(560, 304)
-        Me.panel.TabIndex = 10
+        Me.panel.Size = New System.Drawing.Size(614, 314)
+        Me.panel.TabIndex = 0
+        '
+        'LabelAdmin1
+        '
+        Me.LabelAdmin1.BackColor = System.Drawing.Color.Transparent
+        Me.LabelAdmin1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LabelAdmin1.Font = New System.Drawing.Font("Showcard Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAdmin1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelAdmin1.Location = New System.Drawing.Point(0, 0)
+        Me.LabelAdmin1.Name = "LabelAdmin1"
+        Me.LabelAdmin1.Size = New System.Drawing.Size(614, 83)
+        Me.LabelAdmin1.TabIndex = 9
+        Me.LabelAdmin1.Text = "BIENVENIDO A PREGUNTADOS"
+        Me.LabelAdmin1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BTNcerrar
         '
@@ -151,7 +164,7 @@ Partial Class FrmLoginAdmin
         Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrar.ForeColor = System.Drawing.Color.White
         Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
-        Me.BTNcerrar.Location = New System.Drawing.Point(724, 0)
+        Me.BTNcerrar.Location = New System.Drawing.Point(740, 0)
         Me.BTNcerrar.Name = "BTNcerrar"
         Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
         Me.BTNcerrar.TabIndex = 11
@@ -166,7 +179,7 @@ Partial Class FrmLoginAdmin
         Me.panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panel2.Location = New System.Drawing.Point(0, 0)
         Me.panel2.Name = "panel2"
-        Me.panel2.Size = New System.Drawing.Size(768, 402)
+        Me.panel2.Size = New System.Drawing.Size(784, 441)
         Me.panel2.TabIndex = 12
         '
         'BTNvolverMenu
@@ -191,26 +204,13 @@ Partial Class FrmLoginAdmin
         'Temporizado
         '
         '
-        'LabelAdmin1
-        '
-        Me.LabelAdmin1.BackColor = System.Drawing.Color.Transparent
-        Me.LabelAdmin1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.LabelAdmin1.Font = New System.Drawing.Font("Showcard Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdmin1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelAdmin1.Location = New System.Drawing.Point(0, 0)
-        Me.LabelAdmin1.Name = "LabelAdmin1"
-        Me.LabelAdmin1.Size = New System.Drawing.Size(560, 83)
-        Me.LabelAdmin1.TabIndex = 9
-        Me.LabelAdmin1.Text = "BIENVENIDO A PREGUNTADOS"
-        Me.LabelAdmin1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'FrmLoginAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PRY_Preguntados.My.Resources.Resources.fondoPRG
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(768, 402)
+        Me.ClientSize = New System.Drawing.Size(784, 441)
         Me.Controls.Add(Me.panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

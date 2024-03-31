@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmCrearTemas
+Partial Class FrmInicioMProfesor
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,20 +22,17 @@ Partial Class FrmCrearTemas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCrearTemas))
         Me.SuspendLayout()
         '
-        'FrmCrearTemas
+        'FrmInicioMProfesor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.CadetBlue
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(955, 610)
+        Me.BackColor = System.Drawing.Color.Lavender
+        Me.ClientSize = New System.Drawing.Size(879, 615)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmCrearTemas"
-        Me.Text = "Frmprueba"
+        Me.Name = "FrmInicioMProfesor"
+        Me.Text = "FrmInicioMProfesor"
         Me.ResumeLayout(False)
 
     End Sub
