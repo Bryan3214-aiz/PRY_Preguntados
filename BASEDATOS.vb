@@ -75,7 +75,7 @@ Module BASEDATOS
         Dim videoBytes As Byte() = Nothing
         Try
             CONECTAR()
-            Dim query As String = "SELECT Fotos FROM Imagenes WHERE ID = 2"
+            Dim query As String = "SELECT Fotos FROM Imagenes WHERE ID = 0"
             Using cmd As New OleDbCommand(query, miconexion)
                 Dim result As Object = cmd.ExecuteScalar()
                 If result IsNot Nothing AndAlso Not IsDBNull(result) Then
@@ -93,6 +93,24 @@ Module BASEDATOS
         Return videoBytes
     End Function
 
+    Friend Sub InsertarImagen(ByVal imagenBytes As Byte())
+        Try
+            CONECTAR()
+            Dim query As String = "INSERT INTO Imagenes (Fotos) VALUES (?)"
+            Using cmd As New OleDbCommand(query, miconexion)
+                Dim param As New OleDbParameter("@imagen", OleDbType.LongVarBinary, imagenBytes.Length)
+                param.Value = imagenBytes
+                cmd.Parameters.Add(param)
+                cmd.ExecuteNonQuery()
+            End Using
+
+            Console.WriteLine("Imagen insertada exitosamente en la base de datos.")
+        Catch ex As Exception
+            Console.WriteLine("Error al insertar la imagen en la base de datos: " & ex.Message)
+        Finally
+            DESCONECTAR()
+        End Try
+    End Sub
     Public Function ObtenerImagen() As Byte()
         Dim imagenBytes As Byte() = Nothing
         Try
@@ -127,24 +145,7 @@ Module BASEDATOS
         Return imagenBytes
     End Function
 
-    Friend Sub InsertarImagen(ByVal imagenBytes As Byte())
-        Try
-            CONECTAR()
-            Dim query As String = "INSERT INTO Imagenes (Fotos) VALUES (?)"
-            Using cmd As New OleDbCommand(query, miconexion)
-                Dim param As New OleDbParameter("@imagen", OleDbType.LongVarBinary, imagenBytes.Length)
-                param.Value = imagenBytes
-                cmd.Parameters.Add(param)
-                cmd.ExecuteNonQuery()
-            End Using
 
-            Console.WriteLine("Imagen insertada exitosamente en la base de datos.")
-        Catch ex As Exception
-            Console.WriteLine("Error al insertar la imagen en la base de datos: " & ex.Message)
-        Finally
-            DESCONECTAR()
-        End Try
-    End Sub
 
 
 End Module
