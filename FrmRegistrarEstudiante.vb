@@ -38,4 +38,12 @@
     Private Sub Label1_paint(sender As Object, e As EventArgs) Handles Label1.Paint
         Label1.BackColor = Color.FromArgb(85, Color.Black)
     End Sub
+
+    Private Sub BTNcrearUsuario_Click(sender As Object, e As EventArgs) Handles BTNcrearUsuario.Click
+        Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, NIVEL, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA) VALUES (" & PK("ESTUDIANTE", "ID_USUARIO") & ", " & CMBcursoLectivo.Text & ", " & CMBgrado.Text & ", " & CMBasignatura.Text & ", " & CMBperiodo.Text & ", " & CMBseccion.Text & ", " & TXTidentifacion.Text & ", " & TXTnombre.Text & ", '" & TXTcorreo.Text & "', " & TXTcontrasena.Text & ")"
+        EJECUTAR(Comando)
+        MsgBox("Listo")
+        FrmLoginEstudiante.ShowDialog()
+    End Sub
+
 End Class
