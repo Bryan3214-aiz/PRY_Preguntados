@@ -51,30 +51,100 @@ Module BASEDATOS
             PK = 1
         End If
     End Function
-    Friend Sub InsertarImagen(ByVal rutaImagen As String)
+
+    Friend Sub InsertarVideo(ByVal videoBytes As Byte())
         Try
             CONECTAR()
-            Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
-
-            Dim tempFilePath As String = Path.Combine(Path.GetTempPath(), Path.GetFileName(rutaImagen))
-            File.Copy(rutaImagen, tempFilePath, True)
-
             Dim query As String = "INSERT INTO Imagenes (Fotos) VALUES (?)"
             Using cmd As New OleDbCommand(query, miconexion)
-                Dim param As New OleDbParameter("@imagen", OleDbType.Binary, imagenBytes.Length)
-                param.Value = imagenBytes
+                Dim param As New OleDbParameter("@video", OleDbType.LongVarBinary, videoBytes.Length)
+                param.Value = videoBytes
                 cmd.Parameters.Add(param)
-
                 cmd.ExecuteNonQuery()
             End Using
 
-            Console.WriteLine("Imagen insertada exitosamente.")
-            File.Delete(tempFilePath)
+            Console.WriteLine("Video insertado exitosamente en la base de datos.")
         Catch ex As Exception
-            Console.WriteLine("Error al insertar la imagen: " & ex.Message)
+            Console.WriteLine("Error al insertar el video en la base de datos: " & ex.Message)
         Finally
             DESCONECTAR()
         End Try
     End Sub
+
+    Friend Function ObtenerVideo() As Byte()
+        Dim videoBytes As Byte() = Nothing
+        Try
+            CONECTAR()
+            Dim query As String = "SELECT Fotos FROM Imagenes WHERE ID = 2"
+            Using cmd As New OleDbCommand(query, miconexion)
+                Dim result As Object = cmd.ExecuteScalar()
+                If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                    videoBytes = DirectCast(result, Byte())
+                End If
+            End Using
+
+            Console.WriteLine("Video recuperado exitosamente de la base de datos.")
+        Catch ex As Exception
+            Console.WriteLine("Error al recuperar el video de la base de datos: " & ex.Message)
+        Finally
+            DESCONECTAR()
+        End Try
+
+        Return videoBytes
+    End Function
+
+    Public Function ObtenerImagen() As Byte()
+        Dim imagenBytes As Byte() = Nothing
+        Try
+            CONECTAR()
+            Dim query As String = "SELECT Fotos FROM Imagenes WHERE ID = 3"
+            Using cmd As New OleDbCommand(query, miconexion)
+                Dim dataReader As OleDbDataReader = cmd.ExecuteReader()
+                If dataReader.Read() Then
+                    Dim columnIndex As Integer = dataReader.GetOrdinal("Fotos")
+                    Using memoryStream As New MemoryStream()
+                        Dim bufferSize As Integer = 4096
+                        Dim buffer(bufferSize - 1) As Byte
+                        Dim bytesRead As Integer
+                        Dim offset As Long = 0
+                        Do
+                            bytesRead = dataReader.GetBytes(columnIndex, offset, buffer, 0, bufferSize)
+                            If bytesRead > 0 Then
+                                memoryStream.Write(buffer, 0, bytesRead)
+                                offset += bytesRead
+                            End If
+                        Loop While bytesRead > 0
+                        imagenBytes = memoryStream.ToArray()
+                    End Using
+                End If
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Error al obtener la imagen desde la base de datos: " & ex.Message)
+        Finally
+            DESCONECTAR()
+        End Try
+
+        Return imagenBytes
+    End Function
+
+    Friend Sub InsertarImagen(ByVal imagenBytes As Byte())
+        Try
+            CONECTAR()
+            Dim query As String = "INSERT INTO Imagenes (Fotos) VALUES (?)"
+            Using cmd As New OleDbCommand(query, miconexion)
+                Dim param As New OleDbParameter("@imagen", OleDbType.LongVarBinary, imagenBytes.Length)
+                param.Value = imagenBytes
+                cmd.Parameters.Add(param)
+                cmd.ExecuteNonQuery()
+            End Using
+
+            Console.WriteLine("Imagen insertada exitosamente en la base de datos.")
+        Catch ex As Exception
+            Console.WriteLine("Error al insertar la imagen en la base de datos: " & ex.Message)
+        Finally
+            DESCONECTAR()
+        End Try
+    End Sub
+
 
 End Module
