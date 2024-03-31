@@ -13,33 +13,29 @@ Option Explicit On
 
 
 Namespace My
-    
+
     'NOTA: Este archivo se genera automáticamente; no lo modifique directamente.  Para hacer cambios,
     ' o si detecta errores de compilación en este archivo, vaya al Diseñador de proyectos
     ' (vaya a Propiedades del proyecto o haga doble clic en el nodo My Project en el
     ' Explorador de soluciones) y realice cambios en la pestaña Aplicación.
     '
     Partial Friend Class MyApplication
-        
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Public Sub New()
             MyBase.New(Global.Microsoft.VisualBasic.ApplicationServices.AuthenticationMode.Windows)
-            Me.IsSingleInstance = false
-            Me.EnableVisualStyles = true
-            Me.SaveMySettingsOnExit = true
+            Me.IsSingleInstance = False
+            Me.EnableVisualStyles = True
+            Me.SaveMySettingsOnExit = True
             Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Sub OnCreateMainForm()
-<<<<<<< HEAD
-            Me.MainForm = Global.PRY_Preguntados.FrmVideoInicio
-=======
-            Me.MainForm = Global.PRY_Preguntados.FrmMenuProfesor
->>>>>>> b97774deca3b87a462a95c4be4d839ef8dfd3ff7
+            Me.MainForm = Global.PRY_Preguntados.FrmPregunta
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Function OnInitialize(ByVal commandLineArgs As System.Collections.ObjectModel.ReadOnlyCollection(Of String)) As Boolean
             Me.MinimumSplashScreenDisplayTime = 0
             Return MyBase.OnInitialize(commandLineArgs)
