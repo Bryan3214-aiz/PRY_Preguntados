@@ -32,7 +32,11 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
+<<<<<<< HEAD
             Me.MainForm = Global.PRY_Preguntados.FrmVideoInicio
+=======
+            Me.MainForm = Global.PRY_Preguntados.FrmMenuProfesor
+>>>>>>> b97774deca3b87a462a95c4be4d839ef8dfd3ff7
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

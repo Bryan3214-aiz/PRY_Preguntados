@@ -1,15 +1,6 @@
 ﻿Public Class FrmMenuProfesor
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos almacenado en una variable global.
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
-    Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
-        Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-        ' Verificar si el usuario ha confirmado el cierre del formulario
-        If resultado = DialogResult.Yes Then
-            FrmOPCIONES.Close()
-            Me.Close() ' Cerrar el formulario
-        End If
-    End Sub
 
     Private Sub FrmMenuProfesor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -25,9 +16,9 @@
     End Sub
 
     Private Sub ocultarMenu()
-        PanelSubFormularios.Visible = False
-        panelCalificaciones.Visible = False
-        Panel_Reportes.Visible = False
+        panelTemas.Visible = False
+        panelCategorias.Visible = False
+        panelReportes.Visible = False
     End Sub
 
     Private Sub mostrarMenu(SubMenu As Panel)
@@ -55,15 +46,15 @@
     '---------------------------------------------Metodos para mostrar paneles con las opciones de menu-------------------------------------------------------
 
     Private Sub BTNtemas_Click(sender As Object, e As EventArgs) Handles BTNtemas.Click
-        mostrarMenu(PanelSubFormularios)
+        mostrarMenu(panelTemas)
     End Sub
 
     Private Sub BTNcategorias_Click(sender As Object, e As EventArgs) Handles BTNcategorias.Click
-        mostrarMenu(panelCalificaciones)
+        mostrarMenu(panelCategorias)
     End Sub
 
-    Private Sub BTNcalificaciones_Click_1(sender As Object, e As EventArgs) Handles BTNcalificaciones.Click
-        mostrarMenu(Panel_Reportes)
+    Private Sub BTNcalificaciones_Click_1(sender As Object, e As EventArgs) Handles BTNreportes.Click
+        mostrarMenu(panelReportes)
     End Sub
 
 
@@ -80,10 +71,12 @@
     End Sub
 
     Private Sub BTNeliminarTemas_Click(sender As Object, e As EventArgs) Handles BTNeliminarTemas.Click
+        FormularioAbierto(New FrmEliminarTemas())
         ocultarMenu()
     End Sub
 
     Private Sub BTNbuscarTemas_Click(sender As Object, e As EventArgs) Handles BTNbuscarTemas.Click
+        FormularioAbierto(New FrmBuscarTemas())
         ocultarMenu()
     End Sub
 
@@ -98,22 +91,31 @@
     End Sub
 
     Private Sub BTNbuscarCategorias_Click(sender As Object, e As EventArgs) Handles BTNbuscarCategorias.Click
+        FormularioAbierto(New FrmBuscarCategorias())
+        ocultarMenu()
+    End Sub
+    Private Sub BTNeliminarCategorias_Click(sender As Object, e As EventArgs) Handles BTNeliminarCategorias.Click
+        FormularioAbierto(New FrmEliminarCategorias())
+        ocultarMenu()
+    End Sub
+
+
+
+    Private Sub BTNcalificarRespuestas_Click(sender As Object, e As EventArgs)
+        ocultarMenu()
+    End Sub
+
+    Private Sub BTNenviarReporte_Click(sender As Object, e As EventArgs)
         ocultarMenu()
     End Sub
 
 
 
 
-    Private Sub BTNcalificarRespuestas_Click(sender As Object, e As EventArgs) Handles BTNcalificarRespuestas.Click
+    Private Sub BTNinicio_Click(sender As Object, e As EventArgs) Handles BTNinicio.Click
+        FormularioAbierto(New FrmInicioMProfesor())
         ocultarMenu()
     End Sub
-
-    Private Sub BTNenviarReporte_Click(sender As Object, e As EventArgs) Handles BTNenviarReporte.Click
-        ocultarMenu()
-    End Sub
-
-
-
 
     Private Sub BTNmiPerfil_Click(sender As Object, e As EventArgs) Handles BTNmiPerfil.Click
         ocultarMenu()
@@ -141,7 +143,16 @@
         formulario.Show()
     End Sub
 
-    Private Sub panelContenedor_Paint(sender As Object, e As PaintEventArgs) Handles panelContenedor.Paint
-        panelContenedor.BackColor = Color.FromArgb(60, Color.Black)
+
+    Private Sub BTNcerrar_Click_1(sender As Object, e As EventArgs) Handles BTNcerrar.Click
+        Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Verificar si el usuario ha confirmado el cierre del formulario
+        If resultado = DialogResult.Yes Then
+            FrmOPCIONES.Close()
+            Me.Close() ' Cerrar el formulario
+        End If
     End Sub
+
+
 End Class

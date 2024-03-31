@@ -48,9 +48,9 @@ Partial Class FrmLoginProfesor
         Me.panel.Controls.Add(Me.LabelPro1)
         Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.TXTcorreo)
-        Me.panel.Location = New System.Drawing.Point(82, 45)
+        Me.panel.Location = New System.Drawing.Point(82, 59)
         Me.panel.Name = "panel"
-        Me.panel.Size = New System.Drawing.Size(614, 320)
+        Me.panel.Size = New System.Drawing.Size(614, 306)
         Me.panel.TabIndex = 0
         '
         'BTNiniciar
@@ -65,7 +65,7 @@ Partial Class FrmLoginProfesor
         Me.BTNiniciar.FillColor = System.Drawing.Color.SeaGreen
         Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNiniciar.ForeColor = System.Drawing.Color.White
-        Me.BTNiniciar.Location = New System.Drawing.Point(411, 258)
+        Me.BTNiniciar.Location = New System.Drawing.Point(409, 248)
         Me.BTNiniciar.Name = "BTNiniciar"
         Me.BTNiniciar.Size = New System.Drawing.Size(150, 41)
         Me.BTNiniciar.TabIndex = 8
@@ -77,7 +77,7 @@ Partial Class FrmLoginProfesor
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label3.Location = New System.Drawing.Point(112, 190)
+        Me.Label3.Location = New System.Drawing.Point(110, 180)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(180, 36)
         Me.Label3.TabIndex = 6
@@ -89,7 +89,7 @@ Partial Class FrmLoginProfesor
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label2.Location = New System.Drawing.Point(112, 134)
+        Me.Label2.Location = New System.Drawing.Point(110, 124)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(180, 36)
         Me.Label2.TabIndex = 5
@@ -122,7 +122,7 @@ Partial Class FrmLoginProfesor
         Me.TXTcontrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTcontrasena.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTcontrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTcontrasena.Location = New System.Drawing.Point(298, 190)
+        Me.TXTcontrasena.Location = New System.Drawing.Point(296, 180)
         Me.TXTcontrasena.Name = "TXTcontrasena"
         Me.TXTcontrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TXTcontrasena.PlaceholderText = "Digite una contraseña"
@@ -143,7 +143,7 @@ Partial Class FrmLoginProfesor
         Me.TXTcorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTcorreo.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTcorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTcorreo.Location = New System.Drawing.Point(298, 134)
+        Me.TXTcorreo.Location = New System.Drawing.Point(296, 124)
         Me.TXTcorreo.Name = "TXTcorreo"
         Me.TXTcorreo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTcorreo.PlaceholderText = "Digite un correo electrónico"

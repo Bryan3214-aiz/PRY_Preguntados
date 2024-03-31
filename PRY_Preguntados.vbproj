@@ -98,10 +98,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BASEDATOS.vb" />
+    <Compile Include="FrmBuscarCategorias.Designer.vb">
+      <DependentUpon>FrmBuscarCategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarCategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarTemas.Designer.vb">
+      <DependentUpon>FrmBuscarTemas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarTemas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmEditarTemas.Designer.vb">
       <DependentUpon>FrmEditarTemas.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmEditarTemas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarCategorias.Designer.vb">
+      <DependentUpon>FrmEliminarCategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarCategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarTemas.Designer.vb">
+      <DependentUpon>FrmEliminarTemas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarTemas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicioMProfesor.Designer.vb">
+      <DependentUpon>FrmInicioMProfesor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInicioMProfesor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLoginAdmin.Designer.vb">
@@ -189,11 +219,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmBuscarCategorias.resx">
+      <DependentUpon>FrmBuscarCategorias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarTemas.resx">
+      <DependentUpon>FrmBuscarTemas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarInformacion.resx">
       <DependentUpon>FrmEditarInformacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarTemas.resx">
       <DependentUpon>FrmEditarTemas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarCategorias.resx">
+      <DependentUpon>FrmEliminarCategorias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarTemas.resx">
+      <DependentUpon>FrmEliminarTemas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicioMProfesor.resx">
+      <DependentUpon>FrmInicioMProfesor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginAdmin.resx">
       <DependentUpon>FrmLoginAdmin.vb</DependentUpon>
