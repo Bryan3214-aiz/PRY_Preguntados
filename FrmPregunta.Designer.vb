@@ -31,8 +31,11 @@ Partial Class FrmPregunta
         Me.BTNopcionUno = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.BTNopcionCuatro = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.BTNopcionDos = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.BTN_IMGINSERT = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTN_VideoInsert = New Guna.UI2.WinForms.Guna2Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.BTNMostrarVideo = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNIMGInsert = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNMostrarIMG = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.MediaPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,7 +46,7 @@ Partial Class FrmPregunta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MediaPlayer.Enabled = True
         Me.MediaPlayer.Location = New System.Drawing.Point(-27, -72)
-        Me.MediaPlayer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MediaPlayer.Margin = New System.Windows.Forms.Padding(4)
         Me.MediaPlayer.Name = "MediaPlayer"
         Me.MediaPlayer.OcxState = CType(resources.GetObject("MediaPlayer.OcxState"), System.Windows.Forms.AxHost.State)
         Me.MediaPlayer.Size = New System.Drawing.Size(838, 555)
@@ -63,7 +66,7 @@ Partial Class FrmPregunta
         Me.BTNopcionTres.ImageRotate = 0!
         Me.BTNopcionTres.ImageSize = New System.Drawing.Size(260, 66)
         Me.BTNopcionTres.Location = New System.Drawing.Point(124, 326)
-        Me.BTNopcionTres.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNopcionTres.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNopcionTres.Name = "BTNopcionTres"
         Me.BTNopcionTres.PressedState.ImageSize = New System.Drawing.Size(260, 66)
         Me.BTNopcionTres.Size = New System.Drawing.Size(349, 85)
@@ -80,7 +83,7 @@ Partial Class FrmPregunta
         Me.BTNopcionUno.ImageRotate = 0!
         Me.BTNopcionUno.ImageSize = New System.Drawing.Size(260, 66)
         Me.BTNopcionUno.Location = New System.Drawing.Point(124, 213)
-        Me.BTNopcionUno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNopcionUno.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNopcionUno.Name = "BTNopcionUno"
         Me.BTNopcionUno.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         Me.BTNopcionUno.PressedState.ImageSize = New System.Drawing.Size(260, 66)
@@ -98,7 +101,7 @@ Partial Class FrmPregunta
         Me.BTNopcionCuatro.ImageRotate = 0!
         Me.BTNopcionCuatro.ImageSize = New System.Drawing.Size(260, 66)
         Me.BTNopcionCuatro.Location = New System.Drawing.Point(561, 326)
-        Me.BTNopcionCuatro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNopcionCuatro.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNopcionCuatro.Name = "BTNopcionCuatro"
         Me.BTNopcionCuatro.PressedState.ImageSize = New System.Drawing.Size(260, 66)
         Me.BTNopcionCuatro.Size = New System.Drawing.Size(349, 85)
@@ -114,36 +117,81 @@ Partial Class FrmPregunta
         Me.BTNopcionDos.ImageRotate = 0!
         Me.BTNopcionDos.ImageSize = New System.Drawing.Size(260, 66)
         Me.BTNopcionDos.Location = New System.Drawing.Point(561, 213)
-        Me.BTNopcionDos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNopcionDos.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNopcionDos.Name = "BTNopcionDos"
         Me.BTNopcionDos.PressedState.ImageSize = New System.Drawing.Size(260, 66)
         Me.BTNopcionDos.Size = New System.Drawing.Size(349, 85)
         Me.BTNopcionDos.TabIndex = 6
         '
-        'BTN_IMGINSERT
+        'BTN_VideoInsert
         '
-        Me.BTN_IMGINSERT.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_IMGINSERT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_IMGINSERT.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_IMGINSERT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_IMGINSERT.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BTN_IMGINSERT.ForeColor = System.Drawing.Color.White
-        Me.BTN_IMGINSERT.Location = New System.Drawing.Point(631, 93)
-        Me.BTN_IMGINSERT.Name = "BTN_IMGINSERT"
-        Me.BTN_IMGINSERT.Size = New System.Drawing.Size(180, 45)
-        Me.BTN_IMGINSERT.TabIndex = 7
-        Me.BTN_IMGINSERT.Text = "Insertar imagen"
+        Me.BTN_VideoInsert.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_VideoInsert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_VideoInsert.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_VideoInsert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_VideoInsert.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTN_VideoInsert.ForeColor = System.Drawing.Color.White
+        Me.BTN_VideoInsert.Location = New System.Drawing.Point(805, 38)
+        Me.BTN_VideoInsert.Name = "BTN_VideoInsert"
+        Me.BTN_VideoInsert.Size = New System.Drawing.Size(180, 45)
+        Me.BTN_VideoInsert.TabIndex = 7
+        Me.BTN_VideoInsert.Text = "Insertar video"
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'BTNMostrarVideo
+        '
+        Me.BTNMostrarVideo.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNMostrarVideo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNMostrarVideo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNMostrarVideo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNMostrarVideo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTNMostrarVideo.ForeColor = System.Drawing.Color.White
+        Me.BTNMostrarVideo.Location = New System.Drawing.Point(281, 38)
+        Me.BTNMostrarVideo.Name = "BTNMostrarVideo"
+        Me.BTNMostrarVideo.Size = New System.Drawing.Size(180, 45)
+        Me.BTNMostrarVideo.TabIndex = 8
+        Me.BTNMostrarVideo.Text = "Mostrar video"
+        '
+        'BTNIMGInsert
+        '
+        Me.BTNIMGInsert.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNIMGInsert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNIMGInsert.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNIMGInsert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNIMGInsert.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTNIMGInsert.ForeColor = System.Drawing.Color.White
+        Me.BTNIMGInsert.Location = New System.Drawing.Point(805, 133)
+        Me.BTNIMGInsert.Name = "BTNIMGInsert"
+        Me.BTNIMGInsert.Size = New System.Drawing.Size(180, 45)
+        Me.BTNIMGInsert.TabIndex = 9
+        Me.BTNIMGInsert.Text = "Insertar imagen"
+        '
+        'BTNMostrarIMG
+        '
+        Me.BTNMostrarIMG.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNMostrarIMG.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNMostrarIMG.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNMostrarIMG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNMostrarIMG.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTNMostrarIMG.ForeColor = System.Drawing.Color.White
+        Me.BTNMostrarIMG.Location = New System.Drawing.Point(281, 133)
+        Me.BTNMostrarIMG.Name = "BTNMostrarIMG"
+        Me.BTNMostrarIMG.Size = New System.Drawing.Size(180, 45)
+        Me.BTNMostrarIMG.TabIndex = 10
+        Me.BTNMostrarIMG.Text = "Mostrar imagen"
         '
         'FrmPregunta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1045, 506)
-        Me.Controls.Add(Me.BTN_IMGINSERT)
+        Me.Controls.Add(Me.BTNMostrarIMG)
+        Me.Controls.Add(Me.BTNIMGInsert)
+        Me.Controls.Add(Me.BTNMostrarVideo)
+        Me.Controls.Add(Me.BTN_VideoInsert)
         Me.Controls.Add(Me.BTNopcionDos)
         Me.Controls.Add(Me.BTNopcionCuatro)
         Me.Controls.Add(Me.BTNopcionTres)
@@ -151,7 +199,7 @@ Partial Class FrmPregunta
         Me.Controls.Add(Me.MediaPlayer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmPregunta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPregunta"
@@ -167,6 +215,9 @@ Partial Class FrmPregunta
     Friend WithEvents BTNopcionUno As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents BTNopcionCuatro As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents BTNopcionDos As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents BTN_IMGINSERT As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTN_VideoInsert As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents BTNMostrarVideo As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTNIMGInsert As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTNMostrarIMG As Guna.UI2.WinForms.Guna2Button
 End Class
