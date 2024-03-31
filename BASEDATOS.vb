@@ -23,6 +23,34 @@ Module BASEDATOS
         miconexion.Close()
     End Sub
 
+
+    Friend Sub CARGAR_TABLA(ByRef Tabla_Temporal As DataSet, ByVal comando As String)
+        CONECTAR()
+        Dim Consulta As New OleDb.OleDbDataAdapter(comando, miconexion)
+        Consulta.Fill(Tabla_Temporal)
+        DESCONECTAR()
+    End Sub
+
+    Friend Sub EJECUTAR(ByVal Sql As String)
+        CONECTAR()
+        Dim Comando As New OleDb.OleDbCommand(Sql, miconexion)
+        Comando.ExecuteNonQuery()
+        DESCONECTAR()
+    End Sub
+
+    Function PK(ByVal TABLA As String, ByVal ID As String) As Integer
+        ds.Tables.Clear()
+        comando = "SELECT " & ID & " FROM " & TABLA
+        CARGAR_TABLA(ds, comando)
+        If ds.Tables(0).Rows.Count > 0 Then
+            ds.Tables.Clear()
+            comando = "SELECT MAX(ID_USUARIO) FROM " & TABLA
+            CARGAR_TABLA(ds, comando)
+            PK = ds.Tables(0).Rows(0).ItemArray(0) + 1
+        Else
+            PK = 1
+        End If
+    End Function
     Friend Sub InsertarImagen(ByVal rutaImagen As String)
         Try
             CONECTAR()

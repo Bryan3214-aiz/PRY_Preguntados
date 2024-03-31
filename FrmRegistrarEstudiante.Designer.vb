@@ -26,12 +26,18 @@ Partial Class FrmRegistrarEstudiante
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistrarEstudiante))
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
         Me.panel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.CMBperiodo = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.CMBseccion = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CMBasignatura = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.CMBgrado = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TXTcontrasena = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.BTNfotoSeleccionar = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TXTnombre = New Guna.UI2.WinForms.Guna2TextBox()
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
@@ -43,12 +49,6 @@ Partial Class FrmRegistrarEstudiante
         Me.TXTidentifacion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CMBcursoLectivo = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.BTNfotoSeleccionar = New Guna.UI2.WinForms.Guna2CirclePictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.CMBperiodo = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.panel.SuspendLayout()
         CType(Me.BTNfotoSeleccionar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,7 +69,7 @@ Partial Class FrmRegistrarEstudiante
         Me.panel.Controls.Add(Me.Label8)
         Me.panel.Controls.Add(Me.CMBgrado)
         Me.panel.Controls.Add(Me.Label13)
-        Me.panel.Controls.Add(Me.Guna2TextBox1)
+        Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.BTNfotoSeleccionar)
         Me.panel.Controls.Add(Me.Label6)
         Me.panel.Controls.Add(Me.Label5)
@@ -87,6 +87,35 @@ Partial Class FrmRegistrarEstudiante
         Me.panel.Name = "panel"
         Me.panel.Size = New System.Drawing.Size(990, 616)
         Me.panel.TabIndex = 11
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label12.Location = New System.Drawing.Point(68, 342)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(187, 67)
+        Me.Label12.TabIndex = 25
+        Me.Label12.Text = "Seleccione su periodo"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CMBperiodo
+        '
+        Me.CMBperiodo.BackColor = System.Drawing.Color.Transparent
+        Me.CMBperiodo.BorderRadius = 5
+        Me.CMBperiodo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CMBperiodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CMBperiodo.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMBperiodo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMBperiodo.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.CMBperiodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CMBperiodo.ItemHeight = 30
+        Me.CMBperiodo.Items.AddRange(New Object() {"Profesor", "Estudiante"})
+        Me.CMBperiodo.Location = New System.Drawing.Point(273, 353)
+        Me.CMBperiodo.Name = "CMBperiodo"
+        Me.CMBperiodo.Size = New System.Drawing.Size(220, 36)
+        Me.CMBperiodo.TabIndex = 24
         '
         'Label10
         '
@@ -174,6 +203,65 @@ Partial Class FrmRegistrarEstudiante
         Me.CMBgrado.Name = "CMBgrado"
         Me.CMBgrado.Size = New System.Drawing.Size(220, 36)
         Me.CMBgrado.TabIndex = 20
+        '
+        'Label13
+        '
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label13.Location = New System.Drawing.Point(547, 157)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(180, 36)
+        Me.Label13.TabIndex = 19
+        Me.Label13.Text = "Contraseña:"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TXTcontrasena
+        '
+        Me.TXTcontrasena.BackColor = System.Drawing.Color.Transparent
+        Me.TXTcontrasena.BorderRadius = 10
+        Me.TXTcontrasena.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXTcontrasena.DefaultText = ""
+        Me.TXTcontrasena.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXTcontrasena.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXTcontrasena.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTcontrasena.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTcontrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTcontrasena.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTcontrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTcontrasena.Location = New System.Drawing.Point(745, 157)
+        Me.TXTcontrasena.Name = "TXTcontrasena"
+        Me.TXTcontrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TXTcontrasena.PlaceholderText = "Digite una contraseña"
+        Me.TXTcontrasena.SelectedText = ""
+        Me.TXTcontrasena.Size = New System.Drawing.Size(220, 36)
+        Me.TXTcontrasena.TabIndex = 18
+        '
+        'BTNfotoSeleccionar
+        '
+        Me.BTNfotoSeleccionar.FillColor = System.Drawing.Color.DimGray
+        Me.BTNfotoSeleccionar.Image = CType(resources.GetObject("BTNfotoSeleccionar.Image"), System.Drawing.Image)
+        Me.BTNfotoSeleccionar.ImageRotate = 0!
+        Me.BTNfotoSeleccionar.Location = New System.Drawing.Point(650, 363)
+        Me.BTNfotoSeleccionar.Name = "BTNfotoSeleccionar"
+        Me.BTNfotoSeleccionar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BTNfotoSeleccionar.Size = New System.Drawing.Size(182, 161)
+        Me.BTNfotoSeleccionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BTNfotoSeleccionar.TabIndex = 16
+        Me.BTNfotoSeleccionar.TabStop = False
+        Me.BTNfotoSeleccionar.UseTransparentBackground = True
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label6.Location = New System.Drawing.Point(605, 327)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(284, 53)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Seleccione una foto "
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
         '
@@ -356,94 +444,6 @@ Partial Class FrmRegistrarEstudiante
         Me.TXTcorreo.Size = New System.Drawing.Size(220, 36)
         Me.TXTcorreo.TabIndex = 1
         '
-        'BTNfotoSeleccionar
-        '
-        Me.BTNfotoSeleccionar.FillColor = System.Drawing.Color.DimGray
-        Me.BTNfotoSeleccionar.Image = CType(resources.GetObject("BTNfotoSeleccionar.Image"), System.Drawing.Image)
-        Me.BTNfotoSeleccionar.ImageRotate = 0!
-        Me.BTNfotoSeleccionar.Location = New System.Drawing.Point(650, 363)
-        Me.BTNfotoSeleccionar.Name = "BTNfotoSeleccionar"
-        Me.BTNfotoSeleccionar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.BTNfotoSeleccionar.Size = New System.Drawing.Size(182, 161)
-        Me.BTNfotoSeleccionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BTNfotoSeleccionar.TabIndex = 16
-        Me.BTNfotoSeleccionar.TabStop = False
-        Me.BTNfotoSeleccionar.UseTransparentBackground = True
-        '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label6.Location = New System.Drawing.Point(605, 327)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(284, 53)
-        Me.Label6.TabIndex = 17
-        Me.Label6.Text = "Seleccione una foto "
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CMBperiodo
-        '
-        Me.CMBperiodo.BackColor = System.Drawing.Color.Transparent
-        Me.CMBperiodo.BorderRadius = 5
-        Me.CMBperiodo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CMBperiodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CMBperiodo.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBperiodo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBperiodo.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.CMBperiodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CMBperiodo.ItemHeight = 30
-        Me.CMBperiodo.Items.AddRange(New Object() {"Profesor", "Estudiante"})
-        Me.CMBperiodo.Location = New System.Drawing.Point(273, 353)
-        Me.CMBperiodo.Name = "CMBperiodo"
-        Me.CMBperiodo.Size = New System.Drawing.Size(220, 36)
-        Me.CMBperiodo.TabIndex = 24
-        '
-        'Label12
-        '
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label12.Location = New System.Drawing.Point(68, 342)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(187, 67)
-        Me.Label12.TabIndex = 25
-        Me.Label12.Text = "Seleccione su periodo"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Guna2TextBox1
-        '
-        Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox1.BorderRadius = 10
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(745, 157)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.Guna2TextBox1.PlaceholderText = "Digite una contraseña"
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(220, 36)
-        Me.Guna2TextBox1.TabIndex = 18
-        '
-        'Label13
-        '
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label13.Location = New System.Drawing.Point(547, 157)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(180, 36)
-        Me.Label13.TabIndex = 19
-        Me.Label13.Text = "Contraseña:"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'FrmRegistrarEstudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -486,5 +486,5 @@ Partial Class FrmRegistrarEstudiante
     Friend WithEvents BTNfotoSeleccionar As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXTcontrasena As Guna.UI2.WinForms.Guna2TextBox
 End Class
