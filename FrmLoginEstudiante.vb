@@ -1,8 +1,8 @@
-﻿
+﻿Imports System.Data.OleDb
+
 Public Class FrmLoginEstudiante
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
-
 
     Private Sub BTNregistrarEstudiante_Click(sender As Object, e As EventArgs) Handles BTNregistrarEstudiante.Click
         Me.Hide()

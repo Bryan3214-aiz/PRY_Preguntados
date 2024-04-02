@@ -100,13 +100,13 @@ Partial Class FrmEliminarCategorias
         '
         Me.ColumnHeader2.Text = "Nombre del tema"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 419
+        Me.ColumnHeader2.Width = 410
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "Grado asignado"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 418
+        Me.ColumnHeader3.Width = 415
         '
         'BTNeliminarCategoria
         '

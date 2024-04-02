@@ -145,7 +145,4 @@ Module BASEDATOS
         Return imagenBytes
     End Function
 
-
-
-
 End Module

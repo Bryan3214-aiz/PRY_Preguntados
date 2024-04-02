@@ -29,7 +29,7 @@ Partial Class FrmEditarInformacion
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TXTnuevoNombre = New Guna.UI2.WinForms.Guna2TextBox()
         Me.BTNvolver = New Guna.UI2.WinForms.Guna2Button()
-        Me.BTNiniciar = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNguardar = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,7 +37,9 @@ Partial Class FrmEditarInformacion
         Me.TXTcontrasena = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.panelinfo = New Guna.UI2.WinForms.Guna2Panel()
         Me.panel.SuspendLayout()
+        Me.panelinfo.SuspendLayout()
         Me.SuspendLayout()
         '
         'Temporizado
@@ -45,12 +47,15 @@ Partial Class FrmEditarInformacion
         '
         'panel
         '
+        Me.panel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.panel.BackColor = System.Drawing.Color.Transparent
         Me.panel.BorderRadius = 100
         Me.panel.Controls.Add(Me.Label5)
         Me.panel.Controls.Add(Me.TXTnuevoNombre)
         Me.panel.Controls.Add(Me.BTNvolver)
-        Me.panel.Controls.Add(Me.BTNiniciar)
+        Me.panel.Controls.Add(Me.BTNguardar)
         Me.panel.Controls.Add(Me.Label4)
         Me.panel.Controls.Add(Me.Label3)
         Me.panel.Controls.Add(Me.Label2)
@@ -58,9 +63,9 @@ Partial Class FrmEditarInformacion
         Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.Guna2ComboBox1)
         Me.panel.Controls.Add(Me.TXTcorreo)
-        Me.panel.Location = New System.Drawing.Point(104, 19)
+        Me.panel.Location = New System.Drawing.Point(89, 12)
         Me.panel.Name = "panel"
-        Me.panel.Size = New System.Drawing.Size(560, 438)
+        Me.panel.Size = New System.Drawing.Size(589, 445)
         Me.panel.TabIndex = 1
         '
         'Label5
@@ -68,7 +73,7 @@ Partial Class FrmEditarInformacion
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label5.Location = New System.Drawing.Point(77, 101)
+        Me.Label5.Location = New System.Drawing.Point(96, 113)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(180, 36)
         Me.Label5.TabIndex = 11
@@ -88,7 +93,7 @@ Partial Class FrmEditarInformacion
         Me.TXTnuevoNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTnuevoNombre.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXTnuevoNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTnuevoNombre.Location = New System.Drawing.Point(263, 104)
+        Me.TXTnuevoNombre.Location = New System.Drawing.Point(282, 116)
         Me.TXTnuevoNombre.Name = "TXTnuevoNombre"
         Me.TXTnuevoNombre.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTnuevoNombre.PlaceholderText = "Digite su nombre"
@@ -108,38 +113,38 @@ Partial Class FrmEditarInformacion
         Me.BTNvolver.FillColor = System.Drawing.Color.DeepSkyBlue
         Me.BTNvolver.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNvolver.ForeColor = System.Drawing.Color.White
-        Me.BTNvolver.Location = New System.Drawing.Point(386, 375)
+        Me.BTNvolver.Location = New System.Drawing.Point(322, 374)
         Me.BTNvolver.Name = "BTNvolver"
         Me.BTNvolver.Size = New System.Drawing.Size(150, 41)
         Me.BTNvolver.TabIndex = 9
         Me.BTNvolver.Text = "Volver al menú"
         Me.BTNvolver.UseTransparentBackground = True
         '
-        'BTNiniciar
+        'BTNguardar
         '
-        Me.BTNiniciar.Animated = True
-        Me.BTNiniciar.BackColor = System.Drawing.Color.Transparent
-        Me.BTNiniciar.BorderRadius = 10
-        Me.BTNiniciar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNiniciar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNiniciar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNiniciar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNiniciar.FillColor = System.Drawing.Color.SeaGreen
-        Me.BTNiniciar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNiniciar.ForeColor = System.Drawing.Color.White
-        Me.BTNiniciar.Location = New System.Drawing.Point(194, 375)
-        Me.BTNiniciar.Name = "BTNiniciar"
-        Me.BTNiniciar.Size = New System.Drawing.Size(150, 41)
-        Me.BTNiniciar.TabIndex = 8
-        Me.BTNiniciar.Text = "Guardar cambios"
-        Me.BTNiniciar.UseTransparentBackground = True
+        Me.BTNguardar.Animated = True
+        Me.BTNguardar.BackColor = System.Drawing.Color.Transparent
+        Me.BTNguardar.BorderRadius = 10
+        Me.BTNguardar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNguardar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNguardar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNguardar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNguardar.FillColor = System.Drawing.Color.SeaGreen
+        Me.BTNguardar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNguardar.ForeColor = System.Drawing.Color.White
+        Me.BTNguardar.Location = New System.Drawing.Point(126, 374)
+        Me.BTNguardar.Name = "BTNguardar"
+        Me.BTNguardar.Size = New System.Drawing.Size(150, 41)
+        Me.BTNguardar.TabIndex = 8
+        Me.BTNguardar.Text = "Guardar cambios"
+        Me.BTNguardar.UseTransparentBackground = True
         '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label4.Location = New System.Drawing.Point(47, 281)
+        Me.Label4.Location = New System.Drawing.Point(66, 293)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(210, 67)
         Me.Label4.TabIndex = 7
@@ -151,7 +156,7 @@ Partial Class FrmEditarInformacion
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label3.Location = New System.Drawing.Point(77, 230)
+        Me.Label3.Location = New System.Drawing.Point(96, 242)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(180, 36)
         Me.Label3.TabIndex = 6
@@ -163,7 +168,7 @@ Partial Class FrmEditarInformacion
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label2.Location = New System.Drawing.Point(77, 164)
+        Me.Label2.Location = New System.Drawing.Point(96, 176)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(180, 36)
         Me.Label2.TabIndex = 5
@@ -173,11 +178,12 @@ Partial Class FrmEditarInformacion
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Location = New System.Drawing.Point(2, 0)
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(555, 101)
+        Me.Label1.Size = New System.Drawing.Size(589, 101)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "EDITAR INFORMACIÓN"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -195,7 +201,7 @@ Partial Class FrmEditarInformacion
         Me.TXTcontrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTcontrasena.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTcontrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTcontrasena.Location = New System.Drawing.Point(263, 230)
+        Me.TXTcontrasena.Location = New System.Drawing.Point(282, 242)
         Me.TXTcontrasena.Name = "TXTcontrasena"
         Me.TXTcontrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TXTcontrasena.PlaceholderText = "Digite una contraseña"
@@ -215,7 +221,7 @@ Partial Class FrmEditarInformacion
         Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.Guna2ComboBox1.ItemHeight = 30
         Me.Guna2ComboBox1.Items.AddRange(New Object() {"Profesor", "Estudiante"})
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(263, 298)
+        Me.Guna2ComboBox1.Location = New System.Drawing.Point(282, 310)
         Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
         Me.Guna2ComboBox1.Size = New System.Drawing.Size(211, 36)
         Me.Guna2ComboBox1.TabIndex = 2
@@ -233,13 +239,23 @@ Partial Class FrmEditarInformacion
         Me.TXTcorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTcorreo.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTcorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTcorreo.Location = New System.Drawing.Point(263, 164)
+        Me.TXTcorreo.Location = New System.Drawing.Point(282, 176)
         Me.TXTcorreo.Name = "TXTcorreo"
         Me.TXTcorreo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTcorreo.PlaceholderText = "Digite un correo electrónico"
         Me.TXTcorreo.SelectedText = ""
         Me.TXTcorreo.Size = New System.Drawing.Size(211, 36)
         Me.TXTcorreo.TabIndex = 1
+        '
+        'panelinfo
+        '
+        Me.panelinfo.BackColor = System.Drawing.Color.Transparent
+        Me.panelinfo.Controls.Add(Me.panel)
+        Me.panelinfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelinfo.Location = New System.Drawing.Point(0, 0)
+        Me.panelinfo.Name = "panelinfo"
+        Me.panelinfo.Size = New System.Drawing.Size(768, 469)
+        Me.panelinfo.TabIndex = 2
         '
         'FrmEditarInformacion
         '
@@ -248,13 +264,14 @@ Partial Class FrmEditarInformacion
         Me.BackgroundImage = Global.PRY_Preguntados.My.Resources.Resources.fondoPRG
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(768, 469)
-        Me.Controls.Add(Me.panel)
+        Me.Controls.Add(Me.panelinfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmEditarInformacion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmEditarInformacion"
         Me.panel.ResumeLayout(False)
+        Me.panelinfo.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -262,7 +279,7 @@ Partial Class FrmEditarInformacion
     Friend WithEvents Temporizado As Timer
     Friend WithEvents panel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BTNvolver As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BTNiniciar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTNguardar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -272,4 +289,5 @@ Partial Class FrmEditarInformacion
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TXTnuevoNombre As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents panelinfo As Guna.UI2.WinForms.Guna2Panel
 End Class
