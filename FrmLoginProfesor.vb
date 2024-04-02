@@ -1,8 +1,9 @@
-﻿
+﻿Imports System.Data.OleDb
 Public Class FrmLoginProfesor
 
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
+
 
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
         panel.BackColor = Color.FromArgb(55, Color.Black)
@@ -19,9 +20,7 @@ Public Class FrmLoginProfesor
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        ' Conexión a la base de datos
-        CONECTAR()
-        ' Comando SQL para realizar la verificación de login
+
         Dim comando As String = "SELECT * FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
         Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
 
@@ -45,6 +44,7 @@ Public Class FrmLoginProfesor
         ' Se desconecta de la base de datos
         DESCONECTAR()
     End Sub
+
 
     Private Sub FrmLoginUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo

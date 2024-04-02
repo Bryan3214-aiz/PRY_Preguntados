@@ -11,6 +11,7 @@
         ' Iniciar el temporizador para controlar la transición
         Temporizado.Interval = 20 ' Intervalo en milisegundos
         Temporizado.Start()
+        FormularioAbierto(New FrmInicioMProfesor())
         ocultarMenu()
 
     End Sub
@@ -121,8 +122,8 @@
         ocultarMenu()
     End Sub
 
-    Private Sub BTNayuda_Click(sender As Object, e As EventArgs) Handles BTNayuda.Click
-        ocultarMenu()
+    Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrarSesion.Click
+
     End Sub
 
 

@@ -78,7 +78,6 @@ Partial Class FrmBuscarTemas
         Me.L.ForeColor = System.Drawing.SystemColors.WindowText
         Me.L.FullRowSelect = True
         Me.L.GridLines = True
-        Me.L.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.L.HideSelection = False
         Me.L.HoverSelection = True
         Me.L.Location = New System.Drawing.Point(31, 158)
@@ -99,13 +98,13 @@ Partial Class FrmBuscarTemas
         '
         Me.ColumnHeader2.Text = "Nombre del tema"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 419
+        Me.ColumnHeader2.Width = 415
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "Grado asignado"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 418
+        Me.ColumnHeader3.Width = 415
         '
         'FrmBuscarTemas
         '
@@ -118,7 +117,6 @@ Partial Class FrmBuscarTemas
         Me.Controls.Add(Me.LabelEliTemas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmBuscarTemas"
-        Me.Text = "FrmBuscarTemas"
         Me.ResumeLayout(False)
 
     End Sub

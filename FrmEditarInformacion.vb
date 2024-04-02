@@ -1,9 +1,9 @@
 ﻿Public Class FrmEditarInformacion
 
-    Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
+    Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
-        Panel.BackColor = Color.FromArgb(99, Color.Black)
+        panel.BackColor = Color.FromArgb(65, Color.Black)
     End Sub
 
     Private Sub BTNvolver_Click(sender As Object, e As EventArgs) Handles BTNvolver.Click
@@ -27,7 +27,9 @@
         ' Iniciar el temporizador para controlar la transición
         Temporizado.Interval = 20 ' Intervalo en milisegundos
         Temporizado.Start()
+        Label1.BackColor = Color.FromArgb(50, Color.Black)
     End Sub
+
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
         tiempoTranscurrido += Temporizado.Interval / 1000 ' Convertir el intervalo a segundos
 
@@ -40,13 +42,9 @@
 
         End If
     End Sub
-    Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
 
+    Private Sub panelinfo_Paint(sender As Object, e As PaintEventArgs) Handles panelinfo.Paint
+        panelinfo.BackColor = Color.FromArgb(85, Color.Black)
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-
-
-    End Sub
 End Class

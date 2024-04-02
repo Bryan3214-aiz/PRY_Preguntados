@@ -25,7 +25,7 @@ Partial Class FrmMenuProfesor
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuProfesor))
         Me.BTNinfoPRO = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.BTNayuda = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNcerrarSesion = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNmiPerfil = New Guna.UI2.WinForms.Guna2Button()
         Me.panelReportes = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
@@ -47,24 +47,24 @@ Partial Class FrmMenuProfesor
         Me.BTNtemas = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNinicio = New Guna.UI2.WinForms.Guna2Button()
         Me.PanelLOGO = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
         Me.panelContenedor = New Guna.UI2.WinForms.Guna2Panel()
         Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.BTNinfoPRO.SuspendLayout()
         Me.panelReportes.SuspendLayout()
         Me.panelCategorias.SuspendLayout()
         Me.panelTemas.SuspendLayout()
         Me.PanelLOGO.SuspendLayout()
-        Me.panelContenedor.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelContenedor.SuspendLayout()
         Me.SuspendLayout()
         '
         'BTNinfoPRO
         '
         Me.BTNinfoPRO.AutoScroll = True
         Me.BTNinfoPRO.BackColor = System.Drawing.Color.MediumSlateBlue
-        Me.BTNinfoPRO.Controls.Add(Me.BTNayuda)
+        Me.BTNinfoPRO.Controls.Add(Me.BTNcerrarSesion)
         Me.BTNinfoPRO.Controls.Add(Me.BTNmiPerfil)
         Me.BTNinfoPRO.Controls.Add(Me.panelReportes)
         Me.BTNinfoPRO.Controls.Add(Me.BTNreportes)
@@ -80,25 +80,26 @@ Partial Class FrmMenuProfesor
         Me.BTNinfoPRO.Size = New System.Drawing.Size(250, 654)
         Me.BTNinfoPRO.TabIndex = 12
         '
-        'BTNayuda
+        'BTNcerrarSesion
         '
-        Me.BTNayuda.Animated = True
-        Me.BTNayuda.BackColor = System.Drawing.Color.Teal
-        Me.BTNayuda.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNayuda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNayuda.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNayuda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNayuda.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BTNayuda.FillColor = System.Drawing.Color.SlateBlue
-        Me.BTNayuda.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNayuda.ForeColor = System.Drawing.Color.White
-        Me.BTNayuda.Location = New System.Drawing.Point(0, 766)
-        Me.BTNayuda.Name = "BTNayuda"
-        Me.BTNayuda.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNayuda.Size = New System.Drawing.Size(233, 45)
-        Me.BTNayuda.TabIndex = 17
-        Me.BTNayuda.Text = "Ayuda"
-        Me.BTNayuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BTNcerrarSesion.Animated = True
+        Me.BTNcerrarSesion.BackColor = System.Drawing.Color.Teal
+        Me.BTNcerrarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcerrarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BTNcerrarSesion.FillColor = System.Drawing.Color.SlateBlue
+        Me.BTNcerrarSesion.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNcerrarSesion.ForeColor = System.Drawing.Color.White
+        Me.BTNcerrarSesion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BTNcerrarSesion.Location = New System.Drawing.Point(0, 766)
+        Me.BTNcerrarSesion.Name = "BTNcerrarSesion"
+        Me.BTNcerrarSesion.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BTNcerrarSesion.Size = New System.Drawing.Size(233, 45)
+        Me.BTNcerrarSesion.TabIndex = 17
+        Me.BTNcerrarSesion.Text = "Cerrar sesión"
+        Me.BTNcerrarSesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'BTNmiPerfil
         '
@@ -487,6 +488,19 @@ Partial Class FrmMenuProfesor
         Me.PanelLOGO.Size = New System.Drawing.Size(233, 115)
         Me.PanelLOGO.TabIndex = 0
         '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(233, 112)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 1
+        Me.Guna2PictureBox1.TabStop = False
+        '
         'Temporizado
         '
         '
@@ -518,19 +532,6 @@ Partial Class FrmMenuProfesor
         Me.BTNcerrar.TabIndex = 10
         Me.BTNcerrar.Text = "X"
         '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(233, 112)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 1
-        Me.Guna2PictureBox1.TabStop = False
-        '
         'FrmMenuProfesor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -550,8 +551,8 @@ Partial Class FrmMenuProfesor
         Me.panelCategorias.ResumeLayout(False)
         Me.panelTemas.ResumeLayout(False)
         Me.PanelLOGO.ResumeLayout(False)
-        Me.panelContenedor.ResumeLayout(False)
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelContenedor.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -580,6 +581,6 @@ Partial Class FrmMenuProfesor
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BTNayuda As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTNcerrarSesion As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNmiPerfil As Guna.UI2.WinForms.Guna2Button
 End Class

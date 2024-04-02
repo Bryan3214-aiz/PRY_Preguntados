@@ -1,4 +1,5 @@
-﻿
+﻿Imports System.Data.OleDb
+
 Public Class FrmLoginAdmin
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
