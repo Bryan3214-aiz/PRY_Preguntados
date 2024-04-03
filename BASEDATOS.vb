@@ -142,6 +142,7 @@ Module BASEDATOS
         Finally
             DESCONECTAR()
         End Try
+
     End Sub
     Public Function ObtenerImagen() As Byte()
         Dim imagenBytes As Byte() = Nothing
