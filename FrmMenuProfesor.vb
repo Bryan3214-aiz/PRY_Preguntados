@@ -84,6 +84,7 @@
 
 
     Private Sub BTNcrearCategorias_Click(sender As Object, e As EventArgs) Handles BTNcrearCategorias.Click
+        FormularioAbierto(New FrmCrearCategorias())
         ocultarMenu()
     End Sub
 

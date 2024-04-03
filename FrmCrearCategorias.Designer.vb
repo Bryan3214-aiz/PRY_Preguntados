@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmCrearTemas
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FrmCrearCategorias
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmCrearTemas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.LabelbienvenidaProfesor = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -33,22 +33,21 @@ Partial Class FrmCrearTemas
         Me.LabelbienvenidaProfesor.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LabelbienvenidaProfesor.Location = New System.Drawing.Point(0, 0)
         Me.LabelbienvenidaProfesor.Name = "LabelbienvenidaProfesor"
-        Me.LabelbienvenidaProfesor.Size = New System.Drawing.Size(895, 72)
-        Me.LabelbienvenidaProfesor.TabIndex = 31
-        Me.LabelbienvenidaProfesor.Text = "Registro de temas"
+        Me.LabelbienvenidaProfesor.Size = New System.Drawing.Size(879, 72)
+        Me.LabelbienvenidaProfesor.TabIndex = 32
+        Me.LabelbienvenidaProfesor.Text = "Registro de categorias"
         Me.LabelbienvenidaProfesor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'FrmCrearTemas
+        'FrmCrearCategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(895, 654)
+        Me.ClientSize = New System.Drawing.Size(879, 615)
         Me.Controls.Add(Me.LabelbienvenidaProfesor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmCrearTemas"
-        Me.Text = "Frmprueba"
+        Me.Name = "FrmCrearCategorias"
+        Me.Text = "FrmCrearCategorias"
         Me.ResumeLayout(False)
 
     End Sub
