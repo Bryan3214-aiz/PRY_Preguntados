@@ -40,10 +40,20 @@
     End Sub
 
     Private Sub BTNcrearUsuario_Click(sender As Object, e As EventArgs) Handles BTNcrearUsuario.Click
-        Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, NIVEL, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA) VALUES (" & PK("ESTUDIANTE", "ID_USUARIO") & ", " & CMBcursoLectivo.Text & ", " & CMBgrado.Text & ", " & CMBasignatura.Text & ", " & CMBperiodo.Text & ", " & CMBseccion.Text & ", " & TXTidentifacion.Text & ", " & TXTnombre.Text & ", '" & TXTcorreo.Text & "', " & TXTcontrasena.Text & ")"
+        ' Construye la cadena de comando SQL para insertar un nuevo estudiante en la tabla ESTUDIANTE.
+        ' Se utilizan los valores de los controles del formulario para completar los campos correspondientes.
+        Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, NIVEL, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA) VALUES ('" & PK("ESTUDIANTE", "ID_USUARIO") & "', '" & CMBcursoLectivo.Text & "', '" & CMBgrado.Text & "', '" & CMBasignatura.Text & "', '" & CMBperiodo.Text & "', '" & CMBseccion.Text & "', '" & TXTidentifacion.Text & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTcontrasena.Text & "')"
+        ' Ejecuta la función EJECUTAR pasando la cadena de comando SQL como argumento.
         EJECUTAR(Comando)
+        ' Muestra un mensaje de confirmación.
         MsgBox("Listo")
-        FrmLoginEstudiante.ShowDialog()
+        ' Oculta el formulario actual.
+        Me.Hide()
+        ' Muestra el formulario de inicio de sesión para estudiantes.
+        FrmOPCIONES.Show()
     End Sub
 
+    Private Sub BTNfotoSeleccionar_Click(sender As Object, e As EventArgs) Handles BTNfotoSeleccionar.Click
+
+    End Sub
 End Class

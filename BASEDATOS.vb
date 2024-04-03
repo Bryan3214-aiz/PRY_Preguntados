@@ -52,10 +52,24 @@ Module BASEDATOS
         End If
     End Function
 
+    Function PKIMG(ByVal TABLA As String, ByVal ID As String) As Integer
+        ds.Tables.Clear()
+        comando = "SELECT " & ID & " FROM " & TABLA
+        CARGAR_TABLA(ds, comando)
+        If ds.Tables(0).Rows.Count > 0 Then
+            ds.Tables.Clear()
+            comando = "SELECT MAX(ID) FROM " & TABLA
+            CARGAR_TABLA(ds, comando)
+            PKIMG = ds.Tables(0).Rows(0).ItemArray(0) + 1
+        Else
+            PKIMG = 1
+        End If
+    End Function
+
     Friend Sub InsertarVideo(ByVal videoBytes As Byte())
         Try
             CONECTAR()
-            Dim query As String = "INSERT INTO Imagenes (Fotos) VALUES (?)"
+            Dim query As String = "INSERT INTO Imagenes (ID, Fotos) VALUES ('" & PKIMG("IMAGENES", "ID") & "',?)"
             Using cmd As New OleDbCommand(query, miconexion)
                 Dim param As New OleDbParameter("@video", OleDbType.LongVarBinary, videoBytes.Length)
                 param.Value = videoBytes
@@ -97,6 +111,24 @@ Module BASEDATOS
         Try
             CONECTAR()
             Dim query As String = "INSERT INTO Imagenes (Fotos) VALUES (?)"
+            Using cmd As New OleDbCommand(query, miconexion)
+                Dim param As New OleDbParameter("@imagen", OleDbType.LongVarBinary, imagenBytes.Length)
+                param.Value = imagenBytes
+                cmd.Parameters.Add(param)
+                cmd.ExecuteNonQuery()
+            End Using
+
+            Console.WriteLine("Imagen insertada exitosamente en la base de datos.")
+        Catch ex As Exception
+            Console.WriteLine("Error al insertar la imagen en la base de datos: " & ex.Message)
+        Finally
+            DESCONECTAR()
+        End Try
+    End Sub
+    Friend Sub InsertarImagenRegistro(ByVal imagenBytes As Byte())
+        Try
+            CONECTAR()
+            Dim query As String = "INSERT INTO Estudiantes (Fotografia) VALUES (?)"
             Using cmd As New OleDbCommand(query, miconexion)
                 Dim param As New OleDbParameter("@imagen", OleDbType.LongVarBinary, imagenBytes.Length)
                 param.Value = imagenBytes

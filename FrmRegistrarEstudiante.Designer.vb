@@ -111,7 +111,7 @@ Partial Class FrmRegistrarEstudiante
         Me.CMBperiodo.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.CMBperiodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBperiodo.ItemHeight = 30
-        Me.CMBperiodo.Items.AddRange(New Object() {"Profesor", "Estudiante"})
+        Me.CMBperiodo.Items.AddRange(New Object() {"Primer Trimestre", "Segundo Trimestre", "Tercer Trimestre"})
         Me.CMBperiodo.Location = New System.Drawing.Point(273, 353)
         Me.CMBperiodo.Name = "CMBperiodo"
         Me.CMBperiodo.Size = New System.Drawing.Size(220, 36)
@@ -140,7 +140,7 @@ Partial Class FrmRegistrarEstudiante
         Me.CMBseccion.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.CMBseccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBseccion.ItemHeight = 30
-        Me.CMBseccion.Items.AddRange(New Object() {"Profesor", "Estudiante"})
+        Me.CMBseccion.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
         Me.CMBseccion.Location = New System.Drawing.Point(273, 424)
         Me.CMBseccion.Name = "CMBseccion"
         Me.CMBseccion.Size = New System.Drawing.Size(220, 36)
@@ -169,7 +169,7 @@ Partial Class FrmRegistrarEstudiante
         Me.CMBasignatura.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.CMBasignatura.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBasignatura.ItemHeight = 30
-        Me.CMBasignatura.Items.AddRange(New Object() {"Profesor", "Estudiante"})
+        Me.CMBasignatura.Items.AddRange(New Object() {"Informática", "Diseño Gráfico", "Inglés Conversacional", "Contabilidad", "Diseño Publicitario", "Técnicas Secretariales"})
         Me.CMBasignatura.Location = New System.Drawing.Point(273, 286)
         Me.CMBasignatura.Name = "CMBasignatura"
         Me.CMBasignatura.Size = New System.Drawing.Size(220, 36)
@@ -198,7 +198,7 @@ Partial Class FrmRegistrarEstudiante
         Me.CMBgrado.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.CMBgrado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBgrado.ItemHeight = 30
-        Me.CMBgrado.Items.AddRange(New Object() {"Profesor", "Estudiante"})
+        Me.CMBgrado.Items.AddRange(New Object() {"2024", "2025", "2026", "2027", "2028", "2029", "2030"})
         Me.CMBgrado.Location = New System.Drawing.Point(273, 157)
         Me.CMBgrado.Name = "CMBgrado"
         Me.CMBgrado.Size = New System.Drawing.Size(220, 36)
@@ -400,7 +400,7 @@ Partial Class FrmRegistrarEstudiante
         Me.TXTidentifacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTidentifacion.Location = New System.Drawing.Point(273, 488)
         Me.TXTidentifacion.Name = "TXTidentifacion"
-        Me.TXTidentifacion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TXTidentifacion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTidentifacion.PlaceholderText = "Digite su identificación personal"
         Me.TXTidentifacion.SelectedText = ""
         Me.TXTidentifacion.Size = New System.Drawing.Size(220, 36)
@@ -417,7 +417,7 @@ Partial Class FrmRegistrarEstudiante
         Me.CMBcursoLectivo.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.CMBcursoLectivo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBcursoLectivo.ItemHeight = 30
-        Me.CMBcursoLectivo.Items.AddRange(New Object() {"Profesor", "Estudiante"})
+        Me.CMBcursoLectivo.Items.AddRange(New Object() {"Sétimo", "Octavo", "Noveno", "Décimo", "Undécimo", "Duodécimo"})
         Me.CMBcursoLectivo.Location = New System.Drawing.Point(273, 225)
         Me.CMBcursoLectivo.Name = "CMBcursoLectivo"
         Me.CMBcursoLectivo.Size = New System.Drawing.Size(220, 36)
