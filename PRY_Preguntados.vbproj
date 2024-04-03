@@ -110,6 +110,12 @@
     <Compile Include="FrmBuscarTemas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCrearCategorias.Designer.vb">
+      <DependentUpon>FrmCrearCategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearCategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmEditarTemas.Designer.vb">
       <DependentUpon>FrmEditarTemas.vb</DependentUpon>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarTemas.resx">
       <DependentUpon>FrmBuscarTemas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearCategorias.resx">
+      <DependentUpon>FrmCrearCategorias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarInformacion.resx">
       <DependentUpon>FrmEditarInformacion.vb</DependentUpon>
