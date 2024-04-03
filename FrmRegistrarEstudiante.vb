@@ -53,7 +53,4 @@
         FrmOPCIONES.Show()
     End Sub
 
-    Private Sub BTNfotoSeleccionar_Click(sender As Object, e As EventArgs) Handles BTNfotoSeleccionar.Click
-
-    End Sub
 End Class
