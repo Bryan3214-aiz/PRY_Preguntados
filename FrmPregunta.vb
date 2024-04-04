@@ -74,24 +74,7 @@ Public Class FrmPregunta
         MostrarVideo()
     End Sub
 
-    Private Sub BTNIMGInsert_Click(sender As Object, e As EventArgs) Handles BTNIMGInsert.Click
-        Try
-            OpenFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif|Todos los archivos|*.*"
 
-            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
-                Dim rutaImagen As String = OpenFileDialog1.FileName
-                Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
-
-                BASEDATOS.InsertarImagen(imagenBytes)
-
-                MessageBox.Show("Imagen insertada correctamente en la base de datos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-        Catch ex As Exception
-            Console.WriteLine("Error al insertar la imagen: " & ex.Message)
-            MessageBox.Show("Ocurrió un error al insertar la imagen en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-
-    End Sub
 
     Private Sub MostrarImagen()
         Dim imagenBytes As Byte() = ObtenerImagen()
