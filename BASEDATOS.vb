@@ -31,9 +31,10 @@ Module BASEDATOS
         DESCONECTAR()
     End Sub
 
-    Friend Sub EJECUTAR(ByVal Sql As String)
+    Friend Sub EJECUTAR(ByVal Sql As String, ByVal imagenbytes As Byte())
         CONECTAR()
         Dim Comando As New OleDb.OleDbCommand(Sql, miconexion)
+        Comando.Parameters.AddWithValue("@imagen", imagenbytes)
         Comando.ExecuteNonQuery()
         DESCONECTAR()
     End Sub
@@ -107,24 +108,6 @@ Module BASEDATOS
         Return videoBytes
     End Function
 
-    Friend Sub InsertarImagen(ByVal imagenBytes As Byte())
-        Try
-            CONECTAR()
-            Dim query As String = "INSERT INTO Imagenes (Fotos) VALUES (?)"
-            Using cmd As New OleDbCommand(query, miconexion)
-                Dim param As New OleDbParameter("@imagen", OleDbType.LongVarBinary, imagenBytes.Length)
-                param.Value = imagenBytes
-                cmd.Parameters.Add(param)
-                cmd.ExecuteNonQuery()
-            End Using
-
-            Console.WriteLine("Imagen insertada exitosamente en la base de datos.")
-        Catch ex As Exception
-            Console.WriteLine("Error al insertar la imagen en la base de datos: " & ex.Message)
-        Finally
-            DESCONECTAR()
-        End Try
-    End Sub
     Friend Sub InsertarImagenRegistro(ByVal imagenBytes As Byte())
         Try
             CONECTAR()
@@ -148,25 +131,27 @@ Module BASEDATOS
         Dim imagenBytes As Byte() = Nothing
         Try
             CONECTAR()
-            Dim query As String = "SELECT Fotos FROM Imagenes WHERE ID = 3"
+            Dim query As String = "SELECT Fotografia FROM Estudiante WHERE ID_Usuario = 3"
             Using cmd As New OleDbCommand(query, miconexion)
                 Dim dataReader As OleDbDataReader = cmd.ExecuteReader()
                 If dataReader.Read() Then
-                    Dim columnIndex As Integer = dataReader.GetOrdinal("Fotos")
+                    Dim columnIndex As Integer = dataReader.GetOrdinal("Fotografia")
                     Using memoryStream As New MemoryStream()
                         Dim bufferSize As Integer = 4096
                         Dim buffer(bufferSize - 1) As Byte
-                        Dim bytesRead As Integer
+                        Dim bytesRead As Long
                         Dim offset As Long = 0
                         Do
                             bytesRead = dataReader.GetBytes(columnIndex, offset, buffer, 0, bufferSize)
                             If bytesRead > 0 Then
-                                memoryStream.Write(buffer, 0, bytesRead)
+                                memoryStream.Write(buffer, 0, CInt(bytesRead))
                                 offset += bytesRead
                             End If
                         Loop While bytesRead > 0
                         imagenBytes = memoryStream.ToArray()
                     End Using
+                Else
+                    Console.WriteLine("No se encontró la imagen en la base de datos.")
                 End If
             End Using
         Catch ex As Exception
@@ -174,7 +159,6 @@ Module BASEDATOS
         Finally
             DESCONECTAR()
         End Try
-
         Return imagenBytes
     End Function
 

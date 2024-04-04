@@ -1,4 +1,5 @@
-﻿Public Class FrmRegistrarEstudiante
+﻿Imports System.IO
+Public Class FrmRegistrarEstudiante
     Private duracionTransicion As Double = 1 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
 
@@ -40,17 +41,50 @@
     End Sub
 
     Private Sub BTNcrearUsuario_Click(sender As Object, e As EventArgs) Handles BTNcrearUsuario.Click
-        ' Construye la cadena de comando SQL para insertar un nuevo estudiante en la tabla ESTUDIANTE.
-        ' Se utilizan los valores de los controles del formulario para completar los campos correspondientes.
-        Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, NIVEL, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA) VALUES ('" & PK("ESTUDIANTE", "ID_USUARIO") & "', '" & CMBcursoLectivo.Text & "', '" & CMBgrado.Text & "', '" & CMBasignatura.Text & "', '" & CMBperiodo.Text & "', '" & CMBseccion.Text & "', '" & TXTidentifacion.Text & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTcontrasena.Text & "')"
-        ' Ejecuta la función EJECUTAR pasando la cadena de comando SQL como argumento.
-        EJECUTAR(Comando)
-        ' Muestra un mensaje de confirmación.
-        MsgBox("Listo")
-        ' Oculta el formulario actual.
-        Me.Hide()
-        ' Muestra el formulario de inicio de sesión para estudiantes.
-        FrmOPCIONES.Show()
+        Try
+            Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
+            Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, NIVEL, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA, FOTOGRAFIA) VALUES ('" & PK("ESTUDIANTE", "ID_USUARIO") & "', '" & CMBcursoLectivo.Text & "', '" & CMBgrado.Text & "', '" & CMBasignatura.Text & "', '" & CMBperiodo.Text & "', '" & CMBseccion.Text & "', '" & TXTidentifacion.Text & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTcontrasena.Text & "', ?)"
+
+            EJECUTAR(Comando, imagenBytes)
+            MsgBox("Usuario creado exitosamente.")
+            Me.Hide()
+            FrmOPCIONES.Show()
+        Catch ex As Exception
+            Console.WriteLine("Error al crear usuario: " & ex.Message)
+            MessageBox.Show("Ocurrió un error al crear el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
+
+    Private Sub BTNfotoSeleccionar_Click(sender As Object, e As EventArgs) Handles BTNfotoSeleccionar.Click
+        Try
+            OpenFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif|Todos los archivos|*.*"
+
+            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+                Dim rutaImagen As String = OpenFileDialog1.FileName
+                Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
+                MostrarImagen(imagenBytes)
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Error al insertar la imagen: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub MostrarImagen(imagenBytes As Byte())
+        Try
+            Dim tempFilePath As String = Path.GetTempFileName()
+            tempFilePath = Path.ChangeExtension(tempFilePath, ".jpg")
+            File.WriteAllBytes(tempFilePath, imagenBytes)
+
+            BTNfotoSeleccionar.Image = Image.FromFile(tempFilePath)
+        Catch ex As Exception
+            Console.WriteLine("Error al mostrar la imagen: " & ex.Message)
+        End Try
+    End Sub
+    Private Function ObtenerBytesDeImagen(ByVal imagen As Image) As Byte()
+        Using ms As New MemoryStream()
+            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
+            Return ms.ToArray()
+        End Using
+    End Function
 
 End Class
