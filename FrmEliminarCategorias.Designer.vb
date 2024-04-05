@@ -41,7 +41,7 @@ Partial Class FrmEliminarCategorias
         Me.LabelEliTemas.Name = "LabelEliTemas"
         Me.LabelEliTemas.Size = New System.Drawing.Size(895, 72)
         Me.LabelEliTemas.TabIndex = 28
-        Me.LabelEliTemas.Text = "Buscando categorias y preguntas asociadas"
+        Me.LabelEliTemas.Text = "Buscar categorias y preguntas asociadas"
         Me.LabelEliTemas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TXTNOMBRESUCURSAL
