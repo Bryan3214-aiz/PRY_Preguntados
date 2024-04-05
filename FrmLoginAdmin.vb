@@ -36,7 +36,7 @@ Public Class FrmLoginAdmin
         If ds.Tables("tabla").Rows.Count > 0 Then
             ' Si se encontraron filas, el inicio de sesión es exitoso
             Me.Hide()
-            FrmMenuProfesor.ShowDialog()
+            FrmMenuAdministrador.ShowDialog()
             Me.Close()
         Else
             ' Si no se encontraron filas, se muestra un mensaje de error
