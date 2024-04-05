@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Public Class FrmCrearPerfilProfesor
     Private Sub BTNcrearPerfilProfesor_Click(sender As Object, e As EventArgs) Handles BTNcrearPerfilProfesor.Click
+
         Try
             ' Validar si algún campo está vacío
             If String.IsNullOrWhiteSpace(TXTidentifacion.Text) OrElse
@@ -16,7 +17,7 @@ Public Class FrmCrearPerfilProfesor
             Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
 
             ' Construir el comando SQL con parámetros 
-            Dim Comando As String = "INSERT INTO PROFESOR (ID_PROFESOR, NOMBRE_COMPLETO, CORREO_ELECTRONICO, IDENTIFICACION,FOTOGRAFIA, CONTRASENA, PATRON) VALUES ('" & PK("PROFESOR", "ID_PROFESOR") & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTidentifacion.Text & "', ?, '" & TXTcontrasena.Text & "', '" & TXTpatron.Text & "')"
+            Dim Comando As String = "INSERT INTO PROFESOR (ID_PROFESOR, NOMBRE_COMPLETO, CORREO_ELECTRONICO, IDENTIFICACION, CONTRASENA, PATRON, FOTOGRAFIA) VALUES ('" & PKF("PROFESOR", "ID_PROFESOR") & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTidentifacion.Text & "','" & TXTcontrasena.Text & "', '" & TXTpatron.Text & "', ?)"
 
             ' Ejecutar el comando SQL
             EJECUTAR(Comando, imagenBytes)
