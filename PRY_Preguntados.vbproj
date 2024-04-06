@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E24144F-76DE-4C8A-8F9F-419414017FD1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>PRY_Preguntados.FrmMenuAdministrador</StartupObject>
+    <StartupObject>PRY_Preguntados.FrmOPCIONES</StartupObject>
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -230,6 +230,12 @@
     <Compile Include="FrmRegistrarEstudiante.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmVerDatosRegistradosEstudiante.Designer.vb">
+      <DependentUpon>FrmVerDatosRegistradosEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerDatosRegistradosEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmVideoInicio.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarEstudiante.resx">
       <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerDatosRegistradosEstudiante.resx">
+      <DependentUpon>FrmVerDatosRegistradosEstudiante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVideoInicio.resx">
       <DependentUpon>FrmVideoInicio.vb</DependentUpon>

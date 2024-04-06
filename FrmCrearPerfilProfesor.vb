@@ -22,7 +22,7 @@ Public Class FrmCrearPerfilProfesor
             ' Ejecutar el comando SQL
             EJECUTAR(Comando, imagenBytes)
 
-            MsgBox("Usuario creado exitosamente.", "")
+            MsgBox("Usuario creado exitosamente.")
 
         Catch ex As Exception
             Console.WriteLine("Error al crear usuario: " & ex.Message)
