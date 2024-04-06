@@ -222,6 +222,7 @@ Partial Class FrmMenuAdministrador
         Me.Controls.Add(Me.panelContenedor)
         Me.Controls.Add(Me.BTNinfoPRO)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmMenuAdministrador"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmMenuAdministrador"

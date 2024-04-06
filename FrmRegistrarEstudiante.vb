@@ -60,7 +60,8 @@ Public Class FrmRegistrarEstudiante
             EJECUTAR(Comando, imagenBytes)
             MsgBox("Usuario creado exitosamente.")
             Me.Hide()
-            FrmOPCIONES.Show()
+            FrmVerDatosRegistradosEstudiante.ShowDialog()
+            Me.Close()
         Catch ex As Exception
             Console.WriteLine("Error al crear usuario: " & ex.Message)
             MessageBox.Show("Ocurrió un error al crear el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
