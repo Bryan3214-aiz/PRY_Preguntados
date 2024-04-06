@@ -19,6 +19,7 @@
     Private Sub ocultarMenu()
         panelTemas.Visible = False
         panelCategorias.Visible = False
+        panelPreguntas.Visible = False
         panelReportes.Visible = False
     End Sub
 
@@ -54,7 +55,10 @@
         mostrarMenu(panelCategorias)
     End Sub
 
-    Private Sub BTNcalificaciones_Click_1(sender As Object, e As EventArgs) Handles BTNreportes.Click
+    Private Sub BTNpreguntas_Click_1(sender As Object, e As EventArgs) Handles BTNpreguntas.Click
+        mostrarMenu(panelPreguntas)
+    End Sub
+    Private Sub BTNmiPerfil_Click(sender As Object, e As EventArgs) Handles BTNreportes.Click
         mostrarMenu(panelReportes)
     End Sub
 
@@ -103,29 +107,37 @@
 
 
 
-    Private Sub BTNcalificarRespuestas_Click(sender As Object, e As EventArgs)
+
+
+    Private Sub BTNasignarCalificacion_Click(sender As Object, e As EventArgs) Handles BTNasignarCalificacion.Click
+        FormularioAbierto(New FrmAsignarCalificaciones())
+        ocultarMenu()
+    End Sub
+    Private Sub BTNcrearReportes_Click(sender As Object, e As EventArgs) Handles BTNcrearReportes.Click
+        FormularioAbierto(New FrmCrearReportes())
         ocultarMenu()
     End Sub
 
-    Private Sub BTNenviarReporte_Click(sender As Object, e As EventArgs)
+    Private Sub BTNenviarCorreoReporte_Click(sender As Object, e As EventArgs) Handles BTNenviarCorreoReporte.Click
+        FormularioAbierto(New FrmEnviarCorreo())
         ocultarMenu()
     End Sub
 
 
 
+
+
+
+    Private Sub BTNperfil_Click(sender As Object, e As EventArgs) Handles BTNperfil.Click
+        ocultarMenu()
+    End Sub
 
     Private Sub BTNinicio_Click(sender As Object, e As EventArgs) Handles BTNinicio.Click
         FormularioAbierto(New FrmInicioMProfesor())
         ocultarMenu()
     End Sub
 
-    Private Sub BTNmiPerfil_Click(sender As Object, e As EventArgs) Handles BTNmiPerfil.Click
-        ocultarMenu()
-    End Sub
 
-    Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrarSesion.Click
-
-    End Sub
 
 
     '--------------------------------------------- Metodo que llama a los formularios -------------------------------------------------------
