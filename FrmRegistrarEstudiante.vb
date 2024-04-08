@@ -42,8 +42,8 @@ Public Class FrmRegistrarEstudiante
 
     Private Sub BTNcrearUsuario_Click(sender As Object, e As EventArgs) Handles BTNcrearUsuario.Click
         Try
-            If String.IsNullOrWhiteSpace(CMBcursoLectivo.Text) OrElse
-                String.IsNullOrWhiteSpace(CMBgrado.Text) OrElse
+            If String.IsNullOrWhiteSpace(CMBgrado.Text) OrElse
+                String.IsNullOrWhiteSpace(CMBcursoLectivo.Text) OrElse
                 String.IsNullOrWhiteSpace(CMBasignatura.Text) OrElse
                 String.IsNullOrWhiteSpace(CMBperiodo.Text) OrElse
                 String.IsNullOrWhiteSpace(CMBseccion.Text) OrElse
@@ -55,7 +55,7 @@ Public Class FrmRegistrarEstudiante
                 Return ' Salir del método si hay campos vacíos
             End If
             Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
-            Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, NIVEL, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA, FOTOGRAFIA) VALUES ('" & PK("ESTUDIANTE", "ID_USUARIO") & "', '" & CMBcursoLectivo.Text & "', '" & CMBgrado.Text & "', '" & CMBasignatura.Text & "', '" & CMBperiodo.Text & "', '" & CMBseccion.Text & "', '" & TXTidentifacion.Text & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTcontrasena.Text & "', ?)"
+            Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, GRADO, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA, FOTOGRAFIA) VALUES ('" & PK("ESTUDIANTE", "ID_USUARIO") & "', '" & CMBcursoLectivo.Text & "', '" & CMBgrado.Text & "', '" & CMBasignatura.Text & "', '" & CMBperiodo.Text & "', '" & CMBseccion.Text & "', '" & TXTidentifacion.Text & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTcontrasena.Text & "', ?)"
 
             EJECUTAR(Comando, imagenBytes)
             MsgBox("Usuario creado exitosamente.")

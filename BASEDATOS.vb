@@ -31,6 +31,7 @@ Module BASEDATOS
         DESCONECTAR()
     End Sub
 
+
     Friend Sub EJECUTAR(ByVal Sql As String, ByVal imagenbytes As Byte())
         CONECTAR()
         Dim Comando As New OleDb.OleDbCommand(Sql, miconexion)

@@ -33,7 +33,7 @@ Partial Class FrmRegistrarEstudiante
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CMBasignatura = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.CMBgrado = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CMBcursoLectivo = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TXTcontrasena = New Guna.UI2.WinForms.Guna2TextBox()
         Me.BTNfotoSeleccionar = New Guna.UI2.WinForms.Guna2CirclePictureBox()
@@ -47,7 +47,7 @@ Partial Class FrmRegistrarEstudiante
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXTidentifacion = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.CMBcursoLectivo = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CMBgrado = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.panel.SuspendLayout()
@@ -68,7 +68,7 @@ Partial Class FrmRegistrarEstudiante
         Me.panel.Controls.Add(Me.Label9)
         Me.panel.Controls.Add(Me.CMBasignatura)
         Me.panel.Controls.Add(Me.Label8)
-        Me.panel.Controls.Add(Me.CMBgrado)
+        Me.panel.Controls.Add(Me.CMBcursoLectivo)
         Me.panel.Controls.Add(Me.Label13)
         Me.panel.Controls.Add(Me.TXTcontrasena)
         Me.panel.Controls.Add(Me.BTNfotoSeleccionar)
@@ -82,7 +82,7 @@ Partial Class FrmRegistrarEstudiante
         Me.panel.Controls.Add(Me.Label2)
         Me.panel.Controls.Add(Me.Label1)
         Me.panel.Controls.Add(Me.TXTidentifacion)
-        Me.panel.Controls.Add(Me.CMBcursoLectivo)
+        Me.panel.Controls.Add(Me.CMBgrado)
         Me.panel.Controls.Add(Me.TXTcorreo)
         Me.panel.Location = New System.Drawing.Point(0, 0)
         Me.panel.Name = "panel"
@@ -188,22 +188,22 @@ Partial Class FrmRegistrarEstudiante
         Me.Label8.Text = "Seleccione su grado"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'CMBgrado
+        'CMBcursoLectivo
         '
-        Me.CMBgrado.BackColor = System.Drawing.Color.Transparent
-        Me.CMBgrado.BorderRadius = 5
-        Me.CMBgrado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CMBgrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CMBgrado.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBgrado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBgrado.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.CMBgrado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CMBgrado.ItemHeight = 30
-        Me.CMBgrado.Items.AddRange(New Object() {"2024", "2025", "2026", "2027", "2028", "2029", "2030"})
-        Me.CMBgrado.Location = New System.Drawing.Point(273, 157)
-        Me.CMBgrado.Name = "CMBgrado"
-        Me.CMBgrado.Size = New System.Drawing.Size(220, 36)
-        Me.CMBgrado.TabIndex = 20
+        Me.CMBcursoLectivo.BackColor = System.Drawing.Color.Transparent
+        Me.CMBcursoLectivo.BorderRadius = 5
+        Me.CMBcursoLectivo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CMBcursoLectivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CMBcursoLectivo.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMBcursoLectivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMBcursoLectivo.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.CMBcursoLectivo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CMBcursoLectivo.ItemHeight = 30
+        Me.CMBcursoLectivo.Items.AddRange(New Object() {"2024", "2025", "2026", "2027", "2028", "2029", "2030"})
+        Me.CMBcursoLectivo.Location = New System.Drawing.Point(273, 157)
+        Me.CMBcursoLectivo.Name = "CMBcursoLectivo"
+        Me.CMBcursoLectivo.Size = New System.Drawing.Size(220, 36)
+        Me.CMBcursoLectivo.TabIndex = 20
         '
         'Label13
         '
@@ -410,22 +410,22 @@ Partial Class FrmRegistrarEstudiante
         Me.TXTidentifacion.Size = New System.Drawing.Size(220, 36)
         Me.TXTidentifacion.TabIndex = 3
         '
-        'CMBcursoLectivo
+        'CMBgrado
         '
-        Me.CMBcursoLectivo.BackColor = System.Drawing.Color.Transparent
-        Me.CMBcursoLectivo.BorderRadius = 5
-        Me.CMBcursoLectivo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.CMBcursoLectivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CMBcursoLectivo.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBcursoLectivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBcursoLectivo.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.CMBcursoLectivo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.CMBcursoLectivo.ItemHeight = 30
-        Me.CMBcursoLectivo.Items.AddRange(New Object() {"Sétimo", "Octavo", "Noveno", "Décimo", "Undécimo", "Duodécimo"})
-        Me.CMBcursoLectivo.Location = New System.Drawing.Point(273, 225)
-        Me.CMBcursoLectivo.Name = "CMBcursoLectivo"
-        Me.CMBcursoLectivo.Size = New System.Drawing.Size(220, 36)
-        Me.CMBcursoLectivo.TabIndex = 2
+        Me.CMBgrado.BackColor = System.Drawing.Color.Transparent
+        Me.CMBgrado.BorderRadius = 5
+        Me.CMBgrado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CMBgrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CMBgrado.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMBgrado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMBgrado.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.CMBgrado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CMBgrado.ItemHeight = 30
+        Me.CMBgrado.Items.AddRange(New Object() {"Sétimo", "Octavo", "Noveno", "Décimo", "Undécimo", "Duodécimo"})
+        Me.CMBgrado.Location = New System.Drawing.Point(273, 225)
+        Me.CMBgrado.Name = "CMBgrado"
+        Me.CMBgrado.Size = New System.Drawing.Size(220, 36)
+        Me.CMBgrado.TabIndex = 2
         '
         'TXTcorreo
         '
@@ -479,13 +479,13 @@ Partial Class FrmRegistrarEstudiante
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TXTidentifacion As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents CMBcursoLectivo As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CMBgrado As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents BTNcerrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label5 As Label
     Friend WithEvents TXTnombre As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents CMBgrado As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CMBcursoLectivo As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents CMBasignatura As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label10 As Label
