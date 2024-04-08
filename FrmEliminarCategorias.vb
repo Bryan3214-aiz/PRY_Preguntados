@@ -2,7 +2,7 @@
 
     Dim ID As Integer = 0 'CODIGO SELECCIONADO
     Friend Sub INICIALIZAR()
-        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA, TEMA.NOMBRE_TEMA FROM CATEGORIA INNER JOIN TEMA ON TEMA.ID_TEMA = CATEGORIA.ID_TEMA"
+        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA, TEMA.NOMBRE_TEMA, TEMA.Nivel FROM CATEGORIA INNER JOIN TEMA ON TEMA.ID_TEMA = CATEGORIA.ID_TEMA"
         BUSCAR(comando)
         BTNeliminarCategoria.Enabled = False
         ID = 0
@@ -16,13 +16,14 @@
                 L.Items.Add(ds.Tables(0).Rows(I).Item(0))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(1))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(2))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(3))
             Next
         End If
     End Sub
 
 
-    Private Sub TXTNOMBRESUCURSAL_TextChanged(sender As Object, e As EventArgs) Handles TXTNOMBRESUCURSAL.TextChanged
-        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA, TEMA.NOMBRE_TEMA FROM CATEGORIA INNER JOIN TEMA ON TEMA.ID_TEMA = CATEGORIA.ID_TEMA WHERE NOMBRE_CATEGORIA LIKE '%" & TXTNOMBRESUCURSAL.Text & "%'"
+    Private Sub TXTNOMBRECATEGORIA_TextChanged(sender As Object, e As EventArgs) Handles TXTNOMBRESUCURSAL.TextChanged
+        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA, TEMA.NOMBRE_TEMA, TEMA.NIVEL FROM CATEGORIA INNER JOIN TEMA ON TEMA.ID_TEMA = CATEGORIA.ID_TEMA WHERE NOMBRE_CATEGORIA LIKE '%" & TXTNOMBRESUCURSAL.Text & "%'"
         BUSCAR(comando)
     End Sub
 

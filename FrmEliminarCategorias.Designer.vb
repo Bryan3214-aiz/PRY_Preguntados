@@ -29,6 +29,7 @@ Partial Class FrmEliminarCategorias
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BTNeliminarCategoria = New Guna.UI2.WinForms.Guna2Button()
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'LabelEliTemas
@@ -74,7 +75,7 @@ Partial Class FrmEliminarCategorias
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.L.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
         Me.L.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L.ForeColor = System.Drawing.SystemColors.WindowText
         Me.L.FullRowSelect = True
@@ -86,6 +87,7 @@ Partial Class FrmEliminarCategorias
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
+        Me.L.Scrollable = False
         Me.L.Size = New System.Drawing.Size(832, 420)
         Me.L.TabIndex = 30
         Me.L.UseCompatibleStateImageBehavior = False
@@ -100,13 +102,13 @@ Partial Class FrmEliminarCategorias
         '
         Me.ColumnHeader2.Text = "Nombre de la categoria"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 410
+        Me.ColumnHeader2.Width = 275
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "Nombre del tema asociado"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 415
+        Me.ColumnHeader3.Width = 275
         '
         'BTNeliminarCategoria
         '
@@ -131,6 +133,12 @@ Partial Class FrmEliminarCategorias
         Me.BTNeliminarCategoria.Text = "Eliminar"
         Me.BTNeliminarCategoria.UseTransparentBackground = True
         '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Grado"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 280
+        '
         'FrmEliminarCategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -154,4 +162,5 @@ Partial Class FrmEliminarCategorias
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents BTNeliminarCategoria As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ColumnHeader4 As ColumnHeader
 End Class
