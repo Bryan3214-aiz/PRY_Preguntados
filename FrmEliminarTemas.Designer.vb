@@ -60,7 +60,7 @@ Partial Class FrmEliminarTemas
         '
         Me.ColumnHeader2.Text = "Nombre del tema"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 418
+        Me.ColumnHeader2.Width = 417
         '
         'ColumnHeader3
         '

@@ -80,7 +80,7 @@ Partial Class FrmBuscarTemas
         Me.L.GridLines = True
         Me.L.HideSelection = False
         Me.L.HoverSelection = True
-        Me.L.Location = New System.Drawing.Point(31, 158)
+        Me.L.Location = New System.Drawing.Point(31, 160)
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
