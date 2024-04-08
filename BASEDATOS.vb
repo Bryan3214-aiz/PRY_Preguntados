@@ -181,4 +181,19 @@ Module BASEDATOS
         Return imagenBytes
     End Function
 
+    Function PKCC(ByVal TABLA As String, ByVal ID As String) As Integer
+        ds.Tables.Clear()
+        comando = "SELECT " & ID & " FROM " & TABLA
+        CARGAR_TABLA(ds, comando)
+        If ds.Tables(0).Rows.Count > 0 Then
+            ds.Tables.Clear()
+            comando = "SELECT MAX(ID_PROFESOR) FROM " & TABLA
+            CARGAR_TABLA(ds, comando)
+            PKCC = ds.Tables(0).Rows(0).ItemArray(0) + 1
+        Else
+            PKCC = 1
+        End If
+    End Function
+
+
 End Module

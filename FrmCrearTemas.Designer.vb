@@ -34,6 +34,7 @@ Partial Class FrmCrearTemas
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TXTtema = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,8 +45,9 @@ Partial Class FrmCrearTemas
         Me.LabelbienvenidaProfesor.Font = New System.Drawing.Font("Showcard Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelbienvenidaProfesor.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LabelbienvenidaProfesor.Location = New System.Drawing.Point(0, 0)
+        Me.LabelbienvenidaProfesor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelbienvenidaProfesor.Name = "LabelbienvenidaProfesor"
-        Me.LabelbienvenidaProfesor.Size = New System.Drawing.Size(895, 115)
+        Me.LabelbienvenidaProfesor.Size = New System.Drawing.Size(1193, 142)
         Me.LabelbienvenidaProfesor.TabIndex = 31
         Me.LabelbienvenidaProfesor.Text = "Registrar nuevos temas"
         Me.LabelbienvenidaProfesor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -64,9 +66,10 @@ Partial Class FrmCrearTemas
         Me.Guna2Panel1.Controls.Add(Me.Label4)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 115)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 142)
+        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(895, 539)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1193, 663)
         Me.Guna2Panel1.TabIndex = 34
         '
         'BTNcrearTema
@@ -81,9 +84,10 @@ Partial Class FrmCrearTemas
         Me.BTNcrearTema.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTNcrearTema.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
         Me.BTNcrearTema.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTNcrearTema.Location = New System.Drawing.Point(680, 430)
+        Me.BTNcrearTema.Location = New System.Drawing.Point(907, 529)
+        Me.BTNcrearTema.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNcrearTema.Name = "BTNcrearTema"
-        Me.BTNcrearTema.Size = New System.Drawing.Size(180, 60)
+        Me.BTNcrearTema.Size = New System.Drawing.Size(240, 74)
         Me.BTNcrearTema.TabIndex = 31
         Me.BTNcrearTema.Text = "Crear tema"
         '
@@ -98,9 +102,10 @@ Partial Class FrmCrearTemas
         Me.CMBgradoTemas.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.CMBgradoTemas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBgradoTemas.ItemHeight = 30
-        Me.CMBgradoTemas.Location = New System.Drawing.Point(621, 78)
+        Me.CMBgradoTemas.Location = New System.Drawing.Point(828, 96)
+        Me.CMBgradoTemas.Margin = New System.Windows.Forms.Padding(4)
         Me.CMBgradoTemas.Name = "CMBgradoTemas"
-        Me.CMBgradoTemas.Size = New System.Drawing.Size(220, 36)
+        Me.CMBgradoTemas.Size = New System.Drawing.Size(292, 36)
         Me.CMBgradoTemas.TabIndex = 30
         '
         'BTNvideoTema
@@ -115,9 +120,10 @@ Partial Class FrmCrearTemas
         Me.BTNvideoTema.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNvideoTema.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNvideoTema.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTNvideoTema.Location = New System.Drawing.Point(526, 296)
+        Me.BTNvideoTema.Location = New System.Drawing.Point(701, 364)
+        Me.BTNvideoTema.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNvideoTema.Name = "BTNvideoTema"
-        Me.BTNvideoTema.Size = New System.Drawing.Size(195, 70)
+        Me.BTNvideoTema.Size = New System.Drawing.Size(260, 86)
         Me.BTNvideoTema.TabIndex = 29
         Me.BTNvideoTema.Text = "Video del tema"
         '
@@ -133,9 +139,10 @@ Partial Class FrmCrearTemas
         Me.BTNAudioVozTema.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNAudioVozTema.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNAudioVozTema.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTNAudioVozTema.Location = New System.Drawing.Point(188, 296)
+        Me.BTNAudioVozTema.Location = New System.Drawing.Point(251, 364)
+        Me.BTNAudioVozTema.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNAudioVozTema.Name = "BTNAudioVozTema"
-        Me.BTNAudioVozTema.Size = New System.Drawing.Size(195, 70)
+        Me.BTNAudioVozTema.Size = New System.Drawing.Size(260, 86)
         Me.BTNAudioVozTema.TabIndex = 28
         Me.BTNAudioVozTema.Text = "Audio de voz del tema"
         '
@@ -151,9 +158,10 @@ Partial Class FrmCrearTemas
         Me.BTNsonidoTema.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNsonidoTema.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNsonidoTema.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTNsonidoTema.Location = New System.Drawing.Point(646, 187)
+        Me.BTNsonidoTema.Location = New System.Drawing.Point(861, 230)
+        Me.BTNsonidoTema.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNsonidoTema.Name = "BTNsonidoTema"
-        Me.BTNsonidoTema.Size = New System.Drawing.Size(195, 70)
+        Me.BTNsonidoTema.Size = New System.Drawing.Size(260, 86)
         Me.BTNsonidoTema.TabIndex = 27
         Me.BTNsonidoTema.Text = "Sonido del tema"
         '
@@ -169,9 +177,10 @@ Partial Class FrmCrearTemas
         Me.BTNimgAnimadaTema.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNimgAnimadaTema.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNimgAnimadaTema.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTNimgAnimadaTema.Location = New System.Drawing.Point(354, 187)
+        Me.BTNimgAnimadaTema.Location = New System.Drawing.Point(472, 230)
+        Me.BTNimgAnimadaTema.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNimgAnimadaTema.Name = "BTNimgAnimadaTema"
-        Me.BTNimgAnimadaTema.Size = New System.Drawing.Size(195, 70)
+        Me.BTNimgAnimadaTema.Size = New System.Drawing.Size(260, 86)
         Me.BTNimgAnimadaTema.TabIndex = 26
         Me.BTNimgAnimadaTema.Text = "Imagen animada del tema"
         '
@@ -187,9 +196,10 @@ Partial Class FrmCrearTemas
         Me.BTNimgEstaticaTema.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNimgEstaticaTema.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNimgEstaticaTema.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTNimgEstaticaTema.Location = New System.Drawing.Point(63, 187)
+        Me.BTNimgEstaticaTema.Location = New System.Drawing.Point(84, 230)
+        Me.BTNimgEstaticaTema.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNimgEstaticaTema.Name = "BTNimgEstaticaTema"
-        Me.BTNimgEstaticaTema.Size = New System.Drawing.Size(195, 70)
+        Me.BTNimgEstaticaTema.Size = New System.Drawing.Size(260, 86)
         Me.BTNimgEstaticaTema.TabIndex = 25
         Me.BTNimgEstaticaTema.Text = "Imagen estática del tema"
         '
@@ -198,9 +208,10 @@ Partial Class FrmCrearTemas
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label5.Location = New System.Drawing.Point(46, 78)
+        Me.Label5.Location = New System.Drawing.Point(61, 96)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(136, 36)
+        Me.Label5.Size = New System.Drawing.Size(181, 44)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Tema:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -219,12 +230,13 @@ Partial Class FrmCrearTemas
         Me.TXTtema.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTtema.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXTtema.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTtema.Location = New System.Drawing.Point(188, 78)
+        Me.TXTtema.Location = New System.Drawing.Point(251, 96)
+        Me.TXTtema.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TXTtema.Name = "TXTtema"
         Me.TXTtema.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTtema.PlaceholderText = "Digite el nombre de la categoria "
         Me.TXTtema.SelectedText = ""
-        Me.TXTtema.Size = New System.Drawing.Size(220, 36)
+        Me.TXTtema.Size = New System.Drawing.Size(293, 44)
         Me.TXTtema.TabIndex = 23
         '
         'Label4
@@ -232,23 +244,25 @@ Partial Class FrmCrearTemas
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label4.Location = New System.Drawing.Point(419, 63)
+        Me.Label4.Location = New System.Drawing.Point(559, 78)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(210, 87)
+        Me.Label4.Size = New System.Drawing.Size(280, 107)
         Me.Label4.TabIndex = 21
         Me.Label4.Text = "Seleccione el grado: "
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmCrearTemas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(895, 654)
+        Me.ClientSize = New System.Drawing.Size(1193, 805)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.LabelbienvenidaProfesor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmCrearTemas"
         Me.Text = "Frmprueba"
         Me.Guna2Panel1.ResumeLayout(False)
@@ -268,4 +282,5 @@ Partial Class FrmCrearTemas
     Friend WithEvents Label5 As Label
     Friend WithEvents TXTtema As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
