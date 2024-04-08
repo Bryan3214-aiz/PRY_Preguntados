@@ -35,6 +35,7 @@ Public Class FrmLoginAdmin
         ' Se verifica si se encontraron filas en el DataSet
         If ds.Tables("tabla").Rows.Count > 0 Then
             ' Si se encontraron filas, el inicio de sesión es exitoso
+            DESCONECTAR()
             Me.Hide()
             FrmMenuAdministrador.ShowDialog()
             Me.Close()

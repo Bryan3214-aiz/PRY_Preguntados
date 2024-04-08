@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmEditarInformacion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmEditarInformacion
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEditarInformacion))
@@ -35,7 +35,7 @@ Partial Class FrmEditarInformacion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXTcontrasena = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CMBnuevogrado = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.panelinfo = New Guna.UI2.WinForms.Guna2Panel()
         Me.panel.SuspendLayout()
@@ -61,7 +61,7 @@ Partial Class FrmEditarInformacion
         Me.panel.Controls.Add(Me.Label2)
         Me.panel.Controls.Add(Me.Label1)
         Me.panel.Controls.Add(Me.TXTcontrasena)
-        Me.panel.Controls.Add(Me.Guna2ComboBox1)
+        Me.panel.Controls.Add(Me.CMBnuevogrado)
         Me.panel.Controls.Add(Me.TXTcorreo)
         Me.panel.Location = New System.Drawing.Point(89, 12)
         Me.panel.Name = "panel"
@@ -93,7 +93,7 @@ Partial Class FrmEditarInformacion
         Me.TXTnuevoNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTnuevoNombre.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXTnuevoNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTnuevoNombre.Location = New System.Drawing.Point(282, 116)
+        Me.TXTnuevoNombre.Location = New System.Drawing.Point(282, 113)
         Me.TXTnuevoNombre.Name = "TXTnuevoNombre"
         Me.TXTnuevoNombre.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTnuevoNombre.PlaceholderText = "Digite su nombre"
@@ -148,7 +148,7 @@ Partial Class FrmEditarInformacion
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(210, 67)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Seleccione su tipo de usuario:"
+        Me.Label4.Text = "Seleccione su grado:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -209,22 +209,22 @@ Partial Class FrmEditarInformacion
         Me.TXTcontrasena.Size = New System.Drawing.Size(211, 36)
         Me.TXTcontrasena.TabIndex = 3
         '
-        'Guna2ComboBox1
+        'CMBnuevogrado
         '
-        Me.Guna2ComboBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ComboBox1.BorderRadius = 5
-        Me.Guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.Guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Guna2ComboBox1.ItemHeight = 30
-        Me.Guna2ComboBox1.Items.AddRange(New Object() {"Profesor", "Estudiante"})
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(282, 310)
-        Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Me.Guna2ComboBox1.Size = New System.Drawing.Size(211, 36)
-        Me.Guna2ComboBox1.TabIndex = 2
+        Me.CMBnuevogrado.BackColor = System.Drawing.Color.Transparent
+        Me.CMBnuevogrado.BorderRadius = 5
+        Me.CMBnuevogrado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CMBnuevogrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CMBnuevogrado.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMBnuevogrado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMBnuevogrado.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CMBnuevogrado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CMBnuevogrado.ItemHeight = 30
+        Me.CMBnuevogrado.Items.AddRange(New Object() {"Sétimo", "Octavo", "Noveno", "Décimo", "Undécimo", "Duodécimo"})
+        Me.CMBnuevogrado.Location = New System.Drawing.Point(282, 310)
+        Me.CMBnuevogrado.Name = "CMBnuevogrado"
+        Me.CMBnuevogrado.Size = New System.Drawing.Size(211, 36)
+        Me.CMBnuevogrado.TabIndex = 2
         '
         'TXTcorreo
         '
@@ -285,7 +285,7 @@ Partial Class FrmEditarInformacion
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TXTcontrasena As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CMBnuevogrado As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TXTnuevoNombre As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label

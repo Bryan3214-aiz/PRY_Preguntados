@@ -22,8 +22,6 @@ Module BASEDATOS
     Friend Sub DESCONECTAR()
         miconexion.Close()
     End Sub
-
-
     Friend Sub CARGAR_TABLA(ByRef Tabla_Temporal As DataSet, ByVal comando As String)
         CONECTAR()
         Dim Consulta As New OleDb.OleDbDataAdapter(comando, miconexion)
@@ -31,7 +29,13 @@ Module BASEDATOS
         DESCONECTAR()
     End Sub
 
-
+    'Ejecutar pero sin imagen
+    Friend Sub EJECUTARSI(ByVal Sql As String)
+        CONECTAR()
+        Dim Comando As New OleDb.OleDbCommand(Sql, miconexion)
+        Comando.ExecuteNonQuery()
+        DESCONECTAR()
+    End Sub
     Friend Sub EJECUTAR(ByVal Sql As String, ByVal imagenbytes As Byte())
         CONECTAR()
         Dim Comando As New OleDb.OleDbCommand(Sql, miconexion)

@@ -47,4 +47,26 @@
         panelinfo.BackColor = Color.FromArgb(85, Color.Black)
     End Sub
 
+    Private Sub BTNguardar_Click(sender As Object, e As EventArgs) Handles BTNguardar.Click
+
+        Try
+            If String.IsNullOrWhiteSpace(TXTnuevoNombre.Text) OrElse
+                String.IsNullOrWhiteSpace(CMBnuevogrado.Text) OrElse
+                String.IsNullOrWhiteSpace(TXTcorreo.Text) OrElse
+                String.IsNullOrWhiteSpace(TXTcontrasena.Text) Then
+                MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return ' Salir del método si hay campos vacíos
+            End If
+            Dim Editar As String = FrmLoginEstudiante.TXTcorreo.Tag
+            Dim Comando As String = "UPDATE ESTUDIANTE SET NOMBRE_COMPLETO = '" & TXTnuevoNombre.Text & "', CORREO_ELECTRONICO = '" & TXTcorreo.Text & "', CONTRASENA = '" & TXTcontrasena.Text & "', NIVEL = '" & CMBnuevogrado.Text & "' WHERE CORREO_ELECTRONICO = '" & Editar & "' "
+            EJECUTARSI(Comando)
+            MsgBox("Usuario creado exitosamente.")
+            Me.Hide()
+            FrmVerDatosRegistradosEstudiante.ShowDialog()
+            Me.Close()
+        Catch ex As Exception
+            Console.WriteLine("Error al crear usuario: " & ex.Message)
+            MessageBox.Show("Ocurrió un error al crear el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 End Class
