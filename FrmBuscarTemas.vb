@@ -1,5 +1,4 @@
 ﻿Public Class FrmBuscarTemas
-
     Friend Sub BUSCAR(ByVal SQL As String)
         ds.Tables.Clear()
         L.Items.Clear()
@@ -12,11 +11,9 @@
             Next
         End If
     End Sub
-
     Private Sub TXTNOMBRESUCURSAL_TextChanged(sender As Object, e As EventArgs) Handles TXTNOMBRESUCURSAL.TextChanged
         comando = "SELECT * FROM TEMA WHERE NOMBRE_TEMA LIKE '%" & TXTNOMBRESUCURSAL.Text & "%'"
         BUSCAR(comando)
     End Sub
-
 
 End Class
