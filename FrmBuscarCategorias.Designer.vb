@@ -40,7 +40,7 @@ Partial Class FrmBuscarCategorias
         Me.LabelEliTemas.Name = "LabelEliTemas"
         Me.LabelEliTemas.Size = New System.Drawing.Size(895, 72)
         Me.LabelEliTemas.TabIndex = 29
-        Me.LabelEliTemas.Text = "Buscando categorias y preguntas asociadas"
+        Me.LabelEliTemas.Text = "Buscando categorias creadas"
         Me.LabelEliTemas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TXTNOMBRESUCURSAL

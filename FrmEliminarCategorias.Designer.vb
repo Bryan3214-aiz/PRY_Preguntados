@@ -41,7 +41,7 @@ Partial Class FrmEliminarCategorias
         Me.LabelEliTemas.Name = "LabelEliTemas"
         Me.LabelEliTemas.Size = New System.Drawing.Size(895, 72)
         Me.LabelEliTemas.TabIndex = 28
-        Me.LabelEliTemas.Text = "Buscar categorias y preguntas asociadas"
+        Me.LabelEliTemas.Text = "Eliminar categorias "
         Me.LabelEliTemas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TXTNOMBRESUCURSAL
@@ -98,13 +98,13 @@ Partial Class FrmEliminarCategorias
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "Nombre del tema"
+        Me.ColumnHeader2.Text = "Nombre de la categoria"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader2.Width = 410
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "Grado asignado"
+        Me.ColumnHeader3.Text = "Nombre del tema asociado"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader3.Width = 415
         '
