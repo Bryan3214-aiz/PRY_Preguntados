@@ -60,5 +60,4 @@ Public Class FrmCrearPerfilProfesor
             Return ms.ToArray()
         End Using
     End Function
-
 End Class
