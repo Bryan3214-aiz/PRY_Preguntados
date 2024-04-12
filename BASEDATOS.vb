@@ -50,25 +50,11 @@ Module BASEDATOS
         CARGAR_TABLA(ds, comando)
         If ds.Tables(0).Rows.Count > 0 Then
             ds.Tables.Clear()
-            comando = "SELECT MAX(ID_USUARIO) FROM " & TABLA
+            comando = "SELECT MAX(" & ID & ") FROM " & TABLA
             CARGAR_TABLA(ds, comando)
             PK = ds.Tables(0).Rows(0).ItemArray(0) + 1
         Else
             PK = 1
-        End If
-    End Function
-
-    Function PKF(ByVal TABLA As String, ByVal ID As String) As Integer
-        ds.Tables.Clear()
-        comando = "SELECT " & ID & " FROM " & TABLA
-        CARGAR_TABLA(ds, comando)
-        If ds.Tables(0).Rows.Count > 0 Then
-            ds.Tables.Clear()
-            comando = "SELECT MAX(ID_PROFESOR) FROM " & TABLA
-            CARGAR_TABLA(ds, comando)
-            PKF = ds.Tables(0).Rows(0).ItemArray(0) + 1
-        Else
-            PKF = 1
         End If
     End Function
 

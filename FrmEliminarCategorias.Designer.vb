@@ -23,13 +23,13 @@ Partial Class FrmEliminarCategorias
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.LabelEliTemas = New System.Windows.Forms.Label()
-        Me.TXTNOMBRESUCURSAL = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXTNOMBRECATEGORIA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.L = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.BTNeliminarCategoria = New Guna.UI2.WinForms.Guna2Button()
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.BTNeliminarCategoria = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'LabelEliTemas
@@ -45,29 +45,29 @@ Partial Class FrmEliminarCategorias
         Me.LabelEliTemas.Text = "Eliminar categorias "
         Me.LabelEliTemas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TXTNOMBRESUCURSAL
+        'TXTNOMBRECATEGORIA
         '
-        Me.TXTNOMBRESUCURSAL.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.TXTNOMBRECATEGORIA.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TXTNOMBRESUCURSAL.BorderRadius = 15
-        Me.TXTNOMBRESUCURSAL.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXTNOMBRESUCURSAL.DefaultText = ""
-        Me.TXTNOMBRESUCURSAL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXTNOMBRESUCURSAL.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXTNOMBRESUCURSAL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXTNOMBRESUCURSAL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXTNOMBRESUCURSAL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTNOMBRESUCURSAL.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
-        Me.TXTNOMBRESUCURSAL.ForeColor = System.Drawing.Color.DimGray
-        Me.TXTNOMBRESUCURSAL.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTNOMBRESUCURSAL.Location = New System.Drawing.Point(30, 101)
-        Me.TXTNOMBRESUCURSAL.Name = "TXTNOMBRESUCURSAL"
-        Me.TXTNOMBRESUCURSAL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXTNOMBRESUCURSAL.PlaceholderText = "Ingrese el nombre de la categoria"
-        Me.TXTNOMBRESUCURSAL.SelectedText = ""
-        Me.TXTNOMBRESUCURSAL.Size = New System.Drawing.Size(832, 42)
-        Me.TXTNOMBRESUCURSAL.TabIndex = 29
+        Me.TXTNOMBRECATEGORIA.BorderRadius = 15
+        Me.TXTNOMBRECATEGORIA.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXTNOMBRECATEGORIA.DefaultText = ""
+        Me.TXTNOMBRECATEGORIA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXTNOMBRECATEGORIA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXTNOMBRECATEGORIA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTNOMBRECATEGORIA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTNOMBRECATEGORIA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTNOMBRECATEGORIA.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
+        Me.TXTNOMBRECATEGORIA.ForeColor = System.Drawing.Color.DimGray
+        Me.TXTNOMBRECATEGORIA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTNOMBRECATEGORIA.Location = New System.Drawing.Point(30, 101)
+        Me.TXTNOMBRECATEGORIA.Name = "TXTNOMBRECATEGORIA"
+        Me.TXTNOMBRECATEGORIA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXTNOMBRECATEGORIA.PlaceholderText = "Ingrese el nombre de la categoria"
+        Me.TXTNOMBRECATEGORIA.SelectedText = ""
+        Me.TXTNOMBRECATEGORIA.Size = New System.Drawing.Size(832, 42)
+        Me.TXTNOMBRECATEGORIA.TabIndex = 29
         '
         'L
         '
@@ -110,6 +110,12 @@ Partial Class FrmEliminarCategorias
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader3.Width = 275
         '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Grado"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 280
+        '
         'BTNeliminarCategoria
         '
         Me.BTNeliminarCategoria.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -133,12 +139,6 @@ Partial Class FrmEliminarCategorias
         Me.BTNeliminarCategoria.Text = "Eliminar"
         Me.BTNeliminarCategoria.UseTransparentBackground = True
         '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Grado"
-        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 280
-        '
         'FrmEliminarCategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -147,7 +147,7 @@ Partial Class FrmEliminarCategorias
         Me.ClientSize = New System.Drawing.Size(895, 654)
         Me.Controls.Add(Me.BTNeliminarCategoria)
         Me.Controls.Add(Me.L)
-        Me.Controls.Add(Me.TXTNOMBRESUCURSAL)
+        Me.Controls.Add(Me.TXTNOMBRECATEGORIA)
         Me.Controls.Add(Me.LabelEliTemas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmEliminarCategorias"
@@ -156,7 +156,7 @@ Partial Class FrmEliminarCategorias
 
     End Sub
     Friend WithEvents LabelEliTemas As Label
-    Friend WithEvents TXTNOMBRESUCURSAL As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXTNOMBRECATEGORIA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents L As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader

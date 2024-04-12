@@ -22,7 +22,6 @@ Partial Class FrmCrearPerfilProfesor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCrearPerfilProfesor))
         Me.LabelbienvenidaProfesor = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -150,7 +149,7 @@ Partial Class FrmCrearPerfilProfesor
         '
         Me.BTNfotoSeleccionar.BackColor = System.Drawing.Color.Transparent
         Me.BTNfotoSeleccionar.FillColor = System.Drawing.Color.DimGray
-        Me.BTNfotoSeleccionar.Image = CType(resources.GetObject("BTNfotoSeleccionar.Image"), System.Drawing.Image)
+        Me.BTNfotoSeleccionar.Image = Global.PRY_Preguntados.My.Resources.Resources.img_usuario
         Me.BTNfotoSeleccionar.ImageRotate = 0!
         Me.BTNfotoSeleccionar.Location = New System.Drawing.Point(535, 194)
         Me.BTNfotoSeleccionar.Name = "BTNfotoSeleccionar"

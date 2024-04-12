@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Public Class FrmCrearPerfilProfesor
     Private Sub BTNcrearPerfilProfesor_Click(sender As Object, e As EventArgs) Handles BTNcrearPerfilProfesor.Click
-
         Try
             ' Validar si algún campo está vacío
             If String.IsNullOrWhiteSpace(TXTidentifacion.Text) OrElse
@@ -17,17 +16,25 @@ Public Class FrmCrearPerfilProfesor
             Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
 
             ' Construir el comando SQL con parámetros 
-            Dim Comando As String = "INSERT INTO PROFESOR (ID_PROFESOR, NOMBRE_COMPLETO, CORREO_ELECTRONICO, IDENTIFICACION, CONTRASENA, PATRON, FOTOGRAFIA) VALUES ('" & PKF("PROFESOR", "ID_PROFESOR") & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTidentifacion.Text & "','" & TXTcontrasena.Text & "', '" & TXTpatron.Text & "', ?)"
+            Dim Comando As String = "INSERT INTO PROFESOR (ID_profesor, Nombre_Completo, Correo_Electronico, identificacion, Contrasena, Patron, Fotografia) VALUES ('" & PK("Profesor", "ID_profesor") & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTidentifacion.Text & "','" & TXTcontrasena.Text & "', '" & TXTpatron.Text & "', ?)"
 
             ' Ejecutar el comando SQL
             EJECUTAR(Comando, imagenBytes)
-
             MsgBox("Usuario creado exitosamente.")
+            TXTidentifacion.Text = ""
+            TXTnombre.Text = ""
+            TXTcorreo.Text = ""
+            TXTpatron.Text = ""
+            TXTcontrasena.Text = ""
+            CargarImagenPorDefecto()
 
         Catch ex As Exception
             Console.WriteLine("Error al crear usuario: " & ex.Message)
             MessageBox.Show("Ocurrió un error al crear el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+    Private Sub CargarImagenPorDefecto()
+        BTNfotoSeleccionar.Image = My.Resources.img_usuario
     End Sub
 
     Private Sub BTNfotoSeleccionar_Click(sender As Object, e As EventArgs) Handles BTNfotoSeleccionar.Click
