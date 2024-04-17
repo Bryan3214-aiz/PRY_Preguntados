@@ -7,7 +7,14 @@ Public Class FrmCrearTemas
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return ' Salir del método si hay campos vacíos
             End If
+
             Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNimgEstaticaTema.Image)
+            Dim imagenBytesA As Byte() = ObtenerBytesDeImagenAnimada(BTNimgAnimadaTema.Image)
+            Dim sonidoTema As Byte() = ObtenerBytesAudio(BTNsonidoTema.Tag)
+            Dim AudioVoz As Byte() = ObtenerBytesAudio(BTNAudioVozTema.Tag)
+            Dim Video As Byte() = ObtenerBytesVideo(BTNvideoTema.Tag)
+
+
             Dim Comando As String = "INSERT INTO TEMA (ID_TEMA, NOMBRE_TEMA, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ_TEMA, VIDEO_TEMA, NIVEL) VALUES ('" & PK("TEMA", "ID_TEMA") & "', '" & TXTtema.Text & "', ? , ? , ? , ? , ? , '" & CMBgradoTemas.Text & "')"
 
             EJECUTAR(Comando, imagenBytes)
@@ -27,7 +34,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
-                MostrarImagen(imagenBytes)
+                MsgBox("Imagen estatica insertada correctamente.")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -35,22 +42,35 @@ Public Class FrmCrearTemas
     End Sub
     Private Function ObtenerBytesDeImagen(ByVal imagen As Image) As Byte()
         Using ms As New MemoryStream()
-            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
+            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Png)
             Return ms.ToArray()
         End Using
     End Function
 
-    Private Sub MostrarImagen(imagenBytes As Byte())
-        Try
-            Dim tempFilePath As String = Path.GetTempFileName()
-            tempFilePath = Path.ChangeExtension(tempFilePath, ".jpg")
-            File.WriteAllBytes(tempFilePath, imagenBytes)
+    Private Function ObtenerBytesDeImagenAnimada(ByVal imagen As Image) As Byte()
+        Using ms As New MemoryStream()
+            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Gif)
+            Return ms.ToArray()
+        End Using
+    End Function
 
-            BTNimgEstaticaTema.Image = Image.FromFile(tempFilePath)
+    Private Function ObtenerBytesAudio(ByVal RutaAudio As String) As Byte()
+        Try
+            Return File.ReadAllBytes(RutaAudio)
         Catch ex As Exception
-            Console.WriteLine("Error al mostrar la imagen: " & ex.Message)
+            Console.WriteLine("Error al leer el archivo de audio: " & ex.Message)
+            Return Nothing
         End Try
-    End Sub
+    End Function
+
+    Private Function ObtenerBytesVideo(ByVal RutaVideo As String) As Byte()
+        Try
+            Return File.ReadAllBytes(RutaVideo)
+        Catch ex As Exception
+            Console.WriteLine("Error al leer el archivo de video: " & ex.Message)
+            Return Nothing
+        End Try
+    End Function
 
     Private Sub BTNimgAnimadaTema_Click(sender As Object, e As EventArgs) Handles BTNimgAnimadaTema.Click
         Try
@@ -59,7 +79,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
-                MostrarImagen(imagenBytes)
+                MsgBox("Imagen animada insertada correctamente")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -73,7 +93,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
-                MostrarImagen(imagenBytes)
+                MsgBox("Sonido del tema agregado correctamente.")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -87,7 +107,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
-                MostrarImagen(imagenBytes)
+                MsgBox("Audio voz del tema agregado correctamente.")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -101,10 +121,12 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
-                MostrarImagen(imagenBytes)
+                MsgBox("Video del tema agregado correctamente.")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
         End Try
     End Sub
+
+
 End Class
