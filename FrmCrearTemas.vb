@@ -13,8 +13,6 @@ Public Class FrmCrearTemas
             Dim sonidoTema As Byte() = ObtenerBytesAudio(BTNsonidoTema.Tag)
             Dim AudioVoz As Byte() = ObtenerBytesAudio(BTNAudioVozTema.Tag)
             Dim Video As Byte() = ObtenerBytesVideo(BTNvideoTema.Tag)
-
-
             Dim Comando As String = "INSERT INTO TEMA (ID_TEMA, NOMBRE_TEMA, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ_TEMA, VIDEO_TEMA, NIVEL) VALUES ('" & PK("TEMA", "ID_TEMA") & "', '" & TXTtema.Text & "', ? , ? , ? , ? , ? , '" & CMBgradoTemas.Text & "')"
 
             EJECUTAR(Comando, imagenBytes)

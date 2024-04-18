@@ -23,29 +23,35 @@ Partial Class FrmVerDatosRegistradosEstudiante
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVerDatosRegistradosEstudiante))
         Me.panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNcrearUsuario = New Guna.UI2.WinForms.Guna2Button()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
-        Me.dataGEstudiante = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.L = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.panel1.SuspendLayout()
-        CType(Me.dataGEstudiante, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panel1
         '
         Me.panel1.BackColor = System.Drawing.Color.Transparent
-        Me.panel1.Controls.Add(Me.dataGEstudiante)
+        Me.panel1.Controls.Add(Me.L)
         Me.panel1.Controls.Add(Me.Guna2Button1)
         Me.panel1.Controls.Add(Me.BTNcrearUsuario)
         Me.panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panel1.Location = New System.Drawing.Point(0, 0)
         Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(1040, 564)
+        Me.panel1.Size = New System.Drawing.Size(1248, 596)
         Me.panel1.TabIndex = 0
         '
         'Guna2Button1
@@ -60,7 +66,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Guna2Button1.FillColor = System.Drawing.Color.DimGray
         Me.Guna2Button1.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(232, 262)
+        Me.Guna2Button1.Location = New System.Drawing.Point(220, 163)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(150, 41)
         Me.Guna2Button1.TabIndex = 10
@@ -79,7 +85,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.BTNcrearUsuario.FillColor = System.Drawing.Color.SeaGreen
         Me.BTNcrearUsuario.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcrearUsuario.ForeColor = System.Drawing.Color.White
-        Me.BTNcrearUsuario.Location = New System.Drawing.Point(49, 262)
+        Me.BTNcrearUsuario.Location = New System.Drawing.Point(49, 163)
         Me.BTNcrearUsuario.Name = "BTNcrearUsuario"
         Me.BTNcrearUsuario.Size = New System.Drawing.Size(150, 41)
         Me.BTNcrearUsuario.TabIndex = 9
@@ -89,54 +95,82 @@ Partial Class FrmVerDatosRegistradosEstudiante
         'Temporizado
         '
         '
-        'dataGEstudiante
+        'L
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dataGEstudiante.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dataGEstudiante.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dataGEstudiante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dataGEstudiante.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dataGEstudiante.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataGEstudiante.Location = New System.Drawing.Point(118, 65)
-        Me.dataGEstudiante.Name = "dataGEstudiante"
-        Me.dataGEstudiante.RowHeadersVisible = False
-        Me.dataGEstudiante.Size = New System.Drawing.Size(812, 177)
-        Me.dataGEstudiante.TabIndex = 11
-        Me.dataGEstudiante.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.dataGEstudiante.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dataGEstudiante.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dataGEstudiante.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dataGEstudiante.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dataGEstudiante.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dataGEstudiante.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataGEstudiante.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataGEstudiante.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dataGEstudiante.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dataGEstudiante.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dataGEstudiante.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataGEstudiante.ThemeStyle.HeaderStyle.Height = 4
-        Me.dataGEstudiante.ThemeStyle.ReadOnly = False
-        Me.dataGEstudiante.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.dataGEstudiante.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dataGEstudiante.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dataGEstudiante.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.dataGEstudiante.ThemeStyle.RowsStyle.Height = 22
-        Me.dataGEstudiante.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataGEstudiante.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
+        Me.L.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L.FullRowSelect = True
+        Me.L.GridLines = True
+        Me.L.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.L.HideSelection = False
+        Me.L.Location = New System.Drawing.Point(49, 77)
+        Me.L.Margin = New System.Windows.Forms.Padding(2)
+        Me.L.MultiSelect = False
+        Me.L.Name = "L"
+        Me.L.Scrollable = False
+        Me.L.Size = New System.Drawing.Size(1142, 68)
+        Me.L.TabIndex = 27
+        Me.L.UseCompatibleStateImageBehavior = False
+        Me.L.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = ""
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Curso Lectivo"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader2.Width = 100
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Grado"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 100
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Asignatura"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 180
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Periodo"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 120
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Sección"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader6.Width = 70
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Identificación"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader7.Width = 150
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Nombre Completo"
+        Me.ColumnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader8.Width = 200
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "Correo"
+        Me.ColumnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader9.Width = 100
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "Contraseña"
+        Me.ColumnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader10.Width = 120
         '
         'FrmVerDatosRegistradosEstudiante
         '
@@ -144,7 +178,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PRY_Preguntados.My.Resources.Resources.fondoPRG
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1040, 564)
+        Me.ClientSize = New System.Drawing.Size(1248, 596)
         Me.Controls.Add(Me.panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -152,7 +186,6 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmVerDatosRegistradosEstudiante"
         Me.panel1.ResumeLayout(False)
-        CType(Me.dataGEstudiante, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -161,5 +194,15 @@ Partial Class FrmVerDatosRegistradosEstudiante
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNcrearUsuario As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Temporizado As Timer
-    Friend WithEvents dataGEstudiante As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents L As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
 End Class

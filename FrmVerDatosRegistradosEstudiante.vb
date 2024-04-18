@@ -28,5 +28,9 @@ Public Class FrmVerDatosRegistradosEstudiante
         End If
     End Sub
 
-
+    Private Sub BTNcrearUsuario_Click(sender As Object, e As EventArgs) Handles BTNcrearUsuario.Click
+        Me.Hide()
+        FrmMenuEstudiante.ShowDialog()
+        Me.Close()
+    End Sub
 End Class

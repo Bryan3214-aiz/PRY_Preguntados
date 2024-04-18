@@ -55,7 +55,7 @@ Public Class FrmRegistrarEstudiante
                 Return ' Salir del método si hay campos vacíos
             End If
             Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
-            Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, NIVEL, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA, FOTOGRAFIA) VALUES ('" & PK("ESTUDIANTE", "ID_USUARIO") & "', '" & CMBgrado.Text & "', '" & CMBcursolectivo.Text & "', '" & CMBasignatura.Text & "', '" & CMBperiodo.Text & "', '" & CMBseccion.Text & "', '" & TXTidentifacion.Text & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTcontrasena.Text & "', ?)"
+            Dim Comando As String = "INSERT INTO ESTUDIANTE (ID_USUARIO, CURSO_LECTIVO, NIVEL, ASIGNATURA, PERIODO, SECCION, IDENTIFICACION, NOMBRE_COMPLETO, CORREO_ELECTRONICO, CONTRASENA, FOTOGRAFIA) VALUES ('" & PK("ESTUDIANTE", "ID_USUARIO") & "', '" & CMBcursolectivo.Text & "', '" & CMBgrado.Text & "', '" & CMBasignatura.Text & "', '" & CMBperiodo.Text & "', '" & CMBseccion.Text & "', '" & TXTidentifacion.Text & "', '" & TXTnombre.Text & "', '" & TXTcorreo.Text & "', '" & TXTcontrasena.Text & "', ?)"
 
             EJECUTAR(Comando, imagenBytes)
             MsgBox("Usuario creado exitosamente.")
