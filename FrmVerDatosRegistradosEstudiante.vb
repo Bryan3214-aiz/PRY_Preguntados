@@ -1,8 +1,9 @@
 ﻿Imports System.IO
 
 Public Class FrmVerDatosRegistradosEstudiante
-    Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos almacenado en una variable global.
-    Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
+    Private duracionTransicion As Double = 0.5
+    Private tiempoTranscurrido As Double = 0
+    Dim ID As Integer = 0
 
     Private Sub FrmVerDatosRegistradosEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo
@@ -28,9 +29,50 @@ Public Class FrmVerDatosRegistradosEstudiante
         End If
     End Sub
 
-    Private Sub BTNcrearUsuario_Click(sender As Object, e As EventArgs) Handles BTNcrearUsuario.Click
+    Private Sub BTNjuego_Click(sender As Object, e As EventArgs) Handles BTNcomenzarJuego.Click
         Me.Hide()
         FrmMenuEstudiante.ShowDialog()
         Me.Close()
+    End Sub
+
+    Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
+        Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If resultado = DialogResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub L_SelectedIndexChanged(sender As Object, e As EventArgs) Handles L.SelectedIndexChanged
+        If L.SelectedItems.Count > 0 Then
+            ID = Convert.ToInt32(L.SelectedItems(0).Text)
+            BTNeditarInfo.Enabled = True
+        End If
+    End Sub
+
+    Friend Sub BUSCAR(ByVal SQL As String)
+        ds.Tables.Clear()
+        L.Items.Clear()
+        CARGAR_TABLA(ds, SQL)
+        If ds.Tables(0).Rows.Count > 0 Then
+            For I = 0 To ds.Tables(0).Rows.Count - 1
+                L.Items.Add(ds.Tables(0).Rows(I).Item(0))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(1))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(2))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(3))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(4))
+            Next
+        End If
+    End Sub
+
+    Friend Sub INICIALIZAR()
+        comando = "SELECT COLABORADORES.ID, COLABORADORES.IDENTIFICACION,COLABORADORES.NOMBRE,COLABORADORES.TELEFONO,SUCURSALES.NOMBRE FROM COLABORADORES INNER JOIN SUCURSALES ON COLABORADORES.ID_SUCURSAL = SUCURSALES.ID"
+        BTNeditarInfo.Enabled = False
+        BTNguardarCambios.Enabled = False
+        ID = 0
+    End Sub
+
+    Private Sub panel1_Paint(sender As Object, e As PaintEventArgs) Handles panel1.Paint
+        INICIALIZAR()
     End Sub
 End Class

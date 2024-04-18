@@ -29,7 +29,6 @@
         Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If resultado = DialogResult.Yes Then
-            FrmRegistrarEstudiante.Close()
             Me.Close()
         End If
     End Sub
