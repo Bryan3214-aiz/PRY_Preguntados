@@ -133,4 +133,13 @@
   <data name="img-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\img-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Botonrojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\Botonrojo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonSeleccionadoPresionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\BotonSeleccionadoPresionado.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Botonverde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\Botonverde.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -19,83 +19,131 @@ Public Class FrmPregunta
         MediaPlayer.enableContextMenu = False
     End Sub
     Private Sub FrmPregunta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Focus()
+        Me.KeyPreview = True
         ' Configurar el máximo valor del temporizador para que coincida con la duración del video
         TemporizadorVideo.Interval = 1000 ' Intervalo en milisegundos
         TemporizadorVideo.Start()
-
+        DisableMouseInteraction()
         ' Asigna la imagen deseada a cada botón (reemplaza MyImage1, MyImage2, MyImage3, MyImage4)
         BTNopcionUno.Image = My.Resources.long_button
         BTNopcionDos.Image = My.Resources.long_button
         BTNopcionTres.Image = My.Resources.long_button
         BTNopcionCuatro.Image = My.Resources.long_button
-
-    End Sub
-
-    Private Sub BTN_VideoInsert_Click(sender As Object, e As EventArgs) Handles BTN_VideoInsert.Click
-        Try
-            OpenFileDialog1.Filter = "Archivos de video|*.webm;*.avi;*.mp4|Todos los archivos|*.*"
-
-            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
-                Dim rutaVideo As String = OpenFileDialog1.FileName
-
-                ' Leer los bytes del archivo de video
-                Dim videoBytes As Byte() = File.ReadAllBytes(rutaVideo)
-
-                BASEDATOS.InsertarVideo(videoBytes)
-
-                MessageBox.Show("Video insertado correctamente en la base de datos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ' Agregar los eventos de MouseEnter y MouseLeave para cada botón
+        AddHandler BTNopcionUno.GotFocus, AddressOf Boton_ConFocus
+        AddHandler BTNopcionUno.LostFocus, AddressOf Boton_SinFocus
+        AddHandler BTNopcionDos.GotFocus, AddressOf Boton_ConFocus
+        AddHandler BTNopcionDos.LostFocus, AddressOf Boton_SinFocus
+        AddHandler BTNopcionTres.GotFocus, AddressOf Boton_ConFocus
+        AddHandler BTNopcionTres.LostFocus, AddressOf Boton_SinFocus
+        AddHandler BTNopcionCuatro.GotFocus, AddressOf Boton_ConFocus
+        AddHandler BTNopcionCuatro.LostFocus, AddressOf Boton_SinFocus
+        AddHandler Me.KeyDown, AddressOf MainForm_KeyDown
+        For Each control As Control In Me.Controls
+            If TypeOf control Is Guna.UI2.WinForms.Guna2ImageButton Then
+                control.TabStop = True
             End If
-        Catch ex As Exception
-            Console.WriteLine("Error al insertar el video: " & ex.Message)
-            MessageBox.Show("Ocurrió un error al insertar el video en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+        Next
+
 
     End Sub
 
-    Private Sub MostrarVideo()
-        Dim videoBytes As Byte() = ObtenerVideo()
+    Private Sub MainForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Left
+                PreviousButton()
+            Case Keys.Right
+                NextButton()
+            Case Keys.Space
+        End Select
+    End Sub
 
-        If videoBytes IsNot Nothing AndAlso videoBytes.Length > 0 Then
-            Try
-                Dim tempFilePath As String = Path.GetTempFileName()
-                tempFilePath = Path.ChangeExtension(tempFilePath, ".mp4")
-                File.WriteAllBytes(tempFilePath, videoBytes)
-                MediaPlayer.URL = tempFilePath
-                MediaPlayer.Ctlcontrols.play()
-            Catch ex As Exception
-                Console.WriteLine("Error al mostrar el video: " & ex.Message)
-            End Try
-        Else
-            Console.WriteLine("No se encontró el video en la base de datos.")
+    Private Sub PreviousButton()
+        Dim focusedControl As Control = Me.ActiveControl
+
+        If focusedControl IsNot Nothing Then
+            Dim currentIndex As Integer = Me.Controls.IndexOf(focusedControl)
+            Dim previousIndex As Integer = (currentIndex - 1 + Me.Controls.Count) Mod Me.Controls.Count
+
+            Me.Controls(previousIndex).Focus()
+            UpdateImageButtonImage(Me.Controls(previousIndex))
         End If
     End Sub
 
-    Private Sub BTNMostrarVideo_Click(sender As Object, e As EventArgs) Handles BTNMostrarVideo.Click
-        MostrarVideo()
-    End Sub
+    Private Sub NextButton()
+        Dim focusedControl As Control = Me.ActiveControl
 
+        If focusedControl IsNot Nothing Then
+            Dim currentIndex As Integer = Me.Controls.IndexOf(focusedControl)
+            Dim nextIndex As Integer = (currentIndex + 1) Mod Me.Controls.Count
 
-
-    Private Sub MostrarImagen()
-        Dim imagenBytes As Byte() = ObtenerImagen()
-
-        If imagenBytes IsNot Nothing AndAlso imagenBytes.Length > 0 Then
-            Try
-                Dim tempFilePath As String = Path.GetTempFileName()
-                tempFilePath = Path.ChangeExtension(tempFilePath, ".jpg")
-                File.WriteAllBytes(tempFilePath, imagenBytes)
-
-                MediaPlayer.URL = tempFilePath
-                MediaPlayer.Ctlcontrols.play()
-            Catch ex As Exception
-                Console.WriteLine("Error al mostrar la imagen: " & ex.Message)
-            End Try
-        Else
-            Console.WriteLine("No se encontró la imagen en la base de datos.")
+            Me.Controls(nextIndex).Focus()
+            UpdateImageButtonImage(Me.Controls(nextIndex))
         End If
     End Sub
 
-    Private Sub BTNMostrarIMG_Click(sender As Object, e As EventArgs) Handles BTNMostrarIMG.Click
-        MostrarImagen()
+
+    Private Sub UpdateImageButtonImage(button As Control)
+        If TypeOf button Is Guna.UI2.WinForms.Guna2ImageButton Then
+            Dim gunaButton As Guna.UI2.WinForms.Guna2ImageButton = DirectCast(button, Guna.UI2.WinForms.Guna2ImageButton)
+            If gunaButton Is BTNopcionUno Then
+                gunaButton.Image = My.Resources.BotonSeleccionado
+            ElseIf gunaButton Is BTNopcionDos Then
+                gunaButton.Image = My.Resources.BotonSeleccionado
+            ElseIf gunaButton Is BTNopcionTres Then
+                gunaButton.Image = My.Resources.BotonSeleccionado
+            ElseIf gunaButton Is BTNopcionCuatro Then
+                gunaButton.Image = My.Resources.BotonSeleccionado
+            End If
+        End If
+    End Sub
+    Private Sub DisableMouseInteraction()
+        RemoveHandler BTNopcionUno.MouseEnter, AddressOf Boton_MouseEnter
+        RemoveHandler BTNopcionUno.MouseLeave, AddressOf Boton_MouseLeave
+        RemoveHandler BTNopcionDos.MouseEnter, AddressOf Boton_MouseEnter
+        RemoveHandler BTNopcionDos.MouseLeave, AddressOf Boton_MouseLeave
+        RemoveHandler BTNopcionTres.MouseEnter, AddressOf Boton_MouseEnter
+        RemoveHandler BTNopcionTres.MouseLeave, AddressOf Boton_MouseLeave
+        RemoveHandler BTNopcionCuatro.MouseEnter, AddressOf Boton_MouseEnter
+        RemoveHandler BTNopcionCuatro.MouseLeave, AddressOf Boton_MouseLeave
+    End Sub
+    Private Sub Boton_MouseEnter(sender As Object, e As EventArgs)
+        Dim boton As Guna.UI2.WinForms.Guna2ImageButton = CType(sender, Guna.UI2.WinForms.Guna2ImageButton)
+        boton.Image = My.Resources.BotonSeleccionado
+    End Sub
+
+    Private Sub Boton_MouseLeave(sender As Object, e As EventArgs)
+        Dim boton As Guna.UI2.WinForms.Guna2ImageButton = CType(sender, Guna.UI2.WinForms.Guna2ImageButton)
+        boton.Image = My.Resources.long_button
+    End Sub
+    Private Sub Boton_ConFocus(sender As Object, e As EventArgs)
+        Dim boton As Guna.UI2.WinForms.Guna2ImageButton = CType(sender, Guna.UI2.WinForms.Guna2ImageButton)
+        boton.Image = My.Resources.BotonSeleccionado
+    End Sub
+
+    Private Sub Boton_SinFocus(sender As Object, e As EventArgs)
+        Dim boton As Guna.UI2.WinForms.Guna2ImageButton = CType(sender, Guna.UI2.WinForms.Guna2ImageButton)
+        boton.Image = My.Resources.long_button
+    End Sub
+
+    Private Sub PKeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Space Then
+            Dim focusedControl As Control = Me.ActiveControl
+            If TypeOf focusedControl Is Guna.UI2.WinForms.Guna2ImageButton Then
+                Dim focusedButton As Guna.UI2.WinForms.Guna2ImageButton = DirectCast(focusedControl, Guna.UI2.WinForms.Guna2ImageButton)
+                focusedButton.Image = My.Resources.BotonSeleccionadoPresionado
+            End If
+        End If
+    End Sub
+
+    Private Sub PKeyUp(sender As Object, e As KeyEventArgs) Handles MyBase.KeyUp
+        If e.KeyCode = Keys.Space Then
+            Dim focusedControl As Control = Me.ActiveControl
+            If TypeOf focusedControl Is Guna.UI2.WinForms.Guna2ImageButton Then
+                Dim focusedButton As Guna.UI2.WinForms.Guna2ImageButton = DirectCast(focusedControl, Guna.UI2.WinForms.Guna2ImageButton)
+                focusedButton.Image = My.Resources.Botonverde
+            End If
+        End If
     End Sub
 End Class
