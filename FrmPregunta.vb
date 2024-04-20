@@ -146,4 +146,15 @@ Public Class FrmPregunta
             End If
         End If
     End Sub
+
+    Private Sub PKeyUp2(sender As Object, e As KeyEventArgs) Handles MyBase.KeyUp
+        If e.KeyCode = Keys.Space Then
+            Dim focusedControl As Control = Me.ActiveControl
+            If TypeOf focusedControl Is Guna.UI2.WinForms.Guna2ImageButton Then
+                Dim focusedButton As Guna.UI2.WinForms.Guna2ImageButton = DirectCast(focusedControl, Guna.UI2.WinForms.Guna2ImageButton)
+                focusedButton.Image = My.Resources.Botonrojo
+            End If
+        End If
+    End Sub
+
 End Class
