@@ -44,6 +44,16 @@ Module BASEDATOS
         DESCONECTAR()
     End Sub
 
+    Friend Sub EJECUTARTEMA(ByVal Sql As String, ByVal imagenbytes As Byte(), ByVal audiobytes As Byte(), ByVal videobytes As Byte())
+        CONECTAR()
+        Dim Comando As New OleDb.OleDbCommand(Sql, miconexion)
+        Comando.Parameters.AddWithValue("@imagen", imagenbytes)
+        Comando.Parameters.AddWithValue("@audio", audiobytes)
+        Comando.Parameters.AddWithValue("@video", videobytes)
+        Comando.ExecuteNonQuery()
+        DESCONECTAR()
+    End Sub
+
     Function PK(ByVal TABLA As String, ByVal ID As String) As Integer
         ds.Tables.Clear()
         comando = "SELECT " & ID & " FROM " & TABLA
