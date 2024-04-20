@@ -5,17 +5,17 @@ Public Class FrmCrearTemas
             If String.IsNullOrWhiteSpace(TXTtema.Text) OrElse
                 String.IsNullOrWhiteSpace(CMBgradoTemas.Text) Then
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return ' Salir del método si hay campos vacíos
+                Return
             End If
 
             Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNimgEstaticaTema.Image)
             Dim imagenBytesA As Byte() = ObtenerBytesDeImagenAnimada(BTNimgAnimadaTema.Image)
             Dim sonidoTema As Byte() = ObtenerBytesAudio(BTNsonidoTema.Tag)
-            Dim AudioVoz As Byte() = ObtenerBytesAudio(BTNAudioVozTema.Tag)
-            Dim Video As Byte() = ObtenerBytesVideo(BTNvideoTema.Tag)
-            Dim Comando As String = "INSERT INTO TEMA (ID_TEMA, NOMBRE_TEMA, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ_TEMA, VIDEO_TEMA, NIVEL) VALUES ('" & PK("TEMA", "ID_TEMA") & "', '" & TXTtema.Text & "', ? , ? , ? , ? , ? , '" & CMBgradoTemas.Text & "')"
-
-            EJECUTAR(Comando, imagenBytes)
+            Dim Audiobytes As Byte() = ObtenerBytesAudio(BTNAudioVozTema.Tag)
+            Dim Videobytes As Byte() = ObtenerBytesVideo(BTNvideoTema.Tag)
+            Dim comando As String = "INSERT INTO TEMA (ID_TEMA, NOMBRE_TEMA, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ_TEMA, VIDEO_TEMA, NIVEL) " &
+                               "VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+            EJECUTARTEMA(comando, imagenBytes, videobytes, audiobytes)
             MsgBox("Tema creado exitosamente.")
             Me.Hide()
             Me.Close()
@@ -126,5 +126,7 @@ Public Class FrmCrearTemas
         End Try
     End Sub
 
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
+    End Sub
 End Class
