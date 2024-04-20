@@ -34,12 +34,14 @@ Public Class FrmLoginAdmin
         adp.Fill(ds, "tabla")
         ' Se verifica si se encontraron filas en el DataSet
         If ds.Tables("tabla").Rows.Count > 0 Then
+            ' Si se encontraron filas, el inicio de sesión es exitoso
+            DESCONECTAR()
             Me.Hide()
             FrmMenuAdministrador.ShowDialog()
             Me.Close()
         Else
             ' Si no se encontraron filas, se muestra un mensaje de error
-            MsgBox("El usuario o contraseña no coinciden", vbOK, "Alerta")
+            MsgBox("El usuario o contraseña no coinciden")
             ' Se limpian los campos de texto
             TXTcorreo.Text = ""
             TXTcontrasena.Text = ""
