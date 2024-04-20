@@ -6,7 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E24144F-76DE-4C8A-8F9F-419414017FD1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>PRY_Preguntados.FrmPregunta</StartupObject>
+<<<<<<< HEAD
+    <StartupObject>PRY_Preguntados.FrmVerDatosRegistradosEstudiante</StartupObject>
+=======
+    <StartupObject>PRY_Preguntados.FrmMenuProfesor</StartupObject>
+>>>>>>> parent of 2363b22 (reportes)
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
