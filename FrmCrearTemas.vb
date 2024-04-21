@@ -20,7 +20,7 @@ Public Class FrmCrearTemas
             Dim sonidoBytes As Byte() = sonidoBytesTemp
             Dim videoBytes As Byte() = videoBytesTemp
 
-            Dim comando As String = "INSERT INTO TEMA (ID_TEMA, NOMBRE_TEMA, NIVEL, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ_TEMA, VIDEO_TEMA) VALUES ( '" & TXTtema.Text & "', '" & CMBgradoTemas.Text & "',?, ?, ?, ?, ?, ?, ?, ?)"
+            Dim comando As String = "INSERT INTO TEMA (ID_TEMA, NOMBRE_TEMA, NIVEL, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ, VIDEO_TEMA) VALUES ( '" & PK("TEMA", "ID_TEMA") & "','" & TXTtema.Text & "', '" & CMBgradoTemas.Text & "',?, ?, ?, ?, ?)"
             EJECUTARTEMA(comando, imagenEstBytes, imagenAniBytes, audioBytes, sonidoBytes, videoBytes)
             MsgBox("Tema creado exitosamente.")
         Catch ex As Exception
