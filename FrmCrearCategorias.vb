@@ -22,8 +22,8 @@ Public Class FrmCrearCategorias
             Dim audioBytes As Byte() = audioBytesTemp
             Dim sonidoBytes As Byte() = sonidoBytesTemp
             Dim videoBytes As Byte() = videoBytesTemp
-
-            Dim comando As String = "INSERT INTO CATEGORIA (ID_CATEGORIA, NOMBRE_CATEGORIA, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_CATEGORIA, AUDIO_VOZ, VIDEO_CATEGORIA) VALUES ( '" & PK("CATEGORIA", "ID_CATEGORIA") & "','" & TXTcategoria.Text & "', '" &  & "',?, ?, ?, ?, ?)"
+            Dim index As Integer = CMBseleccionarTemaC.SelectedIndex + 1
+            Dim comando As String = "INSERT INTO CATEGORIA (ID_CATEGORIA, NOMBRE_CATEGORIA, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_CATEGORIA, AUDIO_VOZ, VIDEO_CATEGORIA) VALUES ( '" & PK("CATEGORIA", "ID_CATEGORIA") & "','" & TXTcategoria.Text & "', '" & index & "',?, ?, ?, ?, ?)"
             EJECUTARTEMA(comando, imagenEstBytes, imagenAniBytes, audioBytes, sonidoBytes, videoBytes)
             MsgBox("Categoria creada exitosamente.")
         Catch ex As Exception
@@ -100,5 +100,25 @@ Public Class FrmCrearCategorias
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
         End Try
+    End Sub
+
+    Friend Sub BUSCARcombo(ByVal SQL As String)
+        ds.Tables.Clear()
+        CMBseleccionarTemaC.Items.Clear()
+        CARGAR_TABLA(ds, SQL)
+        If ds.Tables(0).Rows.Count > 0 Then
+            For I = 0 To ds.Tables(0).Rows.Count - 1
+                CMBseleccionarTemaC.Items.Add(ds.Tables(0).Rows(I).Item(0))
+            Next
+        End If
+    End Sub
+
+    Friend Sub INICIALIZARCOMBO()
+        comando = "SELECT NOMBRE_TEMA FROM TEMA"
+        BUSCARcombo(comando)
+    End Sub
+
+    Private Sub FrmCrearCategorias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        INICIALIZARCOMBO()
     End Sub
 End Class
