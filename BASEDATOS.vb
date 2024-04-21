@@ -44,11 +44,13 @@ Module BASEDATOS
         DESCONECTAR()
     End Sub
 
-    Friend Sub EJECUTARTEMA(ByVal Sql As String, ByVal imagenbytes As Byte(), ByVal audiobytes As Byte(), ByVal videobytes As Byte())
+    Friend Sub EJECUTARTEMA(ByVal Sql As String, ByVal imagenEstbytes As Byte(), ByVal imagenAnibytes As Byte(), ByVal audiobytes As Byte(), ByVal sonidoBytes As Byte(), ByVal videobytes As Byte())
         CONECTAR()
         Dim Comando As New OleDb.OleDbCommand(Sql, miconexion)
-        Comando.Parameters.AddWithValue("@imagen", imagenbytes)
+        Comando.Parameters.AddWithValue("@imagenEst", imagenEstbytes)
+        Comando.Parameters.AddWithValue("@imagenAni", imagenAnibytes)
         Comando.Parameters.AddWithValue("@audio", audiobytes)
+        Comando.Parameters.AddWithValue("@sonido", sonidoBytes)
         Comando.Parameters.AddWithValue("@video", videobytes)
         Comando.ExecuteNonQuery()
         DESCONECTAR()

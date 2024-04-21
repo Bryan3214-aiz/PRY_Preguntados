@@ -61,6 +61,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.BTNeditarInfo = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNcomenzarJuego = New Guna.UI2.WinForms.Guna2Button()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.panel1.SuspendLayout()
         CType(Me.BTNfotoSeleccionar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -68,6 +69,8 @@ Partial Class FrmVerDatosRegistradosEstudiante
         'panel1
         '
         Me.panel1.BackColor = System.Drawing.Color.Transparent
+        Me.panel1.Controls.Add(Me.BTNcerrar)
+        Me.panel1.Controls.Add(Me.Label1)
         Me.panel1.Controls.Add(Me.Label12)
         Me.panel1.Controls.Add(Me.CMBperiodo)
         Me.panel1.Controls.Add(Me.Label10)
@@ -82,7 +85,6 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.panel1.Controls.Add(Me.Label6)
         Me.panel1.Controls.Add(Me.Label5)
         Me.panel1.Controls.Add(Me.TXTnombre)
-        Me.panel1.Controls.Add(Me.BTNcerrar)
         Me.panel1.Controls.Add(Me.Label4)
         Me.panel1.Controls.Add(Me.Label3)
         Me.panel1.Controls.Add(Me.Label2)
@@ -104,7 +106,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label12.Location = New System.Drawing.Point(140, 390)
+        Me.Label12.Location = New System.Drawing.Point(140, 407)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(187, 67)
         Me.Label12.TabIndex = 49
@@ -123,7 +125,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.CMBperiodo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBperiodo.ItemHeight = 30
         Me.CMBperiodo.Items.AddRange(New Object() {"Primer Trimestre", "Segundo Trimestre", "Tercer Trimestre"})
-        Me.CMBperiodo.Location = New System.Drawing.Point(345, 401)
+        Me.CMBperiodo.Location = New System.Drawing.Point(345, 418)
         Me.CMBperiodo.Name = "CMBperiodo"
         Me.CMBperiodo.Size = New System.Drawing.Size(220, 36)
         Me.CMBperiodo.TabIndex = 47
@@ -133,7 +135,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label10.Location = New System.Drawing.Point(143, 457)
+        Me.Label10.Location = New System.Drawing.Point(143, 474)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(184, 67)
         Me.Label10.TabIndex = 48
@@ -152,7 +154,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.CMBseccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBseccion.ItemHeight = 30
         Me.CMBseccion.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
-        Me.CMBseccion.Location = New System.Drawing.Point(345, 472)
+        Me.CMBseccion.Location = New System.Drawing.Point(345, 489)
         Me.CMBseccion.Name = "CMBseccion"
         Me.CMBseccion.Size = New System.Drawing.Size(220, 36)
         Me.CMBseccion.TabIndex = 46
@@ -162,7 +164,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label9.Location = New System.Drawing.Point(129, 323)
+        Me.Label9.Location = New System.Drawing.Point(129, 340)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(210, 67)
         Me.Label9.TabIndex = 45
@@ -181,7 +183,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.CMBasignatura.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBasignatura.ItemHeight = 30
         Me.CMBasignatura.Items.AddRange(New Object() {"Informática", "Diseño Gráfico", "Inglés Conversacional", "Contabilidad", "Diseño Publicitario", "Técnicas Secretariales"})
-        Me.CMBasignatura.Location = New System.Drawing.Point(345, 334)
+        Me.CMBasignatura.Location = New System.Drawing.Point(345, 351)
         Me.CMBasignatura.Name = "CMBasignatura"
         Me.CMBasignatura.Size = New System.Drawing.Size(220, 36)
         Me.CMBasignatura.TabIndex = 44
@@ -191,7 +193,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label8.Location = New System.Drawing.Point(129, 262)
+        Me.Label8.Location = New System.Drawing.Point(129, 279)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(210, 67)
         Me.Label8.TabIndex = 43
@@ -210,7 +212,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.CMBcursolectivo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBcursolectivo.ItemHeight = 30
         Me.CMBcursolectivo.Items.AddRange(New Object() {"2024", "2025", "2026", "2027", "2028", "2029", "2030"})
-        Me.CMBcursolectivo.Location = New System.Drawing.Point(345, 205)
+        Me.CMBcursolectivo.Location = New System.Drawing.Point(345, 222)
         Me.CMBcursolectivo.Name = "CMBcursolectivo"
         Me.CMBcursolectivo.Size = New System.Drawing.Size(220, 36)
         Me.CMBcursolectivo.TabIndex = 42
@@ -220,7 +222,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label13.Location = New System.Drawing.Point(654, 205)
+        Me.Label13.Location = New System.Drawing.Point(654, 222)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(180, 36)
         Me.Label13.TabIndex = 41
@@ -240,7 +242,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.TXTcontrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTcontrasena.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTcontrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTcontrasena.Location = New System.Drawing.Point(852, 205)
+        Me.TXTcontrasena.Location = New System.Drawing.Point(852, 222)
         Me.TXTcontrasena.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXTcontrasena.Name = "TXTcontrasena"
         Me.TXTcontrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -254,7 +256,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.BTNfotoSeleccionar.FillColor = System.Drawing.Color.DimGray
         Me.BTNfotoSeleccionar.Image = CType(resources.GetObject("BTNfotoSeleccionar.Image"), System.Drawing.Image)
         Me.BTNfotoSeleccionar.ImageRotate = 0!
-        Me.BTNfotoSeleccionar.Location = New System.Drawing.Point(757, 411)
+        Me.BTNfotoSeleccionar.Location = New System.Drawing.Point(757, 428)
         Me.BTNfotoSeleccionar.Name = "BTNfotoSeleccionar"
         Me.BTNfotoSeleccionar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.BTNfotoSeleccionar.Size = New System.Drawing.Size(182, 161)
@@ -268,7 +270,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label6.Location = New System.Drawing.Point(712, 375)
+        Me.Label6.Location = New System.Drawing.Point(712, 392)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(284, 53)
         Me.Label6.TabIndex = 39
@@ -280,7 +282,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label5.Location = New System.Drawing.Point(654, 262)
+        Me.Label5.Location = New System.Drawing.Point(654, 279)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(168, 36)
         Me.Label5.TabIndex = 37
@@ -300,7 +302,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.TXTnombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTnombre.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXTnombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTnombre.Location = New System.Drawing.Point(852, 262)
+        Me.TXTnombre.Location = New System.Drawing.Point(852, 279)
         Me.TXTnombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXTnombre.Name = "TXTnombre"
         Me.TXTnombre.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -333,7 +335,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label4.Location = New System.Drawing.Point(129, 195)
+        Me.Label4.Location = New System.Drawing.Point(129, 212)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(210, 67)
         Me.Label4.TabIndex = 34
@@ -345,7 +347,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label3.Location = New System.Drawing.Point(144, 536)
+        Me.Label3.Location = New System.Drawing.Point(144, 553)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(191, 36)
         Me.Label3.TabIndex = 33
@@ -357,7 +359,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label2.Location = New System.Drawing.Point(642, 323)
+        Me.Label2.Location = New System.Drawing.Point(642, 340)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(180, 36)
         Me.Label2.TabIndex = 32
@@ -377,7 +379,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.TXTidentifacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTidentifacion.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTidentifacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTidentifacion.Location = New System.Drawing.Point(345, 536)
+        Me.TXTidentifacion.Location = New System.Drawing.Point(345, 553)
         Me.TXTidentifacion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXTidentifacion.Name = "TXTidentifacion"
         Me.TXTidentifacion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -398,7 +400,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.CMBgrado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBgrado.ItemHeight = 30
         Me.CMBgrado.Items.AddRange(New Object() {"Sétimo", "Octavo", "Noveno", "Décimo", "Undécimo", "Duodécimo"})
-        Me.CMBgrado.Location = New System.Drawing.Point(345, 273)
+        Me.CMBgrado.Location = New System.Drawing.Point(345, 290)
         Me.CMBgrado.Name = "CMBgrado"
         Me.CMBgrado.Size = New System.Drawing.Size(220, 36)
         Me.CMBgrado.TabIndex = 30
@@ -416,7 +418,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.TXTcorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTcorreo.Font = New System.Drawing.Font("Showcard Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTcorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTcorreo.Location = New System.Drawing.Point(852, 323)
+        Me.TXTcorreo.Location = New System.Drawing.Point(852, 340)
         Me.TXTcorreo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXTcorreo.Name = "TXTcorreo"
         Me.TXTcorreo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -434,10 +436,10 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.BTNguardarCambios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BTNguardarCambios.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BTNguardarCambios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNguardarCambios.FillColor = System.Drawing.Color.DarkSlateBlue
+        Me.BTNguardarCambios.FillColor = System.Drawing.Color.SteelBlue
         Me.BTNguardarCambios.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNguardarCambios.ForeColor = System.Drawing.Color.White
-        Me.BTNguardarCambios.Location = New System.Drawing.Point(1070, 577)
+        Me.BTNguardarCambios.Location = New System.Drawing.Point(401, 161)
         Me.BTNguardarCambios.Name = "BTNguardarCambios"
         Me.BTNguardarCambios.Size = New System.Drawing.Size(150, 41)
         Me.BTNguardarCambios.TabIndex = 28
@@ -452,7 +454,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.L.GridLines = True
         Me.L.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.L.HideSelection = False
-        Me.L.Location = New System.Drawing.Point(49, 86)
+        Me.L.Location = New System.Drawing.Point(49, 106)
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
@@ -534,7 +536,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.BTNeditarInfo.FillColor = System.Drawing.Color.DimGray
         Me.BTNeditarInfo.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNeditarInfo.ForeColor = System.Drawing.Color.White
-        Me.BTNeditarInfo.Location = New System.Drawing.Point(223, 144)
+        Me.BTNeditarInfo.Location = New System.Drawing.Point(223, 161)
         Me.BTNeditarInfo.Name = "BTNeditarInfo"
         Me.BTNeditarInfo.Size = New System.Drawing.Size(150, 41)
         Me.BTNeditarInfo.TabIndex = 10
@@ -553,7 +555,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.BTNcomenzarJuego.FillColor = System.Drawing.Color.SeaGreen
         Me.BTNcomenzarJuego.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcomenzarJuego.ForeColor = System.Drawing.Color.White
-        Me.BTNcomenzarJuego.Location = New System.Drawing.Point(49, 144)
+        Me.BTNcomenzarJuego.Location = New System.Drawing.Point(49, 161)
         Me.BTNcomenzarJuego.Name = "BTNcomenzarJuego"
         Me.BTNcomenzarJuego.Size = New System.Drawing.Size(150, 41)
         Me.BTNcomenzarJuego.TabIndex = 9
@@ -562,6 +564,21 @@ Partial Class FrmVerDatosRegistradosEstudiante
         '
         'Temporizado
         '
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.ImageKey = "(ninguno)"
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1248, 91)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "registrar nuevo usuario"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmVerDatosRegistradosEstudiante
         '
@@ -619,4 +636,5 @@ Partial Class FrmVerDatosRegistradosEstudiante
     Friend WithEvents TXTidentifacion As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CMBgrado As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label1 As Label
 End Class

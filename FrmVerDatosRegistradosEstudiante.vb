@@ -4,6 +4,7 @@ Public Class FrmVerDatosRegistradosEstudiante
     Private duracionTransicion As Double = 0.5
     Private tiempoTranscurrido As Double = 0
     Dim ID As Integer = 0
+    Private fotoCambiada As Boolean = False
 
     Private Sub FrmVerDatosRegistradosEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo
@@ -14,7 +15,7 @@ Public Class FrmVerDatosRegistradosEstudiante
         Temporizado.Interval = 20 ' Intervalo en milisegundos
         Temporizado.Start()
         panel1.BackColor = Color.FromArgb(70, Color.Black)
-
+        INICIALIZAR()
     End Sub
 
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
@@ -61,18 +62,113 @@ Public Class FrmVerDatosRegistradosEstudiante
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(2))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(3))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(4))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(5))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(6))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(7))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(8))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(9))
+                ' Recuperar la fotografía (asumiendo que está en la última columna de la tabla)
+                Dim fotoBytes As Byte() = CType(ds.Tables(0).Rows(I).Item(10), Byte())
+                If fotoBytes IsNot Nothing Then
+                    Using ms As New MemoryStream(fotoBytes)
+                        Dim imagen As Image = Image.FromStream(ms)
+                        BTNfotoSeleccionar.Image = imagen
+                    End Using
+                End If
             Next
+
         End If
     End Sub
-
     Friend Sub INICIALIZAR()
-        comando = "SELECT COLABORADORES.ID, COLABORADORES.IDENTIFICACION,COLABORADORES.NOMBRE,COLABORADORES.TELEFONO,SUCURSALES.NOMBRE FROM COLABORADORES INNER JOIN SUCURSALES ON COLABORADORES.ID_SUCURSAL = SUCURSALES.ID"
-        BTNeditarInfo.Enabled = False
-        BTNguardarCambios.Enabled = False
+        comando = "SELECT TOP 1 ID_usuario, Curso_Lectivo, Nivel, Asignatura, periodo, seccion, identificacion, nombre_completo, correo_electronico, contrasena,fotografia FROM estudiante ORDER BY ID_usuario DESC"
+        BUSCAR(comando)
+        reiniciar()
         ID = 0
     End Sub
+    Friend Sub reiniciar()
+        BTNguardarCambios.Enabled = False
+        BTNeditarInfo.Enabled = False
+        CMBasignatura.Enabled = False
+        CMBcursolectivo.Enabled = False
+        CMBgrado.Enabled = False
+        CMBperiodo.Enabled = False
+        CMBseccion.Enabled = False
+        TXTnombre.Enabled = False
+        TXTcontrasena.Enabled = False
+        TXTcorreo.Enabled = False
+        TXTidentifacion.Enabled = False
+        BTNfotoSeleccionar.Enabled = False
 
-    Private Sub panel1_Paint(sender As Object, e As PaintEventArgs) Handles panel1.Paint
-        INICIALIZAR()
+        CMBcursolectivo.SelectedText = ""
+        CMBasignatura.SelectedText = ""
+        CMBgrado.SelectedText = ""
+        CMBperiodo.SelectedText = ""
+        CMBseccion.SelectedText = ""
+
+        TXTnombre.Text = ""
+        TXTcorreo.Text = ""
+        TXTidentifacion.Text = ""
+        TXTcontrasena.Text = ""
+    End Sub
+
+    Private Sub BTNguardarCambios_Click(sender As Object, e As EventArgs) Handles BTNguardarCambios.Click
+        Try
+            If String.IsNullOrWhiteSpace(CMBgrado.Text) OrElse
+            String.IsNullOrWhiteSpace(CMBcursolectivo.Text) OrElse
+            String.IsNullOrWhiteSpace(CMBasignatura.Text) OrElse
+            String.IsNullOrWhiteSpace(CMBperiodo.Text) OrElse
+            String.IsNullOrWhiteSpace(CMBseccion.Text) OrElse
+            String.IsNullOrWhiteSpace(TXTidentifacion.Text) OrElse
+            String.IsNullOrWhiteSpace(TXTnombre.Text) OrElse
+            String.IsNullOrWhiteSpace(TXTcorreo.Text) OrElse
+            String.IsNullOrWhiteSpace(TXTcontrasena.Text) Then
+                MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return ' Salir del método si hay campos vacíos
+            End If
+
+            If fotoCambiada Then ' Verifica si se ha cambiado la foto
+                Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
+                comando = "UPDATE ESTUDIANTE SET Curso_Lectivo = '" & CMBcursolectivo.Text & "', Nivel = '" & CMBgrado.Text & "', Asignatura = '" & CMBasignatura.Text & "', periodo = '" & CMBperiodo.Text & "', seccion = '" & CMBseccion.Text & "', identificacion = '" & TXTidentifacion.Text & "', nombre_completo = '" & TXTnombre.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "', fotografia = ? where ID_usuario = " & ID & ""
+                EJECUTAR(comando, imagenBytes)
+                MsgBox("Datos actualizados con foto nueva.", vbOKOnly, "")
+            Else
+                comando = "UPDATE ESTUDIANTE SET Curso_Lectivo = '" & CMBcursolectivo.Text & "', Nivel = '" & CMBgrado.Text & "', Asignatura = '" & CMBasignatura.Text & "', periodo = '" & CMBperiodo.Text & "', seccion = '" & CMBseccion.Text & "', identificacion = '" & TXTidentifacion.Text & "', nombre_completo = '" & TXTnombre.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "' where ID_usuario = " & ID & ""
+                EJECUTARSI(comando)
+                MsgBox("Datos actualizados sin foto.", vbOKOnly, "")
+            End If
+
+            INICIALIZAR()
+
+        Catch ex As Exception
+            Console.WriteLine("Error de actualización: " & ex.Message)
+            MessageBox.Show("Ocurrió un error al ingresar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Function ObtenerBytesDeImagen(ByVal imagen As Image) As Byte()
+        Using ms As New MemoryStream()
+            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
+            Return ms.ToArray()
+        End Using
+    End Function
+
+    Private Sub MostrarImagen(imagenBytes As Byte())
+        Try
+            Dim tempFilePath As String = Path.GetTempFileName()
+            tempFilePath = Path.ChangeExtension(tempFilePath, ".jpg")
+            File.WriteAllBytes(tempFilePath, imagenBytes)
+
+            BTNfotoSeleccionar.Image = Image.FromFile(tempFilePath)
+        Catch ex As Exception
+            Console.WriteLine("Error al mostrar la imagen: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub BTNeditarInfo_Click(sender As Object, e As EventArgs) Handles BTNeditarInfo.Click
+        Dim resultado As DialogResult = MessageBox.Show("¿E?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If resultado = DialogResult.Yes Then
+            Me.Close()
+        End If
     End Sub
 End Class
