@@ -25,6 +25,8 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVerDatosRegistradosEstudiante))
         Me.panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.CMBperiodo = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -39,7 +41,6 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TXTnombre = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -61,7 +62,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.BTNeditarInfo = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNcomenzarJuego = New Guna.UI2.WinForms.Guna2Button()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.panel1.SuspendLayout()
         CType(Me.BTNfotoSeleccionar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -100,6 +101,40 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.panel1.Name = "panel1"
         Me.panel1.Size = New System.Drawing.Size(1248, 641)
         Me.panel1.TabIndex = 0
+        '
+        'BTNcerrar
+        '
+        Me.BTNcerrar.Animated = True
+        Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.BorderColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNcerrar.ForeColor = System.Drawing.Color.White
+        Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
+        Me.BTNcerrar.Location = New System.Drawing.Point(1204, 0)
+        Me.BTNcerrar.Name = "BTNcerrar"
+        Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
+        Me.BTNcerrar.TabIndex = 35
+        Me.BTNcerrar.Text = "X"
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.ImageKey = "(ninguno)"
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1248, 91)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "registrar nuevo usuario"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label12
         '
@@ -310,25 +345,6 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.TXTnombre.SelectedText = ""
         Me.TXTnombre.Size = New System.Drawing.Size(220, 36)
         Me.TXTnombre.TabIndex = 36
-        '
-        'BTNcerrar
-        '
-        Me.BTNcerrar.Animated = True
-        Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
-        Me.BTNcerrar.BorderColor = System.Drawing.Color.Transparent
-        Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNcerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNcerrar.ForeColor = System.Drawing.Color.White
-        Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
-        Me.BTNcerrar.Location = New System.Drawing.Point(1204, 0)
-        Me.BTNcerrar.Name = "BTNcerrar"
-        Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
-        Me.BTNcerrar.TabIndex = 35
-        Me.BTNcerrar.Text = "X"
         '
         'Label4
         '
@@ -565,20 +581,9 @@ Partial Class FrmVerDatosRegistradosEstudiante
         'Temporizado
         '
         '
-        'Label1
+        'OpenFileDialog1
         '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Transparent
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.ImageKey = "(ninguno)"
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1248, 91)
-        Me.Label1.TabIndex = 50
-        Me.Label1.Text = "registrar nuevo usuario"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'FrmVerDatosRegistradosEstudiante
         '
@@ -637,4 +642,5 @@ Partial Class FrmVerDatosRegistradosEstudiante
     Friend WithEvents CMBgrado As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
