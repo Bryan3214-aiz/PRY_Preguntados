@@ -5,9 +5,7 @@ Public Class FrmCrearCategorias
     Private audioBytesTemp As Byte()
     Private sonidoBytesTemp As Byte()
     Private videoBytesTemp As Byte()
-    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
-    End Sub
 
     Private Sub BTNcrearCategoria_Click(sender As Object, e As EventArgs) Handles BTNcrearCategoria.Click
         Try
@@ -30,6 +28,10 @@ Public Class FrmCrearCategorias
             Console.WriteLine("Error al crear usuario: " & ex.Message)
             MessageBox.Show("Ocurrió un error al crear la categoria.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+    Friend Sub REINICIAR()
+        TXTcategoria.Text = ""
+        CMBseleccionarTemaC.SelectedItem = Nothing
     End Sub
 
     Private Sub BTNimgEstaticaCategoria_Click(sender As Object, e As EventArgs) Handles BTNimgEstaticaCategoria.Click

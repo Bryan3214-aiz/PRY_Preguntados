@@ -133,7 +133,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(1248, 91)
         Me.Label1.TabIndex = 50
-        Me.Label1.Text = "registrar nuevo usuario"
+        Me.Label1.Text = "Información personal del estudiante"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label12

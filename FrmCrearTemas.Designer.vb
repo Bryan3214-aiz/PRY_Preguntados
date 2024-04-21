@@ -96,7 +96,7 @@ Partial Class FrmCrearTemas
         Me.CMBgradoTemas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CMBgradoTemas.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.CMBgradoTemas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBgradoTemas.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CMBgradoTemas.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CMBgradoTemas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBgradoTemas.ItemHeight = 30
         Me.CMBgradoTemas.Items.AddRange(New Object() {"Sétimo", "Octavo", "Noveno", "Décimo", "Undécimo", "Duodécimo"})

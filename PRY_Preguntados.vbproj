@@ -104,6 +104,12 @@
     <Compile Include="FrmActualizarPerfilProfesor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmActualizarPreguntas.Designer.vb">
+      <DependentUpon>FrmActualizarPreguntas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizarPreguntas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmAsignarCalificaciones.Designer.vb">
       <DependentUpon>FrmAsignarCalificaciones.vb</DependentUpon>
     </Compile>
@@ -138,6 +144,12 @@
       <DependentUpon>FrmCrearPerfilProfesor.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmCrearPerfilProfesor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearPreguntas.Designer.vb">
+      <DependentUpon>FrmCrearPreguntas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearPreguntas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCrearReportes.Designer.vb">
@@ -282,6 +294,9 @@
     <EmbeddedResource Include="FrmActualizarPerfilProfesor.resx">
       <DependentUpon>FrmActualizarPerfilProfesor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizarPreguntas.resx">
+      <DependentUpon>FrmActualizarPreguntas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarCategorias.resx">
       <DependentUpon>FrmBuscarCategorias.vb</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCrearPerfilProfesor.resx">
       <DependentUpon>FrmCrearPerfilProfesor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearPreguntas.resx">
+      <DependentUpon>FrmCrearPreguntas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCrearReportes.resx">
       <DependentUpon>FrmCrearReportes.vb</DependentUpon>

@@ -14,7 +14,7 @@
             For I = 0 To ds.Tables(0).Rows.Count - 1
                 L.Items.Add(ds.Tables(0).Rows(I).Item(0))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(1))
-                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(7))
+                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(2))
             Next
         End If
     End Sub
@@ -32,7 +32,7 @@
     End Sub
     Private Sub BTNeliminarTema_Click(sender As Object, e As EventArgs) Handles BTNeliminarTema.Click
         If ID <> 0 Then
-            If MsgBox("¿Desea realmente eliminar el tema seleccionado?", vbQuestion + vbYesNo, "Confirmar Eliminación") = vbYes Then
+            If MsgBox("¿Desea realmente eliminar el tema seleccionado?", vbQuestion + vbYesNo, "Confirmar Solicitud") = vbYes Then
                 comando = "DELETE FROM TEMA WHERE ID_TEMA = " & ID
                 EJECUTARSI(comando)
                 INICIALIZAR()

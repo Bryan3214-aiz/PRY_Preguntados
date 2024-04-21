@@ -99,11 +99,11 @@ Public Class FrmVerDatosRegistradosEstudiante
         TXTidentifacion.Enabled = False
         BTNfotoSeleccionar.Enabled = False
 
-        CMBcursolectivo.SelectedText = ""
-        CMBasignatura.SelectedText = ""
-        CMBgrado.SelectedText = ""
-        CMBperiodo.SelectedText = ""
-        CMBseccion.SelectedText = ""
+        CMBcursolectivo.SelectedItem = Nothing
+        CMBasignatura.SelectedItem = Nothing
+        CMBgrado.SelectedItem = Nothing
+        CMBperiodo.SelectedItem = Nothing
+        CMBseccion.SelectedItem = Nothing
 
         TXTnombre.Text = ""
         TXTcorreo.Text = ""

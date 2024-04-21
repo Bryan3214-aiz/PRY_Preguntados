@@ -96,7 +96,7 @@ Partial Class FrmCrearCategorias
         Me.CMBseleccionarTemaC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CMBseleccionarTemaC.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.CMBseleccionarTemaC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBseleccionarTemaC.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CMBseleccionarTemaC.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CMBseleccionarTemaC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBseleccionarTemaC.ItemHeight = 30
         Me.CMBseleccionarTemaC.Location = New System.Drawing.Point(620, 78)

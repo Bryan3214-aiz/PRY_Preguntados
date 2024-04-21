@@ -22,11 +22,17 @@ Public Class FrmCrearTemas
 
             Dim comando As String = "INSERT INTO TEMA (ID_TEMA, NOMBRE_TEMA, NIVEL, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ, VIDEO_TEMA) VALUES ( '" & PK("TEMA", "ID_TEMA") & "','" & TXTtema.Text & "', '" & CMBgradoTemas.Text & "',?, ?, ?, ?, ?)"
             EJECUTARTEMA(comando, imagenEstBytes, imagenAniBytes, audioBytes, sonidoBytes, videoBytes)
+            REINICIAR()
             MsgBox("Tema creado exitosamente.")
         Catch ex As Exception
             Console.WriteLine("Error al crear usuario: " & ex.Message)
             MessageBox.Show("Ocurrió un error al crear el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Friend Sub REINICIAR()
+        TXTtema.Text = ""
+        CMBgradoTemas.SelectedItem = Nothing
     End Sub
 
     Private Sub BTNimgEstaticaTema_Click(sender As Object, e As EventArgs) Handles BTNimgEstaticaTema.Click

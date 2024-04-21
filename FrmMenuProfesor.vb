@@ -125,7 +125,15 @@
 
 
 
+    Private Sub BTNcrearPregunta_Click(sender As Object, e As EventArgs) Handles BTNcrearPregunta.Click
+        FormularioAbierto(New FrmCrearPreguntas())
+        ocultarMenu()
+    End Sub
 
+    Private Sub BTNactualizarPregunta_Click(sender As Object, e As EventArgs) Handles BTNactualizarPregunta.Click
+        FormularioAbierto(New FrmActualizarPreguntas())
+        ocultarMenu()
+    End Sub
 
 
     Private Sub BTNperfil_Click(sender As Object, e As EventArgs) Handles BTNperfil.Click
@@ -167,5 +175,6 @@
             Me.Close() ' Cerrar el formulario
         End If
     End Sub
+
 
 End Class
