@@ -28,6 +28,10 @@ Partial Class FrmCrearReportes
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BTNcrearTema = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
@@ -63,7 +67,7 @@ Partial Class FrmCrearReportes
         Me.TXTNOMBRESUCURSAL.Location = New System.Drawing.Point(27, 130)
         Me.TXTNOMBRESUCURSAL.Name = "TXTNOMBRESUCURSAL"
         Me.TXTNOMBRESUCURSAL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXTNOMBRESUCURSAL.PlaceholderText = "Ingrese el nombre del tema"
+        Me.TXTNOMBRESUCURSAL.PlaceholderText = "Filtrar partidas con el nombre del estudiante"
         Me.TXTNOMBRESUCURSAL.SelectedText = ""
         Me.TXTNOMBRESUCURSAL.Size = New System.Drawing.Size(832, 42)
         Me.TXTNOMBRESUCURSAL.TabIndex = 34
@@ -74,8 +78,8 @@ Partial Class FrmCrearReportes
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.L.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
-        Me.L.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8})
+        Me.L.Font = New System.Drawing.Font("Showcard Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L.ForeColor = System.Drawing.SystemColors.WindowText
         Me.L.FullRowSelect = True
         Me.L.GridLines = True
@@ -83,8 +87,8 @@ Partial Class FrmCrearReportes
         Me.L.HoverSelection = True
         Me.L.Location = New System.Drawing.Point(27, 194)
         Me.L.Margin = New System.Windows.Forms.Padding(2)
-        Me.L.MultiSelect = False
         Me.L.Name = "L"
+        Me.L.Scrollable = False
         Me.L.Size = New System.Drawing.Size(832, 363)
         Me.L.TabIndex = 33
         Me.L.UseCompatibleStateImageBehavior = False
@@ -97,15 +101,39 @@ Partial Class FrmCrearReportes
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "Nombre del tema"
+        Me.ColumnHeader2.Text = "Estudiante"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 415
+        Me.ColumnHeader2.Width = 145
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "Grado asignado"
+        Me.ColumnHeader3.Text = "Categoría"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 415
+        Me.ColumnHeader3.Width = 145
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Puntaje"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 80
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Respuestas correctas"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader6.Width = 180
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Respuestas incorrectas"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader7.Width = 185
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Fecha "
+        Me.ColumnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader8.Width = 100
         '
         'BTNcrearTema
         '
@@ -117,13 +145,13 @@ Partial Class FrmCrearReportes
         Me.BTNcrearTema.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BTNcrearTema.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BTNcrearTema.FillColor = System.Drawing.Color.MediumSlateBlue
-        Me.BTNcrearTema.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
+        Me.BTNcrearTema.Font = New System.Drawing.Font("Showcard Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNcrearTema.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BTNcrearTema.Location = New System.Drawing.Point(679, 571)
         Me.BTNcrearTema.Name = "BTNcrearTema"
         Me.BTNcrearTema.Size = New System.Drawing.Size(180, 60)
         Me.BTNcrearTema.TabIndex = 35
-        Me.BTNcrearTema.Text = "Crear tema"
+        Me.BTNcrearTema.Text = "Generar reporte"
         '
         'FrmCrearReportes
         '
@@ -149,4 +177,8 @@ Partial Class FrmCrearReportes
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents BTNcrearTema As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
 End Class
