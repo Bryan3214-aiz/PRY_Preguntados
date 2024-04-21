@@ -67,7 +67,7 @@ Partial Class FrmCrearCategorias
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 142)
-        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1193, 663)
         Me.Guna2Panel1.TabIndex = 33
@@ -85,7 +85,7 @@ Partial Class FrmCrearCategorias
         Me.BTNcrearCategoria.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
         Me.BTNcrearCategoria.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BTNcrearCategoria.Location = New System.Drawing.Point(907, 529)
-        Me.BTNcrearCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNcrearCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNcrearCategoria.Name = "BTNcrearCategoria"
         Me.BTNcrearCategoria.Size = New System.Drawing.Size(240, 74)
         Me.BTNcrearCategoria.TabIndex = 31
@@ -103,7 +103,7 @@ Partial Class FrmCrearCategorias
         Me.CMBseleccionarTemaC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBseleccionarTemaC.ItemHeight = 30
         Me.CMBseleccionarTemaC.Location = New System.Drawing.Point(827, 96)
-        Me.CMBseleccionarTemaC.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CMBseleccionarTemaC.Margin = New System.Windows.Forms.Padding(4)
         Me.CMBseleccionarTemaC.Name = "CMBseleccionarTemaC"
         Me.CMBseleccionarTemaC.Size = New System.Drawing.Size(292, 36)
         Me.CMBseleccionarTemaC.TabIndex = 30
@@ -121,7 +121,7 @@ Partial Class FrmCrearCategorias
         Me.BTNvideoCategoria.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNvideoCategoria.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BTNvideoCategoria.Location = New System.Drawing.Point(701, 364)
-        Me.BTNvideoCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNvideoCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNvideoCategoria.Name = "BTNvideoCategoria"
         Me.BTNvideoCategoria.Size = New System.Drawing.Size(260, 86)
         Me.BTNvideoCategoria.TabIndex = 29
@@ -140,7 +140,7 @@ Partial Class FrmCrearCategorias
         Me.BTNAudioVozCategoria.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNAudioVozCategoria.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BTNAudioVozCategoria.Location = New System.Drawing.Point(251, 364)
-        Me.BTNAudioVozCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNAudioVozCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNAudioVozCategoria.Name = "BTNAudioVozCategoria"
         Me.BTNAudioVozCategoria.Size = New System.Drawing.Size(260, 86)
         Me.BTNAudioVozCategoria.TabIndex = 28
@@ -159,7 +159,7 @@ Partial Class FrmCrearCategorias
         Me.BTNSonidoCategoria.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNSonidoCategoria.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BTNSonidoCategoria.Location = New System.Drawing.Point(861, 230)
-        Me.BTNSonidoCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNSonidoCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSonidoCategoria.Name = "BTNSonidoCategoria"
         Me.BTNSonidoCategoria.Size = New System.Drawing.Size(260, 86)
         Me.BTNSonidoCategoria.TabIndex = 27
@@ -178,7 +178,7 @@ Partial Class FrmCrearCategorias
         Me.BTNimgAnimadaCategoria.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNimgAnimadaCategoria.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BTNimgAnimadaCategoria.Location = New System.Drawing.Point(472, 230)
-        Me.BTNimgAnimadaCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNimgAnimadaCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNimgAnimadaCategoria.Name = "BTNimgAnimadaCategoria"
         Me.BTNimgAnimadaCategoria.Size = New System.Drawing.Size(260, 86)
         Me.BTNimgAnimadaCategoria.TabIndex = 26
@@ -197,7 +197,7 @@ Partial Class FrmCrearCategorias
         Me.BTNimgEstaticaCategoria.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
         Me.BTNimgEstaticaCategoria.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BTNimgEstaticaCategoria.Location = New System.Drawing.Point(84, 230)
-        Me.BTNimgEstaticaCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTNimgEstaticaCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNimgEstaticaCategoria.Name = "BTNimgEstaticaCategoria"
         Me.BTNimgEstaticaCategoria.Size = New System.Drawing.Size(260, 86)
         Me.BTNimgEstaticaCategoria.TabIndex = 25
@@ -261,7 +261,7 @@ Partial Class FrmCrearCategorias
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.LabelbienvenidaProfesor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmCrearCategorias"
         Me.Text = "FrmCrearCategorias"
         Me.Guna2Panel1.ResumeLayout(False)
