@@ -136,8 +136,10 @@ Public Class FrmVerDatosRegistradosEstudiante
                 EJECUTARSI(comando)
                 MsgBox("Datos actualizados sin foto.", vbOKOnly, "")
             End If
-
             INICIALIZAR()
+            Me.Hide()
+            FrmMenuEstudiante.ShowDialog()
+            Me.Close()
 
         Catch ex As Exception
             Console.WriteLine("Error de actualización: " & ex.Message)
@@ -165,10 +167,67 @@ Public Class FrmVerDatosRegistradosEstudiante
     End Sub
 
     Private Sub BTNeditarInfo_Click(sender As Object, e As EventArgs) Handles BTNeditarInfo.Click
-        Dim resultado As DialogResult = MessageBox.Show("¿E?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim resultado As DialogResult = MessageBox.Show("¿Desea actualizar su información personal?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If resultado = DialogResult.Yes Then
-            Me.Close()
+            BTNcomenzarJuego.Enabled = False
+            BTNguardarCambios.Enabled = True
+            BTNeditarInfo.Enabled = True
+            CMBasignatura.Enabled = True
+            CMBcursolectivo.Enabled = True
+            CMBgrado.Enabled = True
+            CMBperiodo.Enabled = True
+            CMBseccion.Enabled = True
+            TXTnombre.Enabled = True
+            TXTcontrasena.Enabled = True
+            TXTcorreo.Enabled = True
+            TXTidentifacion.Enabled = True
+            BTNfotoSeleccionar.Enabled = True
+
+            If ID <> 0 Then
+                comando = "SELECT id_usuario,Curso_Lectivo,Nivel,Asignatura,periodo,seccion,identificacion,nombre_completo,correo_electronico,contrasena from estudiante where ID_usuario = " & ID & ""
+                ds.Tables.Clear()
+                L.Items.Clear()
+                CARGAR_TABLA(ds, comando)
+                If ds.Tables(0).Rows.Count > 0 Then
+                    For I = 0 To ds.Tables(0).Rows.Count - 1
+                        L.Items.Add(ds.Tables(0).Rows(I).Item(0))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(1))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(2))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(3))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(4))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(5))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(6))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(7))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(8))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(9))
+                    Next
+                End If
+                CMBcursolectivo.Text = L.Items(L.Items.Count - 1).SubItems(1).Text
+                CMBgrado.Text = L.Items(L.Items.Count - 1).SubItems(2).Text
+                CMBasignatura.Text = L.Items(L.Items.Count - 1).SubItems(3).Text
+                CMBperiodo.Text = L.Items(L.Items.Count - 1).SubItems(4).Text
+                CMBseccion.Text = L.Items(L.Items.Count - 1).SubItems(5).Text
+                TXTidentifacion.Text = L.Items(L.Items.Count - 1).SubItems(6).Text
+                TXTnombre.Text = L.Items(L.Items.Count - 1).SubItems(7).Text
+                TXTcorreo.Text = L.Items(L.Items.Count - 1).SubItems(8).Text
+                TXTcontrasena.Text = L.Items(L.Items.Count - 1).SubItems(9).Text
+            End If
         End If
+    End Sub
+
+    Private Sub BTNfotoSeleccionar_Click(sender As Object, e As EventArgs) Handles BTNfotoSeleccionar.Click
+        Try
+            OpenFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif|Todos los archivos|*.*"
+
+            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+                Dim rutaImagen As String = OpenFileDialog1.FileName
+                Dim imagenBytes As Byte() = File.ReadAllBytes(rutaImagen)
+                fotoCambiada = True
+                MostrarImagen(imagenBytes)
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Error al insertar la imagen: " & ex.Message)
+        End Try
     End Sub
 End Class
