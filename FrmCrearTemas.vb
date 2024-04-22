@@ -23,7 +23,7 @@ Public Class FrmCrearTemas
             Dim comando As String = "INSERT INTO TEMA (ID_TEMA, NOMBRE_TEMA, NIVEL, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ, VIDEO_TEMA) VALUES ( '" & PK("TEMA", "ID_TEMA") & "','" & TXTtema.Text & "', '" & CMBgradoTemas.Text & "',?, ?, ?, ?, ?)"
             EJECUTARTEMA(comando, imagenEstBytes, imagenAniBytes, audioBytes, sonidoBytes, videoBytes)
             REINICIAR()
-            MsgBox("Tema creado exitosamente.")
+            MsgBox("Tema creado exitosamente.", vbOKOnly, "")
         Catch ex As Exception
             Console.WriteLine("Error al crear usuario: " & ex.Message)
             MessageBox.Show("Ocurrió un error al crear el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -42,7 +42,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 imagenBytesEstTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Imagen estatica insertada correctamente.")
+                MsgBox("Imagen estatica insertada correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -57,7 +57,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 imagenBytesAniTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Imagen animada insertada correctamente")
+                MsgBox("Imagen animada insertada correctamente", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -71,7 +71,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 sonidoBytesTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Sonido del tema agregado correctamente.")
+                MsgBox("Sonido del tema agregado correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -85,7 +85,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 audioBytesTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Audio voz del tema agregado correctamente.")
+                MsgBox("Audio voz del tema agregado correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -99,7 +99,7 @@ Public Class FrmCrearTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 videoBytesTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Video del tema agregado correctamente.")
+                MsgBox("Video del tema agregado correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)

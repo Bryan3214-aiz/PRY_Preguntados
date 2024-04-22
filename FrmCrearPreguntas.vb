@@ -44,7 +44,7 @@
                 Dim comando As String = "INSERT INTO PREGUNTA (ID_PREGUNTA, ID_CATEGORIA, ENUNCIADO_PREGUNTA, TIEMPO_LIMITE, MAX_CARACTERES, PUNTAJE) VALUES ( '" & PK("PREGUNTA", "ID_PREGUNTA") & "','" & index & "', '" & TXTpregunta.Text & "','" & tiempo & "','" & caracteres & "','" & puntaje & "')"
                 EJECUTARSI(comando)
             End If
-            MsgBox("Pregunta creada exitosamente.")
+            MsgBox("Pregunta creada exitosamente.", vbOK, "")
             BTN_OPCIONES.Enabled = True
             BTNcrearPregunta.Enabled = False
             TXTpregunta.Enabled = False
@@ -81,7 +81,7 @@
             EJECUTARSI(comando)
             comando = "INSERT INTO OPCION (ID_OPCION, ID_PREGUNTA, TEXTO_OPCION, ESCORRECTA) VALUES ( '" & PK("OPCION", "ID_OPCION") & "','" & id_pregunta & "', '" & TXT_OPC_CUATRO.Text & "','" & falso & "')"
             EJECUTARSI(comando)
-            MsgBox("Opciones creadas exitosamente.")
+            MsgBox("Opciones creadas exitosamente.", vbOK, "")
             REINICIAR()
             INICIALIZAR()
         Catch ex As Exception

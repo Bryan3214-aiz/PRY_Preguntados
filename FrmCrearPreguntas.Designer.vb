@@ -43,10 +43,12 @@ Partial Class FrmCrearPreguntas
         Me.BTN_OPCIONES = New Guna.UI2.WinForms.Guna2Button()
         Me.LBL_IDPREG = New System.Windows.Forms.Label()
         Me.TXT_ID_PREGUNTA = New System.Windows.Forms.TextBox()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelbienvenidaProfesor
@@ -57,7 +59,7 @@ Partial Class FrmCrearPreguntas
         Me.LabelbienvenidaProfesor.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LabelbienvenidaProfesor.Location = New System.Drawing.Point(0, 0)
         Me.LabelbienvenidaProfesor.Name = "LabelbienvenidaProfesor"
-        Me.LabelbienvenidaProfesor.Size = New System.Drawing.Size(879, 115)
+        Me.LabelbienvenidaProfesor.Size = New System.Drawing.Size(895, 115)
         Me.LabelbienvenidaProfesor.TabIndex = 33
         Me.LabelbienvenidaProfesor.Text = "Registrar nuevas preguntas"
         Me.LabelbienvenidaProfesor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -73,7 +75,7 @@ Partial Class FrmCrearPreguntas
         Me.CMBseleccionarCate.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.CMBseleccionarCate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBseleccionarCate.ItemHeight = 30
-        Me.CMBseleccionarCate.Location = New System.Drawing.Point(228, 188)
+        Me.CMBseleccionarCate.Location = New System.Drawing.Point(241, 82)
         Me.CMBseleccionarCate.Name = "CMBseleccionarCate"
         Me.CMBseleccionarCate.Size = New System.Drawing.Size(220, 36)
         Me.CMBseleccionarCate.TabIndex = 35
@@ -83,7 +85,7 @@ Partial Class FrmCrearPreguntas
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label4.Location = New System.Drawing.Point(16, 157)
+        Me.Label4.Location = New System.Drawing.Point(30, 67)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(210, 67)
         Me.Label4.TabIndex = 34
@@ -95,7 +97,7 @@ Partial Class FrmCrearPreguntas
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label5.Location = New System.Drawing.Point(454, 188)
+        Me.Label5.Location = New System.Drawing.Point(467, 82)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(156, 36)
         Me.Label5.TabIndex = 37
@@ -116,7 +118,7 @@ Partial Class FrmCrearPreguntas
         Me.TXTpregunta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTpregunta.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXTpregunta.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTpregunta.Location = New System.Drawing.Point(616, 188)
+        Me.TXTpregunta.Location = New System.Drawing.Point(629, 82)
         Me.TXTpregunta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXTpregunta.Name = "TXTpregunta"
         Me.TXTpregunta.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -130,7 +132,7 @@ Partial Class FrmCrearPreguntas
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label1.Location = New System.Drawing.Point(63, 331)
+        Me.Label1.Location = New System.Drawing.Point(76, 224)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(163, 36)
         Me.Label1.TabIndex = 39
@@ -151,7 +153,7 @@ Partial Class FrmCrearPreguntas
         Me.TXT_OPC_DOS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXT_OPC_DOS.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXT_OPC_DOS.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_DOS.Location = New System.Drawing.Point(229, 331)
+        Me.TXT_OPC_DOS.Location = New System.Drawing.Point(242, 224)
         Me.TXT_OPC_DOS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXT_OPC_DOS.Name = "TXT_OPC_DOS"
         Me.TXT_OPC_DOS.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -165,7 +167,7 @@ Partial Class FrmCrearPreguntas
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label2.Location = New System.Drawing.Point(61, 386)
+        Me.Label2.Location = New System.Drawing.Point(74, 279)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(162, 36)
         Me.Label2.TabIndex = 41
@@ -186,7 +188,7 @@ Partial Class FrmCrearPreguntas
         Me.TXT_OPC_TRES.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXT_OPC_TRES.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXT_OPC_TRES.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_TRES.Location = New System.Drawing.Point(229, 386)
+        Me.TXT_OPC_TRES.Location = New System.Drawing.Point(242, 279)
         Me.TXT_OPC_TRES.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXT_OPC_TRES.Name = "TXT_OPC_TRES"
         Me.TXT_OPC_TRES.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -200,7 +202,7 @@ Partial Class FrmCrearPreguntas
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label3.Location = New System.Drawing.Point(63, 276)
+        Me.Label3.Location = New System.Drawing.Point(76, 168)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(160, 36)
         Me.Label3.TabIndex = 43
@@ -221,7 +223,7 @@ Partial Class FrmCrearPreguntas
         Me.TXT_OPC_UNO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXT_OPC_UNO.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXT_OPC_UNO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_UNO.Location = New System.Drawing.Point(229, 276)
+        Me.TXT_OPC_UNO.Location = New System.Drawing.Point(242, 168)
         Me.TXT_OPC_UNO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXT_OPC_UNO.Name = "TXT_OPC_UNO"
         Me.TXT_OPC_UNO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -235,7 +237,7 @@ Partial Class FrmCrearPreguntas
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label6.Location = New System.Drawing.Point(61, 441)
+        Me.Label6.Location = New System.Drawing.Point(74, 338)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(166, 36)
         Me.Label6.TabIndex = 45
@@ -256,7 +258,7 @@ Partial Class FrmCrearPreguntas
         Me.TXT_OPC_CUATRO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXT_OPC_CUATRO.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXT_OPC_CUATRO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_CUATRO.Location = New System.Drawing.Point(229, 441)
+        Me.TXT_OPC_CUATRO.Location = New System.Drawing.Point(242, 338)
         Me.TXT_OPC_CUATRO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXT_OPC_CUATRO.Name = "TXT_OPC_CUATRO"
         Me.TXT_OPC_CUATRO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -277,45 +279,49 @@ Partial Class FrmCrearPreguntas
         Me.BTNcrearPregunta.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTNcrearPregunta.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
         Me.BTNcrearPregunta.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTNcrearPregunta.Location = New System.Drawing.Point(459, 511)
+        Me.BTNcrearPregunta.Location = New System.Drawing.Point(461, 417)
         Me.BTNcrearPregunta.Name = "BTNcrearPregunta"
         Me.BTNcrearPregunta.Size = New System.Drawing.Size(180, 60)
         Me.BTNcrearPregunta.TabIndex = 46
-        Me.BTNcrearPregunta.Text = "Crear preguntas"
+        Me.BTNcrearPregunta.Text = "Crear pregunta"
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.PRY_Preguntados.My.Resources.Resources.png_transparent_x_red_mark_incorrect_thumbnail__1_
-        Me.PictureBox2.Location = New System.Drawing.Point(761, 335)
+        Me.PictureBox2.Location = New System.Drawing.Point(774, 228)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 48
         Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.PRY_Preguntados.My.Resources.Resources.CORRECTA__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(761, 280)
+        Me.PictureBox1.Location = New System.Drawing.Point(774, 172)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 47
         Me.PictureBox1.TabStop = False
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.PRY_Preguntados.My.Resources.Resources.png_transparent_x_red_mark_incorrect_thumbnail__1_
-        Me.PictureBox3.Location = New System.Drawing.Point(761, 390)
+        Me.PictureBox3.Location = New System.Drawing.Point(774, 283)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 49
         Me.PictureBox3.TabStop = False
         '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.PRY_Preguntados.My.Resources.Resources.png_transparent_x_red_mark_incorrect_thumbnail__1_
-        Me.PictureBox4.Location = New System.Drawing.Point(761, 445)
+        Me.PictureBox4.Location = New System.Drawing.Point(774, 342)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox4.TabIndex = 50
         Me.PictureBox4.TabStop = False
         '
@@ -331,7 +337,7 @@ Partial Class FrmCrearPreguntas
         Me.BTN_OPCIONES.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN_OPCIONES.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
         Me.BTN_OPCIONES.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTN_OPCIONES.Location = New System.Drawing.Point(687, 511)
+        Me.BTN_OPCIONES.Location = New System.Drawing.Point(669, 417)
         Me.BTN_OPCIONES.Name = "BTN_OPCIONES"
         Me.BTN_OPCIONES.Size = New System.Drawing.Size(180, 60)
         Me.BTN_OPCIONES.TabIndex = 51
@@ -352,32 +358,41 @@ Partial Class FrmCrearPreguntas
         Me.TXT_ID_PREGUNTA.Size = New System.Drawing.Size(0, 20)
         Me.TXT_ID_PREGUNTA.TabIndex = 53
         '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.Controls.Add(Me.TXTpregunta)
+        Me.Guna2Panel1.Controls.Add(Me.Label4)
+        Me.Guna2Panel1.Controls.Add(Me.CMBseleccionarCate)
+        Me.Guna2Panel1.Controls.Add(Me.BTN_OPCIONES)
+        Me.Guna2Panel1.Controls.Add(Me.Label5)
+        Me.Guna2Panel1.Controls.Add(Me.PictureBox4)
+        Me.Guna2Panel1.Controls.Add(Me.Label3)
+        Me.Guna2Panel1.Controls.Add(Me.PictureBox3)
+        Me.Guna2Panel1.Controls.Add(Me.TXT_OPC_UNO)
+        Me.Guna2Panel1.Controls.Add(Me.PictureBox2)
+        Me.Guna2Panel1.Controls.Add(Me.PictureBox1)
+        Me.Guna2Panel1.Controls.Add(Me.BTNcrearPregunta)
+        Me.Guna2Panel1.Controls.Add(Me.TXT_OPC_DOS)
+        Me.Guna2Panel1.Controls.Add(Me.Label6)
+        Me.Guna2Panel1.Controls.Add(Me.Label1)
+        Me.Guna2Panel1.Controls.Add(Me.TXT_OPC_CUATRO)
+        Me.Guna2Panel1.Controls.Add(Me.TXT_OPC_TRES)
+        Me.Guna2Panel1.Controls.Add(Me.Label2)
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 115)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(895, 550)
+        Me.Guna2Panel1.TabIndex = 54
+        '
         'FrmCrearPreguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
-        Me.ClientSize = New System.Drawing.Size(879, 615)
+        Me.ClientSize = New System.Drawing.Size(895, 665)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.TXT_ID_PREGUNTA)
         Me.Controls.Add(Me.LBL_IDPREG)
-        Me.Controls.Add(Me.BTN_OPCIONES)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.BTNcrearPregunta)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TXT_OPC_CUATRO)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TXT_OPC_UNO)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TXT_OPC_TRES)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TXT_OPC_DOS)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TXTpregunta)
-        Me.Controls.Add(Me.CMBseleccionarCate)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.LabelbienvenidaProfesor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmCrearPreguntas"
@@ -386,6 +401,7 @@ Partial Class FrmCrearPreguntas
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -412,4 +428,5 @@ Partial Class FrmCrearPreguntas
     Friend WithEvents BTN_OPCIONES As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LBL_IDPREG As Label
     Friend WithEvents TXT_ID_PREGUNTA As TextBox
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
 End Class

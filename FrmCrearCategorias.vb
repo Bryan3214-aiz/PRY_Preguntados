@@ -22,7 +22,7 @@ Public Class FrmCrearCategorias
             Dim index As Integer = CMBseleccionarTemaC.SelectedIndex + 1
             Dim comando As String = "INSERT INTO CATEGORIA (ID_CATEGORIA, NOMBRE_CATEGORIA, ID_TEMA, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_CATEGORIA, AUDIO_VOZ, VIDEO_CATEGORIA) VALUES ( '" & PK("CATEGORIA", "ID_CATEGORIA") & "','" & TXTcategoria.Text & "', '" & index & "',?, ?, ?, ?, ?)"
             EJECUTARTEMA(comando, imagenEstBytes, imagenAniBytes, audioBytes, sonidoBytes, videoBytes)
-            MsgBox("Categoria creada exitosamente.")
+            MsgBox("Categoria creada exitosamente.", vbOKOnly, "")
         Catch ex As Exception
             Console.WriteLine("Error al crear usuario: " & ex.Message)
             MessageBox.Show("Ocurrió un error al crear la categoria.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -40,7 +40,7 @@ Public Class FrmCrearCategorias
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 imagenBytesEstTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Imagen estatica insertada correctamente.")
+                MsgBox("Imagen estatica insertada correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -54,7 +54,7 @@ Public Class FrmCrearCategorias
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 imagenBytesAniTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Imagen animada insertada correctamente")
+                MsgBox("Imagen animada insertada correctamente", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -68,7 +68,7 @@ Public Class FrmCrearCategorias
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 sonidoBytesTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Sonido agregado correctamente.")
+                MsgBox("Sonido agregado correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -82,7 +82,7 @@ Public Class FrmCrearCategorias
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 audioBytesTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Audio voz agregado correctamente.")
+                MsgBox("Audio voz agregado correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -96,7 +96,7 @@ Public Class FrmCrearCategorias
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 videoBytesTemp = File.ReadAllBytes(rutaImagen)
-                MsgBox("Video agregado correctamente.")
+                MsgBox("Video agregado correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
@@ -122,5 +122,4 @@ Public Class FrmCrearCategorias
     Private Sub FrmCrearCategorias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         INICIALIZARCOMBO()
     End Sub
-
 End Class
