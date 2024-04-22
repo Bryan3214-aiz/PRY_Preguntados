@@ -98,7 +98,7 @@ Public Class FrmVerDatosRegistradosEstudiante
         TXTcorreo.Enabled = False
         TXTidentifacion.Enabled = False
         BTNfotoSeleccionar.Enabled = False
-
+        BTNfotoSeleccionar.Image = My.Resources.img_usuario
         CMBcursolectivo.SelectedItem = Nothing
         CMBasignatura.SelectedItem = Nothing
         CMBgrado.SelectedItem = Nothing
@@ -130,11 +130,11 @@ Public Class FrmVerDatosRegistradosEstudiante
                 Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
                 comando = "UPDATE ESTUDIANTE SET Curso_Lectivo = '" & CMBcursolectivo.Text & "', Nivel = '" & CMBgrado.Text & "', Asignatura = '" & CMBasignatura.Text & "', periodo = '" & CMBperiodo.Text & "', seccion = '" & CMBseccion.Text & "', identificacion = '" & TXTidentifacion.Text & "', nombre_completo = '" & TXTnombre.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "', fotografia = ? where ID_usuario = " & ID & ""
                 EJECUTAR(comando, imagenBytes)
-                MsgBox("Datos actualizados con foto nueva.", vbOKOnly, "")
+                MsgBox("Datos actualizados.", vbOKOnly, "")
             Else
                 comando = "UPDATE ESTUDIANTE SET Curso_Lectivo = '" & CMBcursolectivo.Text & "', Nivel = '" & CMBgrado.Text & "', Asignatura = '" & CMBasignatura.Text & "', periodo = '" & CMBperiodo.Text & "', seccion = '" & CMBseccion.Text & "', identificacion = '" & TXTidentifacion.Text & "', nombre_completo = '" & TXTnombre.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "' where ID_usuario = " & ID & ""
                 EJECUTARSI(comando)
-                MsgBox("Datos actualizados sin foto.", vbOKOnly, "")
+                MsgBox("Datos actualizados.", vbOKOnly, "")
             End If
             INICIALIZAR()
             Me.Hide()
@@ -230,4 +230,6 @@ Public Class FrmVerDatosRegistradosEstudiante
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
         End Try
     End Sub
+
+
 End Class
