@@ -98,7 +98,5 @@
         TXT_OPC_TRES.Text = ""
         TXT_OPC_CUATRO.Text = ""
     End Sub
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles LBL_IDPREG.Click
 
-    End Sub
 End Class
