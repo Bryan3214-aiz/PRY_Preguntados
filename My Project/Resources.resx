@@ -121,25 +121,34 @@
   <data name="BotonSeleccionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\BotonSeleccionado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="long_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\long_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CORRECTA (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CORRECTA (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CORRECTA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CORRECTA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logoPr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\logoPr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondoPRG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondoPRG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="long_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\img\long_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Botonrojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\Botonrojo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Botonverde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\img\Botonverde.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="img-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\img-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Botonrojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\img\Botonrojo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="BotonSeleccionadoPresionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\img\BotonSeleccionadoPresionado.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Botonverde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\img\Botonverde.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="png-transparent-x-red-mark-incorrect-thumbnail (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-x-red-mark-incorrect-thumbnail (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

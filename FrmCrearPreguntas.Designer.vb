@@ -28,13 +28,25 @@ Partial Class FrmCrearPreguntas
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TXTpregunta = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXT_OPC_DOS = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXT_OPC_TRES = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXT_OPC_UNO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXT_OPC_CUATRO = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.BTNcrearPregunta = New Guna.UI2.WinForms.Guna2Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.BTN_OPCIONES = New Guna.UI2.WinForms.Guna2Button()
+        Me.LBL_IDPREG = New System.Windows.Forms.Label()
+        Me.TXT_ID_PREGUNTA = New System.Windows.Forms.TextBox()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelbienvenidaProfesor
@@ -61,7 +73,7 @@ Partial Class FrmCrearPreguntas
         Me.CMBseleccionarCate.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.CMBseleccionarCate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBseleccionarCate.ItemHeight = 30
-        Me.CMBseleccionarCate.Location = New System.Drawing.Point(214, 200)
+        Me.CMBseleccionarCate.Location = New System.Drawing.Point(228, 188)
         Me.CMBseleccionarCate.Name = "CMBseleccionarCate"
         Me.CMBseleccionarCate.Size = New System.Drawing.Size(220, 36)
         Me.CMBseleccionarCate.TabIndex = 35
@@ -71,7 +83,7 @@ Partial Class FrmCrearPreguntas
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label4.Location = New System.Drawing.Point(13, 185)
+        Me.Label4.Location = New System.Drawing.Point(16, 157)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(210, 67)
         Me.Label4.TabIndex = 34
@@ -83,7 +95,7 @@ Partial Class FrmCrearPreguntas
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label5.Location = New System.Drawing.Point(454, 200)
+        Me.Label5.Location = New System.Drawing.Point(454, 188)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(156, 36)
         Me.Label5.TabIndex = 37
@@ -104,7 +116,7 @@ Partial Class FrmCrearPreguntas
         Me.TXTpregunta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TXTpregunta.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
         Me.TXTpregunta.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTpregunta.Location = New System.Drawing.Point(616, 200)
+        Me.TXTpregunta.Location = New System.Drawing.Point(616, 188)
         Me.TXTpregunta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TXTpregunta.Name = "TXTpregunta"
         Me.TXTpregunta.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -125,28 +137,28 @@ Partial Class FrmCrearPreguntas
         Me.Label1.Text = "Respuesta 2:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2TextBox1
+        'TXT_OPC_DOS
         '
-        Me.Guna2TextBox1.Animated = True
-        Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox1.BorderRadius = 10
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(229, 331)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = "Digite una opción de respuesta"
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(575, 36)
-        Me.Guna2TextBox1.TabIndex = 38
+        Me.TXT_OPC_DOS.Animated = True
+        Me.TXT_OPC_DOS.BackColor = System.Drawing.Color.Transparent
+        Me.TXT_OPC_DOS.BorderRadius = 10
+        Me.TXT_OPC_DOS.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_OPC_DOS.DefaultText = ""
+        Me.TXT_OPC_DOS.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_OPC_DOS.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_OPC_DOS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_OPC_DOS.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_OPC_DOS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_OPC_DOS.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXT_OPC_DOS.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_OPC_DOS.Location = New System.Drawing.Point(229, 331)
+        Me.TXT_OPC_DOS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXT_OPC_DOS.Name = "TXT_OPC_DOS"
+        Me.TXT_OPC_DOS.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_OPC_DOS.PlaceholderText = "Digite una opción de respuesta"
+        Me.TXT_OPC_DOS.SelectedText = ""
+        Me.TXT_OPC_DOS.Size = New System.Drawing.Size(514, 36)
+        Me.TXT_OPC_DOS.TabIndex = 38
         '
         'Label2
         '
@@ -160,28 +172,28 @@ Partial Class FrmCrearPreguntas
         Me.Label2.Text = "Respuesta 3:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2TextBox2
+        'TXT_OPC_TRES
         '
-        Me.Guna2TextBox2.Animated = True
-        Me.Guna2TextBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox2.BorderRadius = 10
-        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox2.DefaultText = ""
-        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(229, 386)
-        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox2.Name = "Guna2TextBox2"
-        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox2.PlaceholderText = "Digite una opción de respuesta"
-        Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(575, 36)
-        Me.Guna2TextBox2.TabIndex = 40
+        Me.TXT_OPC_TRES.Animated = True
+        Me.TXT_OPC_TRES.BackColor = System.Drawing.Color.Transparent
+        Me.TXT_OPC_TRES.BorderRadius = 10
+        Me.TXT_OPC_TRES.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_OPC_TRES.DefaultText = ""
+        Me.TXT_OPC_TRES.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_OPC_TRES.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_OPC_TRES.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_OPC_TRES.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_OPC_TRES.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_OPC_TRES.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXT_OPC_TRES.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_OPC_TRES.Location = New System.Drawing.Point(229, 386)
+        Me.TXT_OPC_TRES.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXT_OPC_TRES.Name = "TXT_OPC_TRES"
+        Me.TXT_OPC_TRES.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_OPC_TRES.PlaceholderText = "Digite una opción de respuesta"
+        Me.TXT_OPC_TRES.SelectedText = ""
+        Me.TXT_OPC_TRES.Size = New System.Drawing.Size(514, 36)
+        Me.TXT_OPC_TRES.TabIndex = 40
         '
         'Label3
         '
@@ -195,28 +207,28 @@ Partial Class FrmCrearPreguntas
         Me.Label3.Text = "Respuesta 1:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2TextBox3
+        'TXT_OPC_UNO
         '
-        Me.Guna2TextBox3.Animated = True
-        Me.Guna2TextBox3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox3.BorderRadius = 10
-        Me.Guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox3.DefaultText = ""
-        Me.Guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.Guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.Location = New System.Drawing.Point(229, 276)
-        Me.Guna2TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox3.Name = "Guna2TextBox3"
-        Me.Guna2TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox3.PlaceholderText = "Digite una opción de respuesta"
-        Me.Guna2TextBox3.SelectedText = ""
-        Me.Guna2TextBox3.Size = New System.Drawing.Size(575, 36)
-        Me.Guna2TextBox3.TabIndex = 42
+        Me.TXT_OPC_UNO.Animated = True
+        Me.TXT_OPC_UNO.BackColor = System.Drawing.Color.Transparent
+        Me.TXT_OPC_UNO.BorderRadius = 10
+        Me.TXT_OPC_UNO.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_OPC_UNO.DefaultText = ""
+        Me.TXT_OPC_UNO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_OPC_UNO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_OPC_UNO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_OPC_UNO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_OPC_UNO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_OPC_UNO.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXT_OPC_UNO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_OPC_UNO.Location = New System.Drawing.Point(229, 276)
+        Me.TXT_OPC_UNO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXT_OPC_UNO.Name = "TXT_OPC_UNO"
+        Me.TXT_OPC_UNO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_OPC_UNO.PlaceholderText = "Digite una opción de respuesta"
+        Me.TXT_OPC_UNO.SelectedText = ""
+        Me.TXT_OPC_UNO.Size = New System.Drawing.Size(514, 36)
+        Me.TXT_OPC_UNO.TabIndex = 42
         '
         'Label6
         '
@@ -230,28 +242,115 @@ Partial Class FrmCrearPreguntas
         Me.Label6.Text = "Respuesta 4:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2TextBox4
+        'TXT_OPC_CUATRO
         '
-        Me.Guna2TextBox4.Animated = True
-        Me.Guna2TextBox4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox4.BorderRadius = 10
-        Me.Guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox4.DefaultText = ""
-        Me.Guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Location = New System.Drawing.Point(229, 441)
-        Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox4.Name = "Guna2TextBox4"
-        Me.Guna2TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox4.PlaceholderText = "Digite una opción de respuesta"
-        Me.Guna2TextBox4.SelectedText = ""
-        Me.Guna2TextBox4.Size = New System.Drawing.Size(575, 36)
-        Me.Guna2TextBox4.TabIndex = 44
+        Me.TXT_OPC_CUATRO.Animated = True
+        Me.TXT_OPC_CUATRO.BackColor = System.Drawing.Color.Transparent
+        Me.TXT_OPC_CUATRO.BorderRadius = 10
+        Me.TXT_OPC_CUATRO.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_OPC_CUATRO.DefaultText = ""
+        Me.TXT_OPC_CUATRO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_OPC_CUATRO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_OPC_CUATRO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_OPC_CUATRO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_OPC_CUATRO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_OPC_CUATRO.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXT_OPC_CUATRO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_OPC_CUATRO.Location = New System.Drawing.Point(229, 441)
+        Me.TXT_OPC_CUATRO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXT_OPC_CUATRO.Name = "TXT_OPC_CUATRO"
+        Me.TXT_OPC_CUATRO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_OPC_CUATRO.PlaceholderText = "Digite una opción de respuesta"
+        Me.TXT_OPC_CUATRO.SelectedText = ""
+        Me.TXT_OPC_CUATRO.Size = New System.Drawing.Size(514, 36)
+        Me.TXT_OPC_CUATRO.TabIndex = 44
+        '
+        'BTNcrearPregunta
+        '
+        Me.BTNcrearPregunta.Animated = True
+        Me.BTNcrearPregunta.BackColor = System.Drawing.Color.Lavender
+        Me.BTNcrearPregunta.BorderRadius = 10
+        Me.BTNcrearPregunta.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcrearPregunta.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcrearPregunta.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcrearPregunta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcrearPregunta.FillColor = System.Drawing.Color.MediumSlateBlue
+        Me.BTNcrearPregunta.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
+        Me.BTNcrearPregunta.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BTNcrearPregunta.Location = New System.Drawing.Point(459, 511)
+        Me.BTNcrearPregunta.Name = "BTNcrearPregunta"
+        Me.BTNcrearPregunta.Size = New System.Drawing.Size(180, 60)
+        Me.BTNcrearPregunta.TabIndex = 46
+        Me.BTNcrearPregunta.Text = "Crear preguntas"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.PRY_Preguntados.My.Resources.Resources.png_transparent_x_red_mark_incorrect_thumbnail__1_
+        Me.PictureBox2.Location = New System.Drawing.Point(761, 335)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox2.TabIndex = 48
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.PRY_Preguntados.My.Resources.Resources.CORRECTA__1_
+        Me.PictureBox1.Location = New System.Drawing.Point(761, 280)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox1.TabIndex = 47
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.PRY_Preguntados.My.Resources.Resources.png_transparent_x_red_mark_incorrect_thumbnail__1_
+        Me.PictureBox3.Location = New System.Drawing.Point(761, 390)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox3.TabIndex = 49
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.PRY_Preguntados.My.Resources.Resources.png_transparent_x_red_mark_incorrect_thumbnail__1_
+        Me.PictureBox4.Location = New System.Drawing.Point(761, 445)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox4.TabIndex = 50
+        Me.PictureBox4.TabStop = False
+        '
+        'BTN_OPCIONES
+        '
+        Me.BTN_OPCIONES.Animated = True
+        Me.BTN_OPCIONES.BackColor = System.Drawing.Color.Lavender
+        Me.BTN_OPCIONES.BorderRadius = 10
+        Me.BTN_OPCIONES.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_OPCIONES.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_OPCIONES.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_OPCIONES.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_OPCIONES.FillColor = System.Drawing.Color.MediumSlateBlue
+        Me.BTN_OPCIONES.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
+        Me.BTN_OPCIONES.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BTN_OPCIONES.Location = New System.Drawing.Point(687, 511)
+        Me.BTN_OPCIONES.Name = "BTN_OPCIONES"
+        Me.BTN_OPCIONES.Size = New System.Drawing.Size(180, 60)
+        Me.BTN_OPCIONES.TabIndex = 51
+        Me.BTN_OPCIONES.Text = "Crear opciones"
+        '
+        'LBL_IDPREG
+        '
+        Me.LBL_IDPREG.AutoSize = True
+        Me.LBL_IDPREG.Location = New System.Drawing.Point(639, 280)
+        Me.LBL_IDPREG.Name = "LBL_IDPREG"
+        Me.LBL_IDPREG.Size = New System.Drawing.Size(0, 13)
+        Me.LBL_IDPREG.TabIndex = 52
+        '
+        'TXT_ID_PREGUNTA
+        '
+        Me.TXT_ID_PREGUNTA.Location = New System.Drawing.Point(520, 249)
+        Me.TXT_ID_PREGUNTA.Name = "TXT_ID_PREGUNTA"
+        Me.TXT_ID_PREGUNTA.Size = New System.Drawing.Size(0, 20)
+        Me.TXT_ID_PREGUNTA.TabIndex = 53
         '
         'FrmCrearPreguntas
         '
@@ -259,14 +358,22 @@ Partial Class FrmCrearPreguntas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
         Me.ClientSize = New System.Drawing.Size(879, 615)
+        Me.Controls.Add(Me.TXT_ID_PREGUNTA)
+        Me.Controls.Add(Me.LBL_IDPREG)
+        Me.Controls.Add(Me.BTN_OPCIONES)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.BTNcrearPregunta)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Guna2TextBox4)
+        Me.Controls.Add(Me.TXT_OPC_CUATRO)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Guna2TextBox3)
+        Me.Controls.Add(Me.TXT_OPC_UNO)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Guna2TextBox2)
+        Me.Controls.Add(Me.TXT_OPC_TRES)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Guna2TextBox1)
+        Me.Controls.Add(Me.TXT_OPC_DOS)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TXTpregunta)
         Me.Controls.Add(Me.CMBseleccionarCate)
@@ -275,7 +382,12 @@ Partial Class FrmCrearPreguntas
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmCrearPreguntas"
         Me.Text = "FrmCrearPreguntas"
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -285,11 +397,19 @@ Partial Class FrmCrearPreguntas
     Friend WithEvents Label5 As Label
     Friend WithEvents TXTpregunta As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXT_OPC_DOS As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXT_OPC_TRES As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXT_OPC_UNO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXT_OPC_CUATRO As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents BTNcrearPregunta As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents BTN_OPCIONES As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LBL_IDPREG As Label
+    Friend WithEvents TXT_ID_PREGUNTA As TextBox
 End Class

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E24144F-76DE-4C8A-8F9F-419414017FD1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>PRY_Preguntados.FrmMenuProfesor</StartupObject>
+    <StartupObject>PRY_Preguntados.FrmCrearPreguntas</StartupObject>
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -414,6 +414,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\png-transparent-x-red-mark-incorrect-thumbnail %281%29.png" />
+    <None Include="Resources\CORRECTA %281%29.png" />
+    <None Include="Resources\CORRECTA.png" />
     <None Include="Resources\Botonverde.bmp" />
     <None Include="Recursos\img\BotonSeleccionado.png" />
     <None Include="Recursos\img\Botonverde.jpg" />
