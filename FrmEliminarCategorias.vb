@@ -20,13 +20,10 @@
             Next
         End If
     End Sub
-
-
     Private Sub TXTNOMBRECATEGORIA_TextChanged(sender As Object, e As EventArgs) Handles TXTNOMBRECATEGORIA.TextChanged
         comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA, TEMA.NOMBRE_TEMA, TEMA.NIVEL FROM CATEGORIA INNER JOIN TEMA ON TEMA.ID_TEMA = CATEGORIA.ID_TEMA WHERE NOMBRE_CATEGORIA LIKE '%" & TXTNOMBRECATEGORIA.Text & "%'"
         BUSCAR(comando)
     End Sub
-
     Private Sub BTNeliminarCategoria_Click(sender As Object, e As EventArgs) Handles BTNeliminarCategoria.Click
         If ID <> 0 Then
             If MsgBox("¿Desea realmente eliminar la categoria seleccionada?", vbQuestion + vbYesNo, "Confirmar Eliminación") = vbYes Then
@@ -38,11 +35,9 @@
             End If
         End If
     End Sub
-
     Private Sub FrmEliminarCategorias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         INICIALIZAR()
     End Sub
-
     Private Sub L_SelectedIndexChanged(sender As Object, e As EventArgs) Handles L.SelectedIndexChanged
         If L.SelectedItems.Count > 0 Then
             ID = Convert.ToString(L.SelectedItems(0).Text)

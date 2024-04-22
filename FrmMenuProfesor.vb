@@ -176,5 +176,13 @@
         End If
     End Sub
 
+    Private Sub BTNbuscarPregunta_Click(sender As Object, e As EventArgs) Handles BTNbuscarPregunta.Click
+        FormularioAbierto(New FrmBuscarPreguntas())
+        ocultarMenu()
+    End Sub
 
+    Private Sub BTNeliminarPregunta_Click(sender As Object, e As EventArgs) Handles BTNeliminarPregunta.Click
+        FormularioAbierto(New FrmEliminarPreguntas())
+        ocultarMenu()
+    End Sub
 End Class
