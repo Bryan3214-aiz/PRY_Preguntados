@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E24144F-76DE-4C8A-8F9F-419414017FD1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>PRY_Preguntados.FrmMenuEstudiante</StartupObject>
+    <StartupObject>PRY_Preguntados.FrmMenuProfesor</StartupObject>
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -128,6 +128,12 @@
     <Compile Include="FrmBuscarPerfilProfesor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBuscarPreguntas.Designer.vb">
+      <DependentUpon>FrmBuscarPreguntas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarPreguntas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBuscarTemas.Designer.vb">
       <DependentUpon>FrmBuscarTemas.vb</DependentUpon>
     </Compile>
@@ -174,6 +180,12 @@
       <DependentUpon>FrmEliminarPerfilProfesor.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmEliminarPerfilProfesor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminarPreguntas.Designer.vb">
+      <DependentUpon>FrmEliminarPreguntas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminarPreguntas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEliminarTemas.Designer.vb">
@@ -303,6 +315,9 @@
     <EmbeddedResource Include="FrmBuscarPerfilProfesor.resx">
       <DependentUpon>FrmBuscarPerfilProfesor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarPreguntas.resx">
+      <DependentUpon>FrmBuscarPreguntas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarTemas.resx">
       <DependentUpon>FrmBuscarTemas.vb</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEliminarPerfilProfesor.resx">
       <DependentUpon>FrmEliminarPerfilProfesor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminarPreguntas.resx">
+      <DependentUpon>FrmEliminarPreguntas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEliminarTemas.resx">
       <DependentUpon>FrmEliminarTemas.vb</DependentUpon>
