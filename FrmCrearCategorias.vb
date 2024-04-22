@@ -14,7 +14,6 @@ Public Class FrmCrearCategorias
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return
             End If
-
             Dim imagenEstBytes As Byte() = imagenBytesEstTemp
             Dim imagenAniBytes As Byte() = imagenBytesAniTemp
             Dim audioBytes As Byte() = audioBytesTemp
@@ -123,4 +122,5 @@ Public Class FrmCrearCategorias
     Private Sub FrmCrearCategorias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         INICIALIZARCOMBO()
     End Sub
+
 End Class
