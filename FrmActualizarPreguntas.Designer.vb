@@ -24,23 +24,24 @@ Partial Class FrmActualizarPreguntas
     Private Sub InitializeComponent()
         Me.LabelbienvenidaProfesor = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.TXTpregunta = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.BTN_OPCIONES = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTN_CARGAROPC = New Guna.UI2.WinForms.Guna2Button()
+        Me.TXTactpregunta = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CMB_ACT_PRE = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.BTN_actualizar = New Guna.UI2.WinForms.Guna2Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.TXT_OPC_UNO = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXT_actOPC_UNO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TXT_OPC_DOS = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXT_actOPC_DOS = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TXT_OPC_CUATRO = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TXT_OPC_TRES = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXT_actOPC_CUATRO = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TXT_actOPC_TRES = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,22 +64,23 @@ Partial Class FrmActualizarPreguntas
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.Controls.Add(Me.TXTpregunta)
+        Me.Guna2Panel1.Controls.Add(Me.BTN_CARGAROPC)
+        Me.Guna2Panel1.Controls.Add(Me.TXTactpregunta)
         Me.Guna2Panel1.Controls.Add(Me.Label7)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2ComboBox1)
-        Me.Guna2Panel1.Controls.Add(Me.BTN_OPCIONES)
+        Me.Guna2Panel1.Controls.Add(Me.CMB_ACT_PRE)
+        Me.Guna2Panel1.Controls.Add(Me.BTN_actualizar)
         Me.Guna2Panel1.Controls.Add(Me.Label5)
         Me.Guna2Panel1.Controls.Add(Me.PictureBox4)
         Me.Guna2Panel1.Controls.Add(Me.Label3)
         Me.Guna2Panel1.Controls.Add(Me.PictureBox3)
-        Me.Guna2Panel1.Controls.Add(Me.TXT_OPC_UNO)
+        Me.Guna2Panel1.Controls.Add(Me.TXT_actOPC_UNO)
         Me.Guna2Panel1.Controls.Add(Me.PictureBox2)
         Me.Guna2Panel1.Controls.Add(Me.PictureBox1)
-        Me.Guna2Panel1.Controls.Add(Me.TXT_OPC_DOS)
+        Me.Guna2Panel1.Controls.Add(Me.TXT_actOPC_DOS)
         Me.Guna2Panel1.Controls.Add(Me.Label6)
         Me.Guna2Panel1.Controls.Add(Me.Label1)
-        Me.Guna2Panel1.Controls.Add(Me.TXT_OPC_CUATRO)
-        Me.Guna2Panel1.Controls.Add(Me.TXT_OPC_TRES)
+        Me.Guna2Panel1.Controls.Add(Me.TXT_actOPC_CUATRO)
+        Me.Guna2Panel1.Controls.Add(Me.TXT_actOPC_TRES)
         Me.Guna2Panel1.Controls.Add(Me.Label2)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 115)
@@ -86,46 +88,92 @@ Partial Class FrmActualizarPreguntas
         Me.Guna2Panel1.Size = New System.Drawing.Size(895, 539)
         Me.Guna2Panel1.TabIndex = 55
         '
-        'TXTpregunta
+        'BTN_CARGAROPC
         '
-        Me.TXTpregunta.Animated = True
-        Me.TXTpregunta.BackColor = System.Drawing.Color.Transparent
-        Me.TXTpregunta.BorderRadius = 10
-        Me.TXTpregunta.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXTpregunta.DefaultText = ""
-        Me.TXTpregunta.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXTpregunta.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXTpregunta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXTpregunta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXTpregunta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTpregunta.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.TXTpregunta.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTpregunta.Location = New System.Drawing.Point(242, 115)
-        Me.TXTpregunta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TXTpregunta.Name = "TXTpregunta"
-        Me.TXTpregunta.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXTpregunta.PlaceholderText = "Digite la pregunta"
-        Me.TXTpregunta.SelectedText = ""
-        Me.TXTpregunta.Size = New System.Drawing.Size(514, 36)
-        Me.TXTpregunta.TabIndex = 36
+        Me.BTN_CARGAROPC.Animated = True
+        Me.BTN_CARGAROPC.BackColor = System.Drawing.Color.Lavender
+        Me.BTN_CARGAROPC.BorderRadius = 10
+        Me.BTN_CARGAROPC.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_CARGAROPC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_CARGAROPC.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_CARGAROPC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_CARGAROPC.FillColor = System.Drawing.Color.MediumSlateBlue
+        Me.BTN_CARGAROPC.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
+        Me.BTN_CARGAROPC.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BTN_CARGAROPC.Location = New System.Drawing.Point(703, 44)
+        Me.BTN_CARGAROPC.Name = "BTN_CARGAROPC"
+        Me.BTN_CARGAROPC.Size = New System.Drawing.Size(125, 60)
+        Me.BTN_CARGAROPC.TabIndex = 52
+        Me.BTN_CARGAROPC.Text = "CARGAR CAMBIOS"
         '
-        'BTN_OPCIONES
+        'TXTactpregunta
         '
-        Me.BTN_OPCIONES.Animated = True
-        Me.BTN_OPCIONES.BackColor = System.Drawing.Color.Lavender
-        Me.BTN_OPCIONES.BorderRadius = 10
-        Me.BTN_OPCIONES.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_OPCIONES.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_OPCIONES.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_OPCIONES.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_OPCIONES.FillColor = System.Drawing.Color.MediumSlateBlue
-        Me.BTN_OPCIONES.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
-        Me.BTN_OPCIONES.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTN_OPCIONES.Location = New System.Drawing.Point(648, 424)
-        Me.BTN_OPCIONES.Name = "BTN_OPCIONES"
-        Me.BTN_OPCIONES.Size = New System.Drawing.Size(180, 60)
-        Me.BTN_OPCIONES.TabIndex = 51
-        Me.BTN_OPCIONES.Text = "Actualizar preguntas"
+        Me.TXTactpregunta.Animated = True
+        Me.TXTactpregunta.BackColor = System.Drawing.Color.Transparent
+        Me.TXTactpregunta.BorderRadius = 10
+        Me.TXTactpregunta.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXTactpregunta.DefaultText = ""
+        Me.TXTactpregunta.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXTactpregunta.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXTactpregunta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTactpregunta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTactpregunta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTactpregunta.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXTactpregunta.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTactpregunta.Location = New System.Drawing.Point(242, 115)
+        Me.TXTactpregunta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXTactpregunta.Name = "TXTactpregunta"
+        Me.TXTactpregunta.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXTactpregunta.PlaceholderText = "Digite la pregunta"
+        Me.TXTactpregunta.SelectedText = ""
+        Me.TXTactpregunta.Size = New System.Drawing.Size(514, 36)
+        Me.TXTactpregunta.TabIndex = 36
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.DarkSlateBlue
+        Me.Label7.Location = New System.Drawing.Point(114, 26)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(341, 67)
+        Me.Label7.TabIndex = 34
+        Me.Label7.Text = "Seleccione una pregunta para modificarla: "
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CMB_ACT_PRE
+        '
+        Me.CMB_ACT_PRE.BackColor = System.Drawing.Color.Transparent
+        Me.CMB_ACT_PRE.BorderRadius = 10
+        Me.CMB_ACT_PRE.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CMB_ACT_PRE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CMB_ACT_PRE.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMB_ACT_PRE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CMB_ACT_PRE.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CMB_ACT_PRE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.CMB_ACT_PRE.ItemHeight = 30
+        Me.CMB_ACT_PRE.Location = New System.Drawing.Point(461, 44)
+        Me.CMB_ACT_PRE.Name = "CMB_ACT_PRE"
+        Me.CMB_ACT_PRE.Size = New System.Drawing.Size(220, 36)
+        Me.CMB_ACT_PRE.TabIndex = 35
+        '
+        'BTN_actualizar
+        '
+        Me.BTN_actualizar.Animated = True
+        Me.BTN_actualizar.BackColor = System.Drawing.Color.Lavender
+        Me.BTN_actualizar.BorderRadius = 10
+        Me.BTN_actualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_actualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_actualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_actualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_actualizar.FillColor = System.Drawing.Color.MediumSlateBlue
+        Me.BTN_actualizar.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
+        Me.BTN_actualizar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BTN_actualizar.Location = New System.Drawing.Point(648, 424)
+        Me.BTN_actualizar.Name = "BTN_actualizar"
+        Me.BTN_actualizar.Size = New System.Drawing.Size(180, 60)
+        Me.BTN_actualizar.TabIndex = 51
+        Me.BTN_actualizar.Text = "Actualizar preguntas"
         '
         'Label5
         '
@@ -171,28 +219,28 @@ Partial Class FrmActualizarPreguntas
         Me.PictureBox3.TabIndex = 49
         Me.PictureBox3.TabStop = False
         '
-        'TXT_OPC_UNO
+        'TXT_actOPC_UNO
         '
-        Me.TXT_OPC_UNO.Animated = True
-        Me.TXT_OPC_UNO.BackColor = System.Drawing.Color.Transparent
-        Me.TXT_OPC_UNO.BorderRadius = 10
-        Me.TXT_OPC_UNO.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXT_OPC_UNO.DefaultText = ""
-        Me.TXT_OPC_UNO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXT_OPC_UNO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXT_OPC_UNO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_OPC_UNO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_OPC_UNO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_UNO.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.TXT_OPC_UNO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_UNO.Location = New System.Drawing.Point(242, 168)
-        Me.TXT_OPC_UNO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TXT_OPC_UNO.Name = "TXT_OPC_UNO"
-        Me.TXT_OPC_UNO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXT_OPC_UNO.PlaceholderText = "Digite una opción de respuesta"
-        Me.TXT_OPC_UNO.SelectedText = ""
-        Me.TXT_OPC_UNO.Size = New System.Drawing.Size(514, 36)
-        Me.TXT_OPC_UNO.TabIndex = 42
+        Me.TXT_actOPC_UNO.Animated = True
+        Me.TXT_actOPC_UNO.BackColor = System.Drawing.Color.Transparent
+        Me.TXT_actOPC_UNO.BorderRadius = 10
+        Me.TXT_actOPC_UNO.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_actOPC_UNO.DefaultText = ""
+        Me.TXT_actOPC_UNO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_actOPC_UNO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_actOPC_UNO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_actOPC_UNO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_actOPC_UNO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_actOPC_UNO.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXT_actOPC_UNO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_actOPC_UNO.Location = New System.Drawing.Point(242, 168)
+        Me.TXT_actOPC_UNO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXT_actOPC_UNO.Name = "TXT_actOPC_UNO"
+        Me.TXT_actOPC_UNO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_actOPC_UNO.PlaceholderText = "Digite una opción de respuesta"
+        Me.TXT_actOPC_UNO.SelectedText = ""
+        Me.TXT_actOPC_UNO.Size = New System.Drawing.Size(514, 36)
+        Me.TXT_actOPC_UNO.TabIndex = 42
         '
         'PictureBox2
         '
@@ -214,28 +262,28 @@ Partial Class FrmActualizarPreguntas
         Me.PictureBox1.TabIndex = 47
         Me.PictureBox1.TabStop = False
         '
-        'TXT_OPC_DOS
+        'TXT_actOPC_DOS
         '
-        Me.TXT_OPC_DOS.Animated = True
-        Me.TXT_OPC_DOS.BackColor = System.Drawing.Color.Transparent
-        Me.TXT_OPC_DOS.BorderRadius = 10
-        Me.TXT_OPC_DOS.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXT_OPC_DOS.DefaultText = ""
-        Me.TXT_OPC_DOS.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXT_OPC_DOS.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXT_OPC_DOS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_OPC_DOS.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_OPC_DOS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_DOS.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.TXT_OPC_DOS.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_DOS.Location = New System.Drawing.Point(242, 224)
-        Me.TXT_OPC_DOS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TXT_OPC_DOS.Name = "TXT_OPC_DOS"
-        Me.TXT_OPC_DOS.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXT_OPC_DOS.PlaceholderText = "Digite una opción de respuesta"
-        Me.TXT_OPC_DOS.SelectedText = ""
-        Me.TXT_OPC_DOS.Size = New System.Drawing.Size(514, 36)
-        Me.TXT_OPC_DOS.TabIndex = 38
+        Me.TXT_actOPC_DOS.Animated = True
+        Me.TXT_actOPC_DOS.BackColor = System.Drawing.Color.Transparent
+        Me.TXT_actOPC_DOS.BorderRadius = 10
+        Me.TXT_actOPC_DOS.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_actOPC_DOS.DefaultText = ""
+        Me.TXT_actOPC_DOS.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_actOPC_DOS.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_actOPC_DOS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_actOPC_DOS.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_actOPC_DOS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_actOPC_DOS.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXT_actOPC_DOS.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_actOPC_DOS.Location = New System.Drawing.Point(242, 224)
+        Me.TXT_actOPC_DOS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXT_actOPC_DOS.Name = "TXT_actOPC_DOS"
+        Me.TXT_actOPC_DOS.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_actOPC_DOS.PlaceholderText = "Digite una opción de respuesta"
+        Me.TXT_actOPC_DOS.SelectedText = ""
+        Me.TXT_actOPC_DOS.Size = New System.Drawing.Size(514, 36)
+        Me.TXT_actOPC_DOS.TabIndex = 38
         '
         'Label6
         '
@@ -261,51 +309,51 @@ Partial Class FrmActualizarPreguntas
         Me.Label1.Text = "Respuesta 2:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TXT_OPC_CUATRO
+        'TXT_actOPC_CUATRO
         '
-        Me.TXT_OPC_CUATRO.Animated = True
-        Me.TXT_OPC_CUATRO.BackColor = System.Drawing.Color.Transparent
-        Me.TXT_OPC_CUATRO.BorderRadius = 10
-        Me.TXT_OPC_CUATRO.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXT_OPC_CUATRO.DefaultText = ""
-        Me.TXT_OPC_CUATRO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXT_OPC_CUATRO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXT_OPC_CUATRO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_OPC_CUATRO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_OPC_CUATRO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_CUATRO.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.TXT_OPC_CUATRO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_CUATRO.Location = New System.Drawing.Point(242, 338)
-        Me.TXT_OPC_CUATRO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TXT_OPC_CUATRO.Name = "TXT_OPC_CUATRO"
-        Me.TXT_OPC_CUATRO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXT_OPC_CUATRO.PlaceholderText = "Digite una opción de respuesta"
-        Me.TXT_OPC_CUATRO.SelectedText = ""
-        Me.TXT_OPC_CUATRO.Size = New System.Drawing.Size(514, 36)
-        Me.TXT_OPC_CUATRO.TabIndex = 44
+        Me.TXT_actOPC_CUATRO.Animated = True
+        Me.TXT_actOPC_CUATRO.BackColor = System.Drawing.Color.Transparent
+        Me.TXT_actOPC_CUATRO.BorderRadius = 10
+        Me.TXT_actOPC_CUATRO.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_actOPC_CUATRO.DefaultText = ""
+        Me.TXT_actOPC_CUATRO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_actOPC_CUATRO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_actOPC_CUATRO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_actOPC_CUATRO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_actOPC_CUATRO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_actOPC_CUATRO.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXT_actOPC_CUATRO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_actOPC_CUATRO.Location = New System.Drawing.Point(242, 338)
+        Me.TXT_actOPC_CUATRO.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXT_actOPC_CUATRO.Name = "TXT_actOPC_CUATRO"
+        Me.TXT_actOPC_CUATRO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_actOPC_CUATRO.PlaceholderText = "Digite una opción de respuesta"
+        Me.TXT_actOPC_CUATRO.SelectedText = ""
+        Me.TXT_actOPC_CUATRO.Size = New System.Drawing.Size(514, 36)
+        Me.TXT_actOPC_CUATRO.TabIndex = 44
         '
-        'TXT_OPC_TRES
+        'TXT_actOPC_TRES
         '
-        Me.TXT_OPC_TRES.Animated = True
-        Me.TXT_OPC_TRES.BackColor = System.Drawing.Color.Transparent
-        Me.TXT_OPC_TRES.BorderRadius = 10
-        Me.TXT_OPC_TRES.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXT_OPC_TRES.DefaultText = ""
-        Me.TXT_OPC_TRES.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXT_OPC_TRES.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXT_OPC_TRES.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_OPC_TRES.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_OPC_TRES.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_TRES.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
-        Me.TXT_OPC_TRES.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_OPC_TRES.Location = New System.Drawing.Point(242, 279)
-        Me.TXT_OPC_TRES.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TXT_OPC_TRES.Name = "TXT_OPC_TRES"
-        Me.TXT_OPC_TRES.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXT_OPC_TRES.PlaceholderText = "Digite una opción de respuesta"
-        Me.TXT_OPC_TRES.SelectedText = ""
-        Me.TXT_OPC_TRES.Size = New System.Drawing.Size(514, 36)
-        Me.TXT_OPC_TRES.TabIndex = 40
+        Me.TXT_actOPC_TRES.Animated = True
+        Me.TXT_actOPC_TRES.BackColor = System.Drawing.Color.Transparent
+        Me.TXT_actOPC_TRES.BorderRadius = 10
+        Me.TXT_actOPC_TRES.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_actOPC_TRES.DefaultText = ""
+        Me.TXT_actOPC_TRES.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_actOPC_TRES.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_actOPC_TRES.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_actOPC_TRES.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_actOPC_TRES.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_actOPC_TRES.Font = New System.Drawing.Font("Showcard Gothic", 8.25!)
+        Me.TXT_actOPC_TRES.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_actOPC_TRES.Location = New System.Drawing.Point(242, 279)
+        Me.TXT_actOPC_TRES.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TXT_actOPC_TRES.Name = "TXT_actOPC_TRES"
+        Me.TXT_actOPC_TRES.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_actOPC_TRES.PlaceholderText = "Digite una opción de respuesta"
+        Me.TXT_actOPC_TRES.SelectedText = ""
+        Me.TXT_actOPC_TRES.Size = New System.Drawing.Size(514, 36)
+        Me.TXT_actOPC_TRES.TabIndex = 40
         '
         'Label2
         '
@@ -318,34 +366,6 @@ Partial Class FrmActualizarPreguntas
         Me.Label2.TabIndex = 41
         Me.Label2.Text = "Respuesta 3:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Guna2ComboBox1
-        '
-        Me.Guna2ComboBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ComboBox1.BorderRadius = 10
-        Me.Guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.Guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Guna2ComboBox1.ItemHeight = 30
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(461, 44)
-        Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Me.Guna2ComboBox1.Size = New System.Drawing.Size(220, 36)
-        Me.Guna2ComboBox1.TabIndex = 35
-        '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label7.Location = New System.Drawing.Point(114, 26)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(341, 67)
-        Me.Label7.TabIndex = 34
-        Me.Label7.Text = "Seleccione una pregunta para modificarla: "
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmActualizarPreguntas
         '
@@ -368,21 +388,22 @@ Partial Class FrmActualizarPreguntas
     End Sub
     Friend WithEvents LabelbienvenidaProfesor As Label
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents TXTpregunta As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents BTN_OPCIONES As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents TXTactpregunta As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents BTN_actualizar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents TXT_OPC_UNO As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXT_actOPC_UNO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TXT_OPC_DOS As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXT_actOPC_DOS As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TXT_OPC_CUATRO As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents TXT_OPC_TRES As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXT_actOPC_CUATRO As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TXT_actOPC_TRES As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CMB_ACT_PRE As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents BTN_CARGAROPC As Guna.UI2.WinForms.Guna2Button
 End Class
