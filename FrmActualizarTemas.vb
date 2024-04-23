@@ -1,7 +1,14 @@
 ﻿Imports System.IO
 Public Class FrmActualizarTemas
     Dim ID As Integer = 0
-    Private fotoCambiada As Boolean = False
+    Private fotoCambiadaEST As Boolean = False
+    Private fotoCambiadaANI As Boolean = False
+    Private SonidoTemaB As Boolean = False
+    Private AudioTemaB As Boolean = False
+    Private VideoTemaB As Boolean = False
+    Private TodosCampos As Boolean = False
+
+
     Private imagenBytesEstTemp As Byte()
     Private imagenBytesAniTemp As Byte()
     Private audioBytesTemp As Byte()
@@ -21,6 +28,9 @@ Public Class FrmActualizarTemas
     Friend Sub reiniciar()
         BTNseleccionarTema.Enabled = False
         BTNactualizarTema.Enabled = False
+        TXTtema.Text = ""
+        TXTfiltrarNombreTema.Text = ""
+        CMBgradoTemas.SelectedItem = Nothing
     End Sub
     Friend Sub BUSCAR(ByVal SQL As String)
         ds.Tables.Clear()
@@ -73,20 +83,53 @@ Public Class FrmActualizarTemas
 
     Private Sub BTNactualizarTema_Click(sender As Object, e As EventArgs) Handles BTNactualizarTema.Click
         Try
-            If String.IsNullOrWhiteSpace(TXTtema.Text) OrElse
-                String.IsNullOrWhiteSpace(CMBgradoTemas.Text) OrElse
-                MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error) Then
-                Return
-            End If
 
-            Dim imagenEstBytes As Byte() = imagenBytesEstTemp
-            Dim imagenAniBytes As Byte() = imagenBytesAniTemp
-            Dim audioBytes As Byte() = audioBytesTemp
-            Dim sonidoBytes As Byte() = sonidoBytesTemp
-            Dim videoBytes As Byte() = videoBytesTemp
+            If fotoCambiadaEST = True Then
 
-            If fotoCambiada = True Then
+                Dim imagenEstBytes As Byte() = imagenBytesEstTemp
+                comando = "UPDATE TEMA SET IMAGEN_ESTATICA = ?"
+                inicializar()
+                MsgBox("Datos actualizados solo img estatica")
+            ElseIf fotoCambiadaANI = True Then
 
+                Dim imagenAniBytes As Byte() = imagenBytesAniTemp
+                comando = "UPDATE TEMA SET IMAGEN_ANIMADA = ?"
+                inicializar()
+                MsgBox("Datos actualizados solo img animada")
+            ElseIf SonidoTemaB = True Then
+
+                Dim sonidoBytes As Byte() = sonidoBytesTemp
+                comando = "UPDATE TEMA SET SONIDO_TEMA = ?"
+                inicializar()
+                MsgBox("Datos actualizados")
+
+            ElseIf AudioTemaB = True Then
+
+                Dim audioBytes As Byte() = audioBytesTemp
+                comando = "UPDATE TEMA SET AUDIO_VOZ = ?"
+                inicializar()
+                MsgBox("Datos actualizados")
+
+            ElseIf VideoTemaB = True Then
+                Dim videoBytes As Byte() = videoBytesTemp
+                comando = "UPDATE TEMA SET VIDEO_TEMA = ?"
+                inicializar()
+                MsgBox("Datos actualizados")
+
+            ElseIf TodosCampos = True Then
+
+                Dim imagenEstBytes As Byte() = imagenBytesEstTemp
+
+                Dim imagenAniBytes As Byte() = imagenBytesAniTemp
+
+                Dim sonidoBytes As Byte() = sonidoBytesTemp
+
+                Dim audioBytes As Byte() = audioBytesTemp
+
+                Dim videoBytes As Byte() = videoBytesTemp
+                comando = "UPDATE TEMA SET VIDEO_TEMA = ?"
+                inicializar()
+                MsgBox("Datos actualizados")
             Else
 
             End If
@@ -104,6 +147,7 @@ Public Class FrmActualizarTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 imagenBytesEstTemp = File.ReadAllBytes(rutaImagen)
+                fotoCambiadaEST = True
                 MsgBox("Imagen estatica insertada correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
@@ -119,6 +163,7 @@ Public Class FrmActualizarTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 imagenBytesAniTemp = File.ReadAllBytes(rutaImagen)
+                fotoCambiadaANI = True
                 MsgBox("Imagen animada insertada correctamente", vbOKOnly, "")
             End If
         Catch ex As Exception
