@@ -42,6 +42,7 @@ Partial Class FrmActualizarPreguntas
         Me.TXT_actOPC_CUATRO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TXT_actOPC_TRES = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.LBL_CARGAR_PREGUNTA = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +65,7 @@ Partial Class FrmActualizarPreguntas
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.LBL_CARGAR_PREGUNTA)
         Me.Guna2Panel1.Controls.Add(Me.BTN_CARGAROPC)
         Me.Guna2Panel1.Controls.Add(Me.TXTactpregunta)
         Me.Guna2Panel1.Controls.Add(Me.Label7)
@@ -134,7 +136,7 @@ Partial Class FrmActualizarPreguntas
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label7.Location = New System.Drawing.Point(114, 26)
+        Me.Label7.Location = New System.Drawing.Point(100, 37)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(341, 67)
         Me.Label7.TabIndex = 34
@@ -367,6 +369,15 @@ Partial Class FrmActualizarPreguntas
         Me.Label2.Text = "Respuesta 3:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'LBL_CARGAR_PREGUNTA
+        '
+        Me.LBL_CARGAR_PREGUNTA.AutoSize = True
+        Me.LBL_CARGAR_PREGUNTA.ForeColor = System.Drawing.Color.Lavender
+        Me.LBL_CARGAR_PREGUNTA.Location = New System.Drawing.Point(309, 424)
+        Me.LBL_CARGAR_PREGUNTA.Name = "LBL_CARGAR_PREGUNTA"
+        Me.LBL_CARGAR_PREGUNTA.Size = New System.Drawing.Size(0, 13)
+        Me.LBL_CARGAR_PREGUNTA.TabIndex = 53
+        '
         'FrmActualizarPreguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -379,6 +390,7 @@ Partial Class FrmActualizarPreguntas
         Me.Name = "FrmActualizarPreguntas"
         Me.Text = "FrmActualizarPreguntas"
         Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -406,4 +418,5 @@ Partial Class FrmActualizarPreguntas
     Friend WithEvents Label7 As Label
     Friend WithEvents CMB_ACT_PRE As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents BTN_CARGAROPC As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LBL_CARGAR_PREGUNTA As Label
 End Class
