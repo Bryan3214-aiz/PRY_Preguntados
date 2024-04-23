@@ -79,12 +79,9 @@
             End If
 
             If fotoCambiada = True Then ' Verifica si se ha cambiado la foto
-                Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
                 comando = "UPDATE PROFESOR SET nombre_completo = '" & TXTnombre.Text & "', identificacion = '" & TXTidentifacion.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "', PATRON = '" & TXTpatron.Text & "', fotografia = ? WHERE ID_profesor = " & ID & ""
-                EJECUTAR(comando, imagenBytes)
                 MsgBox("Datos actualizados con foto nueva.", vbOKOnly, "")
             Else
-                comando = "UPDATE PROFESOR SET nombre_completo = '" & TXTnombre.Text & "', identificacion = '" & TXTidentifacion.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "', PATRON = '" & TXTpatron.Text & "' WHERE ID_profesor = " & ID & ""
                 EJECUTARSI(comando)
                 MsgBox("Datos actualizados sin foto.", vbOKOnly, "")
             End If
