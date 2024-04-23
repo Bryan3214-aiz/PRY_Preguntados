@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /PRY_Preguntados.vbproj
 /.gitignore
+/proyecto_preguntas.laccdb
+/proyecto_preguntas.mdb
