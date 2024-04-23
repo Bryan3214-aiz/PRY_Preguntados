@@ -98,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BASEDATOS.vb" />
+    <Compile Include="FrmActualizarCategorias.Designer.vb">
+      <DependentUpon>FrmActualizarCategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizarCategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmActualizarPerfilProfesor.Designer.vb">
       <DependentUpon>FrmActualizarPerfilProfesor.vb</DependentUpon>
     </Compile>
@@ -164,10 +170,10 @@
     <Compile Include="FrmCrearReportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditarTemas.Designer.vb">
-      <DependentUpon>FrmEditarTemas.vb</DependentUpon>
+    <Compile Include="FrmActualizarTemas.Designer.vb">
+      <DependentUpon>FrmActualizarTemas.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditarTemas.vb">
+    <Compile Include="FrmActualizarTemas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEliminarCategorias.Designer.vb">
@@ -303,6 +309,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmActualizarCategorias.resx">
+      <DependentUpon>FrmActualizarCategorias.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmActualizarPerfilProfesor.resx">
       <DependentUpon>FrmActualizarPerfilProfesor.vb</DependentUpon>
     </EmbeddedResource>
@@ -336,8 +345,8 @@
     <EmbeddedResource Include="FrmEditarInformacion.resx">
       <DependentUpon>FrmEditarInformacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditarTemas.resx">
-      <DependentUpon>FrmEditarTemas.vb</DependentUpon>
+    <EmbeddedResource Include="FrmActualizarTemas.resx">
+      <DependentUpon>FrmActualizarTemas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEliminarCategorias.resx">
       <DependentUpon>FrmEliminarCategorias.vb</DependentUpon>

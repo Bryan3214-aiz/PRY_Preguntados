@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmEditarTemas
+Partial Class FrmActualizarCategorias
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,13 +24,15 @@ Partial Class FrmEditarTemas
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'FrmEditarTemas
+        'FrmActualizarCategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(922, 630)
-        Me.Name = "FrmEditarTemas"
-        Me.Text = "FrmEditarTemas"
+        Me.BackColor = System.Drawing.Color.Lavender
+        Me.ClientSize = New System.Drawing.Size(879, 615)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "FrmActualizarCategorias"
+        Me.Text = "FrmActualizarCategorias"
         Me.ResumeLayout(False)
 
     End Sub

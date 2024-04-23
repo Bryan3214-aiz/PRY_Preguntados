@@ -64,6 +64,7 @@ Public Class FrmActualizarPerfilProfesor
             TXTpatron.Enabled = True
             TXTidentifacion.Enabled = True
             BTNfotoSeleccionar.Enabled = True
+            TXTNOMBRESUCURSAL.Text = ""
 
             If ID <> 0 Then
                 comando = "SELECT ID_PROFESOR, NOMBRE_COMPLETO, CORREO_ELECTRONICO, IDENTIFICACION,CONTRASENA, PATRON,FOTOGRAFIA FROM PROFESOR where ID_PROFESOR = " & ID & ""
@@ -157,5 +158,10 @@ Public Class FrmActualizarPerfilProfesor
             Console.WriteLine("Error de actualización: " & ex.Message)
             MessageBox.Show("Ocurrió un error al ingresar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub TXTNOMBRESUCURSAL_TextChanged(sender As Object, e As EventArgs) Handles TXTNOMBRESUCURSAL.TextChanged
+        comando = "SELECT ID_PROFESOR, NOMBRE_COMPLETO, CORREO_ELECTRONICO, IDENTIFICACION,CONTRASENA, PATRON FROM PROFESOR WHERE NOMBRE_Completo LIKE '%" & TXTNOMBRESUCURSAL.Text & "%'"
+        BUSCAR(comando)
     End Sub
 End Class

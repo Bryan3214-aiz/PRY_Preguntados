@@ -71,7 +71,7 @@
     End Sub
 
     Private Sub BTNeditarTemas_Click(sender As Object, e As EventArgs) Handles BTNeditarTemas.Click
-        FormularioAbierto(New FrmEditarTemas())
+        FormularioAbierto(New FrmActualizarTemas())
         ocultarMenu()
     End Sub
 

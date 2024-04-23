@@ -1,5 +1,5 @@
 ﻿Public Class FrmEliminarTemas
-    Dim ID As Integer = 0 'CODIGO SELECCIONADO
+    Dim ID As Integer = 0
     Friend Sub INICIALIZAR()
         comando = "SELECT * FROM TEMA"
         BUSCAR(comando)

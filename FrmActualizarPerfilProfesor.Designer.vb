@@ -45,6 +45,7 @@ Partial Class FrmActualizarPerfilProfesor
         Me.TXTidentifacion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.TXTNOMBRESUCURSAL = New Guna.UI2.WinForms.Guna2TextBox()
         CType(Me.BTNfotoSeleccionar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,12 +76,12 @@ Partial Class FrmActualizarPerfilProfesor
         Me.L.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.L.HideSelection = False
         Me.L.HoverSelection = True
-        Me.L.Location = New System.Drawing.Point(31, 142)
+        Me.L.Location = New System.Drawing.Point(31, 191)
         Me.L.Margin = New System.Windows.Forms.Padding(50)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
         Me.L.Scrollable = False
-        Me.L.Size = New System.Drawing.Size(832, 175)
+        Me.L.Size = New System.Drawing.Size(832, 126)
         Me.L.TabIndex = 39
         Me.L.UseCompatibleStateImageBehavior = False
         Me.L.View = System.Windows.Forms.View.Details
@@ -92,13 +93,13 @@ Partial Class FrmActualizarPerfilProfesor
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "Nombre del tema"
+        Me.ColumnHeader2.Text = "Profesor"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader2.Width = 180
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "Grado asignado"
+        Me.ColumnHeader3.Text = "Correo"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader3.Width = 180
         '
@@ -360,12 +361,37 @@ Partial Class FrmActualizarPerfilProfesor
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'TXTNOMBRESUCURSAL
+        '
+        Me.TXTNOMBRESUCURSAL.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TXTNOMBRESUCURSAL.BorderRadius = 15
+        Me.TXTNOMBRESUCURSAL.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXTNOMBRESUCURSAL.DefaultText = ""
+        Me.TXTNOMBRESUCURSAL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXTNOMBRESUCURSAL.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXTNOMBRESUCURSAL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTNOMBRESUCURSAL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTNOMBRESUCURSAL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTNOMBRESUCURSAL.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
+        Me.TXTNOMBRESUCURSAL.ForeColor = System.Drawing.Color.DimGray
+        Me.TXTNOMBRESUCURSAL.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTNOMBRESUCURSAL.Location = New System.Drawing.Point(31, 133)
+        Me.TXTNOMBRESUCURSAL.Name = "TXTNOMBRESUCURSAL"
+        Me.TXTNOMBRESUCURSAL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXTNOMBRESUCURSAL.PlaceholderText = "Filtrar resultados por el nombre del profesor"
+        Me.TXTNOMBRESUCURSAL.SelectedText = ""
+        Me.TXTNOMBRESUCURSAL.Size = New System.Drawing.Size(831, 42)
+        Me.TXTNOMBRESUCURSAL.TabIndex = 56
+        '
         'FrmActualizarPerfilProfesor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
         Me.ClientSize = New System.Drawing.Size(895, 654)
+        Me.Controls.Add(Me.TXTNOMBRESUCURSAL)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TXTpatron)
         Me.Controls.Add(Me.Label13)
@@ -413,4 +439,5 @@ Partial Class FrmActualizarPerfilProfesor
     Friend WithEvents TXTidentifacion As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TXTcorreo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents TXTNOMBRESUCURSAL As Guna.UI2.WinForms.Guna2TextBox
 End Class
