@@ -1,4 +1,5 @@
-﻿Public Class FrmActualizarPreguntas
+﻿Imports System.IO
+Public Class FrmActualizarPreguntas
     Friend Sub INICIALIZAR()
         INICIALIZARCOMBO()
         BTN_actualizar.Enabled = False
@@ -29,16 +30,17 @@
         If resultado = DialogResult.Yes Then
             BTN_actualizar.Enabled = True
             BTN_CARGAROPC.Enabled = False
-            TXTactpregunta.Enabled = False
+            TXTactpregunta.Enabled = True
             TXT_actOPC_UNO.Enabled = True
             TXT_actOPC_DOS.Enabled = True
             TXT_actOPC_TRES.Enabled = True
             TXT_actOPC_CUATRO.Enabled = True
             Dim index As Integer = CMB_ACT_PRE.SelectedIndex + 1
             ds.Tables.Clear()
-            comando = "SELECT ENUNCIADO_PREGUNTA FROM PREGUNTA WHERE ID_PREGUNTA = " & index & ""
+            comando = "SELECT ID_PREGUNTA, ENUNCIADO_PREGUNTA FROM PREGUNTA WHERE ID_PREGUNTA = " & index & ""
             CARGAR_TABLA(ds, comando)
-            TXTactpregunta.Text = ds.Tables(0).Rows(0).Item(0)
+            LBL_CARGAR_PREGUNTA.Text = ds.Tables(0).Rows(0).Item(0)
+            TXTactpregunta.Text = ds.Tables(0).Rows(0).Item(1)
 
             ds.Tables.Clear()
             comando = "SELECT ID_OPCION, TEXTO_OPCION FROM OPCION WHERE ID_PREGUNTA = " & index & ""
@@ -75,25 +77,24 @@
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return ' Salir del método si hay campos vacíos
             End If
-            Dim indexP As Integer = CMB_ACT_PRE.SelectedIndex + 1
-            comando = "UPDATE PREGUNTA SET ENUNCIADO_PREGUNTA = '" & TXTactpregunta.Text & "'' WHERE ID_PREGUNTA = " & indexP & ""
-            EJECUTARSI(comando)
-
             ds.Tables.Clear()
-            comando = "SELECT ID_OPCION FROM OPCION WHERE ID_PREGUNTA = " & indexP & ""
+            comando = "SELECT ID_OPCION FROM OPCION WHERE ID_PREGUNTA = " & LBL_CARGAR_PREGUNTA.Text & ""
             CARGAR_TABLA(ds, comando)
             Dim id_opcion As Integer = ds.Tables(0).Rows(0).Item(0)
 
-            comando = "UPDATE OPCION SET TEXTO_OPCION = '" & TXT_actOPC_UNO.Text & "'' WHERE ID_OPCION = " & id_opcion & ""
+            comando = "UPDATE PREGUNTA SET ENUNCIADO_PREGUNTA = '" & TXTactpregunta.Text & "' WHERE ID_PREGUNTA = " & LBL_CARGAR_PREGUNTA.Text & ""
             EJECUTARSI(comando)
 
-            comando = "UPDATE OPCION SET TEXTO_OPCION = '" & TXT_actOPC_DOS.Text & "'' WHERE ID_OPCION = " & id_opcion + 1 & ""
+            comando = "UPDATE OPCION SET TEXTO_OPCION = '" & TXT_actOPC_UNO.Text & "' WHERE ID_OPCION = " & id_opcion & ""
             EJECUTARSI(comando)
 
-            comando = "UPDATE OPCION SET TEXTO_OPCION = '" & TXT_actOPC_TRES.Text & "'' WHERE ID_OPCION = " & id_opcion + 1 + 1 & ""
+            comando = "UPDATE OPCION SET TEXTO_OPCION = '" & TXT_actOPC_DOS.Text & "' WHERE ID_OPCION = " & id_opcion + 1 & ""
             EJECUTARSI(comando)
 
-            comando = "UPDATE OPCION SET TEXTO_OPCION = '" & TXT_actOPC_CUATRO.Text & "'' WHERE ID_OPCION = " & id_opcion + 1 + 1 + 1 & ""
+            comando = "UPDATE OPCION SET TEXTO_OPCION = '" & TXT_actOPC_TRES.Text & "' WHERE ID_OPCION = " & id_opcion + 1 + 1 & ""
+            EJECUTARSI(comando)
+
+            comando = "UPDATE OPCION SET TEXTO_OPCION = '" & TXT_actOPC_CUATRO.Text & "' WHERE ID_OPCION = " & id_opcion + 1 + 1 + 1 & ""
             EJECUTARSI(comando)
 
             MsgBox("Datos actualizados.", vbOKOnly, "")
