@@ -1,4 +1,5 @@
-﻿Public Class FrmOPCIONES
+﻿Imports System.Media
+Public Class FrmOPCIONES
     Dim DuracionTransicion As Double = 0.5
     Private tiempoTranscurrido As Double = 0
 
@@ -7,9 +8,14 @@
         Me.Opacity = 0
         Temporizado.Interval = 20
         Temporizado.Start()
+        Musica()
     End Sub
 
-
+    Private Sub Musica()
+        Dim MusicaActual = My.Resources.sonidoJuego
+        Dim reproductor As New System.Media.SoundPlayer(MusicaActual)
+        reproductor.PlayLooping()
+    End Sub
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
         tiempoTranscurrido += Temporizado.Interval / 1000
 
