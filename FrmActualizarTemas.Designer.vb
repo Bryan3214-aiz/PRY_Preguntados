@@ -23,6 +23,7 @@ Partial Class FrmActualizarTemas
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.TXTfiltrarNombreTema = New Guna.UI2.WinForms.Guna2TextBox()
         Me.L = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -39,7 +40,7 @@ Partial Class FrmActualizarTemas
         Me.TXTtema = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LabelbienvenidaProfesor = New System.Windows.Forms.Label()
-        Me.TXTfiltrarNombreTema = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,6 +67,30 @@ Partial Class FrmActualizarTemas
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(895, 539)
         Me.Guna2Panel1.TabIndex = 36
+        '
+        'TXTfiltrarNombreTema
+        '
+        Me.TXTfiltrarNombreTema.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TXTfiltrarNombreTema.BorderRadius = 15
+        Me.TXTfiltrarNombreTema.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXTfiltrarNombreTema.DefaultText = ""
+        Me.TXTfiltrarNombreTema.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXTfiltrarNombreTema.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXTfiltrarNombreTema.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTfiltrarNombreTema.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXTfiltrarNombreTema.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTfiltrarNombreTema.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
+        Me.TXTfiltrarNombreTema.ForeColor = System.Drawing.Color.DimGray
+        Me.TXTfiltrarNombreTema.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXTfiltrarNombreTema.Location = New System.Drawing.Point(32, 21)
+        Me.TXTfiltrarNombreTema.Name = "TXTfiltrarNombreTema"
+        Me.TXTfiltrarNombreTema.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXTfiltrarNombreTema.PlaceholderText = "Ingrese el nombre del tema"
+        Me.TXTfiltrarNombreTema.SelectedText = ""
+        Me.TXTfiltrarNombreTema.Size = New System.Drawing.Size(629, 42)
+        Me.TXTfiltrarNombreTema.TabIndex = 34
         '
         'L
         '
@@ -307,29 +332,9 @@ Partial Class FrmActualizarTemas
         Me.LabelbienvenidaProfesor.Text = "Actualizar temas creados"
         Me.LabelbienvenidaProfesor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TXTfiltrarNombreTema
+        'OpenFileDialog1
         '
-        Me.TXTfiltrarNombreTema.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TXTfiltrarNombreTema.BorderRadius = 15
-        Me.TXTfiltrarNombreTema.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXTfiltrarNombreTema.DefaultText = ""
-        Me.TXTfiltrarNombreTema.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXTfiltrarNombreTema.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXTfiltrarNombreTema.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXTfiltrarNombreTema.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXTfiltrarNombreTema.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTfiltrarNombreTema.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
-        Me.TXTfiltrarNombreTema.ForeColor = System.Drawing.Color.DimGray
-        Me.TXTfiltrarNombreTema.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTfiltrarNombreTema.Location = New System.Drawing.Point(32, 21)
-        Me.TXTfiltrarNombreTema.Name = "TXTfiltrarNombreTema"
-        Me.TXTfiltrarNombreTema.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXTfiltrarNombreTema.PlaceholderText = "Ingrese el nombre del tema"
-        Me.TXTfiltrarNombreTema.SelectedText = ""
-        Me.TXTfiltrarNombreTema.Size = New System.Drawing.Size(629, 42)
-        Me.TXTfiltrarNombreTema.TabIndex = 34
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'FrmActualizarTemas
         '
@@ -365,4 +370,5 @@ Partial Class FrmActualizarTemas
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents TXTfiltrarNombreTema As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
