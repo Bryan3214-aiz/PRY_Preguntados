@@ -1,5 +1,12 @@
 ﻿Public Class FrmActualizarTemas
     Dim ID As Integer = 0
+    Private fotoCambiada As Boolean = False
+    Private imagenBytesEstTemp As Byte()
+    Private imagenBytesAniTemp As Byte()
+    Private audioBytesTemp As Byte()
+    Private sonidoBytesTemp As Byte()
+    Private videoBytesTemp As Byte()
+
     Private Sub FrmActualizarTemas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         inicializar()
     End Sub
@@ -43,7 +50,9 @@
         Dim resultado As DialogResult = MessageBox.Show("¿Desea actualizar su información personal?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If resultado = DialogResult.Yes Then
+            BTNactualizarTema.Enabled = True
             If ID <> 0 Then
+                BTNseleccionarTema.Enabled = False
                 comando = "SELECT ID_TEMA, NOMBRE_TEMA, NIVEL FROM TEMA where ID_tema = " & ID & ""
                 ds.Tables.Clear()
                 L.Items.Clear()
@@ -59,5 +68,30 @@
                 CMBgradoTemas.Text = L.Items(L.Items.Count - 1).SubItems(2).Text
             End If
         End If
+    End Sub
+
+    Private Sub BTNactualizarTema_Click(sender As Object, e As EventArgs) Handles BTNactualizarTema.Click
+        Try
+            If String.IsNullOrWhiteSpace(TXTtema.Text) OrElse
+                String.IsNullOrWhiteSpace(CMBgradoTemas.Text) OrElse
+                MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error) Then
+                Return
+            End If
+
+            If fotoCambiada = True Then ' Verifica si se ha cambiado la foto
+                Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
+                comando = "UPDATE PROFESOR SET nombre_completo = '" & TXTnombre.Text & "', identificacion = '" & TXTidentifacion.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "', PATRON = '" & TXTpatron.Text & "', fotografia = ? WHERE ID_profesor = " & ID & ""
+                EJECUTAR(comando, imagenBytes)
+                MsgBox("Datos actualizados con foto nueva.", vbOKOnly, "")
+            Else
+                comando = "UPDATE PROFESOR SET nombre_completo = '" & TXTnombre.Text & "', identificacion = '" & TXTidentifacion.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "', PATRON = '" & TXTpatron.Text & "' WHERE ID_profesor = " & ID & ""
+                EJECUTARSI(comando)
+                MsgBox("Datos actualizados sin foto.", vbOKOnly, "")
+            End If
+            inicializar()
+        Catch ex As Exception
+            Console.WriteLine("Error de actualización: " & ex.Message)
+            MessageBox.Show("Ocurrió un error al ingresar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class

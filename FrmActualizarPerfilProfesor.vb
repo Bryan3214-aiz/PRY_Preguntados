@@ -141,7 +141,6 @@ Public Class FrmActualizarPerfilProfesor
                 Return
             End If
 
-
             If fotoCambiada = True Then ' Verifica si se ha cambiado la foto
                 Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
                 comando = "UPDATE PROFESOR SET nombre_completo = '" & TXTnombre.Text & "', identificacion = '" & TXTidentifacion.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "', PATRON = '" & TXTpatron.Text & "', fotografia = ? WHERE ID_profesor = " & ID & ""
