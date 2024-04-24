@@ -3,7 +3,8 @@
 Public Class FrmLoginEstudiante
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
-
+    Public ID_estudiante As Integer = 0
+    Public NOMBRE_ESTUDIANTE As String
     Private Sub BTNregistrarEstudiante_Click(sender As Object, e As EventArgs) Handles BTNregistrarEstudiante.Click
         Me.Hide()
         FrmRegistrarEstudiante.ShowDialog()
@@ -58,25 +59,19 @@ Public Class FrmLoginEstudiante
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        ' Conexión a la base de datos
         CONECTAR()
-        ' Comando SQL para realizar la verificación de login
-        Dim comando As String = "SELECT * FROM ESTUDIANTE WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
-        Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
-        ' Se crea un nuevo DataSet para almacenar los resultados
-        Dim ds As New DataSet()
-        ' Se llena el DataSet con los resultados de la consulta
-        adp.Fill(ds, "tabla")
-        ' Se verifica si se encontraron filas en el DataSet
-        If ds.Tables("tabla").Rows.Count > 0 Then
-            ' Si se encontraron filas, el inicio de sesión es exitoso
+        ds.Tables.Clear()
+        comando = "SELECT ID_USUARIO, NOMBRE_COMPLETO FROM ESTUDIANTE WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
+        DESCONECTAR()
+        CARGAR_TABLA(ds, comando)
+        ID_estudiante = ds.Tables(0).Rows(0).Item(0)
+        NOMBRE_ESTUDIANTE = ds.Tables(0).Rows(0).Item(1)
+        If ID_estudiante > 0 Then
             Me.Hide()
             FrmMenuEstudiante.ShowDialog()
             Me.Close()
         Else
-            ' Si no se encontraron filas, se muestra un mensaje de error
             MsgBox("El usuario o contraseña no coinciden")
-            ' Se limpian los campos de texto
             TXTcorreo.Text = ""
             TXTcontrasena.Text = ""
         End If
