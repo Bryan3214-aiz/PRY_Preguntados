@@ -6,8 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E24144F-76DE-4C8A-8F9F-419414017FD1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
+
     <StartupObject>PRY_Preguntados.FrmOPCIONES</StartupObject>
-    <StartupObject>PRY_Preguntados.FrmVideoInicio</StartupObject>
+
+    <StartupObject>PRY_Preguntados.FrmMenuProfesor</StartupObject>
+
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
