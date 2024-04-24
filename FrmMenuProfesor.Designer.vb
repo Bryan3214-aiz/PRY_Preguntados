@@ -25,7 +25,6 @@ Partial Class FrmMenuProfesor
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuProfesor))
         Me.BTNmiPerfil = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.BTNperfil = New Guna.UI2.WinForms.Guna2Button()
         Me.panelReportes = New Guna.UI2.WinForms.Guna2Panel()
         Me.BTNenviarCorreoReporte = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNcrearReportes = New Guna.UI2.WinForms.Guna2Button()
@@ -70,7 +69,6 @@ Partial Class FrmMenuProfesor
         '
         Me.BTNmiPerfil.AutoScroll = True
         Me.BTNmiPerfil.BackColor = System.Drawing.Color.MediumSlateBlue
-        Me.BTNmiPerfil.Controls.Add(Me.BTNperfil)
         Me.BTNmiPerfil.Controls.Add(Me.panelReportes)
         Me.BTNmiPerfil.Controls.Add(Me.BTNcerrarSesion)
         Me.BTNmiPerfil.Controls.Add(Me.BTNreportes)
@@ -87,26 +85,6 @@ Partial Class FrmMenuProfesor
         Me.BTNmiPerfil.Name = "BTNmiPerfil"
         Me.BTNmiPerfil.Size = New System.Drawing.Size(250, 654)
         Me.BTNmiPerfil.TabIndex = 12
-        '
-        'BTNperfil
-        '
-        Me.BTNperfil.Animated = True
-        Me.BTNperfil.BackColor = System.Drawing.Color.Teal
-        Me.BTNperfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNperfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNperfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNperfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNperfil.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTNperfil.FillColor = System.Drawing.Color.SlateBlue
-        Me.BTNperfil.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNperfil.ForeColor = System.Drawing.Color.White
-        Me.BTNperfil.Location = New System.Drawing.Point(0, 891)
-        Me.BTNperfil.Name = "BTNperfil"
-        Me.BTNperfil.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNperfil.Size = New System.Drawing.Size(233, 45)
-        Me.BTNperfil.TabIndex = 19
-        Me.BTNperfil.Text = "mi perfil"
-        Me.BTNperfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'panelReportes
         '
@@ -192,7 +170,7 @@ Partial Class FrmMenuProfesor
         Me.BTNcerrarSesion.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrarSesion.ForeColor = System.Drawing.Color.White
         Me.BTNcerrarSesion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.BTNcerrarSesion.Location = New System.Drawing.Point(0, 936)
+        Me.BTNcerrarSesion.Location = New System.Drawing.Point(0, 891)
         Me.BTNcerrarSesion.Name = "BTNcerrarSesion"
         Me.BTNcerrarSesion.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BTNcerrarSesion.Size = New System.Drawing.Size(233, 45)
@@ -686,6 +664,5 @@ Partial Class FrmMenuProfesor
     Friend WithEvents panelReportes As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BTNasignarCalificacion As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNcrearReportes As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BTNperfil As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNenviarCorreoReporte As Guna.UI2.WinForms.Guna2Button
 End Class
