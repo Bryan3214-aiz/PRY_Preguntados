@@ -3,9 +3,9 @@
 Public Class FrmLoginAdmin
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
+    Public ID_administrador As Integer = 0
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
         Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
         ' Verificar si el usuario ha confirmado el cierre del formulario
         If resultado = DialogResult.Yes Then
             FrmOPCIONES.Close()
@@ -24,29 +24,22 @@ Public Class FrmLoginAdmin
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        ' Conexión a la base de datos proveniente de FrmOPCIONES al verificar el patrón
-        ' Comando SQL para realizar la verificación de login
-        Dim comando As String = "SELECT * FROM ADMINISTRADOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
-        Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
-        ' Se crea un nuevo DataSet para almacenar los resultados
-        Dim ds As New DataSet()
-        ' Se llena el DataSet con los resultados de la consulta
-        adp.Fill(ds, "tabla")
-        ' Se verifica si se encontraron filas en el DataSet
-        If ds.Tables("tabla").Rows.Count > 0 Then
-            ' Si se encontraron filas, el inicio de sesión es exitoso
-            DESCONECTAR()
+
+        ds.Tables.Clear()
+        comando = "SELECT ID FROM ADMINISTRADOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
+        DESCONECTAR()
+        CARGAR_TABLA(ds, comando)
+        ID_administrador = ds.Tables(0).Rows(0).Item(0)
+        If ID_administrador > 0 Then
             Me.Hide()
             FrmMenuAdministrador.ShowDialog()
             Me.Close()
         Else
             ' Si no se encontraron filas, se muestra un mensaje de error
             MsgBox("El usuario o contraseña no coinciden")
-            ' Se limpian los campos de texto
             TXTcorreo.Text = ""
             TXTcontrasena.Text = ""
         End If
-        ' Se desconecta de la base de datos
         DESCONECTAR()
     End Sub
 
