@@ -1,7 +1,7 @@
 ﻿Public Class FrmMenuProfesor
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos almacenado en una variable global.
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
-
+    Dim reproductor As System.Media.SoundPlayer
     Private Sub FrmMenuProfesor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo
@@ -13,9 +13,15 @@
         Temporizado.Start()
         FormularioAbierto(New FrmInicioMProfesor())
         ocultarMenu()
+        Musica()
 
     End Sub
 
+    Private Sub Musica()
+        Dim MusicaActual = My.Resources.sonidoJuego
+        reproductor = New System.Media.SoundPlayer(MusicaActual)
+        reproductor.PlayLooping()
+    End Sub
     Private Sub ocultarMenu()
         panelTemas.Visible = False
         panelCategorias.Visible = False

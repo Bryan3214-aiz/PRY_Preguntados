@@ -2,6 +2,7 @@
 Public Class FrmOPCIONES
     Dim DuracionTransicion As Double = 0.5
     Private tiempoTranscurrido As Double = 0
+    Dim reproductor As System.Media.SoundPlayer
 
     Private Sub FrmOPCIONES_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.DoubleBuffered = True
@@ -13,7 +14,7 @@ Public Class FrmOPCIONES
 
     Private Sub Musica()
         Dim MusicaActual = My.Resources.sonidoJuego
-        Dim reproductor As New System.Media.SoundPlayer(MusicaActual)
+        reproductor = New System.Media.SoundPlayer(MusicaActual)
         reproductor.PlayLooping()
     End Sub
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
@@ -54,6 +55,7 @@ Public Class FrmOPCIONES
             adp.Fill(ds, "tabla")
             ' Verificar si se encontraron resultados en la consulta
             If ds.Tables("tabla").Rows.Count > 0 Then
+                reproductor.Stop()
                 Me.Hide()
                 FrmLoginProfesor.ShowDialog()
             Else
@@ -63,6 +65,7 @@ Public Class FrmOPCIONES
         End If
         ' Desconectar la base de datos
         DESCONECTAR()
+
     End Sub
 
     Private Sub BTNestudiante_Click(sender As Object, e As EventArgs) Handles BTNestudiante.Click
