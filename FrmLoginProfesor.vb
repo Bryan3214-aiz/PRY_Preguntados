@@ -3,7 +3,8 @@ Public Class FrmLoginProfesor
 
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
-
+    Public ID_profesor As Integer = 0
+    Public NOMBRE_PROFESOR As String
 
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint
         panel.BackColor = Color.FromArgb(55, Color.Black)
@@ -19,30 +20,22 @@ Public Class FrmLoginProfesor
         End If
     End Sub
 
-    Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-
-        Dim comando As String = "SELECT * FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
-        Dim adp As New OleDb.OleDbDataAdapter(comando, miconexion)
-
-        ' Se crea un nuevo DataSet para almacenar los resultados
-        Dim ds As New DataSet()
-        ' Se llena el DataSet con los resultados de la consulta
-        adp.Fill(ds, "tabla")
-        ' Se verifica si se encontraron filas en el DataSet
-        If ds.Tables("tabla").Rows.Count > 0 Then
-            ' Si se encontraron filas, el inicio de sesión es exitoso
-            DESCONECTAR()
+    Public Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
+        ds.Tables.Clear()
+        comando = "SELECT ID_PROFESOR, NOMBRE_COMPLETO FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
+        DESCONECTAR()
+        CARGAR_TABLA(ds, comando)
+        ID_profesor = ds.Tables(0).Rows(0).Item(0)
+        NOMBRE_PROFESOR = ds.Tables(0).Rows(0).Item(1)
+        If ID_profesor > 0 Then
             Me.Hide()
             FrmMenuProfesor.ShowDialog()
             Me.Close()
         Else
-            ' Si no se encontraron filas, se muestra un mensaje de error
             MsgBox("El usuario o contraseña no coinciden")
-            ' Se limpian los campos de texto
             TXTcorreo.Text = ""
             TXTcontrasena.Text = ""
         End If
-        ' Se desconecta de la base de datos
         DESCONECTAR()
     End Sub
 
