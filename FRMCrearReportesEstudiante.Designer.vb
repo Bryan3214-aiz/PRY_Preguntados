@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmCrearReportes
+Partial Class FRMCrearReportesEstudiante
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,8 +22,6 @@ Partial Class FrmCrearReportes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.LabelbienvenidaProfesor = New System.Windows.Forms.Label()
-        Me.TXT_BUSCAR = New Guna.UI2.WinForms.Guna2TextBox()
         Me.L = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -36,48 +34,10 @@ Partial Class FrmCrearReportes
         Me.BTN_Actividad_con_Respuestas = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerarReporteActividadCalificadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BTN_Actualizar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BTN_Puntacion_Alta = New Guna.UI2.WinForms.Guna2Button()
-        Me.BTN_MinimaCalificacion = New Guna.UI2.WinForms.Guna2Button()
+        Me.TXT_BUSCAR = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.LabelbienvenidaProfesor = New System.Windows.Forms.Label()
         Me.Guna2ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'LabelbienvenidaProfesor
-        '
-        Me.LabelbienvenidaProfesor.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.LabelbienvenidaProfesor.Dock = System.Windows.Forms.DockStyle.Top
-        Me.LabelbienvenidaProfesor.Font = New System.Drawing.Font("Showcard Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelbienvenidaProfesor.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelbienvenidaProfesor.Location = New System.Drawing.Point(0, 0)
-        Me.LabelbienvenidaProfesor.Name = "LabelbienvenidaProfesor"
-        Me.LabelbienvenidaProfesor.Size = New System.Drawing.Size(895, 115)
-        Me.LabelbienvenidaProfesor.TabIndex = 32
-        Me.LabelbienvenidaProfesor.Text = "crear reportes nuevos"
-        Me.LabelbienvenidaProfesor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TXT_BUSCAR
-        '
-        Me.TXT_BUSCAR.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TXT_BUSCAR.BorderRadius = 15
-        Me.TXT_BUSCAR.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXT_BUSCAR.DefaultText = ""
-        Me.TXT_BUSCAR.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXT_BUSCAR.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXT_BUSCAR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_BUSCAR.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_BUSCAR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_BUSCAR.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
-        Me.TXT_BUSCAR.ForeColor = System.Drawing.Color.DimGray
-        Me.TXT_BUSCAR.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_BUSCAR.Location = New System.Drawing.Point(27, 130)
-        Me.TXT_BUSCAR.Name = "TXT_BUSCAR"
-        Me.TXT_BUSCAR.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXT_BUSCAR.PlaceholderText = "Filtrar partidas con el nombre del estudiante"
-        Me.TXT_BUSCAR.SelectedText = ""
-        Me.TXT_BUSCAR.Size = New System.Drawing.Size(832, 42)
-        Me.TXT_BUSCAR.TabIndex = 34
         '
         'L
         '
@@ -93,12 +53,12 @@ Partial Class FrmCrearReportes
         Me.L.GridLines = True
         Me.L.HideSelection = False
         Me.L.HoverSelection = True
-        Me.L.Location = New System.Drawing.Point(27, 194)
+        Me.L.Location = New System.Drawing.Point(58, 206)
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.Name = "L"
         Me.L.Scrollable = False
-        Me.L.Size = New System.Drawing.Size(832, 363)
-        Me.L.TabIndex = 33
+        Me.L.Size = New System.Drawing.Size(863, 414)
+        Me.L.TabIndex = 36
         Me.L.UseCompatibleStateImageBehavior = False
         Me.L.View = System.Windows.Forms.View.Details
         '
@@ -176,88 +136,64 @@ Partial Class FrmCrearReportes
         Me.GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
         Me.GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem.Text = "Generar reporte sin respuestas del estudiante"
         '
-        'BTN_Actualizar
+        'TXT_BUSCAR
         '
-        Me.BTN_Actualizar.Animated = True
-        Me.BTN_Actualizar.BackColor = System.Drawing.Color.Lavender
-        Me.BTN_Actualizar.BorderRadius = 10
-        Me.BTN_Actualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_Actualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_Actualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_Actualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_Actualizar.FillColor = System.Drawing.Color.MediumSlateBlue
-        Me.BTN_Actualizar.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
-        Me.BTN_Actualizar.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTN_Actualizar.Location = New System.Drawing.Point(679, 571)
-        Me.BTN_Actualizar.Name = "BTN_Actualizar"
-        Me.BTN_Actualizar.Size = New System.Drawing.Size(180, 60)
-        Me.BTN_Actualizar.TabIndex = 35
-        Me.BTN_Actualizar.Text = "Actualizar"
+        Me.TXT_BUSCAR.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TXT_BUSCAR.BorderRadius = 15
+        Me.TXT_BUSCAR.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_BUSCAR.DefaultText = ""
+        Me.TXT_BUSCAR.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_BUSCAR.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_BUSCAR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_BUSCAR.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_BUSCAR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_BUSCAR.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
+        Me.TXT_BUSCAR.ForeColor = System.Drawing.Color.DimGray
+        Me.TXT_BUSCAR.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_BUSCAR.Location = New System.Drawing.Point(26, 118)
+        Me.TXT_BUSCAR.Name = "TXT_BUSCAR"
+        Me.TXT_BUSCAR.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_BUSCAR.PlaceholderText = "Filtrar partidas con el nombre del estudiante"
+        Me.TXT_BUSCAR.SelectedText = ""
+        Me.TXT_BUSCAR.Size = New System.Drawing.Size(895, 83)
+        Me.TXT_BUSCAR.TabIndex = 37
         '
-        'BTN_Puntacion_Alta
+        'LabelbienvenidaProfesor
         '
-        Me.BTN_Puntacion_Alta.Animated = True
-        Me.BTN_Puntacion_Alta.BackColor = System.Drawing.Color.Lavender
-        Me.BTN_Puntacion_Alta.BorderRadius = 10
-        Me.BTN_Puntacion_Alta.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_Puntacion_Alta.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_Puntacion_Alta.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_Puntacion_Alta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_Puntacion_Alta.FillColor = System.Drawing.Color.MediumSlateBlue
-        Me.BTN_Puntacion_Alta.Font = New System.Drawing.Font("Showcard Gothic", 11.25!)
-        Me.BTN_Puntacion_Alta.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTN_Puntacion_Alta.Location = New System.Drawing.Point(42, 571)
-        Me.BTN_Puntacion_Alta.Name = "BTN_Puntacion_Alta"
-        Me.BTN_Puntacion_Alta.Size = New System.Drawing.Size(180, 60)
-        Me.BTN_Puntacion_Alta.TabIndex = 36
-        Me.BTN_Puntacion_Alta.Text = "Máxima Calificación por Estudiante"
+        Me.LabelbienvenidaProfesor.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.LabelbienvenidaProfesor.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LabelbienvenidaProfesor.Font = New System.Drawing.Font("Showcard Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelbienvenidaProfesor.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelbienvenidaProfesor.Location = New System.Drawing.Point(0, 0)
+        Me.LabelbienvenidaProfesor.Name = "LabelbienvenidaProfesor"
+        Me.LabelbienvenidaProfesor.Size = New System.Drawing.Size(996, 115)
+        Me.LabelbienvenidaProfesor.TabIndex = 35
+        Me.LabelbienvenidaProfesor.Text = "crear reportes nuevos"
+        Me.LabelbienvenidaProfesor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'BTN_MinimaCalificacion
-        '
-        Me.BTN_MinimaCalificacion.Animated = True
-        Me.BTN_MinimaCalificacion.BackColor = System.Drawing.Color.Lavender
-        Me.BTN_MinimaCalificacion.BorderRadius = 10
-        Me.BTN_MinimaCalificacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_MinimaCalificacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_MinimaCalificacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_MinimaCalificacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_MinimaCalificacion.FillColor = System.Drawing.Color.MediumSlateBlue
-        Me.BTN_MinimaCalificacion.Font = New System.Drawing.Font("Showcard Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_MinimaCalificacion.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTN_MinimaCalificacion.Location = New System.Drawing.Point(260, 571)
-        Me.BTN_MinimaCalificacion.Name = "BTN_MinimaCalificacion"
-        Me.BTN_MinimaCalificacion.Size = New System.Drawing.Size(180, 60)
-        Me.BTN_MinimaCalificacion.TabIndex = 37
-        Me.BTN_MinimaCalificacion.Text = "Ver Mínima Calificación por Estudiante"
-        '
-        'FrmCrearReportes
+        'FRMCrearReportesEstudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Lavender
-        Me.ClientSize = New System.Drawing.Size(895, 654)
-        Me.Controls.Add(Me.BTN_MinimaCalificacion)
-        Me.Controls.Add(Me.BTN_Puntacion_Alta)
-        Me.Controls.Add(Me.BTN_Actualizar)
-        Me.Controls.Add(Me.TXT_BUSCAR)
+        Me.ClientSize = New System.Drawing.Size(996, 539)
         Me.Controls.Add(Me.L)
+        Me.Controls.Add(Me.TXT_BUSCAR)
         Me.Controls.Add(Me.LabelbienvenidaProfesor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmCrearReportes"
+        Me.Name = "FRMCrearReportesEstudiante"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmCrearReportes"
+        Me.Text = "FRMCrearReportesEstudiante"
         Me.Guna2ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents LabelbienvenidaProfesor As Label
-    Friend WithEvents TXT_BUSCAR As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents L As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents BTN_Actualizar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
@@ -266,6 +202,6 @@ Partial Class FrmCrearReportes
     Friend WithEvents BTN_Actividad_con_Respuestas As ToolStripMenuItem
     Friend WithEvents GenerarReporteActividadCalificadaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BTN_Puntacion_Alta As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BTN_MinimaCalificacion As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents TXT_BUSCAR As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents LabelbienvenidaProfesor As Label
 End Class
