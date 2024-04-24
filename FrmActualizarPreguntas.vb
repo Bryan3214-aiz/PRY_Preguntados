@@ -5,6 +5,7 @@ Public Class FrmActualizarPreguntas
         BTN_actualizar.Enabled = False
         BTN_CARGAROPC.Enabled = True
         CMB_ACT_PRE.Enabled = True
+        TXTactpregunta.Enabled = False
         TXT_actOPC_UNO.Enabled = False
         TXT_actOPC_DOS.Enabled = False
         TXT_actOPC_TRES.Enabled = False
@@ -62,6 +63,8 @@ Public Class FrmActualizarPreguntas
             comando = "SELECT TEXTO_OPCION FROM OPCION WHERE ID_OPCION = " & id_opcion + 1 + 1 + 1 & ""
             CARGAR_TABLA(ds, comando)
             TXT_actOPC_CUATRO.Text = ds.Tables(0).Rows(0).Item(0)
+        Else
+            CMB_ACT_PRE.SelectedItem = Nothing
         End If
     End Sub
     Private Sub FrmActualizarPreguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load

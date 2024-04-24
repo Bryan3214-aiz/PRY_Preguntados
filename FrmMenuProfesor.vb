@@ -99,6 +99,7 @@
     End Sub
 
     Private Sub BTNeditarCategorias_Click(sender As Object, e As EventArgs) Handles BTNeditarCategorias.Click
+        FormularioAbierto(New FrmActualizarCategorias())
         ocultarMenu()
     End Sub
 

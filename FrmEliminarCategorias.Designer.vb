@@ -40,7 +40,7 @@ Partial Class FrmEliminarCategorias
         Me.LabelEliTemas.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LabelEliTemas.Location = New System.Drawing.Point(0, 0)
         Me.LabelEliTemas.Name = "LabelEliTemas"
-        Me.LabelEliTemas.Size = New System.Drawing.Size(895, 72)
+        Me.LabelEliTemas.Size = New System.Drawing.Size(895, 115)
         Me.LabelEliTemas.TabIndex = 28
         Me.LabelEliTemas.Text = "Eliminar categorias "
         Me.LabelEliTemas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -61,7 +61,7 @@ Partial Class FrmEliminarCategorias
         Me.TXTNOMBRECATEGORIA.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.TXTNOMBRECATEGORIA.ForeColor = System.Drawing.Color.DimGray
         Me.TXTNOMBRECATEGORIA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTNOMBRECATEGORIA.Location = New System.Drawing.Point(30, 101)
+        Me.TXTNOMBRECATEGORIA.Location = New System.Drawing.Point(30, 129)
         Me.TXTNOMBRECATEGORIA.Name = "TXTNOMBRECATEGORIA"
         Me.TXTNOMBRECATEGORIA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTNOMBRECATEGORIA.PlaceholderText = "Ingrese el nombre de la categoria"
@@ -83,12 +83,12 @@ Partial Class FrmEliminarCategorias
         Me.L.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.L.HideSelection = False
         Me.L.HoverSelection = True
-        Me.L.Location = New System.Drawing.Point(30, 165)
+        Me.L.Location = New System.Drawing.Point(30, 186)
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
         Me.L.Scrollable = False
-        Me.L.Size = New System.Drawing.Size(832, 420)
+        Me.L.Size = New System.Drawing.Size(832, 399)
         Me.L.TabIndex = 30
         Me.L.UseCompatibleStateImageBehavior = False
         Me.L.View = System.Windows.Forms.View.Details

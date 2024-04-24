@@ -59,7 +59,7 @@ Partial Class FrmBuscarPerfilProfesor
         Me.L.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.L.HideSelection = False
         Me.L.HoverSelection = True
-        Me.L.Location = New System.Drawing.Point(28, 199)
+        Me.L.Location = New System.Drawing.Point(30, 199)
         Me.L.Margin = New System.Windows.Forms.Padding(50)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
@@ -120,7 +120,7 @@ Partial Class FrmBuscarPerfilProfesor
         Me.TXTNOMBREPROFESOR.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.TXTNOMBREPROFESOR.ForeColor = System.Drawing.Color.DimGray
         Me.TXTNOMBREPROFESOR.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTNOMBREPROFESOR.Location = New System.Drawing.Point(28, 137)
+        Me.TXTNOMBREPROFESOR.Location = New System.Drawing.Point(30, 137)
         Me.TXTNOMBREPROFESOR.Name = "TXTNOMBREPROFESOR"
         Me.TXTNOMBREPROFESOR.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTNOMBREPROFESOR.PlaceholderText = "Ingrese el nombre del profesor"

@@ -87,7 +87,7 @@ Partial Class FrmActualizarTemas
         Me.TXTfiltrarNombreTema.Location = New System.Drawing.Point(32, 21)
         Me.TXTfiltrarNombreTema.Name = "TXTfiltrarNombreTema"
         Me.TXTfiltrarNombreTema.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXTfiltrarNombreTema.PlaceholderText = "Ingrese el nombre del tema"
+        Me.TXTfiltrarNombreTema.PlaceholderText = "Filtrar datos por el nombre del tema"
         Me.TXTfiltrarNombreTema.SelectedText = ""
         Me.TXTfiltrarNombreTema.Size = New System.Drawing.Size(629, 42)
         Me.TXTfiltrarNombreTema.TabIndex = 34

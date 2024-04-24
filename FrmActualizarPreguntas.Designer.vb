@@ -24,6 +24,7 @@ Partial Class FrmActualizarPreguntas
     Private Sub InitializeComponent()
         Me.LabelbienvenidaProfesor = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.LBL_CARGAR_PREGUNTA = New System.Windows.Forms.Label()
         Me.BTN_CARGAROPC = New Guna.UI2.WinForms.Guna2Button()
         Me.TXTactpregunta = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,7 +43,6 @@ Partial Class FrmActualizarPreguntas
         Me.TXT_actOPC_CUATRO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TXT_actOPC_TRES = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.LBL_CARGAR_PREGUNTA = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,6 +90,15 @@ Partial Class FrmActualizarPreguntas
         Me.Guna2Panel1.Size = New System.Drawing.Size(895, 539)
         Me.Guna2Panel1.TabIndex = 55
         '
+        'LBL_CARGAR_PREGUNTA
+        '
+        Me.LBL_CARGAR_PREGUNTA.AutoSize = True
+        Me.LBL_CARGAR_PREGUNTA.ForeColor = System.Drawing.Color.Lavender
+        Me.LBL_CARGAR_PREGUNTA.Location = New System.Drawing.Point(309, 424)
+        Me.LBL_CARGAR_PREGUNTA.Name = "LBL_CARGAR_PREGUNTA"
+        Me.LBL_CARGAR_PREGUNTA.Size = New System.Drawing.Size(0, 13)
+        Me.LBL_CARGAR_PREGUNTA.TabIndex = 53
+        '
         'BTN_CARGAROPC
         '
         Me.BTN_CARGAROPC.Animated = True
@@ -102,7 +111,7 @@ Partial Class FrmActualizarPreguntas
         Me.BTN_CARGAROPC.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN_CARGAROPC.Font = New System.Drawing.Font("Showcard Gothic", 12.0!)
         Me.BTN_CARGAROPC.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BTN_CARGAROPC.Location = New System.Drawing.Point(703, 44)
+        Me.BTN_CARGAROPC.Location = New System.Drawing.Point(703, 37)
         Me.BTN_CARGAROPC.Name = "BTN_CARGAROPC"
         Me.BTN_CARGAROPC.Size = New System.Drawing.Size(125, 60)
         Me.BTN_CARGAROPC.TabIndex = 52
@@ -154,7 +163,7 @@ Partial Class FrmActualizarPreguntas
         Me.CMB_ACT_PRE.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.CMB_ACT_PRE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMB_ACT_PRE.ItemHeight = 30
-        Me.CMB_ACT_PRE.Location = New System.Drawing.Point(461, 44)
+        Me.CMB_ACT_PRE.Location = New System.Drawing.Point(462, 52)
         Me.CMB_ACT_PRE.Name = "CMB_ACT_PRE"
         Me.CMB_ACT_PRE.Size = New System.Drawing.Size(220, 36)
         Me.CMB_ACT_PRE.TabIndex = 35
@@ -368,15 +377,6 @@ Partial Class FrmActualizarPreguntas
         Me.Label2.TabIndex = 41
         Me.Label2.Text = "Respuesta 3:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LBL_CARGAR_PREGUNTA
-        '
-        Me.LBL_CARGAR_PREGUNTA.AutoSize = True
-        Me.LBL_CARGAR_PREGUNTA.ForeColor = System.Drawing.Color.Lavender
-        Me.LBL_CARGAR_PREGUNTA.Location = New System.Drawing.Point(309, 424)
-        Me.LBL_CARGAR_PREGUNTA.Name = "LBL_CARGAR_PREGUNTA"
-        Me.LBL_CARGAR_PREGUNTA.Size = New System.Drawing.Size(0, 13)
-        Me.LBL_CARGAR_PREGUNTA.TabIndex = 53
         '
         'FrmActualizarPreguntas
         '

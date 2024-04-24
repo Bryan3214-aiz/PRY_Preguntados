@@ -20,6 +20,13 @@ Public Class FrmActualizarTemas
     Friend Sub reiniciar()
         BTNseleccionarTema.Enabled = False
         BTNactualizarTema.Enabled = False
+        BTNimgEstaticaTema.Enabled = False
+        BTNimgAnimadaTema.Enabled = False
+        BTNsonidoTema.Enabled = False
+        BTNAudioVozTema.Enabled = False
+        BTNvideoTema.Enabled = False
+        TXTtema.Enabled = False
+        CMBgradoTemas.Enabled = False
         TXTtema.Text = ""
         TXTfiltrarNombreTema.Text = ""
         CMBgradoTemas.SelectedItem = Nothing
@@ -50,10 +57,18 @@ Public Class FrmActualizarTemas
     End Sub
 
     Private Sub BTNseleccionarTema_Click(sender As Object, e As EventArgs) Handles BTNseleccionarTema.Click
-        Dim resultado As DialogResult = MessageBox.Show("¿Desea actualizar su información personal?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim resultado As DialogResult = MessageBox.Show("¿Desea actualizar los datos sobre el tema?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If resultado = DialogResult.Yes Then
             BTNactualizarTema.Enabled = True
+            BTNimgEstaticaTema.Enabled = True
+            BTNimgAnimadaTema.Enabled = True
+            BTNsonidoTema.Enabled = True
+            BTNAudioVozTema.Enabled = True
+            BTNvideoTema.Enabled = True
+            TXTtema.Enabled = True
+            CMBgradoTemas.Enabled = True
+
             If ID <> 0 Then
                 BTNseleccionarTema.Enabled = False
                 comando = "SELECT ID_TEMA, NOMBRE_TEMA, NIVEL, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ, VIDEO_TEMA FROM TEMA where ID_tema = " & ID & ""
@@ -78,12 +93,6 @@ Public Class FrmActualizarTemas
         End If
     End Sub
 
-    Private Function ObtenerBytesDeImagen(ByVal imagen As Image) As Byte()
-        Using ms As New MemoryStream()
-            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-            Return ms.ToArray()
-        End Using
-    End Function
 
     Private Sub BTNactualizarTema_Click(sender As Object, e As EventArgs) Handles BTNactualizarTema.Click
         Try
@@ -96,7 +105,7 @@ Public Class FrmActualizarTemas
 
             comando = "UPDATE TEMA SET NOMBRE_TEMA = '" & TXTtema.Text & "', NIVEL = '" & CMBgradoTemas.Text & "', IMAGEN_ESTATICA = ?, IMAGEN_ANIMADA = ?, SONIDO_TEMA = ?, AUDIO_VOZ = ?,  VIDEO_TEMA = ? where id_tema = " & ID & " "
             EJECUTARTEMA(comando, imagenEstBytes, imagenAniBytes, audioBytes, sonidoBytes, videoBytes)
-            MsgBox("Datos actualizados 'la flaca'", vbOKOnly, "")
+            MsgBox("Datos actualizados", vbOKOnly, "")
             inicializar()
         Catch ex As Exception
             Console.WriteLine("Error de actualización: " & ex.Message)
