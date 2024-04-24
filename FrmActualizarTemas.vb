@@ -1,14 +1,6 @@
 ﻿Imports System.IO
 Public Class FrmActualizarTemas
     Dim ID As Integer = 0
-    Private fotoCambiadaEST As Boolean = False
-    Private fotoCambiadaANI As Boolean = False
-    Private SonidoTemaB As Boolean = False
-    Private AudioTemaB As Boolean = False
-    Private VideoTemaB As Boolean = False
-    Private TodosCampos As Boolean = False
-
-
     Private imagenBytesEstTemp As Byte()
     Private imagenBytesAniTemp As Byte()
     Private audioBytesTemp As Byte()
@@ -64,15 +56,20 @@ Public Class FrmActualizarTemas
             BTNactualizarTema.Enabled = True
             If ID <> 0 Then
                 BTNseleccionarTema.Enabled = False
-                comando = "SELECT ID_TEMA, NOMBRE_TEMA, NIVEL FROM TEMA where ID_tema = " & ID & ""
+                comando = "SELECT ID_TEMA, NOMBRE_TEMA, NIVEL, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_TEMA, AUDIO_VOZ, VIDEO_TEMA FROM TEMA where ID_tema = " & ID & ""
                 ds.Tables.Clear()
                 L.Items.Clear()
                 CARGAR_TABLA(ds, comando)
                 If ds.Tables(0).Rows.Count > 0 Then
                     For I = 0 To ds.Tables(0).Rows.Count - 1
                         L.Items.Add(ds.Tables(0).Rows(I).Item(0))
-                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(1))
-                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(2))
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(1)) 'nombre tema
+                        L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(2)) ' nivel
+                        imagenBytesEstTemp = CType(ds.Tables(0).Rows(I).Item(3), Byte())
+                        imagenBytesAniTemp = CType(ds.Tables(0).Rows(I).Item(4), Byte())
+                        sonidoBytesTemp = CType(ds.Tables(0).Rows(I).Item(5), Byte())
+                        audioBytesTemp = CType(ds.Tables(0).Rows(I).Item(6), Byte())
+                        videoBytesTemp = CType(ds.Tables(0).Rows(I).Item(7), Byte())
                     Next
                 End If
                 TXTtema.Text = L.Items(L.Items.Count - 1).SubItems(1).Text
@@ -81,58 +78,25 @@ Public Class FrmActualizarTemas
         End If
     End Sub
 
+    Private Function ObtenerBytesDeImagen(ByVal imagen As Image) As Byte()
+        Using ms As New MemoryStream()
+            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
+            Return ms.ToArray()
+        End Using
+    End Function
+
     Private Sub BTNactualizarTema_Click(sender As Object, e As EventArgs) Handles BTNactualizarTema.Click
         Try
 
-            If fotoCambiadaEST = True Then
+            Dim imagenEstBytes As Byte() = imagenBytesEstTemp
+            Dim imagenAniBytes As Byte() = imagenBytesAniTemp
+            Dim sonidoBytes As Byte() = sonidoBytesTemp
+            Dim audioBytes As Byte() = audioBytesTemp
+            Dim videoBytes As Byte() = videoBytesTemp
 
-                Dim imagenEstBytes As Byte() = imagenBytesEstTemp
-                comando = "UPDATE TEMA SET IMAGEN_ESTATICA = ?"
-                inicializar()
-                MsgBox("Datos actualizados solo img estatica")
-            ElseIf fotoCambiadaANI = True Then
-
-                Dim imagenAniBytes As Byte() = imagenBytesAniTemp
-                comando = "UPDATE TEMA SET IMAGEN_ANIMADA = ?"
-                inicializar()
-                MsgBox("Datos actualizados solo img animada")
-            ElseIf SonidoTemaB = True Then
-
-                Dim sonidoBytes As Byte() = sonidoBytesTemp
-                comando = "UPDATE TEMA SET SONIDO_TEMA = ?"
-                inicializar()
-                MsgBox("Datos actualizados")
-
-            ElseIf AudioTemaB = True Then
-
-                Dim audioBytes As Byte() = audioBytesTemp
-                comando = "UPDATE TEMA SET AUDIO_VOZ = ?"
-                inicializar()
-                MsgBox("Datos actualizados")
-
-            ElseIf VideoTemaB = True Then
-                Dim videoBytes As Byte() = videoBytesTemp
-                comando = "UPDATE TEMA SET VIDEO_TEMA = ?"
-                inicializar()
-                MsgBox("Datos actualizados")
-
-            ElseIf TodosCampos = True Then
-
-                Dim imagenEstBytes As Byte() = imagenBytesEstTemp
-
-                Dim imagenAniBytes As Byte() = imagenBytesAniTemp
-
-                Dim sonidoBytes As Byte() = sonidoBytesTemp
-
-                Dim audioBytes As Byte() = audioBytesTemp
-
-                Dim videoBytes As Byte() = videoBytesTemp
-                comando = "UPDATE TEMA SET VIDEO_TEMA = ?"
-                inicializar()
-                MsgBox("Datos actualizados")
-            Else
-
-            End If
+            comando = "UPDATE TEMA SET NOMBRE_TEMA = '" & TXTtema.Text & "', NIVEL = '" & CMBgradoTemas.Text & "', IMAGEN_ESTATICA = ?, IMAGEN_ANIMADA = ?, SONIDO_TEMA = ?, AUDIO_VOZ = ?,  VIDEO_TEMA = ? where id_tema = " & ID & " "
+            EJECUTARTEMA(comando, imagenEstBytes, imagenAniBytes, audioBytes, sonidoBytes, videoBytes)
+            MsgBox("Datos actualizados 'la flaca'", vbOKOnly, "")
             inicializar()
         Catch ex As Exception
             Console.WriteLine("Error de actualización: " & ex.Message)
@@ -147,7 +111,7 @@ Public Class FrmActualizarTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 imagenBytesEstTemp = File.ReadAllBytes(rutaImagen)
-                fotoCambiadaEST = True
+
                 MsgBox("Imagen estatica insertada correctamente.", vbOKOnly, "")
             End If
         Catch ex As Exception
@@ -163,7 +127,6 @@ Public Class FrmActualizarTemas
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
                 Dim rutaImagen As String = OpenFileDialog1.FileName
                 imagenBytesAniTemp = File.ReadAllBytes(rutaImagen)
-                fotoCambiadaANI = True
                 MsgBox("Imagen animada insertada correctamente", vbOKOnly, "")
             End If
         Catch ex As Exception
