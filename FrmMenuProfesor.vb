@@ -136,7 +136,7 @@
     End Sub
 
 
-    Private Sub BTNperfil_Click(sender As Object, e As EventArgs) Handles BTNperfil.Click
+    Private Sub BTNperfil_Click(sender As Object, e As EventArgs) 
         ocultarMenu()
     End Sub
 
