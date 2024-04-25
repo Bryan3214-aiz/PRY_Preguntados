@@ -16,6 +16,7 @@
 
         If resultado = DialogResult.Yes Then
             FrmMenuEstudiante.Close()
+            FrmResultados.Close()
             Me.Close() ' Cerrar el formulario
         End If
     End Sub

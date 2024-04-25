@@ -575,7 +575,7 @@ Partial Class FrmVerDatosRegistradosEstudiante
         Me.BTNcomenzarJuego.Name = "BTNcomenzarJuego"
         Me.BTNcomenzarJuego.Size = New System.Drawing.Size(150, 41)
         Me.BTNcomenzarJuego.TabIndex = 9
-        Me.BTNcomenzarJuego.Text = "Comenzar a jugar "
+        Me.BTNcomenzarJuego.Text = "Comenzar a jugar"
         Me.BTNcomenzarJuego.UseTransparentBackground = True
         '
         'Temporizado

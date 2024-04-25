@@ -32,7 +32,7 @@ Public Class FrmVerDatosRegistradosEstudiante
 
     Private Sub BTNjuego_Click(sender As Object, e As EventArgs) Handles BTNcomenzarJuego.Click
         Me.Hide()
-        FrmMenuEstudiante.ShowDialog()
+        FrmLoginEstudiante.ShowDialog()
         Me.Close()
     End Sub
 
@@ -138,7 +138,7 @@ Public Class FrmVerDatosRegistradosEstudiante
             End If
             INICIALIZAR()
             Me.Hide()
-            FrmMenuEstudiante.ShowDialog()
+            FrmLoginEstudiante.ShowDialog()
             Me.Close()
 
         Catch ex As Exception

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PRY_Preguntados.FrmCrearReportes</StartupObject>
     <StartupObject>PRY_Preguntados.FrmOPCIONES</StartupObject>
-    <StartupObject>PRY_Preguntados.FrmLoginEstudiante</StartupObject>
+    <StartupObject>PRY_Preguntados.FrmVideoInicio</StartupObject>
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -237,6 +237,12 @@
     <Compile Include="FrmInicioMProfesor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmJuegoPreguntas.Designer.vb">
+      <DependentUpon>FrmJuegoPreguntas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmJuegoPreguntas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLoginAdmin.Designer.vb">
       <DependentUpon>FrmLoginAdmin.vb</DependentUpon>
     </Compile>
@@ -307,6 +313,12 @@
       <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmRegistrarEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResultados.Designer.vb">
+      <DependentUpon>FrmResultados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResultados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVerDatosRegistradosEstudiante.Designer.vb">
@@ -398,6 +410,9 @@
     <EmbeddedResource Include="FrmInicioMProfesor.resx">
       <DependentUpon>FrmInicioMProfesor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmJuegoPreguntas.resx">
+      <DependentUpon>FrmJuegoPreguntas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginAdmin.resx">
       <DependentUpon>FrmLoginAdmin.vb</DependentUpon>
     </EmbeddedResource>
@@ -430,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarEstudiante.resx">
       <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResultados.resx">
+      <DependentUpon>FrmResultados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerDatosRegistradosEstudiante.resx">
       <DependentUpon>FrmVerDatosRegistradosEstudiante.vb</DependentUpon>
