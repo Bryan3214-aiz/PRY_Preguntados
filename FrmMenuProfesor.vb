@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub Musica()
-        Dim MusicaActual = My.Resources.sonidoJuego
+        Dim MusicaActual = My.Resources.sonidoJuego2
         reproductor = New System.Media.SoundPlayer(MusicaActual)
         reproductor.PlayLooping()
     End Sub
