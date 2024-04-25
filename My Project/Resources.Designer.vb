@@ -173,9 +173,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property sonidoJuego() As System.IO.UnmanagedMemoryStream
+        Friend ReadOnly Property sonidoJuego2() As System.IO.UnmanagedMemoryStream
             Get
-                Return ResourceManager.GetStream("sonidoJuego", resourceCulture)
+                Return ResourceManager.GetStream("sonidoJuego2", resourceCulture)
             End Get
         End Property
         
