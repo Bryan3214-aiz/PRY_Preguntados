@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PRY_Preguntados.FrmCrearReportes</StartupObject>
     <StartupObject>PRY_Preguntados.FrmOPCIONES</StartupObject>
-    <StartupObject>PRY_Preguntados.FrmVideoInicio</StartupObject>
+    <StartupObject>PRY_Preguntados.FrmLoginEstudiante</StartupObject>
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -291,6 +291,12 @@
     <Compile Include="FrmMenuProfesor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmMusicaJuego.Designer.vb">
+      <DependentUpon>FrmMusicaJuego.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusicaJuego.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmOPCIONES.Designer.vb">
       <DependentUpon>FrmOPCIONES.vb</DependentUpon>
     </Compile>
@@ -433,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuProfesor.resx">
       <DependentUpon>FrmMenuProfesor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusicaJuego.resx">
+      <DependentUpon>FrmMusicaJuego.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOPCIONES.resx">
       <DependentUpon>FrmOPCIONES.vb</DependentUpon>

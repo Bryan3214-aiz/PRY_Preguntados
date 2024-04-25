@@ -2,21 +2,17 @@
 Public Class FrmOPCIONES
     Dim DuracionTransicion As Double = 0.5
     Private tiempoTranscurrido As Double = 0
-    Dim reproductor As System.Media.SoundPlayer
 
     Private Sub FrmOPCIONES_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FrmMusicaJuego.Show()
+        FrmMusicaJuego.Hide()
         Me.DoubleBuffered = True
         Me.Opacity = 0
         Temporizado.Interval = 20
         Temporizado.Start()
-        Musica()
     End Sub
 
-    Private Sub Musica()
-        Dim MusicaActual = My.Resources.sonidoJuego2
-        reproductor = New System.Media.SoundPlayer(MusicaActual)
-        reproductor.PlayLooping()
-    End Sub
+
     Private Sub Temporizado_Tick(sender As Object, e As EventArgs) Handles Temporizado.Tick
         tiempoTranscurrido += Temporizado.Interval / 1000
 
@@ -55,7 +51,6 @@ Public Class FrmOPCIONES
             adp.Fill(ds, "tabla")
             ' Verificar si se encontraron resultados en la consulta
             If ds.Tables("tabla").Rows.Count > 0 Then
-                reproductor.Stop()
                 Me.Hide()
                 FrmLoginProfesor.ShowDialog()
             Else

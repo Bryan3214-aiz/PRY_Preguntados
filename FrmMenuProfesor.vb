@@ -13,15 +13,9 @@
         Temporizado.Start()
         FormularioAbierto(New FrmInicioMProfesor())
         ocultarMenu()
-        Musica()
 
     End Sub
 
-    Private Sub Musica()
-        Dim MusicaActual = My.Resources.sonidoJuego2
-        reproductor = New System.Media.SoundPlayer(MusicaActual)
-        reproductor.PlayLooping()
-    End Sub
     Private Sub ocultarMenu()
         panelTemas.Visible = False
         panelCategorias.Visible = False
