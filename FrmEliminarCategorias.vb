@@ -27,6 +27,10 @@
     Private Sub BTNeliminarCategoria_Click(sender As Object, e As EventArgs) Handles BTNeliminarCategoria.Click
         If ID <> 0 Then
             If MsgBox("¿Desea realmente eliminar la categoria seleccionada?", vbQuestion + vbYesNo, "Confirmar Eliminación") = vbYes Then
+                comando = "DELETE FROM OPCION WHERE ID_PREGUNTA IN (SELECT ID_PREGUNTA FROM PREGUNTA WHERE ID_CATEGORIA = " & ID & ")"
+                EJECUTARSI(comando)
+                comando = "DELETE FROM PREGUNTA  WHERE ID_CATEGORIA = " & ID
+                EJECUTARSI(comando)
                 comando = "DELETE FROM CATEGORIA WHERE ID_CATEGORIA = " & ID
                 EJECUTARSI(comando)
                 INICIALIZAR()
@@ -44,4 +48,6 @@
             BTNeliminarCategoria.Enabled = True
         End If
     End Sub
+
+
 End Class

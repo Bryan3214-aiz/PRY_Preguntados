@@ -22,6 +22,7 @@ Public Class FrmCrearCategorias
             Dim index As Integer = CMBseleccionarTemaC.SelectedIndex + 1
             Dim comando As String = "INSERT INTO CATEGORIA (ID_CATEGORIA, NOMBRE_CATEGORIA, ID_TEMA, IMAGEN_ESTATICA, IMAGEN_ANIMADA, SONIDO_CATEGORIA, AUDIO_VOZ, VIDEO_CATEGORIA) VALUES ( '" & PK("CATEGORIA", "ID_CATEGORIA") & "','" & TXTcategoria.Text & "', '" & index & "',?, ?, ?, ?, ?)"
             EJECUTARTEMA(comando, imagenEstBytes, imagenAniBytes, audioBytes, sonidoBytes, videoBytes)
+            REINICIAR()
             MsgBox("Categoria creada exitosamente.", vbOKOnly, "")
         Catch ex As Exception
             Console.WriteLine("Error al crear usuario: " & ex.Message)

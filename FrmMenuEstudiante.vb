@@ -1,4 +1,9 @@
 ﻿Public Class FrmMenuEstudiante
+
+    Dim nombree As String = FrmLoginEstudiante.NOMBRE_ESTUDIANTE
+    Dim id_estudiante As Integer = FrmLoginEstudiante.ID_estudiante
+    Dim nivele As String = FrmLoginEstudiante.NIVEL_ESTUDIANTE
+
     Private duracionTransicion As Double = 0.5 ' Duración de la transición en segundos almacenado en una variable global.
     Private tiempoTranscurrido As Double = 0 ' Tiempo transcurrido inicialmente
     Private Sub FrmMenuEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
