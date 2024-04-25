@@ -26,7 +26,6 @@ Partial Class FrmMenuProfesor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuProfesor))
         Me.BTNmiPerfil = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.panelReportes = New Guna.UI2.WinForms.Guna2Panel()
-        Me.BTNenviarCorreoReporte = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNcrearReportes = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNasignarCalificacion = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNcerrarSesion = New Guna.UI2.WinForms.Guna2Button()
@@ -88,34 +87,13 @@ Partial Class FrmMenuProfesor
         '
         'panelReportes
         '
-        Me.panelReportes.Controls.Add(Me.BTNenviarCorreoReporte)
         Me.panelReportes.Controls.Add(Me.BTNcrearReportes)
         Me.panelReportes.Controls.Add(Me.BTNasignarCalificacion)
         Me.panelReportes.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelReportes.Location = New System.Drawing.Point(0, 766)
         Me.panelReportes.Name = "panelReportes"
-        Me.panelReportes.Size = New System.Drawing.Size(233, 125)
+        Me.panelReportes.Size = New System.Drawing.Size(233, 80)
         Me.panelReportes.TabIndex = 18
-        '
-        'BTNenviarCorreoReporte
-        '
-        Me.BTNenviarCorreoReporte.Animated = True
-        Me.BTNenviarCorreoReporte.BackColor = System.Drawing.Color.DarkCyan
-        Me.BTNenviarCorreoReporte.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNenviarCorreoReporte.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNenviarCorreoReporte.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNenviarCorreoReporte.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNenviarCorreoReporte.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BTNenviarCorreoReporte.FillColor = System.Drawing.Color.DarkSlateBlue
-        Me.BTNenviarCorreoReporte.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNenviarCorreoReporte.ForeColor = System.Drawing.Color.White
-        Me.BTNenviarCorreoReporte.Location = New System.Drawing.Point(0, 82)
-        Me.BTNenviarCorreoReporte.Name = "BTNenviarCorreoReporte"
-        Me.BTNenviarCorreoReporte.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNenviarCorreoReporte.Size = New System.Drawing.Size(233, 43)
-        Me.BTNenviarCorreoReporte.TabIndex = 5
-        Me.BTNenviarCorreoReporte.Text = "Enviar calificaciones por correo"
-        Me.BTNenviarCorreoReporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'BTNcrearReportes
         '
@@ -170,7 +148,7 @@ Partial Class FrmMenuProfesor
         Me.BTNcerrarSesion.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrarSesion.ForeColor = System.Drawing.Color.White
         Me.BTNcerrarSesion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.BTNcerrarSesion.Location = New System.Drawing.Point(0, 891)
+        Me.BTNcerrarSesion.Location = New System.Drawing.Point(0, 846)
         Me.BTNcerrarSesion.Name = "BTNcerrarSesion"
         Me.BTNcerrarSesion.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BTNcerrarSesion.Size = New System.Drawing.Size(233, 45)
@@ -664,5 +642,4 @@ Partial Class FrmMenuProfesor
     Friend WithEvents panelReportes As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BTNasignarCalificacion As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTNcrearReportes As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BTNenviarCorreoReporte As Guna.UI2.WinForms.Guna2Button
 End Class

@@ -63,7 +63,6 @@ Partial Class FrmBuscarPerfilProfesor
         Me.L.Margin = New System.Windows.Forms.Padding(50)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
-        Me.L.Scrollable = False
         Me.L.Size = New System.Drawing.Size(832, 420)
         Me.L.TabIndex = 37
         Me.L.UseCompatibleStateImageBehavior = False

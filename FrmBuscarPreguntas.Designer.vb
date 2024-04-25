@@ -41,7 +41,7 @@ Partial Class FrmBuscarPreguntas
         Me.LabelBuscarPreguntas.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LabelBuscarPreguntas.Location = New System.Drawing.Point(0, 0)
         Me.LabelBuscarPreguntas.Name = "LabelBuscarPreguntas"
-        Me.LabelBuscarPreguntas.Size = New System.Drawing.Size(895, 72)
+        Me.LabelBuscarPreguntas.Size = New System.Drawing.Size(895, 115)
         Me.LabelBuscarPreguntas.TabIndex = 29
         Me.LabelBuscarPreguntas.Text = "Buscar Preguntas"
         Me.LabelBuscarPreguntas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -62,7 +62,7 @@ Partial Class FrmBuscarPreguntas
         Me.TXTNOMBRESUCURSAL.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.TXTNOMBRESUCURSAL.ForeColor = System.Drawing.Color.DimGray
         Me.TXTNOMBRESUCURSAL.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXTNOMBRESUCURSAL.Location = New System.Drawing.Point(29, 99)
+        Me.TXTNOMBRESUCURSAL.Location = New System.Drawing.Point(29, 133)
         Me.TXTNOMBRESUCURSAL.Name = "TXTNOMBRESUCURSAL"
         Me.TXTNOMBRESUCURSAL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TXTNOMBRESUCURSAL.PlaceholderText = "Ingrese el nombre del preguntas"
@@ -79,17 +79,15 @@ Partial Class FrmBuscarPreguntas
         Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.L.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.L.FullRowSelect = True
         Me.L.GridLines = True
         Me.L.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.L.HideSelection = False
         Me.L.HoverSelection = True
-        Me.L.Location = New System.Drawing.Point(29, 158)
+        Me.L.Location = New System.Drawing.Point(29, 194)
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
-        Me.L.Scrollable = False
-        Me.L.Size = New System.Drawing.Size(832, 420)
+        Me.L.Size = New System.Drawing.Size(832, 426)
         Me.L.TabIndex = 31
         Me.L.UseCompatibleStateImageBehavior = False
         Me.L.View = System.Windows.Forms.View.Details
@@ -109,25 +107,25 @@ Partial Class FrmBuscarPreguntas
         '
         Me.ColumnHeader3.Text = "NUMERO OPCION"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 133
+        Me.ColumnHeader3.Width = 145
         '
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "Puntaje"
         Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 280
+        Me.ColumnHeader4.Width = 130
         '
         'ColumnHeader5
         '
         Me.ColumnHeader5.Text = "Opción"
         Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader5.Width = 128
+        Me.ColumnHeader5.Width = 122
         '
         'ColumnHeader6
         '
         Me.ColumnHeader6.Text = "Validacion"
         Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader6.Width = 135
+        Me.ColumnHeader6.Width = 150
         '
         'FrmBuscarPreguntas
         '

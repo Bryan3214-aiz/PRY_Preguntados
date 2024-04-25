@@ -76,7 +76,6 @@ Partial Class FrmBuscarTemas
         Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.L.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.L.FullRowSelect = True
         Me.L.GridLines = True
         Me.L.HideSelection = False
         Me.L.HoverSelection = True

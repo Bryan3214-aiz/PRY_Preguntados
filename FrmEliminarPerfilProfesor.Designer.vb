@@ -73,7 +73,6 @@ Partial Class FrmEliminarPerfilProfesor
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
-        Me.L.Scrollable = False
         Me.L.Size = New System.Drawing.Size(832, 380)
         Me.L.TabIndex = 35
         Me.L.UseCompatibleStateImageBehavior = False

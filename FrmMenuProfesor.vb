@@ -125,7 +125,7 @@
         ocultarMenu()
     End Sub
 
-    Private Sub BTNenviarCorreoReporte_Click(sender As Object, e As EventArgs) Handles BTNenviarCorreoReporte.Click
+    Private Sub BTNenviarCorreoReporte_Click(sender As Object, e As EventArgs) 
         FormularioAbierto(New FrmEnviarCorreo())
         ocultarMenu()
     End Sub

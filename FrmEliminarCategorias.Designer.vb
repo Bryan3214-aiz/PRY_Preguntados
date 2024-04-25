@@ -87,7 +87,6 @@ Partial Class FrmEliminarCategorias
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
-        Me.L.Scrollable = False
         Me.L.Size = New System.Drawing.Size(832, 399)
         Me.L.TabIndex = 30
         Me.L.UseCompatibleStateImageBehavior = False
