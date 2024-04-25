@@ -63,6 +63,9 @@ Partial Class FrmJuegoPreguntas
         Me.PBBARRA.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.PBBARRA.Value = 70
         '
+        'Temporizador
+        '
+        '
         'LBLPUNTOS
         '
         Me.LBLPUNTOS.BackColor = System.Drawing.Color.White
@@ -95,7 +98,6 @@ Partial Class FrmJuegoPreguntas
         Me.BTN1.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN1.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.BTN1.ForeColor = System.Drawing.Color.White
-        Me.BTN1.IndicateFocus = True
         Me.BTN1.Location = New System.Drawing.Point(53, 248)
         Me.BTN1.Name = "BTN1"
         Me.BTN1.Size = New System.Drawing.Size(374, 78)
@@ -114,7 +116,6 @@ Partial Class FrmJuegoPreguntas
         Me.BTN3.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN3.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.BTN3.ForeColor = System.Drawing.Color.White
-        Me.BTN3.IndicateFocus = True
         Me.BTN3.Location = New System.Drawing.Point(533, 248)
         Me.BTN3.Name = "BTN3"
         Me.BTN3.Size = New System.Drawing.Size(374, 78)
@@ -133,7 +134,6 @@ Partial Class FrmJuegoPreguntas
         Me.BTN4.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN4.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.BTN4.ForeColor = System.Drawing.Color.White
-        Me.BTN4.IndicateFocus = True
         Me.BTN4.Location = New System.Drawing.Point(533, 345)
         Me.BTN4.Name = "BTN4"
         Me.BTN4.Size = New System.Drawing.Size(374, 78)
@@ -152,7 +152,6 @@ Partial Class FrmJuegoPreguntas
         Me.BTN2.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN2.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.BTN2.ForeColor = System.Drawing.Color.White
-        Me.BTN2.IndicateFocus = True
         Me.BTN2.Location = New System.Drawing.Point(53, 345)
         Me.BTN2.Name = "BTN2"
         Me.BTN2.Size = New System.Drawing.Size(374, 78)
