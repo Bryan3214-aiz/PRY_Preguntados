@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmEliminarCategorias
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmEliminarCategorias
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.LabelEliTemas = New System.Windows.Forms.Label()
         Me.TXTNOMBRECATEGORIA = New Guna.UI2.WinForms.Guna2TextBox()
@@ -83,7 +83,7 @@ Partial Class FrmEliminarCategorias
         Me.L.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.L.HideSelection = False
         Me.L.HoverSelection = True
-        Me.L.Location = New System.Drawing.Point(30, 186)
+        Me.L.Location = New System.Drawing.Point(30, 196)
         Me.L.Margin = New System.Windows.Forms.Padding(2)
         Me.L.MultiSelect = False
         Me.L.Name = "L"

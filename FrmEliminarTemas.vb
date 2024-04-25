@@ -33,6 +33,12 @@
     Private Sub BTNeliminarTema_Click(sender As Object, e As EventArgs) Handles BTNeliminarTema.Click
         If ID <> 0 Then
             If MsgBox("¿Desea realmente eliminar el tema seleccionado?", vbQuestion + vbYesNo, "Confirmar Solicitud") = vbYes Then
+                comando = "DELETE FROM OPCION WHERE ID_PREGUNTA IN (SELECT ID_PREGUNTA FROM PREGUNTA WHERE ID_CATEGORIA IN (SELECT ID_CATEGORIA FROM CATEGORIA WHERE ID_TEMA = " & ID & "))"
+                EJECUTARSI(comando)
+                comando = "DELETE FROM PREGUNTA WHERE ID_CATEGORIA IN (SELECT ID_CATEGORIA FROM CATEGORIA WHERE ID_TEMA = " & ID & ")"
+                EJECUTARSI(comando)
+                comando = "DELETE FROM CATEGORIA WHERE ID_TEMA = " & ID
+                EJECUTARSI(comando)
                 comando = "DELETE FROM TEMA WHERE ID_TEMA = " & ID
                 EJECUTARSI(comando)
                 INICIALIZAR()
