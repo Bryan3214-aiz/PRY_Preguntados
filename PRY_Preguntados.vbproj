@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PRY_Preguntados.FrmCrearReportes</StartupObject>
     <StartupObject>PRY_Preguntados.FrmOPCIONES</StartupObject>
-    <StartupObject>PRY_Preguntados.FrmMenuProfesor</StartupObject>
+    <StartupObject>PRY_Preguntados.FrmLoginEstudiante</StartupObject>
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -201,12 +201,6 @@
     <Compile Include="FrmCrearReportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRMCrearReportesEstudiante.Designer.vb">
-      <DependentUpon>FRMCrearReportesEstudiante.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FRMCrearReportesEstudiante.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmEliminarCategorias.Designer.vb">
       <DependentUpon>FrmEliminarCategorias.vb</DependentUpon>
     </Compile>
@@ -277,6 +271,12 @@
       <DependentUpon>FrmLoginProfesor.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmLoginProfesor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuPartidaEstudiante.Designer.vb">
+      <DependentUpon>FrmMenuPartidaEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPartidaEstudiante.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMenuProfesor.Designer.vb">
@@ -374,9 +374,6 @@
     <EmbeddedResource Include="FrmCrearReportes.resx">
       <DependentUpon>FrmCrearReportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRMCrearReportesEstudiante.resx">
-      <DependentUpon>FRMCrearReportesEstudiante.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarInformacion.resx">
       <DependentUpon>FrmEditarInformacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -415,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuEstudiante.resx">
       <DependentUpon>FrmMenuEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPartidaEstudiante.resx">
+      <DependentUpon>FrmMenuPartidaEstudiante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuProfesor.resx">
       <DependentUpon>FrmMenuProfesor.vb</DependentUpon>

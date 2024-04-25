@@ -42,7 +42,7 @@
                 comando = "DELETE FROM TEMA WHERE ID_TEMA = " & ID
                 EJECUTARSI(comando)
                 INICIALIZAR()
-                MsgBox("El tema ha sido eliminado satisfactoriamente.", vbInformation + vbOKOnly, "Eliminación Exitosa")
+                MsgBox("El tema ha sido eliminado satisfactoriamente.", vbOKOnly, "Eliminación Exitosa")
                 BTNeliminarTema.Enabled = False
             End If
         End If

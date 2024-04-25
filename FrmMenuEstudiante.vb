@@ -46,4 +46,9 @@
         Me.Hide()
         FrmEditarInformacion.ShowDialog()
     End Sub
+
+    Private Sub BTNcomenzar_Click(sender As Object, e As EventArgs) Handles BTNcomenzar.Click
+        Me.Hide()
+        FrmMenuPartidaEstudiante.ShowDialog()
+    End Sub
 End Class

@@ -68,13 +68,6 @@ Public Class FrmCrearReportes
 
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Guna2ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles Guna2ContextMenuStrip1.Opening
-
-    End Sub
 
     Friend Sub MayorNota()
         comando = "SELECT partida.ID_Partida, partida.ID_Usuario, 
@@ -104,7 +97,6 @@ Public Class FrmCrearReportes
 
 
     Private Sub BTN_Puntacion_Alta_Click(sender As Object, e As EventArgs) Handles BTN_Puntacion_Alta.Click
-
 
         MayorNota()
 
