@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PRY_Preguntados.FrmCrearReportes</StartupObject>
     <StartupObject>PRY_Preguntados.FrmOPCIONES</StartupObject>
-    <StartupObject>PRY_Preguntados.FrmLoginEstudiante</StartupObject>
+    <StartupObject>PRY_Preguntados.FrmVideoInicio</StartupObject>
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>

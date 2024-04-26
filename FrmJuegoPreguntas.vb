@@ -23,6 +23,7 @@ Public Class FrmJuegoPreguntas
         MostrarSonido()
         MostrarVideo()
         REFRESCAR_PREGUNTAS()
+        Me.BeginInvoke(Sub() BTN1.Focus())
     End Sub
 
     Friend Function ObtenerVideo() As Byte()
@@ -115,6 +116,7 @@ Public Class FrmJuegoPreguntas
 
 
     Friend Sub REFRESCAR_PREGUNTAS()
+
         Dim T2 As New DataSet
         Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
         ''Dim CATEGORIA As String = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedItem
