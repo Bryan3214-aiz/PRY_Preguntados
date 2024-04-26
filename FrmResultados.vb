@@ -9,8 +9,10 @@
         Temporizado.Interval = 20
         Temporizado.Start()
         Guna2Panel1.BackColor = Color.FromArgb(80, Color.Black)
-        inicializar()
+        INICIALIZAR()
     End Sub
+
+
     Friend Sub INICIALIZAR()
 
         ds.Tables.Clear()
