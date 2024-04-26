@@ -121,6 +121,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property correcto() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("correcto", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property fondoPRG() As System.Drawing.Bitmap
@@ -161,12 +170,30 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property OpcionSeleccionada() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("OpcionSeleccionada", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property png_transparent_x_red_mark_incorrect_thumbnail__1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("png-transparent-x-red-mark-incorrect-thumbnail (1)", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property PreguntaIncorrecta() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("PreguntaIncorrecta", resourceCulture)
             End Get
         End Property
         

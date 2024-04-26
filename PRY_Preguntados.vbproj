@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PRY_Preguntados.FrmCrearReportes</StartupObject>
     <StartupObject>PRY_Preguntados.FrmOPCIONES</StartupObject>
-    <StartupObject>PRY_Preguntados.FrmLoginEstudiante</StartupObject>
+    <StartupObject>PRY_Preguntados.FrmVideoInicio</StartupObject>
     <RootNamespace>PRY_Preguntados</RootNamespace>
     <AssemblyName>PRY_Preguntados</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -544,6 +544,11 @@
     <None Include="Recursos\img\img-usuario.png" />
     <None Include="Recursos\sonidos\sonidoJuego.wav" />
     <None Include="Recursos\sonidos\sonidoTransición.wav" />
+    <None Include="Recursos\sonidos\correct-101soundboards.wav" />
+    <None Include="Recursos\sonidos\Efecto de sonido burbuja POP.wav" />
+    <None Include="Recursos\sonidos\OpcionSeleccionada.wav" />
+    <None Include="Recursos\sonidos\PreguntaIncorrecta.wav" />
+    <None Include="Recursos\sonidos\correcto.wav" />
     <Content Include="Recursos\video\videoArtePRE.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

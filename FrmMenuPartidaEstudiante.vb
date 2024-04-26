@@ -53,10 +53,17 @@
         End If
     End Sub
 
+    Private Sub DetenerMusica()
+        If reproductor IsNot Nothing Then
+            reproductor.Stop()
+        End If
+    End Sub
+
+
     Private Sub BTNcomenzar_Click(sender As Object, e As EventArgs) Handles BTNcomenzar.Click
         Me.Hide()
         FrmJuegoPreguntas.ShowDialog()
-        FrmMusicaJuego.Close()
+        DetenerMusica()
         Me.Close()
     End Sub
 End Class

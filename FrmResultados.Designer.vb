@@ -126,7 +126,7 @@ Partial Class FrmResultados
         'LbLNombreCategoria
         '
         Me.LbLNombreCategoria.BackColor = System.Drawing.Color.Transparent
-        Me.LbLNombreCategoria.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbLNombreCategoria.Font = New System.Drawing.Font("Showcard Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbLNombreCategoria.ForeColor = System.Drawing.SystemColors.Control
         Me.LbLNombreCategoria.Location = New System.Drawing.Point(178, 89)
         Me.LbLNombreCategoria.Name = "LbLNombreCategoria"

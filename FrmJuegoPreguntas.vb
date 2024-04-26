@@ -1,6 +1,8 @@
 ﻿Imports System.Data.OleDb
 Imports System.Globalization
 Imports System.IO
+Imports WMPLib
+
 
 Public Class FrmJuegoPreguntas
     Dim M(100, 8) As String
@@ -10,14 +12,15 @@ Public Class FrmJuegoPreguntas
     Dim tiempo_limite As Integer = 0
     Dim Respuestas_Correctas As Integer = 0
     Dim Respuestas_Incorrectas As Integer = 0
-    Private videoBytesTemp As Byte()
     Dim reproductor As System.Media.SoundPlayer
+    Dim wmp As New WindowsMediaPlayer()
+
 
     Private Sub FrmJuegoPreguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MostrarSonido()
         MostrarVideo()
         REFRESCAR_PREGUNTAS()
     End Sub
-
 
     Friend Function ObtenerVideo() As Byte()
 
@@ -69,6 +72,53 @@ Public Class FrmJuegoPreguntas
     End Sub
 
 
+    Friend Function ObtenerSonido() As Byte()
+        Dim sonidoBytes As Byte() = Nothing
+        Try
+            CONECTAR()
+            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+            Dim query As String = "SELECT SONIDO_CATEGORIA FROM CATEGORIA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
+            Using cmd As New OleDbCommand(query, miconexion)
+                Dim result As Object = cmd.ExecuteScalar()
+                If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                    sonidoBytes = DirectCast(result, Byte())
+                End If
+            End Using
+            Console.WriteLine("Sonido recuperado exitosamente de la base de datos.")
+        Catch ex As Exception
+            Console.WriteLine("Error al recuperar el sonido de la base de datos: " & ex.Message)
+        Finally
+            DESCONECTAR()
+        End Try
+        Return sonidoBytes
+    End Function
+
+    Friend Sub MostrarSonido()
+        Dim sonidoBytes As Byte() = ObtenerSonido()
+        If sonidoBytes IsNot Nothing AndAlso sonidoBytes.Length > 0 Then
+            Try
+                Dim tempFilePath As String = Path.GetTempFileName()
+                tempFilePath = Path.ChangeExtension(tempFilePath, ".mp3")
+                File.WriteAllBytes(tempFilePath, sonidoBytes)
+
+                ' Utilizar Windows Media Player para reproducir el archivo MP3
+                wmp.URL = tempFilePath
+                wmp.controls.play()
+
+                Console.WriteLine("Sonido mostrado correctamente.")
+            Catch ex As Exception
+                Console.WriteLine("Error al mostrar el sonido: " & ex.Message)
+            End Try
+        Else
+            Console.WriteLine("No se encontró el sonido en la base de datos.")
+        End If
+    End Sub
+
+
+
+
+
+
     Friend Sub REFRESCAR_PREGUNTAS()
         Dim T2 As New DataSet
         Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
@@ -113,14 +163,16 @@ Public Class FrmJuegoPreguntas
 
     Friend Sub SIGUIENTE()
         TiempoPregunta.Stop()
-        sonidoTransición()
         FILA_ACTUAL += 1
         If M(FILA_ACTUAL, 0) <> "" Then
-
+            sonidoTransicion()
             IniciarTiempoLimite(M(FILA_ACTUAL, 8))
             CargarPregunta(FILA_ACTUAL)
             TiempoPregunta.Start()
         Else
+            If wmp IsNot Nothing Then
+                wmp.controls.stop()
+            End If
             MsgBox("Su juego ha concluido.", vbInformation + vbOKOnly, "Fin del juego")
             Me.Hide()
             FrmResultados.ShowDialog()
@@ -135,12 +187,13 @@ Public Class FrmJuegoPreguntas
         Progreso_Barra.Value = 0
 
         If RESPUESTA = M(FILA_ACTUAL, 6) Then
-
+            sonidoCorrecta()
             LBLPUNTOS.Text = CInt(LBLPUNTOS.Text) + CInt(M(FILA_ACTUAL, 1))
             Respuestas_Correctas = Respuestas_Correctas + 1
         ElseIf RESPUESTA <> M(FILA_ACTUAL, 6) Then
-
+            sonidoIncorrecta()
             Respuestas_Incorrectas = Respuestas_Incorrectas + 1
+
             Select Case RESPUESTA
                 Case BTN1.Text
                     BTN1.FillColor = Color.Red ' Cambia el color del botón seleccionado a rojo
@@ -194,29 +247,66 @@ Public Class FrmJuegoPreguntas
         End Select
     End Sub
 
-    Private Sub sonidoTransición()
-        Dim SonidoTransicion = My.Resources.sonidoTransición
-        reproductor = New System.Media.SoundPlayer(SonidoTransicion)
-        reproductor.Play()
+    Private Sub sonidoTransicion()
+
+        Try
+            ' Reproducir el efecto de sonido de forma independiente
+            My.Computer.Audio.Play(My.Resources.sonidoTransición, AudioPlayMode.Background)
+        Catch ex As Exception
+            Console.WriteLine("Error al reproducir el efecto de sonido: " & ex.Message)
+        End Try
+
+    End Sub
+    Private Sub sonidoPresionar()
+        Try
+            ' Reproducir el efecto de sonido de forma independiente
+            My.Computer.Audio.Play(My.Resources.OpcionSeleccionada, AudioPlayMode.Background)
+        Catch ex As Exception
+            Console.WriteLine("Error al reproducir el efecto de sonido: " & ex.Message)
+        End Try
+
     End Sub
 
+    Private Sub sonidoCorrecta()
+
+        Try
+            ' Reproducir el efecto de sonido de forma independiente
+            My.Computer.Audio.Play(My.Resources.correcto, AudioPlayMode.Background)
+        Catch ex As Exception
+            Console.WriteLine("Error al reproducir el efecto de sonido: " & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub sonidoIncorrecta()
+        Try
+            ' Reproducir el efecto de sonido de forma independiente
+            My.Computer.Audio.Play(My.Resources.PreguntaIncorrecta, AudioPlayMode.Background)
+        Catch ex As Exception
+            Console.WriteLine("Error al reproducir el efecto de sonido: " & ex.Message)
+        End Try
+    End Sub
 
     Private Sub BTN1_Click(sender As Object, e As EventArgs) Handles BTN1.Click
+        sonidoPresionar()
         REVISAR(BTN1.Text)
     End Sub
 
 
-    Private Sub BTN2_Click(sender As Object, e As EventArgs) Handles BTN3.Click
+    Private Sub BTN3_Click(sender As Object, e As EventArgs) Handles BTN3.Click
+        sonidoPresionar()
         REVISAR(BTN3.Text)
     End Sub
 
 
-    Private Sub BTN3_Click(sender As Object, e As EventArgs) Handles BTN2.Click
+    Private Sub BTN2_Click(sender As Object, e As EventArgs) Handles BTN2.Click
+        sonidoPresionar()
         REVISAR(BTN2.Text)
     End Sub
 
 
     Private Sub BTN4_Click(sender As Object, e As EventArgs) Handles BTN4.Click
+        sonidoPresionar()
         REVISAR(BTN4.Text)
     End Sub
 

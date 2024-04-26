@@ -169,9 +169,9 @@ Partial Class FrmJuegoPreguntas
         Me.LBLPREGUNTA.BackColor = System.Drawing.Color.Transparent
         Me.LBLPREGUNTA.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLPREGUNTA.ForeColor = System.Drawing.SystemColors.Control
-        Me.LBLPREGUNTA.Location = New System.Drawing.Point(71, 99)
+        Me.LBLPREGUNTA.Location = New System.Drawing.Point(244, 134)
         Me.LBLPREGUNTA.Name = "LBLPREGUNTA"
-        Me.LBLPREGUNTA.Size = New System.Drawing.Size(811, 120)
+        Me.LBLPREGUNTA.Size = New System.Drawing.Size(481, 85)
         Me.LBLPREGUNTA.TabIndex = 29
         Me.LBLPREGUNTA.Text = "Nombre del estudiante:"
         Me.LBLPREGUNTA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
