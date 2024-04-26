@@ -2,7 +2,7 @@
     Private duracionTransicion As Double = 0.5
     Private tiempoTranscurrido As Double = 0
     Dim ID_ESTUDIANTE As Integer = FrmLoginEstudiante.ID_estudiante
-    Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+    Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
     Private Sub FrmResultados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.DoubleBuffered = True
         Me.Opacity = 0
@@ -57,7 +57,7 @@
 
     Private Sub BTNvolver_Click(sender As Object, e As EventArgs) Handles BTNvolver.Click
         Me.Hide()
-        FrmMenuPartidaEstudiante.Show()
+        FrmMenuEstudiante.Show()
     End Sub
 
 

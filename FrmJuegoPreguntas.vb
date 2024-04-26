@@ -30,7 +30,7 @@ Public Class FrmJuegoPreguntas
         Dim videoBytes As Byte() = Nothing
         Try
             CONECTAR()
-            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
             Dim query As String = "SELECT VIDEO_CATEGORIA FROM CATEGORIA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
             Using cmd As New OleDbCommand(query, miconexion)
                 Dim result As Object = cmd.ExecuteScalar()
@@ -82,7 +82,7 @@ Public Class FrmJuegoPreguntas
         Dim sonidoBytes As Byte() = Nothing
         Try
             CONECTAR()
-            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
             Dim query As String = "SELECT SONIDO_CATEGORIA FROM CATEGORIA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
             Using cmd As New OleDbCommand(query, miconexion)
                 Dim result As Object = cmd.ExecuteScalar()
@@ -116,7 +116,7 @@ Public Class FrmJuegoPreguntas
 
     Friend Sub REFRESCAR_PREGUNTAS()
         Dim T2 As New DataSet
-        Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+        Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
 
         ds.Tables.Clear()
         comando = "SELECT ID_PREGUNTA, ENUNCIADO_PREGUNTA, PUNTAJE,tiempo_limite FROM PREGUNTA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
@@ -165,9 +165,7 @@ Public Class FrmJuegoPreguntas
             CargarPregunta(FILA_ACTUAL)
             TiempoPregunta.Start()
         Else
-
             wmp.controls.stop()
-            wmp.close()
             MsgBox("Su juego ha concluido.", vbInformation + vbOKOnly, "Fin del juego")
             Me.Hide()
             FrmResultados.ShowDialog()

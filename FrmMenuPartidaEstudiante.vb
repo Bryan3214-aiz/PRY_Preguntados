@@ -1,6 +1,7 @@
 ﻿Public Class FrmMenuPartidaEstudiante
     Private duracionTransicion As Double = 0.5
     Private tiempoTranscurrido As Double = 0
+    Public ID_CAT As Integer
 
     Private Sub FrmMenuPartidaEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.DoubleBuffered = True
@@ -44,7 +45,7 @@
 
     Friend Sub Inicializar()
         Dim nivel As String = FrmLoginEstudiante.NIVEL_ESTUDIANTE
-        comando = "SELECT NOMBRE_CATEGORIA FROM CATEGORIA INNER JOIN TEMA ON CATEGORIA.ID_TEMA = TEMA.ID_TEMA WHERE NIVEL = '" & nivel & "'"
+        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA FROM CATEGORIA INNER JOIN TEMA ON CATEGORIA.ID_TEMA = TEMA.ID_TEMA WHERE NIVEL = '" & nivel & "'"
         BUSCARcombo(comando)
     End Sub
 
@@ -54,7 +55,8 @@
         CARGAR_TABLA(ds, SQL)
         If ds.Tables(0).Rows.Count > 0 Then
             For I = 0 To ds.Tables(0).Rows.Count - 1
-                CMBseleccionarFRM.Items.Add(ds.Tables(0).Rows(I).Item(0))
+                ID_CAT = ds.Tables(0).Rows(I).Item(0)
+                CMBseleccionarFRM.Items.Add(ds.Tables(0).Rows(I).Item(1))
             Next
         End If
     End Sub
@@ -62,6 +64,5 @@
     Private Sub BTNcomenzar_Click(sender As Object, e As EventArgs) Handles BTNcomenzar.Click
         Me.Hide()
         FrmJuegoPreguntas.ShowDialog()
-        Me.Close()
     End Sub
 End Class
