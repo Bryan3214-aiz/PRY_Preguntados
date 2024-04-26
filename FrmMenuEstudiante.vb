@@ -53,4 +53,14 @@
         Me.Hide()
         FrmMenuPartidaEstudiante.ShowDialog()
     End Sub
+
+    Private Sub BTNranking_Click(sender As Object, e As EventArgs) Handles BTNranking.Click
+        Me.Hide()
+        FrmRankingEstudiante.ShowDialog()
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        Me.Hide()
+        FrmVerPuntuaciones.ShowDialog()
+    End Sub
 End Class

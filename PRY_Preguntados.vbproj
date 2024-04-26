@@ -321,6 +321,12 @@
     <Compile Include="FrmCrearTemas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmRankingEstudiante.Designer.vb">
+      <DependentUpon>FrmRankingEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRankingEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmRegistrarEstudiante.Designer.vb">
       <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>
     </Compile>
@@ -337,6 +343,12 @@
       <DependentUpon>FrmVerDatosRegistradosEstudiante.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmVerDatosRegistradosEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerPuntuaciones.Designer.vb">
+      <DependentUpon>FrmVerPuntuaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerPuntuaciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVideoInicio.vb">
@@ -461,6 +473,9 @@
     <EmbeddedResource Include="FrmCrearTemas.resx">
       <DependentUpon>FrmCrearTemas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRankingEstudiante.resx">
+      <DependentUpon>FrmRankingEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarEstudiante.resx">
       <DependentUpon>FrmRegistrarEstudiante.vb</DependentUpon>
     </EmbeddedResource>
@@ -469,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerDatosRegistradosEstudiante.resx">
       <DependentUpon>FrmVerDatosRegistradosEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerPuntuaciones.resx">
+      <DependentUpon>FrmVerPuntuaciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVideoInicio.resx">
       <DependentUpon>FrmVideoInicio.vb</DependentUpon>
