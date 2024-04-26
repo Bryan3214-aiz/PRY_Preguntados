@@ -11,13 +11,12 @@
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(2))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(3))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(4))
-                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(5))
             Next
         End If
     End Sub
 
     Private Sub FrmRankingEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        comando = "SELECT ESTUDIANTE.NOMBRE_COMPLETO, ESTUDIANTE.NIVEL, PARTIDA.PUNTAJE, PARTIDA.TIEMPO_TOTAL, PARTIDA.RESPUESTAS_CORRECTAS, PARTIDA.RESPUESTAS_INCORRECTAS FROM PARTIDA INNER JOIN ESTUDIANTE ON ESTUDIANTE.ID_USUARIO = PARTIDA.ID_USUARIO ORDER BY PARTIDA.PUNTAJE DESC"
+        comando = "SELECT ESTUDIANTE.NOMBRE_COMPLETO, ESTUDIANTE.NIVEL, PARTIDA.PUNTAJE, PARTIDA.RESPUESTAS_CORRECTAS, PARTIDA.RESPUESTAS_INCORRECTAS FROM PARTIDA INNER JOIN ESTUDIANTE ON ESTUDIANTE.ID_USUARIO = PARTIDA.ID_USUARIO ORDER BY PARTIDA.PUNTAJE DESC"
         BUSCAR(comando)
     End Sub
 
