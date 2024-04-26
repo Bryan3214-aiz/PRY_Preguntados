@@ -1,8 +1,7 @@
 ﻿Public Class FrmResultados
     Private duracionTransicion As Double = 0.5
     Private tiempoTranscurrido As Double = 0
-    Dim ID_ESTUDIANTE As Integer = FrmLoginEstudiante.ID_estudiante
-    Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
+
     Private Sub FrmResultados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.DoubleBuffered = True
         Me.Opacity = 0
@@ -16,7 +15,8 @@
     Friend Sub INICIALIZAR()
 
         ds.Tables.Clear()
-
+        Dim ID_ESTUDIANTE As Integer = FrmLoginEstudiante.ID_estudiante
+        Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
         comando = "SELECT ESTUDIANTE.NOMBRE_COMPLETO, ESTUDIANTE.NIVEL, PARTIDA.PUNTAJE, PARTIDA.TIEMPO_TOTAL, PARTIDA.RESPUESTAS_CORRECTAS, PARTIDA.RESPUESTAS_INCORRECTAS FROM PARTIDA INNER JOIN ESTUDIANTE ON ESTUDIANTE.ID_USUARIO = PARTIDA.ID_USUARIO WHERE PARTIDA.ID_USUARIO = " & ID_ESTUDIANTE & " AND PARTIDA.ID_CATEGORIA = " & ID_CATEGORIA & ""
 
         CARGAR_TABLA(ds, comando)

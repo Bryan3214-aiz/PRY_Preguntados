@@ -72,29 +72,15 @@ Public Class FrmCrearReportes
 
 
     Friend Sub MayorNota()
-        comando = "SELECT partida.ID_Partida, partida.ID_Usuario, 
-                   (SELECT TOP 1 Nombre_Completo FROM estudiante WHERE ID_Usuario = partida.ID_Usuario) AS Nombre_Estudiante, 
-                   (SELECT TOP 1 Nombre_Categoria FROM categoria WHERE ID_Categoria = partida.ID_Categoria) AS Nombre_Categoria, 
-                   partida.ID_Categoria, partida.Puntaje, partida.Respuestas_Correctas, 
-                   partida.Respuestas_Incorrectas, partida.Fecha_Partida 
-                   FROM partida 
-                   WHERE partida.Puntaje = (SELECT MAX(Puntaje) FROM partida)"
+        comando = "SELECT partida.ID_Partida, partida.ID_Usuario, (SELECT TOP 1 Nombre_Completo FROM estudiante WHERE ID_Usuario = partida.ID_Usuario) AS Nombre_Estudiante, (SELECT TOP 1 Nombre_Categoria FROM categoria WHERE ID_Categoria = partida.ID_Categoria) AS Nombre_Categoria, partida.ID_Categoria, partida.Puntaje, partida.Respuestas_Correctas, partida.Respuestas_Incorrectas, partida.Fecha_Partida FROM partida WHERE partida.Puntaje = (SELECT MAX(Puntaje) FROM partida)"
         BUSCAR(comando)
 
     End Sub
 
 
     Friend Sub MenorNota()
-        comando = "SELECT partida.ID_Partida, partida.ID_Usuario, 
-             (SELECT TOP 1 Nombre_Completo FROM estudiante WHERE ID_Usuario = partida.ID_Usuario) AS Nombre_Estudiante, 
-             (SELECT TOP 1 Nombre_Categoria FROM categoria WHERE ID_Categoria = partida.ID_Categoria) AS Nombre_Categoria, 
-              partida.ID_Categoria, partida.Puntaje, partida.Respuestas_Correctas, 
-  partida.Respuestas_Incorrectas, partida.Fecha_Partida 
-  FROM partida 
-  WHERE partida.Puntaje = (SELECT MIN(Puntaje) FROM partida)"
-
+        comando = "SELECT partida.ID_Partida, partida.ID_Usuario, (SELECT TOP 1 Nombre_Completo FROM estudiante WHERE ID_Usuario = partida.ID_Usuario) AS Nombre_Estudiante, (SELECT TOP 1 Nombre_Categoria FROM categoria WHERE ID_Categoria = partida.ID_Categoria) AS Nombre_Categoria, partida.ID_Categoria, partida.Puntaje, partida.Respuestas_Correctas, partida.Respuestas_Incorrectas, partida.Fecha_Partida FROM partida WHERE partida.Puntaje = (SELECT MIN(Puntaje) FROM partida)"
         BUSCAR(comando)
-
     End Sub
 
 

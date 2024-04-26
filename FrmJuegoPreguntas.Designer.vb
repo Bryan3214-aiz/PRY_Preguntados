@@ -77,12 +77,12 @@ Partial Class FrmJuegoPreguntas
         'LBLPUNTOS
         '
         Me.LBLPUNTOS.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.LBLPUNTOS.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLPUNTOS.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLPUNTOS.ForeColor = System.Drawing.Color.White
         Me.LBLPUNTOS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LBLPUNTOS.Location = New System.Drawing.Point(187, 174)
+        Me.LBLPUNTOS.Location = New System.Drawing.Point(169, 177)
         Me.LBLPUNTOS.Name = "LBLPUNTOS"
-        Me.LBLPUNTOS.Size = New System.Drawing.Size(31, 34)
+        Me.LBLPUNTOS.Size = New System.Drawing.Size(54, 31)
         Me.LBLPUNTOS.TabIndex = 21
         Me.LBLPUNTOS.Text = "0"
         Me.LBLPUNTOS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
