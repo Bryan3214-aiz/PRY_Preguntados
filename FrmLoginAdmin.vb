@@ -24,23 +24,28 @@ Public Class FrmLoginAdmin
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
+        Try
+            ds.Tables.Clear()
+            comando = "SELECT ID FROM ADMINISTRADOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
+            DESCONECTAR()
+            CARGAR_TABLA(ds, comando)
+            ID_administrador = ds.Tables(0).Rows(0).Item(0)
+            If ID_administrador > 0 Then
+                Me.Hide()
+                FrmMenuAdministrador.ShowDialog()
+                Me.Close()
+            Else
+                ' Si no se encontraron filas, se muestra un mensaje de error
+                MsgBox("El usuario o contraseña no coinciden")
+                TXTcorreo.Text = ""
+                TXTcontrasena.Text = ""
+            End If
+            DESCONECTAR()
+        Catch ex As Exception
+            Console.WriteLine("Error: " & ex.Message)
+            MessageBox.Show("Ocurrió un error al autenticar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
-        ds.Tables.Clear()
-        comando = "SELECT ID FROM ADMINISTRADOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
-        DESCONECTAR()
-        CARGAR_TABLA(ds, comando)
-        ID_administrador = ds.Tables(0).Rows(0).Item(0)
-        If ID_administrador > 0 Then
-            Me.Hide()
-            FrmMenuAdministrador.ShowDialog()
-            Me.Close()
-        Else
-            ' Si no se encontraron filas, se muestra un mensaje de error
-            MsgBox("El usuario o contraseña no coinciden")
-            TXTcorreo.Text = ""
-            TXTcontrasena.Text = ""
-        End If
-        DESCONECTAR()
     End Sub
 
     Private Sub BTNvolverMenu_Click(sender As Object, e As EventArgs) Handles BTNvolverMenu.Click

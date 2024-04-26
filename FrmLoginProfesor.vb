@@ -21,22 +21,28 @@ Public Class FrmLoginProfesor
     End Sub
 
     Public Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        ds.Tables.Clear()
-        comando = "SELECT ID_PROFESOR, NOMBRE_COMPLETO FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
-        DESCONECTAR()
-        CARGAR_TABLA(ds, comando)
-        ID_profesor = ds.Tables(0).Rows(0).Item(0)
-        NOMBRE_PROFESOR = ds.Tables(0).Rows(0).Item(1)
-        If ID_profesor > 0 Then
-            Me.Hide()
-            FrmMenuProfesor.ShowDialog()
-            Me.Close()
-        Else
-            MsgBox("El usuario o contraseña no coinciden")
-            TXTcorreo.Text = ""
-            TXTcontrasena.Text = ""
-        End If
-        DESCONECTAR()
+        Try
+            ds.Tables.Clear()
+            comando = "SELECT ID_PROFESOR, NOMBRE_COMPLETO FROM PROFESOR WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
+            DESCONECTAR()
+            CARGAR_TABLA(ds, comando)
+            ID_profesor = ds.Tables(0).Rows(0).Item(0)
+            NOMBRE_PROFESOR = ds.Tables(0).Rows(0).Item(1)
+            If ID_profesor > 0 Then
+                Me.Hide()
+                FrmMenuProfesor.ShowDialog()
+                Me.Close()
+            Else
+                MsgBox("El usuario o contraseña no coinciden")
+                TXTcorreo.Text = ""
+                TXTcontrasena.Text = ""
+            End If
+            DESCONECTAR()
+        Catch ex As Exception
+            Console.WriteLine("Error: " & ex.Message)
+            MessageBox.Show("Ocurrió un error al autenticar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 
 
