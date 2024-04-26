@@ -35,6 +35,7 @@ Partial Class FrmJuegoPreguntas
         Me.BTN2 = New Guna.UI2.WinForms.Guna2Button()
         Me.LBLPREGUNTA = New System.Windows.Forms.Label()
         Me.TiempoPregunta = New System.Windows.Forms.Timer(Me.components)
+        Me.TemporizadoTransicion = New System.Windows.Forms.Timer(Me.components)
         CType(Me.MediaPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -179,6 +180,9 @@ Partial Class FrmJuegoPreguntas
         'TiempoPregunta
         '
         '
+        'TemporizadoTransicion
+        '
+        '
         'FrmJuegoPreguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -216,4 +220,5 @@ Partial Class FrmJuegoPreguntas
     Friend WithEvents BTN2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LBLPREGUNTA As Label
     Friend WithEvents TiempoPregunta As Timer
+    Friend WithEvents TemporizadoTransicion As Timer
 End Class

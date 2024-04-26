@@ -3,8 +3,10 @@ Imports System.Globalization
 Imports System.IO
 Imports WMPLib
 
-
 Public Class FrmJuegoPreguntas
+    Private duracionTransicion As Double = 0.5
+    Private tiempoTranscurrido As Double = 0
+
     Dim M(100, 8) As String
     Dim FILA_ACTUAL As Integer = 0
     Dim PTOTAL As Integer = 0
@@ -14,6 +16,10 @@ Public Class FrmJuegoPreguntas
     Dim Respuestas_Incorrectas As Integer = 0
 
     Private Sub FrmJuegoPreguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.DoubleBuffered = True
+        Me.Opacity = 0
+        TemporizadoTransicion.Interval = 20
+        TemporizadoTransicion.Start()
         MostrarSonido()
         MostrarVideo()
         REFRESCAR_PREGUNTAS()
@@ -390,10 +396,18 @@ Public Class FrmJuegoPreguntas
         ResetButtonColors()
         BTN4.FillColor = Color.Gold
     End Sub
+
+    Private Sub TemporizadoTR_Tick(sender As Object, e As EventArgs) Handles TemporizadoTransicion.Tick
+        tiempoTranscurrido += TemporizadoTransicion.Interval / 1000
+
+        Me.Opacity = Math.Min(tiempoTranscurrido / duracionTransicion, 1)
+
+        If tiempoTranscurrido >= duracionTransicion Then
+            TemporizadoTransicion.Stop()
+        End If
+    End Sub
 End Class
-Module sonidoJuego
-    Public wmp As New WindowsMediaPlayer()
-End Module
+
 
 
 

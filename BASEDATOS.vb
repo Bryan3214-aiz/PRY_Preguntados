@@ -1,6 +1,8 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports System.IO
+Imports WMPLib
+
 Module BASEDATOS
     'Modulo para conexion a base de datos'
     Public pro As String
@@ -9,6 +11,11 @@ Module BASEDATOS
     Public miconexion As OleDbConnection = New OleDbConnection
     Public ds As New DataSet
     Public dt As New DataTable
+
+    Public reproductor As System.Media.SoundPlayer
+    Public wmp As New WindowsMediaPlayer()
+
+
     'Función conectar para obtener conexión al archivo udl que contiene la base de datos
     Friend Sub CONECTAR()
         ' pro = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\PRY_PREGUNTADOS\proyecto_preguntas.mdb"'
