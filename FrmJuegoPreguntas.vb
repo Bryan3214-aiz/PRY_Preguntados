@@ -103,13 +103,13 @@ Public Class FrmJuegoPreguntas
                 Case BTN4.Text
                     BTN4.FillColor = Color.Red
             End Select
+
         End If
         MarcarRespuestaCorrecta()
 
-        Temporizador.Interval = 5000
+        Temporizador.Interval = 3000
         Temporizador.Start()
 
-        'GUARDAR(RESPUESTA)
     End Sub
 
     Private Sub MarcarRespuestaCorrecta()
@@ -123,6 +123,10 @@ Public Class FrmJuegoPreguntas
             Case BTN4.Text
                 BTN4.FillColor = Color.Green
         End Select
+        BTN1.Enabled = False
+        BTN2.Enabled = False
+        BTN3.Enabled = False
+        BTN4.Enabled = False
     End Sub
 
     Private Sub BTN1_Click(sender As Object, e As EventArgs) Handles BTN1.Click
@@ -145,17 +149,18 @@ Public Class FrmJuegoPreguntas
     End Sub
 
     Private Sub Temporizador_Tick(sender As Object, e As EventArgs) Handles Temporizador.Tick
-        BTN1.FillColor = Color.MediumSlateBlue
-        BTN2.FillColor = Color.MediumSlateBlue
-        BTN3.FillColor = Color.MediumSlateBlue
-        BTN4.FillColor = Color.MediumSlateBlue
+        ' Restablece los colores de los botones
+        ResetButtonColors()
+
         ' Reactivar los botones
         BTN1.Enabled = True
         BTN2.Enabled = True
         BTN3.Enabled = True
         BTN4.Enabled = True
+
         Temporizador.Stop() ' Detener el temporizador
         SIGUIENTE()
+
     End Sub
 
     'Modulos para moverse con teclas'
@@ -211,6 +216,7 @@ Public Class FrmJuegoPreguntas
         ResetButtonColors()
         BTN4.FillColor = Color.Gold
     End Sub
+
 
 
 End Class
