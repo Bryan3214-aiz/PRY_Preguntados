@@ -45,11 +45,7 @@
 
     Friend Sub Inicializar()
         Dim nivel As String = FrmLoginEstudiante.NIVEL_ESTUDIANTE
-        Dim ID_ESTUDIANTE_ACTUAL As Integer = FrmLoginEstudiante.ID_estudiante
-        comando = "SELECT C.ID_CATEGORIA, C.NOMBRE_CATEGORIA FROM CATEGORIA C " &
-              "INNER JOIN TEMA T ON C.ID_TEMA = T.ID_TEMA " &
-              "INNER JOIN PARTIDA P ON C.ID_CATEGORIA = P.ID_CATEGORIA " &
-              "WHERE T.NIVEL = '" & nivel & "' AND P.ID_ESTUDIANTE <> '" & ID_ESTUDIANTE_ACTUAL & "'"
+        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA FROM CATEGORIA INNER JOIN TEMA ON CATEGORIA.ID_TEMA = TEMA.ID_TEMA WHERE TEMA.NIVEL = '" & nivel & "'"
         BUSCARcombo(comando)
     End Sub
 

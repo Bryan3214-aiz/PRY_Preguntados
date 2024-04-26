@@ -76,7 +76,6 @@ Public Class FrmVerDatosRegistradosEstudiante
                     End Using
                 End If
             Next
-
         End If
     End Sub
     Friend Sub INICIALIZAR()

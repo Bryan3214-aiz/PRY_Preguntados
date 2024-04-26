@@ -36,7 +36,9 @@ Partial Class FrmJuegoPreguntas
         Me.LBLPREGUNTA = New System.Windows.Forms.Label()
         Me.TiempoPregunta = New System.Windows.Forms.Timer(Me.components)
         Me.TemporizadoTransicion = New System.Windows.Forms.Timer(Me.components)
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         CType(Me.MediaPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MediaPlayer
@@ -46,7 +48,6 @@ Partial Class FrmJuegoPreguntas
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MediaPlayer.Enabled = True
         Me.MediaPlayer.Location = New System.Drawing.Point(-51, -38)
-        Me.MediaPlayer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MediaPlayer.Name = "MediaPlayer"
         Me.MediaPlayer.OcxState = CType(resources.GetObject("MediaPlayer.OcxState"), System.Windows.Forms.AxHost.State)
         Me.MediaPlayer.Size = New System.Drawing.Size(1040, 560)
@@ -59,12 +60,11 @@ Partial Class FrmJuegoPreguntas
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Progreso_Barra.BackColor = System.Drawing.Color.Transparent
         Me.Progreso_Barra.FillColor = System.Drawing.Color.Black
-        Me.Progreso_Barra.Location = New System.Drawing.Point(101, 562)
-        Me.Progreso_Barra.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Progreso_Barra.Location = New System.Drawing.Point(76, 457)
         Me.Progreso_Barra.Name = "Progreso_Barra"
         Me.Progreso_Barra.ProgressColor = System.Drawing.Color.Gold
         Me.Progreso_Barra.ProgressColor2 = System.Drawing.Color.Gold
-        Me.Progreso_Barra.Size = New System.Drawing.Size(1075, 18)
+        Me.Progreso_Barra.Size = New System.Drawing.Size(806, 15)
         Me.Progreso_Barra.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.Progreso_Barra.TabIndex = 20
         Me.Progreso_Barra.Text = "Guna2ProgressBar1"
@@ -76,25 +76,22 @@ Partial Class FrmJuegoPreguntas
         '
         'LBLPUNTOS
         '
-        Me.LBLPUNTOS.BackColor = System.Drawing.Color.White
+        Me.LBLPUNTOS.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.LBLPUNTOS.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLPUNTOS.ForeColor = System.Drawing.Color.DarkSlateBlue
+        Me.LBLPUNTOS.ForeColor = System.Drawing.Color.White
         Me.LBLPUNTOS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LBLPUNTOS.ImageIndex = 0
-        Me.LBLPUNTOS.ImageList = Me.IMAGENES
-        Me.LBLPUNTOS.Location = New System.Drawing.Point(1117, -2)
-        Me.LBLPUNTOS.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LBLPUNTOS.Location = New System.Drawing.Point(187, 174)
         Me.LBLPUNTOS.Name = "LBLPUNTOS"
-        Me.LBLPUNTOS.Size = New System.Drawing.Size(164, 76)
+        Me.LBLPUNTOS.Size = New System.Drawing.Size(31, 34)
         Me.LBLPUNTOS.TabIndex = 21
         Me.LBLPUNTOS.Text = "0"
-        Me.LBLPUNTOS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LBLPUNTOS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'IMAGENES
         '
         Me.IMAGENES.ImageStream = CType(resources.GetObject("IMAGENES.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.IMAGENES.TransparentColor = System.Drawing.Color.Transparent
-        Me.IMAGENES.Images.SetKeyName(0, "icono.jpg")
+        Me.IMAGENES.Images.SetKeyName(0, "score_containercoin_2x (1).png")
         '
         'BTN1
         '
@@ -107,10 +104,9 @@ Partial Class FrmJuegoPreguntas
         Me.BTN1.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN1.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.BTN1.ForeColor = System.Drawing.Color.White
-        Me.BTN1.Location = New System.Drawing.Point(71, 305)
-        Me.BTN1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTN1.Location = New System.Drawing.Point(53, 248)
         Me.BTN1.Name = "BTN1"
-        Me.BTN1.Size = New System.Drawing.Size(499, 96)
+        Me.BTN1.Size = New System.Drawing.Size(374, 78)
         Me.BTN1.TabIndex = 1
         Me.BTN1.Text = "Guna2Button1"
         Me.BTN1.UseTransparentBackground = True
@@ -126,10 +122,9 @@ Partial Class FrmJuegoPreguntas
         Me.BTN3.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN3.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.BTN3.ForeColor = System.Drawing.Color.White
-        Me.BTN3.Location = New System.Drawing.Point(711, 305)
-        Me.BTN3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTN3.Location = New System.Drawing.Point(533, 248)
         Me.BTN3.Name = "BTN3"
-        Me.BTN3.Size = New System.Drawing.Size(499, 96)
+        Me.BTN3.Size = New System.Drawing.Size(374, 78)
         Me.BTN3.TabIndex = 2
         Me.BTN3.Text = "Guna2Button1"
         Me.BTN3.UseTransparentBackground = True
@@ -145,10 +140,9 @@ Partial Class FrmJuegoPreguntas
         Me.BTN4.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN4.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.BTN4.ForeColor = System.Drawing.Color.White
-        Me.BTN4.Location = New System.Drawing.Point(711, 425)
-        Me.BTN4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTN4.Location = New System.Drawing.Point(533, 345)
         Me.BTN4.Name = "BTN4"
-        Me.BTN4.Size = New System.Drawing.Size(499, 96)
+        Me.BTN4.Size = New System.Drawing.Size(374, 78)
         Me.BTN4.TabIndex = 4
         Me.BTN4.Text = "Guna2Button1"
         Me.BTN4.UseTransparentBackground = True
@@ -164,10 +158,9 @@ Partial Class FrmJuegoPreguntas
         Me.BTN2.FillColor = System.Drawing.Color.MediumSlateBlue
         Me.BTN2.Font = New System.Drawing.Font("Showcard Gothic", 9.0!)
         Me.BTN2.ForeColor = System.Drawing.Color.White
-        Me.BTN2.Location = New System.Drawing.Point(71, 425)
-        Me.BTN2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BTN2.Location = New System.Drawing.Point(53, 345)
         Me.BTN2.Name = "BTN2"
-        Me.BTN2.Size = New System.Drawing.Size(499, 96)
+        Me.BTN2.Size = New System.Drawing.Size(374, 78)
         Me.BTN2.TabIndex = 3
         Me.BTN2.Text = "Guna2Button1"
         Me.BTN2.UseTransparentBackground = True
@@ -177,10 +170,9 @@ Partial Class FrmJuegoPreguntas
         Me.LBLPREGUNTA.BackColor = System.Drawing.Color.Transparent
         Me.LBLPREGUNTA.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLPREGUNTA.ForeColor = System.Drawing.SystemColors.Control
-        Me.LBLPREGUNTA.Location = New System.Drawing.Point(325, 165)
-        Me.LBLPREGUNTA.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LBLPREGUNTA.Location = New System.Drawing.Point(244, 134)
         Me.LBLPREGUNTA.Name = "LBLPREGUNTA"
-        Me.LBLPREGUNTA.Size = New System.Drawing.Size(641, 105)
+        Me.LBLPREGUNTA.Size = New System.Drawing.Size(481, 85)
         Me.LBLPREGUNTA.TabIndex = 29
         Me.LBLPREGUNTA.Text = "Nombre del estudiante:"
         Me.LBLPREGUNTA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -191,29 +183,45 @@ Partial Class FrmJuegoPreguntas
         'TemporizadoTransicion
         '
         '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(53, 154)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(185, 88)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 30
+        Me.Guna2PictureBox1.TabStop = False
+        '
         'FrmJuegoPreguntas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(1281, 615)
+        Me.ClientSize = New System.Drawing.Size(961, 500)
+        Me.Controls.Add(Me.LBLPUNTOS)
+        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.LBLPREGUNTA)
         Me.Controls.Add(Me.BTN2)
         Me.Controls.Add(Me.BTN4)
         Me.Controls.Add(Me.BTN3)
         Me.Controls.Add(Me.BTN1)
-        Me.Controls.Add(Me.LBLPUNTOS)
         Me.Controls.Add(Me.Progreso_Barra)
         Me.Controls.Add(Me.MediaPlayer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmJuegoPreguntas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmJuegoPreguntas"
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         CType(Me.MediaPlayer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -230,4 +238,5 @@ Partial Class FrmJuegoPreguntas
     Friend WithEvents LBLPREGUNTA As Label
     Friend WithEvents TiempoPregunta As Timer
     Friend WithEvents TemporizadoTransicion As Timer
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

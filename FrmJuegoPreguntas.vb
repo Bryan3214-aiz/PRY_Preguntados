@@ -118,7 +118,7 @@ Public Class FrmJuegoPreguntas
     Friend Sub REFRESCAR_PREGUNTAS()
 
         Dim T2 As New DataSet
-        Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
+        Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedItem
 
         ds.Tables.Clear()
         comando = "SELECT ID_PREGUNTA, ENUNCIADO_PREGUNTA, PUNTAJE,tiempo_limite FROM PREGUNTA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
