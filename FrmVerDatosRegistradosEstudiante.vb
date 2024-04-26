@@ -5,6 +5,8 @@ Public Class FrmVerDatosRegistradosEstudiante
     Private tiempoTranscurrido As Double = 0
     Dim ID As Integer = 0
     Private fotoCambiada As Boolean = False
+    Public FotoPerfil As Byte()
+
 
     Private Sub FrmVerDatosRegistradosEstudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo
@@ -67,19 +69,12 @@ Public Class FrmVerDatosRegistradosEstudiante
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(7))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(8))
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(9))
-                ' Recuperar la fotografía (asumiendo que está en la última columna de la tabla)
-                Dim fotoBytes As Byte() = CType(ds.Tables(0).Rows(I).Item(10), Byte())
-                If fotoBytes IsNot Nothing Then
-                    Using ms As New MemoryStream(fotoBytes)
-                        Dim imagen As Image = Image.FromStream(ms)
-                        BTNfotoSeleccionar.Image = imagen
-                    End Using
-                End If
+
             Next
         End If
     End Sub
     Friend Sub INICIALIZAR()
-        comando = "SELECT TOP 1 ID_usuario, Curso_Lectivo, Nivel, Asignatura, periodo, seccion, identificacion, nombre_completo, correo_electronico, contrasena,fotografia FROM estudiante ORDER BY ID_usuario DESC"
+        comando = "SELECT TOP 1 ID_usuario, Curso_Lectivo, Nivel, Asignatura, periodo, seccion, identificacion, nombre_completo, correo_electronico, contrasena FROM estudiante ORDER BY ID_usuario DESC"
         BUSCAR(comando)
         reiniciar()
         ID = 0
@@ -184,7 +179,7 @@ Public Class FrmVerDatosRegistradosEstudiante
             BTNfotoSeleccionar.Enabled = True
 
             If ID <> 0 Then
-                comando = "SELECT id_usuario,Curso_Lectivo,Nivel,Asignatura,periodo,seccion,identificacion,nombre_completo,correo_electronico,contrasena from estudiante where ID_usuario = " & ID & ""
+                comando = "SELECT id_usuario,Curso_Lectivo,Nivel,Asignatura,periodo,seccion,identificacion,nombre_completo,correo_electronico,contrasena,fotografia from estudiante where ID_usuario = " & ID & ""
                 ds.Tables.Clear()
                 L.Items.Clear()
                 CARGAR_TABLA(ds, comando)
@@ -200,6 +195,13 @@ Public Class FrmVerDatosRegistradosEstudiante
                         L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(7))
                         L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(8))
                         L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(9))
+                        If Not IsDBNull(ds.Tables(0).Rows(I).Item(10)) Then
+                            FotoPerfil = DirectCast(ds.Tables(0).Rows(I).Item(10), Byte())
+                            MostrarImagen(FotoPerfil)
+                        Else
+                            ' Si no hay imagen disponible, establecer la imagen predeterminada
+                            BTNfotoSeleccionar.Image = My.Resources.img_usuario
+                        End If
                     Next
                 End If
                 CMBcursolectivo.Text = L.Items(L.Items.Count - 1).SubItems(1).Text
@@ -229,6 +231,4 @@ Public Class FrmVerDatosRegistradosEstudiante
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
         End Try
     End Sub
-
-
 End Class
