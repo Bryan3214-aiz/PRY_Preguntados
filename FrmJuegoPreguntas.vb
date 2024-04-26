@@ -119,17 +119,17 @@ Public Class FrmJuegoPreguntas
 
         Dim T2 As New DataSet
         Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
-        ''Dim CATEGORIA As String = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedItem
+
         ds.Tables.Clear()
         comando = "SELECT ID_PREGUNTA, ENUNCIADO_PREGUNTA, PUNTAJE,tiempo_limite FROM PREGUNTA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
         CARGAR_TABLA(ds, comando)
         If ds.Tables(0).Rows.Count > 0 Then
             For I = 0 To ds.Tables(0).Rows.Count - 1
-                M(I, 0) = ds.Tables(0).Rows(I).ItemArray(1) 'La pregunta
-                M(I, 1) = ds.Tables(0).Rows(I).ItemArray(2) 'El valor de la pregunta
+                M(I, 0) = ds.Tables(0).Rows(I).ItemArray(1) 'PREGUNTA
+                M(I, 1) = ds.Tables(0).Rows(I).ItemArray(2) 'VALOR DE LA PREGUNTA
                 M(I, 8) = ds.Tables(0).Rows(I).ItemArray(3)
                 PTOTAL += ds.Tables(0).Rows(I).ItemArray(2)
-                M(I, 7) = ds.Tables(0).Rows(I).ItemArray(0) 'El id de la pregunta
+                M(I, 7) = ds.Tables(0).Rows(I).ItemArray(0) 'ID PREGUNTA
                 T2.Tables.Clear()
                 comando = "SELECT TEXTO_OPCION FROM OPCION WHERE ID_PREGUNTA = " & ds.Tables(0).Rows(I).ItemArray(0) & ""
                 CARGAR_TABLA(T2, comando)
@@ -167,9 +167,7 @@ Public Class FrmJuegoPreguntas
             CargarPregunta(FILA_ACTUAL)
             TiempoPregunta.Start()
         Else
-
             wmp.controls.stop()
-            wmp.close()
             MsgBox("Su juego ha concluido.", vbInformation + vbOKOnly, "Fin del juego")
             Me.Hide()
             FrmResultados.ShowDialog()

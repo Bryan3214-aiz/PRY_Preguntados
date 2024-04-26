@@ -45,7 +45,7 @@
 
     Friend Sub Inicializar()
         Dim nivel As String = FrmLoginEstudiante.NIVEL_ESTUDIANTE
-        comando = "SELECT  ID_CATEGORIA, NOMBRE_CATEGORIA FROM CATEGORIA INNER JOIN TEMA ON CATEGORIA.ID_TEMA = TEMA.ID_TEMA WHERE NIVEL = '" & nivel & "'"
+        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA FROM CATEGORIA INNER JOIN TEMA ON CATEGORIA.ID_TEMA = TEMA.ID_TEMA WHERE NIVEL = '" & nivel & "'"
         BUSCARcombo(comando)
     End Sub
 
@@ -57,7 +57,6 @@
             For I = 0 To ds.Tables(0).Rows.Count - 1
                 ID_CAT = ds.Tables(0).Rows(I).Item(0)
                 CMBseleccionarFRM.Items.Add(ds.Tables(0).Rows(I).Item(1))
-
             Next
         End If
     End Sub
