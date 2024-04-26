@@ -154,7 +154,7 @@ Partial Class FrmMenuEstudiante
         Me.BTNranking.FillColor = System.Drawing.Color.Gold
         Me.BTNranking.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNranking.ForeColor = System.Drawing.Color.White
-        Me.BTNranking.Location = New System.Drawing.Point(310, 149)
+        Me.BTNranking.Location = New System.Drawing.Point(314, 149)
         Me.BTNranking.Name = "BTNranking"
         Me.BTNranking.Size = New System.Drawing.Size(150, 41)
         Me.BTNranking.TabIndex = 10
