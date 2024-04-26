@@ -45,10 +45,9 @@
 
     Friend Sub Inicializar()
         Dim nivel As String = FrmLoginEstudiante.NIVEL_ESTUDIANTE
-        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA FROM CATEGORIA INNER JOIN TEMA ON CATEGORIA.ID_TEMA = TEMA.ID_TEMA WHERE TEMA.NIVEL = '" & nivel & "'"
+        comando = "SELECT ID_CATEGORIA, NOMBRE_CATEGORIA FROM CATEGORIA INNER JOIN TEMA ON CATEGORIA.ID_TEMA = TEMA.ID_TEMA WHERE NIVEL = '" & nivel & "'"
         BUSCARcombo(comando)
     End Sub
-
     Friend Sub BUSCARcombo(ByVal SQL As String)
         ds.Tables.Clear()
         CMBseleccionarFRM.Items.Clear()
