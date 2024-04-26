@@ -50,6 +50,7 @@ Partial Class FrmRegistrarEstudiante
         Me.CMBgrado = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.TXTcorreo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.BTNvolverMenu = New Guna.UI2.WinForms.Guna2Button()
         Me.panel.SuspendLayout()
         CType(Me.BTNfotoSeleccionar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,6 +62,7 @@ Partial Class FrmRegistrarEstudiante
         '
         Me.panel.BackColor = System.Drawing.Color.Transparent
         Me.panel.BorderRadius = 100
+        Me.panel.Controls.Add(Me.BTNvolverMenu)
         Me.panel.Controls.Add(Me.Label12)
         Me.panel.Controls.Add(Me.CMBperiodo)
         Me.panel.Controls.Add(Me.Label10)
@@ -453,6 +455,25 @@ Partial Class FrmRegistrarEstudiante
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'BTNvolverMenu
+        '
+        Me.BTNvolverMenu.Animated = True
+        Me.BTNvolverMenu.BackColor = System.Drawing.Color.Transparent
+        Me.BTNvolverMenu.BorderColor = System.Drawing.Color.Transparent
+        Me.BTNvolverMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNvolverMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNvolverMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNvolverMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNvolverMenu.FillColor = System.Drawing.Color.CadetBlue
+        Me.BTNvolverMenu.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNvolverMenu.ForeColor = System.Drawing.Color.White
+        Me.BTNvolverMenu.HoverState.FillColor = System.Drawing.Color.DimGray
+        Me.BTNvolverMenu.Image = CType(resources.GetObject("BTNvolverMenu.Image"), System.Drawing.Image)
+        Me.BTNvolverMenu.Location = New System.Drawing.Point(0, 0)
+        Me.BTNvolverMenu.Name = "BTNvolverMenu"
+        Me.BTNvolverMenu.Size = New System.Drawing.Size(44, 37)
+        Me.BTNvolverMenu.TabIndex = 13
+        '
         'FrmRegistrarEstudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -497,4 +518,5 @@ Partial Class FrmRegistrarEstudiante
     Friend WithEvents Label13 As Label
     Friend WithEvents TXTcontrasena As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents BTNvolverMenu As Guna.UI2.WinForms.Guna2Button
 End Class

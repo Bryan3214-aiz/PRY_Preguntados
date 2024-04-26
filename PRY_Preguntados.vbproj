@@ -195,6 +195,12 @@
     <Compile Include="FrmActualizarTemas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCrearReporteEstudiante.Designer.vb">
+      <DependentUpon>FrmCrearReporteEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrearReporteEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmCrearReportes.designer.vb">
       <DependentUpon>FrmCrearReportes.vb</DependentUpon>
     </Compile>
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCrearPreguntas.resx">
       <DependentUpon>FrmCrearPreguntas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearReporteEstudiante.resx">
+      <DependentUpon>FrmCrearReporteEstudiante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCrearReportes.resx">
       <DependentUpon>FrmCrearReportes.vb</DependentUpon>

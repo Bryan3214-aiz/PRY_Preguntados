@@ -4,7 +4,6 @@ Imports System.IO
 Imports TheArtOfDevHtmlRenderer.Adapters.Entities
 
 
-
 Module REPORTE
     Public OWORD As New Word.Application()
     Public DOCUMENTO As New Word.Document
@@ -13,7 +12,7 @@ Module REPORTE
 
     Public REPORTE_DIRECCION_PDF As String = ""
     Public REPORTE_DIRECCION_WORD As String = ""
-    Public P0, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10 As Word.Paragraph
+    Public P0, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15, P16, P17, P18, P19, P20 As Word.Paragraph
     Public T1, TB2 As Word.Paragraph
     Public M(100, 100) As String
 

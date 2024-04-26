@@ -34,11 +34,13 @@ Partial Class FrmCrearReportes
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Guna2ContextMenuStrip1 = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
         Me.BTN_Actividad_con_Respuestas = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GenerarReporteActividadCalificadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_Actualizar = New Guna.UI2.WinForms.Guna2Button()
         Me.BTN_Puntacion_Alta = New Guna.UI2.WinForms.Guna2Button()
         Me.BTN_MinimaCalificacion = New Guna.UI2.WinForms.Guna2Button()
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Guna2ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -85,7 +87,7 @@ Partial Class FrmCrearReportes
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.L.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8})
+        Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader5, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.L.ContextMenuStrip = Me.Guna2ContextMenuStrip1
         Me.L.Font = New System.Drawing.Font("Showcard Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L.ForeColor = System.Drawing.SystemColors.WindowText
@@ -145,7 +147,7 @@ Partial Class FrmCrearReportes
         '
         'Guna2ContextMenuStrip1
         '
-        Me.Guna2ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_Actividad_con_Respuestas, Me.GenerarReporteActividadCalificadaToolStripMenuItem, Me.GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem})
+        Me.Guna2ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_Actividad_con_Respuestas, Me.GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem})
         Me.Guna2ContextMenuStrip1.Name = "Guna2ContextMenuStrip1"
         Me.Guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro
@@ -156,19 +158,13 @@ Partial Class FrmCrearReportes
         Me.Guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White
         Me.Guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
         Me.Guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.Guna2ContextMenuStrip1.Size = New System.Drawing.Size(310, 70)
+        Me.Guna2ContextMenuStrip1.Size = New System.Drawing.Size(310, 48)
         '
         'BTN_Actividad_con_Respuestas
         '
         Me.BTN_Actividad_con_Respuestas.Name = "BTN_Actividad_con_Respuestas"
         Me.BTN_Actividad_con_Respuestas.Size = New System.Drawing.Size(309, 22)
         Me.BTN_Actividad_con_Respuestas.Text = "Generar reporte respuestas incluidas"
-        '
-        'GenerarReporteActividadCalificadaToolStripMenuItem
-        '
-        Me.GenerarReporteActividadCalificadaToolStripMenuItem.Name = "GenerarReporteActividadCalificadaToolStripMenuItem"
-        Me.GenerarReporteActividadCalificadaToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
-        Me.GenerarReporteActividadCalificadaToolStripMenuItem.Text = "Generar reporte actividad calificada"
         '
         'GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem
         '
@@ -230,6 +226,18 @@ Partial Class FrmCrearReportes
         Me.BTN_MinimaCalificacion.TabIndex = 37
         Me.BTN_MinimaCalificacion.Text = "Ver Mínima Calificación por Estudiante"
         '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Width = 0
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Width = 0
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Width = 0
+        '
         'FrmCrearReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -264,8 +272,10 @@ Partial Class FrmCrearReportes
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents Guna2ContextMenuStrip1 As Guna.UI2.WinForms.Guna2ContextMenuStrip
     Friend WithEvents BTN_Actividad_con_Respuestas As ToolStripMenuItem
-    Friend WithEvents GenerarReporteActividadCalificadaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GenerarReporteSinRespuestasDelEstudianteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BTN_Puntacion_Alta As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTN_MinimaCalificacion As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
 End Class

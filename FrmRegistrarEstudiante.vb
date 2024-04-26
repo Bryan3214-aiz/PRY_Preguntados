@@ -100,4 +100,8 @@ Public Class FrmRegistrarEstudiante
         End Using
     End Function
 
+    Private Sub BTNvolverMenu_Click(sender As Object, e As EventArgs) Handles BTNvolverMenu.Click
+        Me.Hide()
+        FrmOPCIONES.Show()
+    End Sub
 End Class

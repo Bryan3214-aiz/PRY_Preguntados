@@ -1,10 +1,13 @@
-﻿
+﻿Imports System.Globalization
+
 Public Class FrmJuegoPreguntas
     Dim M(100, 8) As String
     Dim FILA_ACTUAL As Integer = 0
     Dim PTOTAL As Integer = 0
     Dim CODIGOJUEGO As Integer = 0
     Dim tiempo_limite As Integer = 0
+    Dim Respuestas_Correctas As Integer = 0
+    Dim Respuestas_Incorrectas As Integer = 0
 
     Private Sub FrmJuegoPreguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         REFRESCAR_PREGUNTAS()
@@ -78,17 +81,18 @@ Public Class FrmJuegoPreguntas
     End Sub
 
 
-
     Friend Sub REVISAR(ByVal RESPUESTA As String)
 
         TiempoPregunta.Stop()
         Progreso_Barra.Value = 0
 
         If RESPUESTA = M(FILA_ACTUAL, 6) Then
-            ' Si la respuesta es correcta
+
             LBLPUNTOS.Text = CInt(LBLPUNTOS.Text) + CInt(M(FILA_ACTUAL, 1))
+            Respuestas_Correctas = Respuestas_Correctas + 1
         ElseIf RESPUESTA <> M(FILA_ACTUAL, 6) Then
-            ' Si la respuesta es incorrecta, mostrar tanto la respuesta seleccionada como la correcta
+
+            Respuestas_Incorrectas = Respuestas_Incorrectas + 1
             Select Case RESPUESTA
                 Case BTN1.Text
                     BTN1.FillColor = Color.Red ' Cambia el color del botón seleccionado a rojo
@@ -103,11 +107,30 @@ Public Class FrmJuegoPreguntas
 
         MarcarRespuestaCorrecta()
 
-        Temporizador.Interval = 3000
+        Temporizador.Interval = 1000
         Temporizador.Start()
 
-        'GUARDAR(RESPUESTA)
+        GUARDAR(RESPUESTA)
     End Sub
+
+    Friend Sub GUARDAR(ByVal RESPUESTA As String)
+        Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+        Dim ID_USUARIO As Integer = FrmLoginEstudiante.ID_estudiante
+        Dim Tiempo As Integer = 1000
+        Dim Fecha_Hora As DateTime = DateTime.Now
+        Dim Fecha_HoraStr As String = Fecha_Hora.ToString("yyyy-MM-dd HH:mm:ss")
+        ds.Tables.Clear()
+        comando = "SELECT PUNTAJE FROM PARTIDA WHERE ID_CATEGORIA = " & ID_CATEGORIA & " AND ID_USUARIO = " & ID_USUARIO & ""
+        CARGAR_TABLA(ds, comando)
+        If ds.Tables(0).Rows.Count = 0 Then
+            CODIGOJUEGO = PK("PARTIDA", "ID_PARTIDA")
+            comando = "INSERT INTO PARTIDA (ID_PARTIDA, ID_USUARIO, ID_CATEGORIA, PUNTAJE, TIEMPO_TOTAL, RESPUESTAS_CORRECTAS, RESPUESTAS_INCORRECTAS, FECHA_PARTIDA) VALUES(" & CODIGOJUEGO & ", " & ID_USUARIO & ", " & ID_CATEGORIA & ", " & LBLPUNTOS.Text & ", " & Tiempo & ", " & Respuestas_Correctas & ", " & Respuestas_Incorrectas & ", '" & Fecha_HoraStr & "')"
+        Else
+            comando = "UPDATE PARTIDA SET PUNTAJE = " & LBLPUNTOS.Text & " ,RESPUESTAS_INCORRECTAS = " & Respuestas_Incorrectas & ", RESPUESTAS_CORRECTAS = " & Respuestas_Correctas & " WHERE ID_CATEGORIA = " & ID_CATEGORIA & " AND ID_USUARIO = " & ID_USUARIO & ""
+        End If
+        EJECUTARSI(comando)
+    End Sub
+
 
     Private Sub MarcarRespuestaCorrecta()
         ' Buscar la opción correcta y marcarla
@@ -121,12 +144,6 @@ Public Class FrmJuegoPreguntas
             Case BTN4.Text
                 BTN4.FillColor = Color.Green
         End Select
-
-        BTN1.Enabled = False
-        BTN2.Enabled = False
-        BTN3.Enabled = False
-        BTN4.Enabled = False
-
     End Sub
 
     Private Sub BTN1_Click(sender As Object, e As EventArgs) Handles BTN1.Click
@@ -151,11 +168,6 @@ Public Class FrmJuegoPreguntas
     Private Sub Temporizador_Tick(sender As Object, e As EventArgs) Handles Temporizador.Tick
 
         ResetButtonColors()
-
-        BTN1.Enabled = True
-        BTN2.Enabled = True
-        BTN3.Enabled = True
-        BTN4.Enabled = True
 
 
         BTN1.FillColor = Color.MediumSlateBlue
@@ -196,8 +208,6 @@ Public Class FrmJuegoPreguntas
         BTN2.Text = opcionesmezclados(2)
         BTN4.Text = opcionesmezclados(3)
     End Sub
-
-
 
 
     Private Sub Modulo_Teclas(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
