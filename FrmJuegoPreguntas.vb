@@ -6,6 +6,7 @@ Public Class FrmJuegoPreguntas
     Dim CODIGOJUEGO As Integer = 0
 
 
+
     Private Sub FrmJuegoPreguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         REFRESCAR_PREGUNTAS()
     End Sub
@@ -90,13 +91,11 @@ Public Class FrmJuegoPreguntas
     Friend Sub REVISAR(ByVal RESPUESTA As String)
 
         If RESPUESTA = M(FILA_ACTUAL, 6) Then
-            ' Si la respuesta es correcta
             LBLPUNTOS.Text = CInt(LBLPUNTOS.Text) + CInt(M(FILA_ACTUAL, 1))
         ElseIf RESPUESTA <> M(FILA_ACTUAL, 6) Then
-            ' Si la respuesta es incorrecta, mostrar tanto la respuesta seleccionada como la correcta
             Select Case RESPUESTA
                 Case BTN1.Text
-                    BTN1.FillColor = Color.Red ' Cambia el color del botón seleccionado a rojo
+                    BTN1.FillColor = Color.Red
                 Case BTN2.Text
                     BTN2.FillColor = Color.Red
                 Case BTN3.Text
@@ -105,8 +104,6 @@ Public Class FrmJuegoPreguntas
                     BTN4.FillColor = Color.Red
             End Select
         End If
-
-        ' Marcar la respuesta correcta
         MarcarRespuestaCorrecta()
 
         Temporizador.Interval = 5000
@@ -116,7 +113,6 @@ Public Class FrmJuegoPreguntas
     End Sub
 
     Private Sub MarcarRespuestaCorrecta()
-        ' Buscar la opción correcta y marcarla
         Select Case M(FILA_ACTUAL, 6)
             Case BTN1.Text
                 BTN1.FillColor = Color.Green
@@ -160,6 +156,60 @@ Public Class FrmJuegoPreguntas
         BTN4.Enabled = True
         Temporizador.Stop() ' Detener el temporizador
         SIGUIENTE()
+    End Sub
+
+    'Modulos para moverse con teclas'
+    Private Sub Modulo_Teclas(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Left
+                Select Case Me.ActiveControl.Name
+                    Case "BTN2"
+                        BTN2.Focus()
+                    Case "BTN3"
+                        BTN3.Focus()
+                    Case "BTN4"
+                        BTN4.Focus()
+                End Select
+            Case Keys.Right
+                Select Case Me.ActiveControl.Name
+                    Case "BTN1"
+                        BTN1.Focus()
+                    Case "BTN2"
+                        BTN2.Focus()
+                    Case "BTN3"
+                        BTN3.Focus()
+                End Select
+            Case Keys.Space
+                DirectCast(Me.ActiveControl, Button).PerformClick()
+        End Select
+
+    End Sub
+
+    Private Sub ResetButtonColors()
+        BTN1.FillColor = Color.MediumSlateBlue
+        BTN2.FillColor = Color.MediumSlateBlue
+        BTN3.FillColor = Color.MediumSlateBlue
+        BTN4.FillColor = Color.MediumSlateBlue
+    End Sub
+
+    Private Sub BTN1_GotFocus(sender As Object, e As EventArgs) Handles BTN1.GotFocus
+        ResetButtonColors()
+        BTN1.FillColor = Color.Gold
+    End Sub
+
+    Private Sub BTN2_GotFocus(sender As Object, e As EventArgs) Handles BTN2.GotFocus
+        ResetButtonColors()
+        BTN2.FillColor = Color.Gold
+    End Sub
+
+    Private Sub BTN3_GotFocus(sender As Object, e As EventArgs) Handles BTN3.GotFocus
+        ResetButtonColors()
+        BTN3.FillColor = Color.Gold
+    End Sub
+
+    Private Sub BTN4_GotFocus(sender As Object, e As EventArgs) Handles BTN4.GotFocus
+        ResetButtonColors()
+        BTN4.FillColor = Color.Gold
     End Sub
 
 
