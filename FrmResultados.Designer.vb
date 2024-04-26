@@ -25,26 +25,26 @@ Partial Class FrmResultados
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmResultados))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
-        Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
-        Me.BTNvolver = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.LblNombreEstudiante = New System.Windows.Forms.Label()
-        Me.LbLNombreCategoria = New System.Windows.Forms.Label()
-        Me.LblPuntaje = New System.Windows.Forms.Label()
-        Me.LblDuracion = New System.Windows.Forms.Label()
-        Me.LblRsCorrectas = New System.Windows.Forms.Label()
         Me.LblRsIncorrectas = New System.Windows.Forms.Label()
+        Me.LblRsCorrectas = New System.Windows.Forms.Label()
+        Me.LblDuracion = New System.Windows.Forms.Label()
+        Me.LblPuntaje = New System.Windows.Forms.Label()
+        Me.LbLNombreCategoria = New System.Windows.Forms.Label()
+        Me.LblNombreEstudiante = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.BTNvolver = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
+        Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Panel1
@@ -59,59 +59,6 @@ Partial Class FrmResultados
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(800, 450)
         Me.Guna2Panel1.TabIndex = 0
-        '
-        'Temporizado
-        '
-        '
-        'BTNcerrar
-        '
-        Me.BTNcerrar.Animated = True
-        Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
-        Me.BTNcerrar.BorderColor = System.Drawing.Color.Transparent
-        Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNcerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNcerrar.ForeColor = System.Drawing.Color.White
-        Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
-        Me.BTNcerrar.Location = New System.Drawing.Point(756, 0)
-        Me.BTNcerrar.Name = "BTNcerrar"
-        Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
-        Me.BTNcerrar.TabIndex = 17
-        Me.BTNcerrar.Text = "X"
-        '
-        'BTNvolver
-        '
-        Me.BTNvolver.Animated = True
-        Me.BTNvolver.BackColor = System.Drawing.Color.Transparent
-        Me.BTNvolver.BorderRadius = 10
-        Me.BTNvolver.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTNvolver.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTNvolver.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTNvolver.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTNvolver.FillColor = System.Drawing.Color.DimGray
-        Me.BTNvolver.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
-        Me.BTNvolver.ForeColor = System.Drawing.Color.White
-        Me.BTNvolver.Location = New System.Drawing.Point(552, 382)
-        Me.BTNvolver.Name = "BTNvolver"
-        Me.BTNvolver.Size = New System.Drawing.Size(150, 41)
-        Me.BTNvolver.TabIndex = 20
-        Me.BTNvolver.Text = "Volver al menú principal"
-        Me.BTNvolver.UseTransparentBackground = True
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(186, 26)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(416, 74)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 34
-        Me.Guna2PictureBox1.TabStop = False
-        Me.Guna2PictureBox1.UseTransparentBackground = True
         '
         'Guna2Panel2
         '
@@ -132,65 +79,71 @@ Partial Class FrmResultados
         Me.Guna2Panel2.Size = New System.Drawing.Size(609, 261)
         Me.Guna2Panel2.TabIndex = 35
         '
-        'Label5
+        'LblRsIncorrectas
         '
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(319, 20)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(169, 60)
-        Me.Label5.TabIndex = 26
-        Me.Label5.Text = "Duración:"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblRsIncorrectas.BackColor = System.Drawing.Color.Transparent
+        Me.LblRsIncorrectas.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblRsIncorrectas.ForeColor = System.Drawing.SystemColors.Control
+        Me.LblRsIncorrectas.Location = New System.Drawing.Point(478, 171)
+        Me.LblRsIncorrectas.Name = "LblRsIncorrectas"
+        Me.LblRsIncorrectas.Size = New System.Drawing.Size(116, 60)
+        Me.LblRsIncorrectas.TabIndex = 40
+        Me.LblRsIncorrectas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label1
+        'LblRsCorrectas
         '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(-5, 89)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(169, 60)
-        Me.Label1.TabIndex = 27
-        Me.Label1.Text = "Categoría:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblRsCorrectas.BackColor = System.Drawing.Color.Transparent
+        Me.LblRsCorrectas.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblRsCorrectas.ForeColor = System.Drawing.SystemColors.Control
+        Me.LblRsCorrectas.Location = New System.Drawing.Point(478, 102)
+        Me.LblRsCorrectas.Name = "LblRsCorrectas"
+        Me.LblRsCorrectas.Size = New System.Drawing.Size(116, 60)
+        Me.LblRsCorrectas.TabIndex = 39
+        Me.LblRsCorrectas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
+        'LblDuracion
         '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(3, 20)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(169, 60)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "Nombre del estudiante:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblDuracion.BackColor = System.Drawing.Color.Transparent
+        Me.LblDuracion.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDuracion.ForeColor = System.Drawing.SystemColors.Control
+        Me.LblDuracion.Location = New System.Drawing.Point(478, 20)
+        Me.LblDuracion.Name = "LblDuracion"
+        Me.LblDuracion.Size = New System.Drawing.Size(116, 60)
+        Me.LblDuracion.TabIndex = 38
+        Me.LblDuracion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label3
+        'LblPuntaje
         '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(319, 89)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(169, 60)
-        Me.Label3.TabIndex = 29
-        Me.Label3.Text = "Respuestas correctas:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblPuntaje.BackColor = System.Drawing.Color.Transparent
+        Me.LblPuntaje.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPuntaje.ForeColor = System.Drawing.SystemColors.Control
+        Me.LblPuntaje.Location = New System.Drawing.Point(178, 162)
+        Me.LblPuntaje.Name = "LblPuntaje"
+        Me.LblPuntaje.Size = New System.Drawing.Size(135, 60)
+        Me.LblPuntaje.TabIndex = 36
+        Me.LblPuntaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label4
+        'LbLNombreCategoria
         '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(-5, 162)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(169, 60)
-        Me.Label4.TabIndex = 30
-        Me.Label4.Text = "Puntaje:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LbLNombreCategoria.BackColor = System.Drawing.Color.Transparent
+        Me.LbLNombreCategoria.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbLNombreCategoria.ForeColor = System.Drawing.SystemColors.Control
+        Me.LbLNombreCategoria.Location = New System.Drawing.Point(178, 89)
+        Me.LbLNombreCategoria.Name = "LbLNombreCategoria"
+        Me.LbLNombreCategoria.Size = New System.Drawing.Size(135, 60)
+        Me.LbLNombreCategoria.TabIndex = 35
+        Me.LbLNombreCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LblNombreEstudiante
+        '
+        Me.LblNombreEstudiante.BackColor = System.Drawing.Color.Transparent
+        Me.LblNombreEstudiante.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNombreEstudiante.ForeColor = System.Drawing.SystemColors.Control
+        Me.LblNombreEstudiante.Location = New System.Drawing.Point(178, 20)
+        Me.LblNombreEstudiante.Name = "LblNombreEstudiante"
+        Me.LblNombreEstudiante.Size = New System.Drawing.Size(135, 60)
+        Me.LblNombreEstudiante.TabIndex = 34
+        Me.LblNombreEstudiante.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label6
         '
@@ -204,71 +157,118 @@ Partial Class FrmResultados
         Me.Label6.Text = "Respuestas incorrectas:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblNombreEstudiante
+        'Label4
         '
-        Me.LblNombreEstudiante.BackColor = System.Drawing.Color.Transparent
-        Me.LblNombreEstudiante.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNombreEstudiante.ForeColor = System.Drawing.SystemColors.Control
-        Me.LblNombreEstudiante.Location = New System.Drawing.Point(178, 20)
-        Me.LblNombreEstudiante.Name = "LblNombreEstudiante"
-        Me.LblNombreEstudiante.Size = New System.Drawing.Size(135, 60)
-        Me.LblNombreEstudiante.TabIndex = 34
-        Me.LblNombreEstudiante.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label4.Location = New System.Drawing.Point(-5, 162)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(169, 60)
+        Me.Label4.TabIndex = 30
+        Me.Label4.Text = "Puntaje:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LbLNombreCategoria
+        'Label3
         '
-        Me.LbLNombreCategoria.BackColor = System.Drawing.Color.Transparent
-        Me.LbLNombreCategoria.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbLNombreCategoria.ForeColor = System.Drawing.SystemColors.Control
-        Me.LbLNombreCategoria.Location = New System.Drawing.Point(178, 89)
-        Me.LbLNombreCategoria.Name = "LbLNombreCategoria"
-        Me.LbLNombreCategoria.Size = New System.Drawing.Size(135, 60)
-        Me.LbLNombreCategoria.TabIndex = 35
-        Me.LbLNombreCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(319, 89)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(169, 60)
+        Me.Label3.TabIndex = 29
+        Me.Label3.Text = "Respuestas correctas:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblPuntaje
+        'Label2
         '
-        Me.LblPuntaje.BackColor = System.Drawing.Color.Transparent
-        Me.LblPuntaje.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPuntaje.ForeColor = System.Drawing.SystemColors.Control
-        Me.LblPuntaje.Location = New System.Drawing.Point(178, 162)
-        Me.LblPuntaje.Name = "LblPuntaje"
-        Me.LblPuntaje.Size = New System.Drawing.Size(135, 60)
-        Me.LblPuntaje.TabIndex = 36
-        Me.LblPuntaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(3, 20)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(169, 60)
+        Me.Label2.TabIndex = 28
+        Me.Label2.Text = "Nombre del estudiante:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblDuracion
+        'Label1
         '
-        Me.LblDuracion.BackColor = System.Drawing.Color.Transparent
-        Me.LblDuracion.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDuracion.ForeColor = System.Drawing.SystemColors.Control
-        Me.LblDuracion.Location = New System.Drawing.Point(478, 20)
-        Me.LblDuracion.Name = "LblDuracion"
-        Me.LblDuracion.Size = New System.Drawing.Size(116, 60)
-        Me.LblDuracion.TabIndex = 38
-        Me.LblDuracion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(-5, 89)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(169, 60)
+        Me.Label1.TabIndex = 27
+        Me.Label1.Text = "Categoría:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblRsCorrectas
+        'Label5
         '
-        Me.LblRsCorrectas.BackColor = System.Drawing.Color.Transparent
-        Me.LblRsCorrectas.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblRsCorrectas.ForeColor = System.Drawing.SystemColors.Control
-        Me.LblRsCorrectas.Location = New System.Drawing.Point(478, 102)
-        Me.LblRsCorrectas.Name = "LblRsCorrectas"
-        Me.LblRsCorrectas.Size = New System.Drawing.Size(116, 60)
-        Me.LblRsCorrectas.TabIndex = 39
-        Me.LblRsCorrectas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label5.Location = New System.Drawing.Point(319, 20)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(169, 60)
+        Me.Label5.TabIndex = 26
+        Me.Label5.Text = "Duración:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblRsIncorrectas
+        'Guna2PictureBox1
         '
-        Me.LblRsIncorrectas.BackColor = System.Drawing.Color.Transparent
-        Me.LblRsIncorrectas.Font = New System.Drawing.Font("Showcard Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblRsIncorrectas.ForeColor = System.Drawing.SystemColors.Control
-        Me.LblRsIncorrectas.Location = New System.Drawing.Point(478, 171)
-        Me.LblRsIncorrectas.Name = "LblRsIncorrectas"
-        Me.LblRsIncorrectas.Size = New System.Drawing.Size(116, 60)
-        Me.LblRsIncorrectas.TabIndex = 40
-        Me.LblRsIncorrectas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(186, 26)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(416, 74)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 34
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
+        '
+        'BTNvolver
+        '
+        Me.BTNvolver.Animated = True
+        Me.BTNvolver.BackColor = System.Drawing.Color.Transparent
+        Me.BTNvolver.BorderRadius = 10
+        Me.BTNvolver.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNvolver.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNvolver.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNvolver.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNvolver.FillColor = System.Drawing.Color.DimGray
+        Me.BTNvolver.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNvolver.ForeColor = System.Drawing.Color.White
+        Me.BTNvolver.Location = New System.Drawing.Point(552, 382)
+        Me.BTNvolver.Name = "BTNvolver"
+        Me.BTNvolver.Size = New System.Drawing.Size(150, 41)
+        Me.BTNvolver.TabIndex = 20
+        Me.BTNvolver.Text = "Volver al menú principal"
+        Me.BTNvolver.UseTransparentBackground = True
+        '
+        'BTNcerrar
+        '
+        Me.BTNcerrar.Animated = True
+        Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.BorderColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNcerrar.ForeColor = System.Drawing.Color.White
+        Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
+        Me.BTNcerrar.Location = New System.Drawing.Point(756, 0)
+        Me.BTNcerrar.Name = "BTNcerrar"
+        Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
+        Me.BTNcerrar.TabIndex = 17
+        Me.BTNcerrar.Text = "X"
+        '
+        'Temporizado
+        '
         '
         'FrmResultados
         '
@@ -284,8 +284,8 @@ Partial Class FrmResultados
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmResultados"
         Me.Guna2Panel1.ResumeLayout(False)
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

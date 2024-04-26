@@ -1,4 +1,6 @@
-﻿Imports System.Globalization
+﻿Imports System.Data.OleDb
+Imports System.Globalization
+Imports System.IO
 
 Public Class FrmJuegoPreguntas
     Dim M(100, 8) As String
@@ -8,19 +10,64 @@ Public Class FrmJuegoPreguntas
     Dim tiempo_limite As Integer = 0
     Dim Respuestas_Correctas As Integer = 0
     Dim Respuestas_Incorrectas As Integer = 0
+    Private videoBytesTemp As Byte()
+    Dim reproductor As System.Media.SoundPlayer
 
     Private Sub FrmJuegoPreguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MostrarVideo()
         REFRESCAR_PREGUNTAS()
     End Sub
 
-    Friend Sub mostrar()
-        comando = ""
 
+    Friend Function ObtenerVideo() As Byte()
+
+        Dim videoBytes As Byte() = Nothing
+        Try
+            CONECTAR()
+            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+            Dim query As String = "SELECT VIDEO_CATEGORIA FROM CATEGORIA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
+            Using cmd As New OleDbCommand(query, miconexion)
+                Dim result As Object = cmd.ExecuteScalar()
+
+                If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+
+                    videoBytes = DirectCast(result, Byte())
+
+                End If
+
+            End Using
+
+            Console.WriteLine("Video recuperado exitosamente de la base de datos.")
+        Catch ex As Exception
+            Console.WriteLine("Error al recuperar el video de la base de datos: " & ex.Message)
+        Finally
+            DESCONECTAR()
+        End Try
+
+        Return videoBytes
+    End Function
+
+
+    Private Sub MostrarVideo()
+        Dim videoBytes As Byte() = ObtenerVideo()
+
+        If videoBytes IsNot Nothing AndAlso videoBytes.Length > 0 Then
+            Try
+                Dim tempFilePath As String = Path.GetTempFileName()
+                tempFilePath = Path.ChangeExtension(tempFilePath, ".mp4")
+                File.WriteAllBytes(tempFilePath, videoBytes)
+                MediaPlayer.URL = tempFilePath
+                MediaPlayer.settings.setMode("loop", True)
+                MediaPlayer.uiMode = "none" ' Ocultar la interfaz de usuario
+                MediaPlayer.Ctlcontrols.play()
+            Catch ex As Exception
+                Console.WriteLine("Error al mostrar el video: " & ex.Message)
+            End Try
+        Else
+            Console.WriteLine("No se encontró el video en la base de datos.")
+        End If
     End Sub
 
-    Friend Sub Buscar()
-
-    End Sub
 
     Friend Sub REFRESCAR_PREGUNTAS()
         Dim T2 As New DataSet
@@ -66,7 +113,7 @@ Public Class FrmJuegoPreguntas
 
     Friend Sub SIGUIENTE()
         TiempoPregunta.Stop()
-
+        sonidoTransición()
         FILA_ACTUAL += 1
         If M(FILA_ACTUAL, 0) <> "" Then
 
@@ -77,6 +124,7 @@ Public Class FrmJuegoPreguntas
             MsgBox("Su juego ha concluido.", vbInformation + vbOKOnly, "Fin del juego")
             Me.Hide()
             FrmResultados.ShowDialog()
+            Me.Close()
         End If
     End Sub
 
@@ -146,6 +194,13 @@ Public Class FrmJuegoPreguntas
         End Select
     End Sub
 
+    Private Sub sonidoTransición()
+        Dim SonidoTransicion = My.Resources.sonidoTransición
+        reproductor = New System.Media.SoundPlayer(SonidoTransicion)
+        reproductor.Play()
+    End Sub
+
+
     Private Sub BTN1_Click(sender As Object, e As EventArgs) Handles BTN1.Click
         REVISAR(BTN1.Text)
     End Sub
@@ -168,12 +223,6 @@ Public Class FrmJuegoPreguntas
     Private Sub Temporizador_Tick(sender As Object, e As EventArgs) Handles Temporizador.Tick
 
         ResetButtonColors()
-
-
-        BTN1.FillColor = Color.MediumSlateBlue
-        BTN2.FillColor = Color.MediumSlateBlue
-        BTN3.FillColor = Color.MediumSlateBlue
-        BTN4.FillColor = Color.MediumSlateBlue
 
         Temporizador.Stop() ' Detener el temporizador
         SIGUIENTE()

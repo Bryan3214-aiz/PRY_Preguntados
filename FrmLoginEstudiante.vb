@@ -60,25 +60,31 @@ Public Class FrmLoginEstudiante
     End Sub
 
     Private Sub BTNiniciar_Click(sender As Object, e As EventArgs) Handles BTNiniciar.Click
-        CONECTAR()
-        ds.Tables.Clear()
-        comando = "SELECT ID_USUARIO, NOMBRE_COMPLETO, NIVEL FROM ESTUDIANTE WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
-        DESCONECTAR()
-        CARGAR_TABLA(ds, comando)
-        ID_estudiante = ds.Tables(0).Rows(0).Item(0)
-        NOMBRE_ESTUDIANTE = ds.Tables(0).Rows(0).Item(1)
-        NIVEL_ESTUDIANTE = ds.Tables(0).Rows(0).Item(2)
-        If ID_estudiante > 0 Then
-            Me.Hide()
-            FrmMenuEstudiante.ShowDialog()
-            Me.Close()
-        Else
-            MsgBox("El usuario o contraseña no coinciden")
-            TXTcorreo.Text = ""
-            TXTcontrasena.Text = ""
-        End If
-        ' Se desconecta de la base de datos
-        DESCONECTAR()
+        Try
+            CONECTAR()
+            ds.Tables.Clear()
+            comando = "SELECT ID_USUARIO, NOMBRE_COMPLETO, NIVEL FROM ESTUDIANTE WHERE CORREO_ELECTRONICO = '" & TXTcorreo.Text & "' AND CONTRASENA = '" & TXTcontrasena.Text & "'"
+            DESCONECTAR()
+            CARGAR_TABLA(ds, comando)
+            ID_estudiante = ds.Tables(0).Rows(0).Item(0)
+            NOMBRE_ESTUDIANTE = ds.Tables(0).Rows(0).Item(1)
+            NIVEL_ESTUDIANTE = ds.Tables(0).Rows(0).Item(2)
+            If ID_estudiante > 0 Then
+                Me.Hide()
+                FrmMenuEstudiante.ShowDialog()
+                Me.Close()
+            Else
+                MsgBox("El usuario o contraseña no coinciden")
+                TXTcorreo.Text = ""
+                TXTcontrasena.Text = ""
+            End If
+            ' Se desconecta de la base de datos
+            DESCONECTAR()
+        Catch ex As Exception
+            Console.WriteLine("Error: " & ex.Message)
+            MessageBox.Show("Ocurrió un error al autenticar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 
     Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint
