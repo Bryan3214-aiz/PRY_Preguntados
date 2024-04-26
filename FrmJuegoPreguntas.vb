@@ -121,6 +121,12 @@ Public Class FrmJuegoPreguntas
             Case BTN4.Text
                 BTN4.FillColor = Color.Green
         End Select
+
+        BTN1.Enabled = False
+        BTN2.Enabled = False
+        BTN3.Enabled = False
+        BTN4.Enabled = False
+
     End Sub
 
     Private Sub BTN1_Click(sender As Object, e As EventArgs) Handles BTN1.Click
@@ -143,6 +149,15 @@ Public Class FrmJuegoPreguntas
     End Sub
 
     Private Sub Temporizador_Tick(sender As Object, e As EventArgs) Handles Temporizador.Tick
+
+        ResetButtonColors()
+
+        BTN1.Enabled = True
+        BTN2.Enabled = True
+        BTN3.Enabled = True
+        BTN4.Enabled = True
+
+
         BTN1.FillColor = Color.MediumSlateBlue
         BTN2.FillColor = Color.MediumSlateBlue
         BTN3.FillColor = Color.MediumSlateBlue
@@ -180,5 +195,61 @@ Public Class FrmJuegoPreguntas
         BTN3.Text = opcionesmezclados(1)
         BTN2.Text = opcionesmezclados(2)
         BTN4.Text = opcionesmezclados(3)
+    End Sub
+
+
+
+
+    Private Sub Modulo_Teclas(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Left
+                Select Case Me.ActiveControl.Name
+                    Case "BTN2"
+                        BTN2.Focus()
+                    Case "BTN3"
+                        BTN3.Focus()
+                    Case "BTN4"
+                        BTN4.Focus()
+                End Select
+            Case Keys.Right
+                Select Case Me.ActiveControl.Name
+                    Case "BTN1"
+                        BTN1.Focus()
+                    Case "BTN2"
+                        BTN2.Focus()
+                    Case "BTN3"
+                        BTN3.Focus()
+                End Select
+            Case Keys.Space
+                DirectCast(Me.ActiveControl, Button).PerformClick()
+        End Select
+
+    End Sub
+
+    Private Sub ResetButtonColors()
+        BTN1.FillColor = Color.MediumSlateBlue
+        BTN2.FillColor = Color.MediumSlateBlue
+        BTN3.FillColor = Color.MediumSlateBlue
+        BTN4.FillColor = Color.MediumSlateBlue
+    End Sub
+
+    Private Sub BTN1_GotFocus(sender As Object, e As EventArgs) Handles BTN1.GotFocus
+        ResetButtonColors()
+        BTN1.FillColor = Color.Gold
+    End Sub
+
+    Private Sub BTN2_GotFocus(sender As Object, e As EventArgs) Handles BTN2.GotFocus
+        ResetButtonColors()
+        BTN2.FillColor = Color.Gold
+    End Sub
+
+    Private Sub BTN3_GotFocus(sender As Object, e As EventArgs) Handles BTN3.GotFocus
+        ResetButtonColors()
+        BTN3.FillColor = Color.Gold
+    End Sub
+
+    Private Sub BTN4_GotFocus(sender As Object, e As EventArgs) Handles BTN4.GotFocus
+        ResetButtonColors()
+        BTN4.FillColor = Color.Gold
     End Sub
 End Class
