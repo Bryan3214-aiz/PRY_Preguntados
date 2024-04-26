@@ -22,6 +22,6 @@
 
     Private Sub BTNvolver_Click(sender As Object, e As EventArgs) Handles BTNvolver.Click
         Me.Hide()
-        FrmMenuEstudiante.ShowDialog()
+        FrmMenuEstudiante.Show()
     End Sub
 End Class

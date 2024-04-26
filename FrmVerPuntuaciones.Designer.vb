@@ -22,6 +22,7 @@ Partial Class FrmVerPuntuaciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVerPuntuaciones))
         Me.LabelEliTemas = New System.Windows.Forms.Label()
         Me.L = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -133,7 +134,9 @@ Partial Class FrmVerPuntuaciones
         Me.Controls.Add(Me.L)
         Me.Controls.Add(Me.LabelEliTemas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmVerPuntuaciones"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmVerPuntuaciones"
         Me.ResumeLayout(False)
 

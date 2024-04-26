@@ -30,22 +30,22 @@ Public Class FrmLoginAdmin
             DESCONECTAR()
             CARGAR_TABLA(ds, comando)
             ID_administrador = ds.Tables(0).Rows(0).Item(0)
-            If ID_administrador > 0 Then
-                Me.Hide()
-                FrmMenuAdministrador.ShowDialog()
-                Me.Close()
-            Else
-                ' Si no se encontraron filas, se muestra un mensaje de error
-                MsgBox("El usuario o contraseña no coinciden")
-                TXTcorreo.Text = ""
-                TXTcontrasena.Text = ""
-            End If
+
+            Me.Hide()
+            REINICIAR()
+            FrmMenuAdministrador.ShowDialog()
+            Me.Close()
+
             DESCONECTAR()
         Catch ex As Exception
             Console.WriteLine("Error: " & ex.Message)
             MessageBox.Show("Ocurrió un error al autenticar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
+    End Sub
+    Friend Sub REINICIAR()
+        TXTcorreo.Text = ""
+        TXTcontrasena.Text = ""
     End Sub
 
     Private Sub BTNvolverMenu_Click(sender As Object, e As EventArgs) Handles BTNvolverMenu.Click

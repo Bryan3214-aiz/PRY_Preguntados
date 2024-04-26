@@ -69,22 +69,23 @@ Public Class FrmLoginEstudiante
             ID_estudiante = ds.Tables(0).Rows(0).Item(0)
             NOMBRE_ESTUDIANTE = ds.Tables(0).Rows(0).Item(1)
             NIVEL_ESTUDIANTE = ds.Tables(0).Rows(0).Item(2)
-            If ID_estudiante > 0 Then
-                Me.Hide()
-                FrmMenuEstudiante.ShowDialog()
-                Me.Close()
-            Else
-                MsgBox("El usuario o contraseña no coinciden")
-                TXTcorreo.Text = ""
-                TXTcontrasena.Text = ""
-            End If
-            ' Se desconecta de la base de datos
+
+            Me.Hide()
+            REINICIAR()
+            FrmMenuEstudiante.ShowDialog()
+            Me.Close()
+
             DESCONECTAR()
         Catch ex As Exception
             Console.WriteLine("Error: " & ex.Message)
             MessageBox.Show("Ocurrió un error al autenticar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
+    End Sub
+
+    Friend Sub REINICIAR()
+        TXTcorreo.Text = ""
+        TXTcontrasena.Text = ""
     End Sub
 
     Private Sub panel2_Paint(sender As Object, e As PaintEventArgs) Handles panel2.Paint

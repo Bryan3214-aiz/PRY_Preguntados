@@ -28,15 +28,12 @@ Public Class FrmLoginProfesor
             CARGAR_TABLA(ds, comando)
             ID_profesor = ds.Tables(0).Rows(0).Item(0)
             NOMBRE_PROFESOR = ds.Tables(0).Rows(0).Item(1)
-            If ID_profesor > 0 Then
-                Me.Hide()
-                FrmMenuProfesor.ShowDialog()
-                Me.Close()
-            Else
-                MsgBox("El usuario o contraseña no coinciden")
-                TXTcorreo.Text = ""
-                TXTcontrasena.Text = ""
-            End If
+
+            Me.Hide()
+            REINICIAR()
+            FrmMenuProfesor.ShowDialog()
+            Me.Close()
+
             DESCONECTAR()
         Catch ex As Exception
             Console.WriteLine("Error: " & ex.Message)
@@ -45,6 +42,10 @@ Public Class FrmLoginProfesor
 
     End Sub
 
+    Friend Sub REINICIAR()
+        TXTcorreo.Text = ""
+        TXTcontrasena.Text = ""
+    End Sub
 
     Private Sub FrmLoginUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Configurar el formulario para usar DoubleBuffered para reducir el parpadeo

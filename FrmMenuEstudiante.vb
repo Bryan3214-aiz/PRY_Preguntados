@@ -50,8 +50,12 @@
     End Sub
 
     Private Sub btnSAlir2_Click(sender As Object, e As EventArgs) Handles btnSAlir2.Click
-        Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Me.Hide()
+        FrmOPCIONES.Show()
+    End Sub
 
+    Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
+        Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If resultado = DialogResult.Yes Then
             FrmOPCIONES.Close()
@@ -60,6 +64,4 @@
             Me.Close()
         End If
     End Sub
-
-
 End Class

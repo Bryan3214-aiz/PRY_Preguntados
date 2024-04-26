@@ -32,6 +32,7 @@ Partial Class FrmMenuEstudiante
         Me.BTNranking = New Guna.UI2.WinForms.Guna2Button()
         Me.BTNcomenzar = New Guna.UI2.WinForms.Guna2Button()
         Me.Temporizado = New System.Windows.Forms.Timer(Me.components)
+        Me.BTNcerrar = New Guna.UI2.WinForms.Guna2Button()
         Me.panel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -40,6 +41,7 @@ Partial Class FrmMenuEstudiante
         '
         Me.panel.BackColor = System.Drawing.Color.Transparent
         Me.panel.BorderRadius = 100
+        Me.panel.Controls.Add(Me.BTNcerrar)
         Me.panel.Controls.Add(Me.Guna2PictureBox1)
         Me.panel.Controls.Add(Me.btnSAlir2)
         Me.panel.Controls.Add(Me.BTNeditarInfoEstudiante)
@@ -73,14 +75,14 @@ Partial Class FrmMenuEstudiante
         Me.btnSAlir2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnSAlir2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnSAlir2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnSAlir2.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSAlir2.FillColor = System.Drawing.Color.Gray
         Me.btnSAlir2.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.btnSAlir2.ForeColor = System.Drawing.Color.White
         Me.btnSAlir2.Location = New System.Drawing.Point(395, 219)
         Me.btnSAlir2.Name = "btnSAlir2"
         Me.btnSAlir2.Size = New System.Drawing.Size(150, 41)
         Me.btnSAlir2.TabIndex = 14
-        Me.btnSAlir2.Text = "Salir del juego"
+        Me.btnSAlir2.Text = "Cerrar sesión"
         Me.btnSAlir2.UseTransparentBackground = True
         '
         'BTNeditarInfoEstudiante
@@ -162,6 +164,25 @@ Partial Class FrmMenuEstudiante
         'Temporizado
         '
         '
+        'BTNcerrar
+        '
+        Me.BTNcerrar.Animated = True
+        Me.BTNcerrar.BackColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.BorderColor = System.Drawing.Color.Transparent
+        Me.BTNcerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTNcerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTNcerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTNcerrar.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
+        Me.BTNcerrar.ForeColor = System.Drawing.Color.White
+        Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
+        Me.BTNcerrar.Location = New System.Drawing.Point(726, 0)
+        Me.BTNcerrar.Name = "BTNcerrar"
+        Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
+        Me.BTNcerrar.TabIndex = 17
+        Me.BTNcerrar.Text = "X"
+        '
         'FrmMenuEstudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -190,4 +211,5 @@ Partial Class FrmMenuEstudiante
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Temporizado As Timer
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents BTNcerrar As Guna.UI2.WinForms.Guna2Button
 End Class
