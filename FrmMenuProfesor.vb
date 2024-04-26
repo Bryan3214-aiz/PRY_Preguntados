@@ -173,6 +173,7 @@
         ' Verificar si el usuario ha confirmado el cierre del formulario
         If resultado = DialogResult.Yes Then
             FrmOPCIONES.Close()
+            FrmLoginProfesor.Close()
             Me.Close() ' Cerrar el formulario
         End If
     End Sub

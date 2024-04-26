@@ -41,7 +41,6 @@ Public Class FrmCrearReportes
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(7)) 'Incorrectas
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(8))  'Fecha
                 L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(4))  'IDcategoria
-                L.Items(L.Items.Count - 1).SubItems.Add(ds.Tables(0).Rows(I).Item(9))  'Tiempo
 
             Next
         End If
@@ -104,7 +103,6 @@ Public Class FrmCrearReportes
             RepuestasIncorrectas = L.SelectedItems(0).SubItems(5).Text
             Fecha = L.SelectedItems(0).SubItems(6).Text
             IDCategoria = L.SelectedItems(0).SubItems(7).Text
-            tiempo = L.SelectedItems(0).SubItems(8).Text
 
         End If
     End Sub
@@ -156,7 +154,6 @@ Public Class FrmCrearReportes
             INSERTAR_REGLON(True, P15, "Puntaje obtenido: " & puntaje & " pts", False, False, 12, "Arial", "I", 0)
             INSERTAR_REGLON(True, P16, "Respuestas correctas: " & RespuestasCorrectas, False, False, 12, "Arial", "I", 0)
             INSERTAR_REGLON(True, P17, "Respuestas incorrectas: " & RepuestasIncorrectas, False, False, 12, "Arial", "I", 0)
-            INSERTAR_REGLON(True, P18, "Tiempo total: " & tiempo & " mins", False, False, 12, "Arial", "I", 0)
             INSERTAR_REGLON(True, P19, "Fecha: " & Fecha, False, False, 12, "Arial", "I", 0)
             INSERTAR_REGLON(True, P20, "", True, False, 12, "Arial", "I", 0)
 
