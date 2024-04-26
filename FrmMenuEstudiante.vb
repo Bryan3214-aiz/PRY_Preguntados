@@ -36,7 +36,6 @@
     Private Sub BTNcomenzar_Click(sender As Object, e As EventArgs) Handles BTNcomenzar.Click
         Me.Hide()
         FrmMenuPartidaEstudiante.ShowDialog()
-        Me.Close()
     End Sub
 
     Private Sub BTNranking_Click(sender As Object, e As EventArgs) Handles BTNranking.Click

@@ -30,7 +30,7 @@ Public Class FrmJuegoPreguntas
         Dim videoBytes As Byte() = Nothing
         Try
             CONECTAR()
-            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
             Dim query As String = "SELECT VIDEO_CATEGORIA FROM CATEGORIA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
             Using cmd As New OleDbCommand(query, miconexion)
                 Dim result As Object = cmd.ExecuteScalar()
@@ -82,7 +82,7 @@ Public Class FrmJuegoPreguntas
         Dim sonidoBytes As Byte() = Nothing
         Try
             CONECTAR()
-            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
+            Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
             Dim query As String = "SELECT SONIDO_CATEGORIA FROM CATEGORIA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
             Using cmd As New OleDbCommand(query, miconexion)
                 Dim result As Object = cmd.ExecuteScalar()
@@ -116,18 +116,18 @@ Public Class FrmJuegoPreguntas
 
     Friend Sub REFRESCAR_PREGUNTAS()
         Dim T2 As New DataSet
-        Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedIndex + 1
-
+        Dim ID_CATEGORIA As Integer = FrmMenuPartidaEstudiante.ID_CAT
+        ''Dim CATEGORIA As String = FrmMenuPartidaEstudiante.CMBseleccionarFRM.SelectedItem
         ds.Tables.Clear()
         comando = "SELECT ID_PREGUNTA, ENUNCIADO_PREGUNTA, PUNTAJE,tiempo_limite FROM PREGUNTA WHERE ID_CATEGORIA = " & ID_CATEGORIA & ""
         CARGAR_TABLA(ds, comando)
         If ds.Tables(0).Rows.Count > 0 Then
             For I = 0 To ds.Tables(0).Rows.Count - 1
-                M(I, 0) = ds.Tables(0).Rows(I).ItemArray(1) 'PREGUNTA
-                M(I, 1) = ds.Tables(0).Rows(I).ItemArray(2) 'VALOR DE LA PREGUNTA
+                M(I, 0) = ds.Tables(0).Rows(I).ItemArray(1) 'La pregunta
+                M(I, 1) = ds.Tables(0).Rows(I).ItemArray(2) 'El valor de la pregunta
                 M(I, 8) = ds.Tables(0).Rows(I).ItemArray(3)
                 PTOTAL += ds.Tables(0).Rows(I).ItemArray(2)
-                M(I, 7) = ds.Tables(0).Rows(I).ItemArray(0) 'ID PREGUNTA
+                M(I, 7) = ds.Tables(0).Rows(I).ItemArray(0) 'El id de la pregunta
                 T2.Tables.Clear()
                 comando = "SELECT TEXTO_OPCION FROM OPCION WHERE ID_PREGUNTA = " & ds.Tables(0).Rows(I).ItemArray(0) & ""
                 CARGAR_TABLA(T2, comando)
