@@ -25,7 +25,7 @@ Partial Class FrmJuegoPreguntas
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmJuegoPreguntas))
         Me.MediaPlayer = New AxWMPLib.AxWindowsMediaPlayer()
-        Me.PBBARRA = New Guna.UI2.WinForms.Guna2ProgressBar()
+        Me.Progreso_Barra = New Guna.UI2.WinForms.Guna2ProgressBar()
         Me.Temporizador = New System.Windows.Forms.Timer(Me.components)
         Me.LBLPUNTOS = New System.Windows.Forms.Label()
         Me.IMAGENES = New System.Windows.Forms.ImageList(Me.components)
@@ -34,6 +34,7 @@ Partial Class FrmJuegoPreguntas
         Me.BTN4 = New Guna.UI2.WinForms.Guna2Button()
         Me.BTN2 = New Guna.UI2.WinForms.Guna2Button()
         Me.LBLPREGUNTA = New System.Windows.Forms.Label()
+        Me.TiempoPregunta = New System.Windows.Forms.Timer(Me.components)
         CType(Me.MediaPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,19 +50,23 @@ Partial Class FrmJuegoPreguntas
         Me.MediaPlayer.Size = New System.Drawing.Size(1040, 560)
         Me.MediaPlayer.TabIndex = 2
         '
-        'PBBARRA
+        'Progreso_Barra
         '
-        Me.PBBARRA.BackColor = System.Drawing.Color.Transparent
-        Me.PBBARRA.FillColor = System.Drawing.Color.Black
-        Me.PBBARRA.Location = New System.Drawing.Point(76, 457)
-        Me.PBBARRA.Name = "PBBARRA"
-        Me.PBBARRA.ProgressColor = System.Drawing.Color.Gold
-        Me.PBBARRA.ProgressColor2 = System.Drawing.Color.Gold
-        Me.PBBARRA.Size = New System.Drawing.Size(806, 15)
-        Me.PBBARRA.TabIndex = 20
-        Me.PBBARRA.Text = "Guna2ProgressBar1"
-        Me.PBBARRA.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.PBBARRA.Value = 70
+        Me.Progreso_Barra.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Progreso_Barra.BackColor = System.Drawing.Color.Transparent
+        Me.Progreso_Barra.FillColor = System.Drawing.Color.Black
+        Me.Progreso_Barra.Location = New System.Drawing.Point(76, 457)
+        Me.Progreso_Barra.Name = "Progreso_Barra"
+        Me.Progreso_Barra.ProgressColor = System.Drawing.Color.Gold
+        Me.Progreso_Barra.ProgressColor2 = System.Drawing.Color.Gold
+        Me.Progreso_Barra.Size = New System.Drawing.Size(806, 15)
+        Me.Progreso_Barra.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.Progreso_Barra.TabIndex = 20
+        Me.Progreso_Barra.Text = "Guna2ProgressBar1"
+        Me.Progreso_Barra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.Progreso_Barra.Value = 70
         '
         'Temporizador
         '
@@ -171,6 +176,9 @@ Partial Class FrmJuegoPreguntas
         Me.LBLPREGUNTA.Text = "Nombre del estudiante:"
         Me.LBLPREGUNTA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'TiempoPregunta
+        '
+        '
         'FrmJuegoPreguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -184,7 +192,7 @@ Partial Class FrmJuegoPreguntas
         Me.Controls.Add(Me.BTN3)
         Me.Controls.Add(Me.BTN1)
         Me.Controls.Add(Me.LBLPUNTOS)
-        Me.Controls.Add(Me.PBBARRA)
+        Me.Controls.Add(Me.Progreso_Barra)
         Me.Controls.Add(Me.MediaPlayer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -198,7 +206,7 @@ Partial Class FrmJuegoPreguntas
     End Sub
 
     Friend WithEvents MediaPlayer As AxWMPLib.AxWindowsMediaPlayer
-    Friend WithEvents PBBARRA As Guna.UI2.WinForms.Guna2ProgressBar
+    Friend WithEvents Progreso_Barra As Guna.UI2.WinForms.Guna2ProgressBar
     Friend WithEvents Temporizador As Timer
     Friend WithEvents LBLPUNTOS As Label
     Friend WithEvents IMAGENES As ImageList
@@ -207,4 +215,5 @@ Partial Class FrmJuegoPreguntas
     Friend WithEvents BTN4 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTN2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LBLPREGUNTA As Label
+    Friend WithEvents TiempoPregunta As Timer
 End Class
