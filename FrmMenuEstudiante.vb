@@ -51,7 +51,7 @@
 
     Private Sub btnSAlir2_Click(sender As Object, e As EventArgs) Handles btnSAlir2.Click
         Me.Hide()
-        FrmOPCIONES.ShowDialog()
+        FrmOPCIONES.Show()
     End Sub
 
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click

@@ -217,7 +217,7 @@ Partial Class FrmEditarInformacion
         Me.CMBnuevogrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CMBnuevogrado.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.CMBnuevogrado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CMBnuevogrado.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CMBnuevogrado.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.CMBnuevogrado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.CMBnuevogrado.ItemHeight = 30
         Me.CMBnuevogrado.Items.AddRange(New Object() {"Sétimo", "Octavo", "Noveno", "Décimo", "Undécimo", "Duodécimo"})

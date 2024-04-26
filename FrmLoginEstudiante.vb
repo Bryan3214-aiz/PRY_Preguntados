@@ -9,7 +9,7 @@ Public Class FrmLoginEstudiante
     Private Sub BTNregistrarEstudiante_Click(sender As Object, e As EventArgs) Handles BTNregistrarEstudiante.Click
         Me.Hide()
         FrmRegistrarEstudiante.ShowDialog()
-        Me.Close()
+
     End Sub
 
     Private Sub panel_Paint(sender As Object, e As PaintEventArgs) Handles panel.Paint

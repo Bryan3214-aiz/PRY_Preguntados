@@ -34,8 +34,7 @@ Public Class FrmVerDatosRegistradosEstudiante
 
     Private Sub BTNjuego_Click(sender As Object, e As EventArgs) Handles BTNcomenzarJuego.Click
         Me.Hide()
-        FrmLoginEstudiante.ShowDialog()
-        Me.Close()
+        FrmLoginEstudiante.Show()
     End Sub
 
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
@@ -107,6 +106,7 @@ Public Class FrmVerDatosRegistradosEstudiante
 
     Private Sub BTNguardarCambios_Click(sender As Object, e As EventArgs) Handles BTNguardarCambios.Click
         Try
+            CONECTAR()
             If String.IsNullOrWhiteSpace(CMBgrado.Text) OrElse
             String.IsNullOrWhiteSpace(CMBcursolectivo.Text) OrElse
             String.IsNullOrWhiteSpace(CMBasignatura.Text) OrElse
@@ -132,9 +132,9 @@ Public Class FrmVerDatosRegistradosEstudiante
             End If
             INICIALIZAR()
             Me.Hide()
-            FrmLoginEstudiante.ShowDialog()
-            Me.Close()
+            FrmLoginEstudiante.Show()
 
+            DESCONECTAR()
         Catch ex As Exception
             Console.WriteLine("Error de actualización: " & ex.Message)
             MessageBox.Show("Ocurrió un error al ingresar los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
