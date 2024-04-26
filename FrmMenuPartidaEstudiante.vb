@@ -9,8 +9,14 @@
         Temporizado.Start()
         Guna2Panel1.BackColor = Color.FromArgb(75, Color.Black)
         Inicializar()
-    End Sub
+        DetenerMusica()
 
+    End Sub
+    Private Sub DetenerMusica()
+        If reproductor IsNot Nothing Then
+            reproductor.Stop()
+        End If
+    End Sub
     Private Sub BTNcerrar_Click(sender As Object, e As EventArgs) Handles BTNcerrar.Click
         Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir del juego?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
@@ -53,17 +59,9 @@
         End If
     End Sub
 
-    Private Sub DetenerMusica()
-        If reproductor IsNot Nothing Then
-            reproductor.Stop()
-        End If
-    End Sub
-
-
     Private Sub BTNcomenzar_Click(sender As Object, e As EventArgs) Handles BTNcomenzar.Click
         Me.Hide()
         FrmJuegoPreguntas.ShowDialog()
-        DetenerMusica()
         Me.Close()
     End Sub
 End Class

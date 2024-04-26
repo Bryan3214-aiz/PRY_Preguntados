@@ -12,9 +12,6 @@ Public Class FrmJuegoPreguntas
     Dim tiempo_limite As Integer = 0
     Dim Respuestas_Correctas As Integer = 0
     Dim Respuestas_Incorrectas As Integer = 0
-    Dim reproductor As System.Media.SoundPlayer
-    Dim wmp As New WindowsMediaPlayer()
-
 
     Private Sub FrmJuegoPreguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarSonido()
@@ -49,7 +46,6 @@ Public Class FrmJuegoPreguntas
 
         Return videoBytes
     End Function
-
 
     Private Sub MostrarVideo()
         Dim videoBytes As Byte() = ObtenerVideo()
@@ -113,10 +109,6 @@ Public Class FrmJuegoPreguntas
             Console.WriteLine("No se encontró el sonido en la base de datos.")
         End If
     End Sub
-
-
-
-
 
 
     Friend Sub REFRESCAR_PREGUNTAS()
@@ -402,3 +394,10 @@ Public Class FrmJuegoPreguntas
         BTN4.FillColor = Color.Gold
     End Sub
 End Class
+Module sonidoJuego
+    Public wmp As New WindowsMediaPlayer()
+End Module
+
+
+
+
