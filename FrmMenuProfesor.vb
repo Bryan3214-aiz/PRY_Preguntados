@@ -186,4 +186,9 @@
         FormularioAbierto(New FrmEliminarPreguntas())
         ocultarMenu()
     End Sub
+
+    Private Sub BTNcerrarSesion_Click(sender As Object, e As EventArgs) Handles BTNcerrarSesion.Click
+        Me.Hide()
+        FrmOPCIONES.Show()
+    End Sub
 End Class

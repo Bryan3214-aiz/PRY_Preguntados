@@ -65,4 +65,9 @@
     Private Sub BTNbuscarProfesor_Click(sender As Object, e As EventArgs) Handles BTNbuscarProfesor.Click
         FormularioAbierto(New FrmBuscarPerfilProfesor())
     End Sub
+
+    Private Sub BTNcerrarSesion_Click(sender As Object, e As EventArgs) Handles BTNcerrarSesion.Click
+        Me.Hide()
+        FrmOPCIONES.Show()
+    End Sub
 End Class

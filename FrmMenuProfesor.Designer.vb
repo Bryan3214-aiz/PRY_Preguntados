@@ -81,8 +81,9 @@ Partial Class FrmMenuProfesor
         Me.BTNmiPerfil.Controls.Add(Me.PanelLOGO)
         Me.BTNmiPerfil.Dock = System.Windows.Forms.DockStyle.Left
         Me.BTNmiPerfil.Location = New System.Drawing.Point(0, 0)
+        Me.BTNmiPerfil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNmiPerfil.Name = "BTNmiPerfil"
-        Me.BTNmiPerfil.Size = New System.Drawing.Size(250, 654)
+        Me.BTNmiPerfil.Size = New System.Drawing.Size(333, 805)
         Me.BTNmiPerfil.TabIndex = 12
         '
         'panelReportes
@@ -90,9 +91,10 @@ Partial Class FrmMenuProfesor
         Me.panelReportes.Controls.Add(Me.BTNcrearReportes)
         Me.panelReportes.Controls.Add(Me.BTNasignarCalificacion)
         Me.panelReportes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelReportes.Location = New System.Drawing.Point(0, 766)
+        Me.panelReportes.Location = New System.Drawing.Point(0, 942)
+        Me.panelReportes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelReportes.Name = "panelReportes"
-        Me.panelReportes.Size = New System.Drawing.Size(233, 80)
+        Me.panelReportes.Size = New System.Drawing.Size(312, 98)
         Me.panelReportes.TabIndex = 18
         '
         'BTNcrearReportes
@@ -107,10 +109,11 @@ Partial Class FrmMenuProfesor
         Me.BTNcrearReportes.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNcrearReportes.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcrearReportes.ForeColor = System.Drawing.Color.White
-        Me.BTNcrearReportes.Location = New System.Drawing.Point(0, 41)
+        Me.BTNcrearReportes.Location = New System.Drawing.Point(0, 50)
+        Me.BTNcrearReportes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNcrearReportes.Name = "BTNcrearReportes"
-        Me.BTNcrearReportes.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNcrearReportes.Size = New System.Drawing.Size(233, 41)
+        Me.BTNcrearReportes.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNcrearReportes.Size = New System.Drawing.Size(312, 50)
         Me.BTNcrearReportes.TabIndex = 4
         Me.BTNcrearReportes.Text = "crear reportes"
         Me.BTNcrearReportes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -128,9 +131,10 @@ Partial Class FrmMenuProfesor
         Me.BTNasignarCalificacion.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNasignarCalificacion.ForeColor = System.Drawing.Color.White
         Me.BTNasignarCalificacion.Location = New System.Drawing.Point(0, 0)
+        Me.BTNasignarCalificacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNasignarCalificacion.Name = "BTNasignarCalificacion"
-        Me.BTNasignarCalificacion.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNasignarCalificacion.Size = New System.Drawing.Size(233, 41)
+        Me.BTNasignarCalificacion.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNasignarCalificacion.Size = New System.Drawing.Size(312, 50)
         Me.BTNasignarCalificacion.TabIndex = 3
         Me.BTNasignarCalificacion.Text = "Asignar calificaciones"
         Me.BTNasignarCalificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -148,10 +152,11 @@ Partial Class FrmMenuProfesor
         Me.BTNcerrarSesion.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrarSesion.ForeColor = System.Drawing.Color.White
         Me.BTNcerrarSesion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.BTNcerrarSesion.Location = New System.Drawing.Point(0, 846)
+        Me.BTNcerrarSesion.Location = New System.Drawing.Point(0, 1040)
+        Me.BTNcerrarSesion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNcerrarSesion.Name = "BTNcerrarSesion"
-        Me.BTNcerrarSesion.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNcerrarSesion.Size = New System.Drawing.Size(233, 45)
+        Me.BTNcerrarSesion.Padding = New System.Windows.Forms.Padding(13, 0, 0, 0)
+        Me.BTNcerrarSesion.Size = New System.Drawing.Size(312, 55)
         Me.BTNcerrarSesion.TabIndex = 17
         Me.BTNcerrarSesion.Text = "Cerrar sesión"
         Me.BTNcerrarSesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -168,10 +173,11 @@ Partial Class FrmMenuProfesor
         Me.BTNreportes.FillColor = System.Drawing.Color.SlateBlue
         Me.BTNreportes.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNreportes.ForeColor = System.Drawing.Color.White
-        Me.BTNreportes.Location = New System.Drawing.Point(0, 721)
+        Me.BTNreportes.Location = New System.Drawing.Point(0, 887)
+        Me.BTNreportes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNreportes.Name = "BTNreportes"
-        Me.BTNreportes.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNreportes.Size = New System.Drawing.Size(233, 45)
+        Me.BTNreportes.Padding = New System.Windows.Forms.Padding(13, 0, 0, 0)
+        Me.BTNreportes.Size = New System.Drawing.Size(312, 55)
         Me.BTNreportes.TabIndex = 11
         Me.BTNreportes.Text = "Reportes"
         Me.BTNreportes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -183,9 +189,10 @@ Partial Class FrmMenuProfesor
         Me.panelPreguntas.Controls.Add(Me.BTNactualizarPregunta)
         Me.panelPreguntas.Controls.Add(Me.BTNcrearPregunta)
         Me.panelPreguntas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelPreguntas.Location = New System.Drawing.Point(0, 579)
+        Me.panelPreguntas.Location = New System.Drawing.Point(0, 712)
+        Me.panelPreguntas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelPreguntas.Name = "panelPreguntas"
-        Me.panelPreguntas.Size = New System.Drawing.Size(233, 142)
+        Me.panelPreguntas.Size = New System.Drawing.Size(312, 175)
         Me.panelPreguntas.TabIndex = 16
         '
         'BTNbuscarPregunta
@@ -200,10 +207,11 @@ Partial Class FrmMenuProfesor
         Me.BTNbuscarPregunta.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNbuscarPregunta.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNbuscarPregunta.ForeColor = System.Drawing.Color.White
-        Me.BTNbuscarPregunta.Location = New System.Drawing.Point(0, 105)
+        Me.BTNbuscarPregunta.Location = New System.Drawing.Point(0, 129)
+        Me.BTNbuscarPregunta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNbuscarPregunta.Name = "BTNbuscarPregunta"
-        Me.BTNbuscarPregunta.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNbuscarPregunta.Size = New System.Drawing.Size(233, 37)
+        Me.BTNbuscarPregunta.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNbuscarPregunta.Size = New System.Drawing.Size(312, 46)
         Me.BTNbuscarPregunta.TabIndex = 6
         Me.BTNbuscarPregunta.Text = "Buscar preguntas"
         Me.BTNbuscarPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -220,10 +228,11 @@ Partial Class FrmMenuProfesor
         Me.BTNeliminarPregunta.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNeliminarPregunta.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNeliminarPregunta.ForeColor = System.Drawing.Color.White
-        Me.BTNeliminarPregunta.Location = New System.Drawing.Point(0, 70)
+        Me.BTNeliminarPregunta.Location = New System.Drawing.Point(0, 86)
+        Me.BTNeliminarPregunta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNeliminarPregunta.Name = "BTNeliminarPregunta"
-        Me.BTNeliminarPregunta.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNeliminarPregunta.Size = New System.Drawing.Size(233, 35)
+        Me.BTNeliminarPregunta.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNeliminarPregunta.Size = New System.Drawing.Size(312, 43)
         Me.BTNeliminarPregunta.TabIndex = 5
         Me.BTNeliminarPregunta.Text = "Eliminar preguntas"
         Me.BTNeliminarPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -240,10 +249,11 @@ Partial Class FrmMenuProfesor
         Me.BTNactualizarPregunta.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNactualizarPregunta.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNactualizarPregunta.ForeColor = System.Drawing.Color.White
-        Me.BTNactualizarPregunta.Location = New System.Drawing.Point(0, 35)
+        Me.BTNactualizarPregunta.Location = New System.Drawing.Point(0, 43)
+        Me.BTNactualizarPregunta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNactualizarPregunta.Name = "BTNactualizarPregunta"
-        Me.BTNactualizarPregunta.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNactualizarPregunta.Size = New System.Drawing.Size(233, 35)
+        Me.BTNactualizarPregunta.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNactualizarPregunta.Size = New System.Drawing.Size(312, 43)
         Me.BTNactualizarPregunta.TabIndex = 4
         Me.BTNactualizarPregunta.Text = "actualizar preguntas"
         Me.BTNactualizarPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -261,9 +271,10 @@ Partial Class FrmMenuProfesor
         Me.BTNcrearPregunta.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcrearPregunta.ForeColor = System.Drawing.Color.White
         Me.BTNcrearPregunta.Location = New System.Drawing.Point(0, 0)
+        Me.BTNcrearPregunta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNcrearPregunta.Name = "BTNcrearPregunta"
-        Me.BTNcrearPregunta.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNcrearPregunta.Size = New System.Drawing.Size(233, 35)
+        Me.BTNcrearPregunta.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNcrearPregunta.Size = New System.Drawing.Size(312, 43)
         Me.BTNcrearPregunta.TabIndex = 3
         Me.BTNcrearPregunta.Text = "Crear preguntas"
         Me.BTNcrearPregunta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -280,10 +291,11 @@ Partial Class FrmMenuProfesor
         Me.BTNpreguntas.FillColor = System.Drawing.Color.SlateBlue
         Me.BTNpreguntas.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNpreguntas.ForeColor = System.Drawing.Color.White
-        Me.BTNpreguntas.Location = New System.Drawing.Point(0, 534)
+        Me.BTNpreguntas.Location = New System.Drawing.Point(0, 657)
+        Me.BTNpreguntas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNpreguntas.Name = "BTNpreguntas"
-        Me.BTNpreguntas.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNpreguntas.Size = New System.Drawing.Size(233, 45)
+        Me.BTNpreguntas.Padding = New System.Windows.Forms.Padding(13, 0, 0, 0)
+        Me.BTNpreguntas.Size = New System.Drawing.Size(312, 55)
         Me.BTNpreguntas.TabIndex = 15
         Me.BTNpreguntas.Text = "Preguntas"
         Me.BTNpreguntas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -295,9 +307,10 @@ Partial Class FrmMenuProfesor
         Me.panelCategorias.Controls.Add(Me.BTNeditarCategorias)
         Me.panelCategorias.Controls.Add(Me.BTNcrearCategorias)
         Me.panelCategorias.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelCategorias.Location = New System.Drawing.Point(0, 392)
+        Me.panelCategorias.Location = New System.Drawing.Point(0, 482)
+        Me.panelCategorias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelCategorias.Name = "panelCategorias"
-        Me.panelCategorias.Size = New System.Drawing.Size(233, 142)
+        Me.panelCategorias.Size = New System.Drawing.Size(312, 175)
         Me.panelCategorias.TabIndex = 14
         '
         'BTNbuscarCategorias
@@ -312,10 +325,11 @@ Partial Class FrmMenuProfesor
         Me.BTNbuscarCategorias.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNbuscarCategorias.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNbuscarCategorias.ForeColor = System.Drawing.Color.White
-        Me.BTNbuscarCategorias.Location = New System.Drawing.Point(0, 105)
+        Me.BTNbuscarCategorias.Location = New System.Drawing.Point(0, 129)
+        Me.BTNbuscarCategorias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNbuscarCategorias.Name = "BTNbuscarCategorias"
-        Me.BTNbuscarCategorias.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNbuscarCategorias.Size = New System.Drawing.Size(233, 37)
+        Me.BTNbuscarCategorias.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNbuscarCategorias.Size = New System.Drawing.Size(312, 46)
         Me.BTNbuscarCategorias.TabIndex = 6
         Me.BTNbuscarCategorias.Text = "Buscar categorias"
         Me.BTNbuscarCategorias.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -332,10 +346,11 @@ Partial Class FrmMenuProfesor
         Me.BTNeliminarCategorias.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNeliminarCategorias.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNeliminarCategorias.ForeColor = System.Drawing.Color.White
-        Me.BTNeliminarCategorias.Location = New System.Drawing.Point(0, 70)
+        Me.BTNeliminarCategorias.Location = New System.Drawing.Point(0, 86)
+        Me.BTNeliminarCategorias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNeliminarCategorias.Name = "BTNeliminarCategorias"
-        Me.BTNeliminarCategorias.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNeliminarCategorias.Size = New System.Drawing.Size(233, 35)
+        Me.BTNeliminarCategorias.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNeliminarCategorias.Size = New System.Drawing.Size(312, 43)
         Me.BTNeliminarCategorias.TabIndex = 5
         Me.BTNeliminarCategorias.Text = "Eliminar categorias"
         Me.BTNeliminarCategorias.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -352,10 +367,11 @@ Partial Class FrmMenuProfesor
         Me.BTNeditarCategorias.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNeditarCategorias.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNeditarCategorias.ForeColor = System.Drawing.Color.White
-        Me.BTNeditarCategorias.Location = New System.Drawing.Point(0, 35)
+        Me.BTNeditarCategorias.Location = New System.Drawing.Point(0, 43)
+        Me.BTNeditarCategorias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNeditarCategorias.Name = "BTNeditarCategorias"
-        Me.BTNeditarCategorias.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNeditarCategorias.Size = New System.Drawing.Size(233, 35)
+        Me.BTNeditarCategorias.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNeditarCategorias.Size = New System.Drawing.Size(312, 43)
         Me.BTNeditarCategorias.TabIndex = 4
         Me.BTNeditarCategorias.Text = "actualizar categorias"
         Me.BTNeditarCategorias.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -373,9 +389,10 @@ Partial Class FrmMenuProfesor
         Me.BTNcrearCategorias.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcrearCategorias.ForeColor = System.Drawing.Color.White
         Me.BTNcrearCategorias.Location = New System.Drawing.Point(0, 0)
+        Me.BTNcrearCategorias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNcrearCategorias.Name = "BTNcrearCategorias"
-        Me.BTNcrearCategorias.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNcrearCategorias.Size = New System.Drawing.Size(233, 35)
+        Me.BTNcrearCategorias.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNcrearCategorias.Size = New System.Drawing.Size(312, 43)
         Me.BTNcrearCategorias.TabIndex = 3
         Me.BTNcrearCategorias.Text = "crear categorias"
         Me.BTNcrearCategorias.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -392,10 +409,11 @@ Partial Class FrmMenuProfesor
         Me.BTNcategorias.FillColor = System.Drawing.Color.SlateBlue
         Me.BTNcategorias.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcategorias.ForeColor = System.Drawing.Color.White
-        Me.BTNcategorias.Location = New System.Drawing.Point(0, 347)
+        Me.BTNcategorias.Location = New System.Drawing.Point(0, 427)
+        Me.BTNcategorias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNcategorias.Name = "BTNcategorias"
-        Me.BTNcategorias.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNcategorias.Size = New System.Drawing.Size(233, 45)
+        Me.BTNcategorias.Padding = New System.Windows.Forms.Padding(13, 0, 0, 0)
+        Me.BTNcategorias.Size = New System.Drawing.Size(312, 55)
         Me.BTNcategorias.TabIndex = 11
         Me.BTNcategorias.Text = "Categorias"
         Me.BTNcategorias.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -407,9 +425,10 @@ Partial Class FrmMenuProfesor
         Me.panelTemas.Controls.Add(Me.BTNeditarTemas)
         Me.panelTemas.Controls.Add(Me.BTNcrearTemas)
         Me.panelTemas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelTemas.Location = New System.Drawing.Point(0, 205)
+        Me.panelTemas.Location = New System.Drawing.Point(0, 252)
+        Me.panelTemas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelTemas.Name = "panelTemas"
-        Me.panelTemas.Size = New System.Drawing.Size(233, 142)
+        Me.panelTemas.Size = New System.Drawing.Size(312, 175)
         Me.panelTemas.TabIndex = 13
         '
         'BTNbuscarTemas
@@ -424,10 +443,11 @@ Partial Class FrmMenuProfesor
         Me.BTNbuscarTemas.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNbuscarTemas.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNbuscarTemas.ForeColor = System.Drawing.Color.White
-        Me.BTNbuscarTemas.Location = New System.Drawing.Point(0, 105)
+        Me.BTNbuscarTemas.Location = New System.Drawing.Point(0, 129)
+        Me.BTNbuscarTemas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNbuscarTemas.Name = "BTNbuscarTemas"
-        Me.BTNbuscarTemas.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNbuscarTemas.Size = New System.Drawing.Size(233, 37)
+        Me.BTNbuscarTemas.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNbuscarTemas.Size = New System.Drawing.Size(312, 46)
         Me.BTNbuscarTemas.TabIndex = 6
         Me.BTNbuscarTemas.Text = "Buscar temas"
         Me.BTNbuscarTemas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -444,10 +464,11 @@ Partial Class FrmMenuProfesor
         Me.BTNeliminarTemas.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNeliminarTemas.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNeliminarTemas.ForeColor = System.Drawing.Color.White
-        Me.BTNeliminarTemas.Location = New System.Drawing.Point(0, 70)
+        Me.BTNeliminarTemas.Location = New System.Drawing.Point(0, 86)
+        Me.BTNeliminarTemas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNeliminarTemas.Name = "BTNeliminarTemas"
-        Me.BTNeliminarTemas.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNeliminarTemas.Size = New System.Drawing.Size(233, 35)
+        Me.BTNeliminarTemas.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNeliminarTemas.Size = New System.Drawing.Size(312, 43)
         Me.BTNeliminarTemas.TabIndex = 5
         Me.BTNeliminarTemas.Text = "Eliminar temas"
         Me.BTNeliminarTemas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -464,10 +485,11 @@ Partial Class FrmMenuProfesor
         Me.BTNeditarTemas.FillColor = System.Drawing.Color.DarkSlateBlue
         Me.BTNeditarTemas.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNeditarTemas.ForeColor = System.Drawing.Color.White
-        Me.BTNeditarTemas.Location = New System.Drawing.Point(0, 35)
+        Me.BTNeditarTemas.Location = New System.Drawing.Point(0, 43)
+        Me.BTNeditarTemas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNeditarTemas.Name = "BTNeditarTemas"
-        Me.BTNeditarTemas.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNeditarTemas.Size = New System.Drawing.Size(233, 35)
+        Me.BTNeditarTemas.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNeditarTemas.Size = New System.Drawing.Size(312, 43)
         Me.BTNeditarTemas.TabIndex = 4
         Me.BTNeditarTemas.Text = "actualizar temas"
         Me.BTNeditarTemas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -485,9 +507,10 @@ Partial Class FrmMenuProfesor
         Me.BTNcrearTemas.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcrearTemas.ForeColor = System.Drawing.Color.White
         Me.BTNcrearTemas.Location = New System.Drawing.Point(0, 0)
+        Me.BTNcrearTemas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNcrearTemas.Name = "BTNcrearTemas"
-        Me.BTNcrearTemas.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BTNcrearTemas.Size = New System.Drawing.Size(233, 35)
+        Me.BTNcrearTemas.Padding = New System.Windows.Forms.Padding(47, 0, 0, 0)
+        Me.BTNcrearTemas.Size = New System.Drawing.Size(312, 43)
         Me.BTNcrearTemas.TabIndex = 3
         Me.BTNcrearTemas.Text = "crear temas"
         Me.BTNcrearTemas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -504,10 +527,11 @@ Partial Class FrmMenuProfesor
         Me.BTNtemas.FillColor = System.Drawing.Color.SlateBlue
         Me.BTNtemas.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNtemas.ForeColor = System.Drawing.Color.White
-        Me.BTNtemas.Location = New System.Drawing.Point(0, 160)
+        Me.BTNtemas.Location = New System.Drawing.Point(0, 197)
+        Me.BTNtemas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNtemas.Name = "BTNtemas"
-        Me.BTNtemas.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNtemas.Size = New System.Drawing.Size(233, 45)
+        Me.BTNtemas.Padding = New System.Windows.Forms.Padding(13, 0, 0, 0)
+        Me.BTNtemas.Size = New System.Drawing.Size(312, 55)
         Me.BTNtemas.TabIndex = 12
         Me.BTNtemas.Text = "Temas"
         Me.BTNtemas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -524,10 +548,11 @@ Partial Class FrmMenuProfesor
         Me.BTNinicio.FillColor = System.Drawing.Color.SlateBlue
         Me.BTNinicio.Font = New System.Drawing.Font("Showcard Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNinicio.ForeColor = System.Drawing.Color.White
-        Me.BTNinicio.Location = New System.Drawing.Point(0, 115)
+        Me.BTNinicio.Location = New System.Drawing.Point(0, 142)
+        Me.BTNinicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNinicio.Name = "BTNinicio"
-        Me.BTNinicio.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.BTNinicio.Size = New System.Drawing.Size(233, 45)
+        Me.BTNinicio.Padding = New System.Windows.Forms.Padding(13, 0, 0, 0)
+        Me.BTNinicio.Size = New System.Drawing.Size(312, 55)
         Me.BTNinicio.TabIndex = 11
         Me.BTNinicio.Text = "Inicio"
         Me.BTNinicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -539,8 +564,9 @@ Partial Class FrmMenuProfesor
         Me.PanelLOGO.Controls.Add(Me.Guna2PictureBox1)
         Me.PanelLOGO.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLOGO.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLOGO.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelLOGO.Name = "PanelLOGO"
-        Me.PanelLOGO.Size = New System.Drawing.Size(233, 115)
+        Me.PanelLOGO.Size = New System.Drawing.Size(312, 142)
         Me.PanelLOGO.TabIndex = 0
         '
         'Guna2PictureBox1
@@ -550,8 +576,9 @@ Partial Class FrmMenuProfesor
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
         Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(233, 112)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(312, 138)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Guna2PictureBox1.TabIndex = 1
         Me.Guna2PictureBox1.TabStop = False
@@ -563,9 +590,10 @@ Partial Class FrmMenuProfesor
         '
         Me.panelContenedor.Controls.Add(Me.BTNcerrar)
         Me.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelContenedor.Location = New System.Drawing.Point(250, 0)
+        Me.panelContenedor.Location = New System.Drawing.Point(333, 0)
+        Me.panelContenedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelContenedor.Name = "panelContenedor"
-        Me.panelContenedor.Size = New System.Drawing.Size(895, 654)
+        Me.panelContenedor.Size = New System.Drawing.Size(1194, 805)
         Me.panelContenedor.TabIndex = 13
         '
         'BTNcerrar
@@ -581,23 +609,25 @@ Partial Class FrmMenuProfesor
         Me.BTNcerrar.Font = New System.Drawing.Font("Showcard Gothic", 9.75!)
         Me.BTNcerrar.ForeColor = System.Drawing.Color.White
         Me.BTNcerrar.HoverState.FillColor = System.Drawing.Color.IndianRed
-        Me.BTNcerrar.Location = New System.Drawing.Point(851, 0)
+        Me.BTNcerrar.Location = New System.Drawing.Point(1135, 0)
+        Me.BTNcerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BTNcerrar.Name = "BTNcerrar"
-        Me.BTNcerrar.Size = New System.Drawing.Size(44, 37)
+        Me.BTNcerrar.Size = New System.Drawing.Size(59, 46)
         Me.BTNcerrar.TabIndex = 10
         Me.BTNcerrar.Text = "X"
         '
         'FrmMenuProfesor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1145, 654)
+        Me.ClientSize = New System.Drawing.Size(1527, 805)
         Me.Controls.Add(Me.panelContenedor)
         Me.Controls.Add(Me.BTNmiPerfil)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmMenuProfesor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmMenuEstudiante"

@@ -58,7 +58,9 @@ Public Class FrmJuegoPreguntas
                 MediaPlayer.URL = tempFilePath
                 MediaPlayer.settings.setMode("loop", True)
                 MediaPlayer.uiMode = "none" ' Ocultar la interfaz de usuario
+                MediaPlayer.settings.volume = 0
                 MediaPlayer.Ctlcontrols.play()
+
             Catch ex As Exception
                 Console.WriteLine("Error al mostrar el video: " & ex.Message)
             End Try
@@ -66,7 +68,9 @@ Public Class FrmJuegoPreguntas
             Console.WriteLine("No se encontró el video en la base de datos.")
         End If
     End Sub
-
+    Private Sub DetenerVideo()
+        MediaPlayer.Ctlcontrols.stop()
+    End Sub
 
     Friend Function ObtenerSonido() As Byte()
         Dim sonidoBytes As Byte() = Nothing
@@ -80,9 +84,7 @@ Public Class FrmJuegoPreguntas
                     sonidoBytes = DirectCast(result, Byte())
                 End If
             End Using
-            Console.WriteLine("Sonido recuperado exitosamente de la base de datos.")
         Catch ex As Exception
-            Console.WriteLine("Error al recuperar el sonido de la base de datos: " & ex.Message)
         Finally
             DESCONECTAR()
         End Try
@@ -97,16 +99,11 @@ Public Class FrmJuegoPreguntas
                 tempFilePath = Path.ChangeExtension(tempFilePath, ".mp3")
                 File.WriteAllBytes(tempFilePath, sonidoBytes)
 
-                ' Utilizar Windows Media Player para reproducir el archivo MP3
                 wmp.URL = tempFilePath
                 wmp.controls.play()
-
-                Console.WriteLine("Sonido mostrado correctamente.")
             Catch ex As Exception
-                Console.WriteLine("Error al mostrar el sonido: " & ex.Message)
             End Try
         Else
-            Console.WriteLine("No se encontró el sonido en la base de datos.")
         End If
     End Sub
 
@@ -162,9 +159,9 @@ Public Class FrmJuegoPreguntas
             CargarPregunta(FILA_ACTUAL)
             TiempoPregunta.Start()
         Else
-            If wmp IsNot Nothing Then
-                wmp.controls.stop()
-            End If
+
+            wmp.controls.stop()
+            wmp.close()
             MsgBox("Su juego ha concluido.", vbInformation + vbOKOnly, "Fin del juego")
             Me.Hide()
             FrmResultados.ShowDialog()
