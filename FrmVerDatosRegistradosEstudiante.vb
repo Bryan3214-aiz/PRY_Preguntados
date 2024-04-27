@@ -121,9 +121,9 @@ Public Class FrmVerDatosRegistradosEstudiante
             End If
 
             If fotoCambiada Then ' Verifica si se ha cambiado la foto
-                Dim imagenBytes As Byte() = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
+                FotoPerfil = ObtenerBytesDeImagen(BTNfotoSeleccionar.Image)
                 comando = "UPDATE ESTUDIANTE SET Curso_Lectivo = '" & CMBcursolectivo.Text & "', Nivel = '" & CMBgrado.Text & "', Asignatura = '" & CMBasignatura.Text & "', periodo = '" & CMBperiodo.Text & "', seccion = '" & CMBseccion.Text & "', identificacion = '" & TXTidentifacion.Text & "', nombre_completo = '" & TXTnombre.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "', fotografia = ? where ID_usuario = " & ID & ""
-                EJECUTAR(comando, imagenBytes)
+                EJECUTAR(comando, FotoPerfil)
                 MsgBox("Datos actualizados.", vbOKOnly, "")
             Else
                 comando = "UPDATE ESTUDIANTE SET Curso_Lectivo = '" & CMBcursolectivo.Text & "', Nivel = '" & CMBgrado.Text & "', Asignatura = '" & CMBasignatura.Text & "', periodo = '" & CMBperiodo.Text & "', seccion = '" & CMBseccion.Text & "', identificacion = '" & TXTidentifacion.Text & "', nombre_completo = '" & TXTnombre.Text & "', correo_electronico = '" & TXTcorreo.Text & "', contrasena = '" & TXTcontrasena.Text & "' where ID_usuario = " & ID & ""
@@ -231,4 +231,6 @@ Public Class FrmVerDatosRegistradosEstudiante
             Console.WriteLine("Error al insertar la imagen: " & ex.Message)
         End Try
     End Sub
+
+
 End Class
